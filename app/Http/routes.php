@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Login', function () {
+    return view('register');
+});
+
+/*Route::group(['prefix' => 'reports', 'as' => 'reports::'], function () {
+    Route::get('/', ['as' => 'index', 'uses' => 'ReportsController@index']);
+    Route::get('/single', ['as' => 'single', 'uses' => 'ReportsController@single']);
+    Route::get('/invoice',['as'=>'invoice','uses' => 'PdfController@invoice']);
+});*/
