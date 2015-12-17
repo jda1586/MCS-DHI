@@ -17,8 +17,7 @@ class Authenticate
     /**
      * Create a new filter instance.
      *
-     * @param  Guard  $auth
-     * @return void
+     * @param  Guard $auth
      */
     public function __construct(Guard $auth)
     {
@@ -41,7 +40,6 @@ class Authenticate
                 return redirect()->guest('auth/login');
             }
         }
-
         return $next($request);
     }
 }

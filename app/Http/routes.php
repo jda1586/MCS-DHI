@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('auth.index');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', ['as' => 'home', 'uses' => 'DashboardController@index']);
+});
+
+Route::group([], function () {
+    Route::get('/login', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
+    Route::post('/login', ['as' => 'auth.login', 'uses' => 'AuthController@login']);
 });
