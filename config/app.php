@@ -140,10 +140,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        DHI\Providers\AppServiceProvider::class,
+        DHI\Providers\AuthServiceProvider::class,
+        DHI\Providers\EventServiceProvider::class,
+        DHI\Providers\RouteServiceProvider::class,
 
         /* Custom service providers */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,

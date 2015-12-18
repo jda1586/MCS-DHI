@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace DHI;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -11,8 +11,8 @@ use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
 class User extends Model implements AuthenticatableContract,
-                                    AuthorizableContract,
-                                    CanResetPasswordContract
+    AuthorizableContract,
+    CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword;
 
@@ -36,4 +36,26 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    // relaciones
+    public function wallets()
+    {
+        return $this->hasOne('DHI\UserWallet');
+    }
+
+    public function payment()
+    {
+        return $this->hasOne('DHI\UserPayment');
+    }
+
+    public function sponsored_payments()
+    {
+        return $this->hasMany('DHI\UserPayment', 'sponsor_id');
+    }
+
+    public function movements()
+    {
+        return $this->hasMany('DHI\UserMovement');
+    }
+// fin relaciones
 }

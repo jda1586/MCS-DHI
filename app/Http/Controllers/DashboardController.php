@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace DHI\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use DHI\Http\Requests;
+use DHI\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
@@ -16,7 +16,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+        return "HOLA MUNDO!! Dashboard";
     }
 
 }

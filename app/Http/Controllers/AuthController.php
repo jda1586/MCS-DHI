@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace DHI\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use DHI\Http\Requests;
+use DHI\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
@@ -24,6 +24,6 @@ class AuthController extends Controller
      */
     public function login()
     {
-        //
+
     }
 }
