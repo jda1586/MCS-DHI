@@ -1050,8 +1050,7 @@
 <!-- Page -->
 <div class="page animsition">
     <div class="page-content">
-        <h2>Blank</h2>
-        <p>Page content goes here</p>
+        @content
     </div>
 </div>
 <!-- End Page -->
