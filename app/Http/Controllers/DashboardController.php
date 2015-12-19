@@ -16,7 +16,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return "HOLA MUNDO!! Dashboard";
+        return view('dashboard.index');
     }
 
 }

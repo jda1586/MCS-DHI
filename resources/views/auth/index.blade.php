@@ -69,10 +69,10 @@
             </div>
             <h3 class="font-size-24">Sign In</h3>
             <p>Texto que se ve en reoluciones pequeñas</p>
-            <form method="post" action="login-v2.html">
+            {!! Form::open(['route'=>'auth.login','method'=>'post']) !!}
                 <div class="form-group">
-                    <label class="sr-only" for="inputEmail">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+                    <label class="sr-only" for="inputEmail">User</label>
+                    <input type="text" class="form-control" id="inputEmail" name="user" placeholder="User">
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="inputPassword">Password</label>
@@ -87,7 +87,7 @@
                     <a class="pull-right" href="forgot-password.html">Forgot password?</a>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-            </form>
+            {!! Form::close() !!}
             <p>No account? <a href="register-v2.html">Sign Up</a></p>
             {{--<footer class="page-copyright">--}}
                 {{--<p>WEBSITE BY amazingSurge</p>--}}
