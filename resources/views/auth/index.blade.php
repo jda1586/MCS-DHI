@@ -62,7 +62,7 @@
             </div>
             <p class="font-size-20">Texto que se ve en resoluciones grandes</p>
         </div>
-        <div class="page-login-main" style="padding-top: 80px !important; padding-bottom: 0px !important;">
+        <div class="page-login-main" style="padding-top: 80px !important; padding-bottom : 0px !important;">
             <div class="brand visible-xs">
                 <img class="brand-img" src="/assets/images/logo-blue@2x.png" alt="...">
                 <h3 class="brand-text font-size-40">Remark</h3>
