@@ -40,8 +40,15 @@
     <script>
         Breakpoints();
     </script>
+    <style>
+        @media (max-width: 4000px) and (min-width: 0px) {
+            .page-login-v2 .page-login-main {
+              padding-top: 0px !important;
+            }
+        }g
+    </style>
 </head>
-<body class="page-login-v2 layout-full page-dark">
+<body class="page-login-v2 layout-full page-dark login">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -53,16 +60,15 @@
                 <img class="brand-img" src="/assets/images/logo@2x.png" alt="...">
                 <h2 class="brand-text font-size-40">Remark</h2>
             </div>
-            <p class="font-size-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="font-size-20">Texto que se ve en resoluciones grandes</p>
         </div>
-        <div class="page-login-main">
+        <div class="page-login-main" style="padding-top: 80px !important; padding-bottom: 0px !important;">
             <div class="brand visible-xs">
                 <img class="brand-img" src="/assets/images/logo-blue@2x.png" alt="...">
                 <h3 class="brand-text font-size-40">Remark</h3>
             </div>
             <h3 class="font-size-24">Sign In</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Texto que se ve en reoluciones pequeñas</p>
             <form method="post" action="login-v2.html">
                 <div class="form-group">
                     <label class="sr-only" for="inputEmail">Email</label>
@@ -83,21 +89,21 @@
                 <button type="submit" class="btn btn-primary btn-block">Sign in</button>
             </form>
             <p>No account? <a href="register-v2.html">Sign Up</a></p>
-            <footer class="page-copyright">
-                <p>WEBSITE BY amazingSurge</p>
-                <p>© 2015. All RIGHT RESERVED.</p>
-                <div class="social">
-                    <a class="btn btn-icon btn-round social-twitter" href="javascript:void(0)">
-                        <i class="icon bd-twitter" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-icon btn-round social-facebook" href="javascript:void(0)">
-                        <i class="icon bd-facebook" aria-hidden="true"></i>
-                    </a>
-                    <a class="btn btn-icon btn-round social-google-plus" href="javascript:void(0)">
-                        <i class="icon bd-google-plus" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </footer>
+            {{--<footer class="page-copyright">--}}
+                {{--<p>WEBSITE BY amazingSurge</p>--}}
+                {{--<p>© 2015. All RIGHT RESERVED.</p>--}}
+                {{--<div class="social">--}}
+                    {{--<a class="btn btn-icon btn-round social-twitter" href="javascript:void(0)">--}}
+                        {{--<i class="icon bd-twitter" aria-hidden="true"></i>--}}
+                    {{--</a>--}}
+                    {{--<a class="btn btn-icon btn-round social-facebook" href="javascript:void(0)">--}}
+                        {{--<i class="icon bd-facebook" aria-hidden="true"></i>--}}
+                    {{--</a>--}}
+                    {{--<a class="btn btn-icon btn-round social-google-plus" href="javascript:void(0)">--}}
+                        {{--<i class="icon bd-google-plus" aria-hidden="true"></i>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</footer>--}}
         </div>
     </div>
 </div>
