@@ -44,12 +44,15 @@
             .page-login-v2 .page-login-main {
                 padding-top: 0px !important;
             }
+            .page-login-v2:before{
+                background-image: url("{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" )!important;
+            }
         }
-
         g
     </style>
 </head>
-<body class="page-login-v2 layout-full page-dark login">
+{{--<body class="page-login-v2 layout-full page-dark login">--}}
+<body class="page-login-v2 layout-full page-dark login" style="background-image: url('{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}')!important;">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
