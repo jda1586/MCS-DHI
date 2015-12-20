@@ -19,4 +19,15 @@ class DashboardController extends Controller
         return view('dashboard.index');
     }
 
+
+    public function binary(){
+
+        return view('tree.binary');
+    }
+
+    public function unilevel()
+    {
+        return view('tree.unilevel');
+    }
+
 }
