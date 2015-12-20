@@ -13,11 +13,10 @@
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'DashboardController@index']);
+    Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
 });
 
 Route::group([], function () {
     Route::get('/login', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
     Route::post('/login', ['as' => 'auth.login', 'uses' => 'AuthController@login']);
 });
-
-Route::get('/dash', ['as' => 'home', 'uses' => 'DashboardController@index']);

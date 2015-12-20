@@ -22,7 +22,8 @@ class AuthController extends Controller
     }
 
     /**
-     * Recive mediante post los datos de ingreso
+     * Recive los parametros de login
+     * @return $this|\Illuminate\Http\RedirectResponse
      */
     public function login()
     {
@@ -39,5 +40,15 @@ class AuthController extends Controller
         } else {
             return redirect()->route('auth.index')->withErrors($validator);
         }
+    }
+
+    /**
+     * Desconecta al usuario
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->route('home');
     }
 }

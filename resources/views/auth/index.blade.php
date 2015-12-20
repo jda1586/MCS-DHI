@@ -66,7 +66,8 @@
         </div>
         <div class="page-login-main" style="padding-top: 80px !important; padding-bottom : 0px !important;">
             <div class="brand visible-xs">
-                <img class="brand-img" src="/assets/images/logos/dream_house.png" alt="Dream House" style="align-items: center;">
+                <img class="brand-img" src="/assets/images/logos/dream_house.png" alt="Dream House"
+                     style="align-items: center;">
                 {{--<h3 class="brand-text font-size-40">Remark</h3>--}}
             </div>
             <h3 class="font-size-24">Sign In</h3>
