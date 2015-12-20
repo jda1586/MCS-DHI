@@ -58,11 +58,11 @@
                         </i>
                     </a>
                 </li>
-                <li>
-                    <a class="icon md-search" data-toggle="collapse" href="#site-navbar-search" role="button">
-                        <span class="sr-only">Toggle Search</span>
-                    </a>
-                </li>
+                {{--<li>--}}
+                    {{--<a class="icon md-search" data-toggle="collapse" href="#site-navbar-search" role="button">--}}
+                        {{--<span class="sr-only">Toggle Search</span>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
             </ul>
             <!-- End Navbar Toolbar -->
             <!-- Navbar Toolbar Right -->
@@ -165,106 +165,28 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+                    <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
                        data-animation="scale-up" role="button">
-                        <i class="icon md-email" aria-hidden="true"></i>
-                        <span class="badge badge-info up">3</span>
+              <span class="avatar avatar-online">
+                <img src="assets/images/users/13.jpg" alt="...">
+                <i></i>
+              </span>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
-                        <li class="dropdown-menu-header" role="presentation">
-                            <h5>MESSAGES</h5>
-                            <span class="label label-round label-info">New 3</span>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="presentation">
+                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
                         </li>
-                        <li class="list-group" role="presentation">
-                            <div data-role="container">
-                                <div data-role="content">
-                                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                                        <div class="media">
-                                            <div class="media-left padding-right-10">
-                          <span class="avatar avatar-sm avatar-online">
-                            <img src="/portraits/2.jpg" alt="..."/>
-                            <i></i>
-                          </span>
-                                            </div>
-                                            <div class="media-body">
-                                                <h6 class="media-heading">Mary Adams</h6>
-                                                <div class="media-meta">
-                                                    <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
-                                                </div>
-                                                <div class="media-detail">Anyways, i would like just do it</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                                        <div class="media">
-                                            <div class="media-left padding-right-10">
-                          <span class="avatar avatar-sm avatar-off">
-                            <img src="../../../global/portraits/3.jpg" alt="..."/>
-                            <i></i>
-                          </span>
-                                            </div>
-                                            <div class="media-body">
-                                                <h6 class="media-heading">Caleb Richards</h6>
-                                                <div class="media-meta">
-                                                    <time datetime="2015-06-17T12:30:30+08:00">12 hours ago</time>
-                                                </div>
-                                                <div class="media-detail">I checheck the document. But there seems</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                                        <div class="media">
-                                            <div class="media-left padding-right-10">
-                          <span class="avatar avatar-sm avatar-busy">
-                            <img src="../../../global/portraits/4.jpg" alt="..."/>
-                            <i></i>
-                          </span>
-                                            </div>
-                                            <div class="media-body">
-                                                <h6 class="media-heading">June Lane</h6>
-                                                <div class="media-meta">
-                                                    <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
-                                                </div>
-                                                <div class="media-detail">Lorem ipsum Id consectetur et minim</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
-                                        <div class="media">
-                                            <div class="media-left padding-right-10">
-                          <span class="avatar avatar-sm avatar-away">
-                            <img src="../../../global/portraits/5.jpg" alt="..."/>
-                            <i></i>
-                          </span>
-                                            </div>
-                                            <div class="media-body">
-                                                <h6 class="media-heading">Edward Fletcher</h6>
-                                                <div class="media-meta">
-                                                    <time datetime="2015-06-15T20:34:48+08:00">3 days ago</time>
-                                                </div>
-                                                <div class="media-detail">Dolor et irure cupidatat commodo nostrud
-                                                    nostrud.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+                        <li role="presentation">
+                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> Billing</a>
                         </li>
-                        <li class="dropdown-menu-footer" role="presentation">
-                            <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
-                                <i class="icon md-settings" aria-hidden="true"></i>
-                            </a>
-                            <a href="javascript:void(0)" role="menuitem">
-                                See all messages
-                            </a>
+                        <li role="presentation">
+                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
+                        </li>
+                        <li class="divider" role="presentation"></li>
+                        <li role="presentation">
+                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-power" aria-hidden="true"></i> Logout</a>
                         </li>
                     </ul>
-                </li>
-                <li id="toggleChat">
-                    <a data-toggle="site-sidebar" href="javascript:void(0)" title="Chat" data-url="../site-sidebar.tpl">
-                        <i class="icon md-comment" aria-hidden="true"></i>
-                    </a>
                 </li>
             </ul>
             <!-- End Navbar Toolbar Right -->
@@ -297,7 +219,7 @@
              style="background-image: url('/assets//examples/images/menubar-header.jpg')">
             <div class="vertical-align-middle">
                 <a class="avatar avatar-lg" href="javascript:void(0)">
-                    <img src="../../../global/portraits/1.jpg" alt="Machi">
+                    <img src="assets/images/users/13.jpg" alt="Machi">
                 </a>
                 <div class="site-menubar-info">
                     <h5 class="site-menubar-user">Machi</h5>
@@ -313,13 +235,19 @@
                     <li class="site-menu-item">
                         <a class="animsition-link" href="../index.html">
                             <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
-                            <span class="site-menu-title">Dashboard</span>
+                            <span class="site-menu-title">Home</span>
+                        </a>
+                    </li>
+                    <li class="site-menu-item">
+                        <a class="animsition-link" href="../index.html">
+                            <i class="site-menu-icon md-money" aria-hidden="true"></i>
+                            <span class="site-menu-title">Subastas</span>
                         </a>
                     </li>
                     <li class="site-menu-item has-sub">
                         <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
-                            <span class="site-menu-title">Layouts</span>
+                            <i class="site-menu-icon md-balance-wallet" aria-hidden="true"></i>
+                            <span class="site-menu-title">Wallets</span>
                             <span class="site-menu-arrow"></span>
                         </a>
                         <ul class="site-menu-sub">
@@ -343,42 +271,12 @@
                                     <span class="site-menu-title">Menubar Push</span>
                                 </a>
                             </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/grids.html">
-                                    <span class="site-menu-title">Grid Scaffolding</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/layout-grid.html">
-                                    <span class="site-menu-title">Layout Grid</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/headers.html">
-                                    <span class="site-menu-title">Different Headers</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/panel-transition.html">
-                                    <span class="site-menu-title">Panel Transition</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/boxed.html">
-                                    <span class="site-menu-title">Boxed Layout</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/two-columns.html">
-                                    <span class="site-menu-title">Two Columns</span>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                     <li class="site-menu-item has-sub active">
                         <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-google-pages" aria-hidden="true"></i>
-                            <span class="site-menu-title">Pages</span>
+                            <i class="site-menu-icon md-assignment-account" aria-hidden="true"></i>
+                            <span class="site-menu-title">Members</span>
                             <span class="site-menu-arrow"></span>
                         </a>
                         <ul class="site-menu-sub">
@@ -533,515 +431,164 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="site-menu-item has-sub">
+                    <li class="site-menu-item has-sub active">
                         <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-palette" aria-hidden="true"></i>
-                            <span class="site-menu-title">Basic UI</span>
+                            <i class="site-menu-icon md-accounts-alt" aria-hidden="true"></i>
+                            <span class="site-menu-title">My organization</span>
                             <span class="site-menu-arrow"></span>
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item has-sub">
                                 <a href="javascript:void(0)">
-                                    <span class="site-menu-title">Panel</span>
+                                    <span class="site-menu-title">Errors</span>
                                     <span class="site-menu-arrow"></span>
                                 </a>
                                 <ul class="site-menu-sub">
                                     <li class="site-menu-item">
-                                        <a class="animsition-link" href="../uikit/panel-structure.html">
-                                            <span class="site-menu-title">Panel Structure</span>
+                                        <a class="animsition-link" href="../pages/error-400.html">
+                                            <span class="site-menu-title">400</span>
                                         </a>
                                     </li>
                                     <li class="site-menu-item">
-                                        <a class="animsition-link" href="../uikit/panel-actions.html">
-                                            <span class="site-menu-title">Panel Actions</span>
+                                        <a class="animsition-link" href="../pages/error-403.html">
+                                            <span class="site-menu-title">403</span>
                                         </a>
                                     </li>
                                     <li class="site-menu-item">
-                                        <a class="animsition-link" href="../uikit/panel-portlets.html">
-                                            <span class="site-menu-title">Panel Portlets</span>
+                                        <a class="animsition-link" href="../pages/error-404.html">
+                                            <span class="site-menu-title">404</span>
+                                        </a>
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="../pages/error-500.html">
+                                            <span class="site-menu-title">500</span>
+                                        </a>
+                                    </li>
+                                    <li class="site-menu-item">
+                                        <a class="animsition-link" href="../pages/error-503.html">
+                                            <span class="site-menu-title">503</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/buttons.html">
-                                    <span class="site-menu-title">Buttons</span>
+                                <a class="animsition-link" href="../pages/faq.html">
+                                    <span class="site-menu-title">FAQ</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/dropdowns.html">
-                                    <span class="site-menu-title">Dropdowns</span>
+                                <a class="animsition-link" href="../pages/gallery.html">
+                                    <span class="site-menu-title">Gallery</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/icons.html">
-                                    <span class="site-menu-title">Icons</span>
+                                <a class="animsition-link" href="../pages/gallery-grid.html">
+                                    <span class="site-menu-title">Gallery Grid</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/list.html">
-                                    <span class="site-menu-title">List</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/tooltip-popover.html">
-                                    <span class="site-menu-title">Tooltip &amp; Popover</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/modals.html">
-                                    <span class="site-menu-title">Modals</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/tabs-accordions.html">
-                                    <span class="site-menu-title">Tabs &amp; Accordions</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/images.html">
-                                    <span class="site-menu-title">Images</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/badges-labels.html">
-                                    <span class="site-menu-title">Badges &amp; Labels</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/progress-bars.html">
-                                    <span class="site-menu-title">Progress Bars</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/carousel.html">
-                                    <span class="site-menu-title">Carousel</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/typography.html">
-                                    <span class="site-menu-title">Typography</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/colors.html">
-                                    <span class="site-menu-title">Colors</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../uikit/utilities.html">
-                                    <span class="site-menu-title">Utilties</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-format-color-fill" aria-hidden="true"></i>
-                            <span class="site-menu-title">Advanced UI</span>
-                            <span class="site-menu-arrow"></span>
-                        </a>
-                        <ul class="site-menu-sub">
-                            <li class="site-menu-item hidden-xs site-tour-trigger">
-                                <a href="javascript:void(0)">
-                                    <span class="site-menu-title">Tour</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/animation.html">
-                                    <span class="site-menu-title">Animation</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/highlight.html">
-                                    <span class="site-menu-title">Highlight</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/lightbox.html">
-                                    <span class="site-menu-title">Lightbox</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/scrollable.html">
-                                    <span class="site-menu-title">Scrollable</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/rating.html">
-                                    <span class="site-menu-title">Rating</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/context-menu.html">
-                                    <span class="site-menu-title">Context Menu</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/alertify.html">
-                                    <span class="site-menu-title">Alertify</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/masonry.html">
-                                    <span class="site-menu-title">Masonry</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/treeview.html">
-                                    <span class="site-menu-title">Treeview</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/toastr.html">
-                                    <span class="site-menu-title">Toastr</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/maps-vector.html">
-                                    <span class="site-menu-title">Vector Maps</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/maps-google.html">
-                                    <span class="site-menu-title">Google Maps</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/sortable-nestable.html">
-                                    <span class="site-menu-title">Sortable &amp; Nestable</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../advanced/bootbox-sweetalert.html">
-                                    <span class="site-menu-title">Bootbox &amp; Sweetalert</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-puzzle-piece" aria-hidden="true"></i>
-                            <span class="site-menu-title">Structure</span>
-                            <span class="site-menu-arrow"></span>
-                        </a>
-                        <ul class="site-menu-sub">
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/alerts.html">
-                                    <span class="site-menu-title">Alerts</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/ribbon.html">
-                                    <span class="site-menu-title">Ribbon</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/pricing-tables.html">
-                                    <span class="site-menu-title">Pricing Tables</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/overlay.html">
-                                    <span class="site-menu-title">Overlay</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/cover.html">
-                                    <span class="site-menu-title">Cover</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/timeline-simple.html">
-                                    <span class="site-menu-title">Simple Timeline</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/timeline.html">
-                                    <span class="site-menu-title">Timeline</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/step.html">
-                                    <span class="site-menu-title">Step</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/comments.html">
-                                    <span class="site-menu-title">Comments</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/media.html">
-                                    <span class="site-menu-title">Media</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/chat.html">
-                                    <span class="site-menu-title">Chat</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/testimonials.html">
-                                    <span class="site-menu-title">Testimonials</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/nav.html">
-                                    <span class="site-menu-title">Nav</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/navbars.html">
-                                    <span class="site-menu-title">Navbars</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/blockquotes.html">
-                                    <span class="site-menu-title">Blockquotes</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/pagination.html">
-                                    <span class="site-menu-title">Pagination</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../structure/breadcrumbs.html">
-                                    <span class="site-menu-title">Breadcrumbs</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-widgets" aria-hidden="true"></i>
-                            <span class="site-menu-title">Widgets</span>
-                            <span class="site-menu-arrow"></span>
-                        </a>
-                        <ul class="site-menu-sub">
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../widgets/statistics.html">
-                                    <span class="site-menu-title">Statistics Widgets</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../widgets/data.html">
-                                    <span class="site-menu-title">Data Widgets</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../widgets/blog.html">
-                                    <span class="site-menu-title">Blog Widgets</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../widgets/chart.html">
-                                    <span class="site-menu-title">Chart Widgets</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../widgets/social.html">
-                                    <span class="site-menu-title">Social Widgets</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../widgets/weather.html">
-                                    <span class="site-menu-title">Weather Widgets</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-comment-alt-text" aria-hidden="true"></i>
-                            <span class="site-menu-title">Forms</span>
-                            <span class="site-menu-arrow"></span>
-                        </a>
-                        <ul class="site-menu-sub">
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/general.html">
-                                    <span class="site-menu-title">General Elements</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/material.html">
-                                    <span class="site-menu-title">Material Elements</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/advanced.html">
-                                    <span class="site-menu-title">Advanced Elements</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/layouts.html">
-                                    <span class="site-menu-title">Form Layouts</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/wizard.html">
-                                    <span class="site-menu-title">Form Wizard</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/validation.html">
-                                    <span class="site-menu-title">Form Validation</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/masks.html">
-                                    <span class="site-menu-title">Form Masks</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/editable.html">
-                                    <span class="site-menu-title">Form Editable</span>
+                                <a class="animsition-link" href="../pages/search-result.html">
+                                    <span class="site-menu-title">Search Result</span>
                                 </a>
                             </li>
                             <li class="site-menu-item has-sub">
                                 <a href="javascript:void(0)">
-                                    <span class="site-menu-title">Editors</span>
+                                    <span class="site-menu-title">Maps</span>
                                     <span class="site-menu-arrow"></span>
                                 </a>
                                 <ul class="site-menu-sub">
                                     <li class="site-menu-item">
-                                        <a class="animsition-link" href="../forms/editor-summernote.html">
-                                            <span class="site-menu-title">Summernote</span>
+                                        <a class="animsition-link" href="../pages/map-google.html">
+                                            <span class="site-menu-title">Google Maps</span>
                                         </a>
                                     </li>
                                     <li class="site-menu-item">
-                                        <a class="animsition-link" href="../forms/editor-markdown.html">
-                                            <span class="site-menu-title">Markdown</span>
-                                        </a>
-                                    </li>
-                                    <li class="site-menu-item">
-                                        <a class="animsition-link" href="../forms/editor-ace.html">
-                                            <span class="site-menu-title">Ace Editor</span>
+                                        <a class="animsition-link" href="../pages/map-vector.html">
+                                            <span class="site-menu-title">Vector Maps</span>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/image-cropping.html">
-                                    <span class="site-menu-title">Image Cropping</span>
+                                <a class="animsition-link" href="../pages/maintenance.html">
+                                    <span class="site-menu-title">Maintenance</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../forms/file-uploads.html">
-                                    <span class="site-menu-title">File Uploads</span>
+                                <a class="animsition-link" href="../pages/forgot-password.html">
+                                    <span class="site-menu-title">Forgot Password</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/lockscreen.html">
+                                    <span class="site-menu-title">Lockscreen</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/login.html">
+                                    <span class="site-menu-title">Login</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/register.html">
+                                    <span class="site-menu-title">Register</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/login-v2.html">
+                                    <span class="site-menu-title">Login V2</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/register-v2.html">
+                                    <span class="site-menu-title">Register V2</span>
+                                    <div class="site-menu-label">
+                                        <span class="label label-info label-round">new</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/login-v3.html">
+                                    <span class="site-menu-title">Login V3</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/register-v3.html">
+                                    <span class="site-menu-title">Register V3</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/user.html">
+                                    <span class="site-menu-title">User List</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/invoice.html">
+                                    <span class="site-menu-title">Invoice</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item active">
+                                <a class="animsition-link" href="../pages/blank.html">
+                                    <span class="site-menu-title">Blank Page</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/email.html">
+                                    <span class="site-menu-title">Email</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/code-editor.html">
+                                    <span class="site-menu-title">Code Editor</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../pages/profile.html">
+                                    <span class="site-menu-title">Profile</span>
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-border-all" aria-hidden="true"></i>
-                            <span class="site-menu-title">Tables</span>
-                            <span class="site-menu-arrow"></span>
-                        </a>
-                        <ul class="site-menu-sub">
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/basic.html">
-                                    <span class="site-menu-title">Basic Tables</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/bootstrap.html">
-                                    <span class="site-menu-title">Bootstrap Tables</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/floatthead.html">
-                                    <span class="site-menu-title">floatThead</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/responsive.html">
-                                    <span class="site-menu-title">Responsive Tables</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/editable.html">
-                                    <span class="site-menu-title">Editable Tables</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/jsgrid.html">
-                                    <span class="site-menu-title">jsGrid</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/footable.html">
-                                    <span class="site-menu-title">FooTable</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../tables/datatable.html">
-                                    <span class="site-menu-title">DataTables</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-chart" aria-hidden="true"></i>
-                            <span class="site-menu-title">Chart</span>
-                            <span class="site-menu-arrow"></span>
-                        </a>
-                        <ul class="site-menu-sub">
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/chartjs.html">
-                                    <span class="site-menu-title">Chart.js</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/gauges.html">
-                                    <span class="site-menu-title">Gauges</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/flot.html">
-                                    <span class="site-menu-title">Flot</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/peity.html">
-                                    <span class="site-menu-title">Peity</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/sparkline.html">
-                                    <span class="site-menu-title">Sparkline</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/morris.html">
-                                    <span class="site-menu-title">Morris</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/chartist.html">
-                                    <span class="site-menu-title">Chartist.js</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/rickshaw.html">
-                                    <span class="site-menu-title">Rickshaw</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/pie-progress.html">
-                                    <span class="site-menu-title">Pie Progress</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="../charts/c3.html">
-                                    <span class="site-menu-title">C3</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    </li
                 </ul>
             </div>
         </div>
@@ -1056,13 +603,13 @@
 <!-- End Page -->
 <!-- Footer -->
 {{--<footer class="site-footer">--}}
-    {{--<div class="site-footer-legal">© 2015 <a--}}
-                {{--href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>--}}
-    {{--<div class="site-footer-right">--}}
-        {{--Crafted with <i class="red-600 icon md-favorite"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>--}}
-    {{--</div>--}}
+{{--<div class="site-footer-legal">© 2015 <a--}}
+{{--href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>--}}
+{{--<div class="site-footer-right">--}}
+{{--Crafted with <i class="red-600 icon md-favorite"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>--}}
+{{--</div>--}}
 {{--</footer>--}}
-<!-- Core  -->
+        <!-- Core  -->
 <script src="/vendor/jquery/jquery.js"></script>
 <script src="/vendor/bootstrap/bootstrap.js"></script>
 <script src="/vendor/animsition/animsition.js"></script>
