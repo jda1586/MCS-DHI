@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="treant-js-master/Treant.css" type="text/css"/>
+</head>
+<body>
+<div id="tree-simple" style="width:1200px; height: 1200px;"></div>
+<!-- javascript -->
+<script src="treant-js-master/vendor/raphael.js"></script>
+<script src="treant-js-master/Treant.min.js"></script>
+<link href="treant-js-master/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" type="text/css"/>
+<script src="treant-js-master/vendor/jquery.min.js"></script>
+<script src="treant-js-master/vendor/jquery.easing.js"></script>
+<script src="treant-js-master/vendor/jquery.mousewheel.js"></script>
+<script src="treant-js-master/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+
+<script>
+
+
+    var simple_chart_config = {
+        chart: {
+            container: "#tree-simple",
+            rootOrientation: "NORTH",
+            nodeAlign: "TOP",
+            hideRootNode: false,
+            nodeAlign: 'center',
+            siblingSeparation : 80,
+            subTeeSeparation: 50,
+            scrollbar: "fancy",
+            levelSeparation: 20,
+            siblingSeparation: 10,
+            padding: 30,
+            subTeeSeparation: 30, 
+            connectors:{
+                type: 'bCurve',
+                style: {
+                    stroke: 'blue'
+                }
+            },
+            node: {
+                    collapsable: true
+                },
+        },
+
+          nodeStructure: {
+        text: { name: "Parent node" },
+        image: "kate3.jpg",
+        collapsed: false,
+        children: [
+            {
+                text: {
+            contact: { 
+            val: "Kate Upton",
+            href: "http://kateupton.com/",
+            target: "_blanck"
+        }
+    },
+                        image: "kate.jpg",
+                        collapsed: true,
+                children: [
+            {
+                text: { name: "este A" },
+                image: "kate2.jpeg",
+                collapsed: true
+            },
+            {
+                text: { name: "Second A " },
+                image: "kate.jpg",
+                collapsed: true,
+            }
+        ]
+            },
+            {
+                text: { name: "Child B" },
+                image: "kate.jpg",
+                collapsed: true, 
+                children: [
+            {
+                text: { name: "First B" },
+                image: "kate.jpg",
+                collapsed: true,
+            }
+        ]
+            }
+        ]
+    }
+};
+
+    var my_chart = new Treant(simple_chart_config);
+
+</script>
+
+    <style type="text/css">
+    .node p {
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: bold;
+    padding: 3px;
+    margin: 0;
+    font-family: none;
+    text-align: center;
+}
+.node {
+    width: 120px;
+    height: 120px;
+}
+
+.node img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    right: 20px;
+}
+
+.Treant .collapse-switch {
+    width: 90px;
+    height: 89px;
+    display: block;
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 0px;
+    right: 29px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.node a{
+    color: black;
+    text-decoration: none;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+a:link{
+    font-size: 20px;
+}
+
+</style>
+</body>
+</html>
