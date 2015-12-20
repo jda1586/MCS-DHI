@@ -20,6 +20,7 @@ class CreateUserWalletsTable extends Migration
             $table->float('auction');
             $table->float('utilities');
             $table->float('balance');
+            $table->integer('responsible_id');
             $table->timestamps();
         });
     }

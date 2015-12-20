@@ -28,7 +28,7 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['user', 'password', 'email', 'name', 'lastname', 'birthday', 'phone', 'address', 'renew', 'product_id', 'rol_id', 'status'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -56,6 +56,11 @@ class User extends Model implements AuthenticatableContract,
     public function movements()
     {
         return $this->hasMany('DHI\UserMovement');
+    }
+
+    public function product()
+    {
+        return $this->belongsTo('DHI\Product');
     }
 // fin relaciones
 }
