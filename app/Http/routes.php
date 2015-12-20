@@ -19,3 +19,5 @@ Route::group([], function () {
     Route::get('/login', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
     Route::post('/login', ['as' => 'auth.login', 'uses' => 'AuthController@login']);
 });
+
+Route::get('/dash', ['as' => 'home', 'uses' => 'DashboardController@index']);

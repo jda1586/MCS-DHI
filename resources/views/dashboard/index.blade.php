@@ -270,7 +270,7 @@
             <!-- End Navbar Toolbar Right -->
             <div class="navbar-brand navbar-brand-center">
                 <a href="../index.html">
-                    <img class="navbar-brand-logo" src="/assets/images/logo.png" title="Remark">
+                    <img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark">
                 </a>
             </div>
         </div>
@@ -1050,18 +1050,18 @@
 <!-- Page -->
 <div class="page animsition">
     <div class="page-content">
-        @content
+        @section('content')
     </div>
 </div>
 <!-- End Page -->
 <!-- Footer -->
-<footer class="site-footer">
-    <div class="site-footer-legal">© 2015 <a
-                href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
-    <div class="site-footer-right">
-        Crafted with <i class="red-600 icon md-favorite"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
-    </div>
-</footer>
+{{--<footer class="site-footer">--}}
+    {{--<div class="site-footer-legal">© 2015 <a--}}
+                {{--href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>--}}
+    {{--<div class="site-footer-right">--}}
+        {{--Crafted with <i class="red-600 icon md-favorite"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>--}}
+    {{--</div>--}}
+{{--</footer>--}}
 <!-- Core  -->
 <script src="/vendor/jquery/jquery.js"></script>
 <script src="/vendor/bootstrap/bootstrap.js"></script>
