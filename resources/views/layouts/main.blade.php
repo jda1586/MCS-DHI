@@ -289,7 +289,7 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                <a class="animsition-link" href="{!! route('members.register') !!}">
                                     <span class="site-menu-title">My Organization</span>
                                 </a>
                             </li>
