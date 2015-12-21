@@ -30,4 +30,9 @@ class DashboardController extends Controller
         return view('tree.unilevel');
     }
 
+    public function register()
+    {
+        return view('user.register');
+    }
+
 }

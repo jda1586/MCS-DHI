@@ -14,8 +14,9 @@
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'DashboardController@index']);
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
-    Route::get('binary', ['as' => 'binary', 'uses' => 'DashboardController@binary']);
-    Route::get('unilevel', ['as' => 'unilevel', 'uses' => 'DashboardController@unilevel']);
+    Route::get('/binary', ['as' => 'binary', 'uses' => 'DashboardController@binary']);
+    Route::get('/unilevel', ['as' => 'unilevel', 'uses' => 'DashboardController@unilevel']);
+    Route::get('/register', ['as' => 'register', 'uses' => 'DashboardController@register']);
 });
 
 Route::group([], function () {

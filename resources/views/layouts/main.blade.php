@@ -510,11 +510,10 @@
     </div>
 </div>
 <!-- Page -->
-<div class="page animsition">
-    <div class="page-content">
+
         @yield('content')
-    </div>
-</div>
+
+
 <!-- End Page -->
 <!-- Footer -->
 {{--<footer class="site-footer">--}}
