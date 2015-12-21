@@ -8,8 +8,7 @@
     <div class="page-register-v2 layout-full page-dark">
         <div class="page-brand-info">
             <div class="brand">
-                <img class="brand-img" src="../../../../assets/images/logo@2x.png" alt="...">
-                <h2 class="brand-text font-size-40">Remark</h2>
+                <img class="brand-img" src="/assets/images/logos/dream_house.png" alt="Dream House">
             </div>
             <p class="font-size-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -76,6 +75,7 @@
                     </div>
                     <p class="margin-left-35">By clicking Sign Up, you agree to our <a href="#">Terms</a>.</p>
                 </div>
+                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Sign Up</button>
             </form>
             <p>Have account already? Please go to <a href="login-v2.html">Sign In</a></p>
