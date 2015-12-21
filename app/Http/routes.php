@@ -13,10 +13,30 @@
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'DashboardController@index']);
+
+    /* Arboles */
+    Route::group(['as' => 'trees.', 'prefix' => 'trees'], function () {
+        Route::get('/binary', ['as' => 'binary', 'uses' => 'TreesController@binary']);
+        Route::get('/unilevel', ['as' => 'unilevel', 'uses' => 'TreesController@unilevel']);
+    });
+    /* Miembros */
+    Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
+        Route::get('/register', ['as' => 'register', 'uses' => 'DashboardController@register']);
+    });
+    /* Carteras */
+    Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
+
+    });
+    /* Subastas */
+    Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
+
+    });
+    /* Perfil */
+    Route::group(['as' => 'profile.', 'prefix' => 'profile'], function () {
+
+    });
+
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
-    Route::get('/binary', ['as' => 'binary', 'uses' => 'DashboardController@binary']);
-    Route::get('/unilevel', ['as' => 'unilevel', 'uses' => 'DashboardController@unilevel']);
-    Route::get('/register', ['as' => 'register', 'uses' => 'DashboardController@register']);
 });
 
 Route::group([], function () {
