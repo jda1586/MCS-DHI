@@ -21,7 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     /* Miembros */
     Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
-        Route::get('/register', ['as' => 'register', 'uses' => 'DashboardController@register']);
+        Route::get('/register', ['as' => 'register', 'uses' => 'MembersController@register']);
     });
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
