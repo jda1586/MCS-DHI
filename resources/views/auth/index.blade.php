@@ -75,15 +75,25 @@
             </div>
             <h3 class="font-size-24">Sign In</h3>
             <p>Texto que se ve en reoluciones pequeñas</p>
-            {!! Form::open(['route'=>'auth.login','method'=>'post']) !!}
+            {!! Form::open(['route'=>'auth.login','method'=>'post','id'=>'loginForm'] ) !!}
+            @if( Session::has('errors') )
+                <div style="text-align: center; color: red;">login {!! $registro = 'filed'  !!} : check fields</div>
+            @endif
+
             <div class="form-group">
-                <label class="sr-only" for="inputEmail">User</label>
-                <input type="text" class="form-control" id="inputEmail" name="user" placeholder="User">
+                <label class="sr-only " for="inputUser">User</label>
+                <input type="text" class="form-control" id="inputUser" name="user" placeholder="User">
+                @foreach($errors->get('user') as $m)
+                    <div style="text-align: center; color: red;">{{ $m }}</div>
+                @endforeach
             </div>
+
             <div class="form-group">
-                <label class="sr-only" for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword" name="password"
-                       placeholder="Password">
+                <label class="sr-only " for="inputPassword">Password</label>
+                <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password">
+                @foreach($errors->get('password') as $m)
+                    <div style="text-align: center; color: red;">{{ $m }}</div>
+                @endforeach
             </div>
             <div class="form-group clearfix">
                 <div class="checkbox-custom checkbox-inline checkbox-primary pull-left">
@@ -92,7 +102,7 @@
                 </div>
                 <a class="pull-right" href="forgot-password.html">Forgot password?</a>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            <button type="submit" id="login" class="btn btn-primary btn-block">Sign in</button>
             {!! Form::close() !!}
             <p>No account? <a href="register-v2.html">Sign Up</a></p>
             {{--<footer class="page-copyright">--}}
@@ -136,21 +146,34 @@
 <script src="/assets/js/sections/menubar.js"></script>
 <script src="/assets/js/sections/sidebar.js"></script>
 <script src="/js/configs/config-colors.js"></script>
-<script src="/js/configs/config-tour.js"></script>
+{{--<script src="/js/configs/config-tour.js"></script>--}}
 <script src="/js/components/asscrollable.js"></script>
 <script src="/js/components/animsition.js"></script>
 <script src="/js/components/slidepanel.js"></script>
 <script src="/js/components/switchery.js"></script>
 <script src="/js/components/tabs.js"></script>
 <script src="/js/components/jquery-placeholder.js"></script>
+<!-- Scripts -->
+{{--{!! HTML::script('bower_components/parsleyjs/dist/parsley.min.js') !!}
+{!! HTML::script('bower_components/parsleyjs/src/i18n/es.js') !!}--}}
+<script src="vendor/formvalidation/formValidation.min.js"></script>
+<script src="vendor/formvalidation/framework/bootstrap.min.js"></script>
+{{--{!! HTML::script('assets/examples/js/forms/validation.js') !!}--}}
+{!! HTML::script('validator.js') !!}
+{{--<script src="../../assets/examples/js/forms/validation.js"></script>--}}
 <script>
-    (function (document, window, $) {
+   /* (function (document, window, $) {
         'use strict';
         var Site = window.Site;
         $(document).ready(function () {
+            console.log(Site);
             Site.run();
         });
-    })(document, window, jQuery);
+    })(document, window, jQuery);*/
+
+//    altair_forms.parsley_validation_config();
+    //        llamada al parsley
+//    $('#form_validation').parsley();
 </script>
 </body>
 </html>
