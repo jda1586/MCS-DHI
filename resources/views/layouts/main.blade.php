@@ -274,10 +274,15 @@
                     <li class="site-menu-item has-sub">
                         <a href="javascript:void(0)">
                             <i class="site-menu-icon md-assignment-account" aria-hidden="true"></i>
-                            <span class="site-menu-title">Trees</span>
+                            <span class="site-menu-title">Members</span>
                             <span class="site-menu-arrow"></span>
                         </a>
                         <ul class="site-menu-sub">
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                    <span class="site-menu-title">My Organization</span>
+                                </a>
+                            </li>
                             <li class="site-menu-item">
                                 <a class="animsition-link" href="../layouts/menubar-fold.html">
                                     <span class="site-menu-title">Binary Tree</span>
@@ -290,7 +295,7 @@
                             </li>
                             <li class="site-menu-item">
                                 <a class="animsition-link" href="../layouts/menubar-fold.html">
-                                    <span class="site-menu-title">My Organization</span>
+                                    <span class="site-menu-title">New members</span>
                                 </a>
                             </li>
                         </ul>
