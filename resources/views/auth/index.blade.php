@@ -44,15 +44,18 @@
             .page-login-v2 .page-login-main {
                 padding-top: 0px !important;
             }
-            .page-login-v2:before{
-                background-image: url("{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" )!important;
+
+            .page-login-v2:before {
+                background-image: url("{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}") !important;
             }
         }
+
         g
     </style>
 </head>
 {{--<body class="page-login-v2 layout-full page-dark login">--}}
-<body class="page-login-v2 layout-full page-dark login" style="background-image: url('{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}')!important;">
+<body class="page-login-v2 layout-full page-dark login"
+      style="background-image: url('{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}')!important;">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -162,18 +165,18 @@
 {!! HTML::script('validator.js') !!}
 {{--<script src="../../assets/examples/js/forms/validation.js"></script>--}}
 <script>
-   /* (function (document, window, $) {
-        'use strict';
-        var Site = window.Site;
-        $(document).ready(function () {
-            console.log(Site);
-            Site.run();
-        });
-    })(document, window, jQuery);*/
+    /* (function (document, window, $) {
+     'use strict';
+     var Site = window.Site;
+     $(document).ready(function () {
+     console.log(Site);
+     Site.run();
+     });
+     })(document, window, jQuery);*/
 
-//    altair_forms.parsley_validation_config();
+    //    altair_forms.parsley_validation_config();
     //        llamada al parsley
-//    $('#form_validation').parsley();
+    //    $('#form_validation').parsley();
 </script>
 </body>
 </html>
