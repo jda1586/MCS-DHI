@@ -41,6 +41,43 @@
     </script>
 </head>
 <body>
+
+<div id="loader" class="loader-wrapper loader-lg active">
+    <div class="loader-layer loader-blue-only">
+        <div class="loader-circle-left">
+            <div class="circle"></div>
+        </div>
+        <div class="loader-circle-gap"></div>
+        <div class="loader-circle-right">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>
+{{--<div id="loader" class="fullscreenTop"
+     style="position: fixed;
+           left: 0px; right: 0px;
+           top: 0px; bottom: 0px;
+           background-color: white;
+           z-index: 99;">
+
+    <div style="position: relative; width: 100%; height: 100%;">
+        <div id="inner_loader"
+             style="position: absolute;  top: 50%;
+                 left: 50%;  transform: translate(-50%, -50%);">
+
+            <div class="cssload-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+--}}
+
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -352,6 +389,16 @@
 
 
 <script>
+
+    window.onload = function () {
+        //remove loader
+        $("#loader").delay( 10000 ).css("display", "none"); //css("display", "none")  fadeIn( 400 )
+        /*TweenLite.to("#loader", .3, {
+            "autoAlpha": 0, onComplete: function () {
+                $("#loader").css("display", "none");
+            }
+        });*/
+    };
     (function (document, window, $) {
         'use strict';
         var Site = window.Site;
@@ -359,6 +406,7 @@
             Site.run();
         });
     })(document, window, jQuery);
+
 </script>
 </body>
 </html>
