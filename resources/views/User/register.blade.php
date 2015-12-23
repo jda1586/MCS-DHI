@@ -18,16 +18,16 @@
                     <form method="post" role="form" id="register">
                         <div class="form-group">
                             <div class="some-class" style="display: inline-block; margin: 10px 25px;">
-                                <input type="radio" class="radio" name="pack" value="1" id="bronce"/>
-                                <label for="bronce"><img class="navbar-brand-logo" src="/assets/images/logos/BRONZE_PACK.png" title="Remark"></label>
+                                <input type="radio" class="radio" name="pack" value="1" id="bronce" />
+                                <label for="bronce"><img class="navbar-brand-logo" src="/assets/images/logos/BRONZE_PACK.png" title="Dream House" style="width: 75px; height: 75px;"></label>
                             </div>
                             <div class="some-class" style="display: inline-block; margin: 10px 25px;">
                                 <input type="radio" class="radio" name="pack" value="2" id="plata" />
-                                <label for="plata"><img class="navbar-brand-logo" src="/assets/images/logos/SILVER_PACK.png" title="Remark"></label>
+                                <label for="plata"><img class="navbar-brand-logo" src="/assets/images/logos/SILVER_PACK.png" title="Dfream House" style="width: 75px; height: 75px;"></label>
                             </div>
                             <div class="some-class" style="display: inline-block; margin: 10px 25px;">
                                 <input type="radio" class="radio" name="pack" value="3" id="oro" />
-                                <label for="oro"><img class="navbar-brand-logo" src="/assets/images/logos/GOLD_PACK.png" title="Remark"></label>
+                                <label for="oro"><img class="navbar-brand-logo" src="/assets/images/logos/GOLD_PACK.png" title="Dream House" style="width: 75px; height: 75px;"></label>
                             </div>
                         </div>
                         <div class="form-group">
