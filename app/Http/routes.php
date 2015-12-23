@@ -38,8 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
 
-    Route::get('/finance', ['as' => 'finance', 'uses' => 'FinanceController@index']);
-    Route::get('/cashOut', ['as' => 'cashOut', 'uses' => 'FinanceController@cashOut']);
+    Route::get('/finance', ['as' => 'finance', 'uses' => 'DepositsController@index']);
+    Route::get('/cashOut', ['as' => 'cashOut', 'uses' => 'DepositsController@cashOut']);
 });
 
 Route::group([], function () {
