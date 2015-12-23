@@ -8,14 +8,28 @@
 
     <div class="page animsition" style="animation-duration: 800ms; opacity: 1;">
         <div class="page-content">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-3"></div>
+            <div class="col-md-4 col-sm-6">
                 <div class="page-register-main">
                     {{--<div class="brand visible-xs">--}}
                     {{--</div>--}}
                     <h3 class="font-size-24">Sign Up</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <form method="post" role="form">
+                        <div class="form-group">
+                            <div class="some-class" style="display: inline-block;">
+                                <input type="radio" class="radio" name="bronce" value="1" id="bronce"/>
+                                <label for="bronce"><img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark"></label>
+                            </div>
+                            <div class="some-class" style="display: inline-block;">
+                                <input type="radio" class="radio" name="plata" value="2" id="plata" />
+                                <label for="plata"><img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark"></label>
+                            </div>
+                            <div class="some-class" style="display: inline-block;">
+                                <input type="radio" class="radio" name="oro" value="3" id="oro" />
+                                <label for="oro"><img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark"></label>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label class="sr-only" for="inputName">Full Name</label>
                             <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
@@ -78,7 +92,7 @@
                     <p>Have account already? Please go to <a href="login-v2.html">Sign In</a></p>
                 </div>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4 col-sm-3"></div>
         </div>
     </div>
 @endsection
