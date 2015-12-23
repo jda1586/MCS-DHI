@@ -333,10 +333,10 @@
     (function() {
         $('#loginForm').formValidation({
             framework: "bootstrap",
-            button: {
+            /*button: {
                 selector: '#login',
                 disabled: 'disabled'
-            },
+            },*/
             icon: null,
             fields: {
                 user: {
@@ -377,4 +377,5 @@
             }
         });
     })();
+
 })(document, window, jQuery);
