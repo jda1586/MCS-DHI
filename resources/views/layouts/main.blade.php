@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <title>Dream House - @yield('title')</title>
     @yield('head_scripts')
-    <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link rel="shortcut icon" href="/assets/images/favicon.ico">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/vendor/waves/waves.css">
     {{--<link rel="stylesheet" href="/treant-js-master/Treant.css">--}}
 
-    <!-- Fonts -->
+            <!-- Fonts -->
     <link rel="stylesheet" href="/fonts/material-design/material-design.min.css">
     <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
@@ -113,12 +113,12 @@
                     <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
                        data-animation="scale-up" role="button">
                         <i class="icon md-notifications" aria-hidden="true"></i>
-                        <span class="badge badge-danger up">5</span>
+                        {{--<span class="badge badge-danger up">1</span>--}}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
                         <li class="dropdown-menu-header" role="presentation">
                             <h5>NOTIFICATIONS</h5>
-                            <span class="label label-round label-danger">New 5</span>
+                            {{--<span class="label label-round label-danger">New 5</span>--}}
                         </li>
                         <li class="list-group" role="presentation">
                             <div data-role="container">
@@ -210,19 +210,22 @@
                     <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
                        data-animation="scale-up" role="button">
               <span class="avatar avatar-online">
-                <img src="assets/images/users/13.jpg" alt="...">
+                <img src="/assets/images/users/13.jpg" alt="...">
                 <i></i>
               </span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li role="presentation">
-                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
+                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i>
+                                Profile</a>
                         </li>
                         <li role="presentation">
-                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment" aria-hidden="true"></i> Billing</a>
+                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-payment"
+                                                                            aria-hidden="true"></i> Billing</a>
                         </li>
                         <li role="presentation">
-                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
+                            <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings"
+                                                                            aria-hidden="true"></i> Settings</a>
                         </li>
                         <li class="divider" role="presentation"></li>
                         <li role="presentation">
@@ -263,7 +266,7 @@
              style="background-image: url('/assets//examples/images/menubar-header.jpg')">
             <div class="vertical-align-middle">
                 <a class="avatar avatar-lg" href="javascript:void(0)">
-                    <img src="assets/images/users/13.jpg" alt="Machi">
+                    <img src="/assets/images/users/13.jpg" alt="Machi">
                 </a>
                 <div class="site-menubar-info">
                     <h5 class="site-menubar-user">Machi</h5>
@@ -277,13 +280,13 @@
             <div>
                 <ul class="site-menu">
                     <li class="site-menu-item">
-                        <a class="animsition-link" href="../index.html">
+                        <a class="animsition-link" href="{!! route('home') !!}">
                             <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
                             <span class="site-menu-title">Home</span>
                         </a>
                     </li>
                     <li class="site-menu-item">
-                        <a class="animsition-link" href="../index.html">
+                        <a class="animsition-link" href="#">
                             <i class="site-menu-icon md-money" aria-hidden="true"></i>
                             <span class="site-menu-title">Subastas</span>
                         </a>
@@ -296,17 +299,17 @@
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Cashouts</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Deposits</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Movements</span>
                                 </a>
                             </li>
@@ -320,17 +323,17 @@
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">My Organization</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Binary Tree</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="../layouts/menubar-fold.html">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Unilevel Tree</span>
                                 </a>
                             </li>
@@ -348,10 +351,10 @@
 </div>
 <!-- Page -->
 
-        @yield('content')
+@yield('content')
 
 
-<!-- End Page -->
+        <!-- End Page -->
 <!-- Footer -->
 {{--<footer class="site-footer">--}}
 {{--<div class="site-footer-legal">© 2015 <a--}}
@@ -383,7 +386,7 @@
 <script src="/assets/js/sections/menu.js"></script>
 <script src="/assets/js/sections/menubar.js"></script>
 <script src="/assets/js/sections/sidebar.js"></script>
-<script src="js/configs/config-colors.js"></script>
+<script src="/js/configs/config-colors.js"></script>
 <script src="/assets/js/configs/config-tour.js"></script>
 <script src="/js/components/asscrollable.js"></script>
 <script src="/js/components/animsition.js"></script>
@@ -397,12 +400,12 @@
 
     window.onload = function () {
         //remove loader
-        $("#loader").delay( 10000 ).css("display", "none"); //css("display", "none")  fadeIn( 400 )
+        $("#loader").delay(10000).css("display", "none"); //css("display", "none")  fadeIn( 400 )
         /*TweenLite.to("#loader", .3, {
-            "autoAlpha": 0, onComplete: function () {
-                $("#loader").css("display", "none");
-            }
-        });*/
+         "autoAlpha": 0, onComplete: function () {
+         $("#loader").css("display", "none");
+         }
+         });*/
     };
     (function (document, window, $) {
         'use strict';
