@@ -33,7 +33,6 @@ Route::group(['middleware' => 'auth'], function () {
     });
     /* Perfil */
     Route::group(['as' => 'profile.', 'prefix' => 'profile'], function () {
-
     });
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);

@@ -377,5 +377,101 @@
             }
         });
     })();
+    // Example Validataion Login
+    // ---------------------------------
+    (function() {
+        $('#register').formValidation({
+            framework: "bootstrap",
+            /*button: {
+             selector: '#login',
+             disabled: 'disabled'
+             },*/
+            icon: null,
+            fields: {
+                name: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The name is required and cannot be empty'
+                        },
+                        stringLength: {
+                            min: 3,
+                            max:30
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z]+$/,
+                            message: 'only letters allowed'
+                        }
+                    }
+                },
+                lastname: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The lastname is required and cannot be empty'
+                        },
+                        stringLength: {
+                            min: 3,
+                            max:30
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z]+$/,
+                            message: 'only letters allowed'
+                        }
+                    }
+                },
+                username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required and cannot be empty'
+                        },
+                        stringLength: {
+                            max: 30,
+                            message: 'The content must be less than 30 characters long'
+                        }
+                    }
+                },
+                Email: {
+                    validators: {
+                        emailAddress: {
+                            message: 'The email address is not valid'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8
+                        }
+                    }
+                },
+                passwordCheck: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 8
+                        }
+                    }
+                },
+                phone: {
+                    validators: {
+                        phone: {
+                            message: 'The value is not an phone(US)'
+                        }
+                    }
+                },
+                pais: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The username is required and cannot be empty'
+                        }
+                    }
+                },
+            }
+        });
+    })();
 
 })(document, window, jQuery);

@@ -15,7 +15,7 @@
                     {{--</div>--}}
                     <h3 class="font-size-24">Sign Up</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <form method="post" role="form">
+                    <form method="post" role="form" id="register">
                         <div class="form-group">
                             <div class="some-class" style="display: inline-block; margin: 10px 25px;">
                                 <input type="radio" class="radio" name="pack" value="1" id="bronce"/>
@@ -46,7 +46,7 @@
                         </div>
                         <div class="form-group">
                             <div class="form-group">
-                                <select class="form-control">
+                                <select class="form-control" name="pais">
                                     <option value="">Pais</option>
                                     <option value="Estados Unidos">Estados Unidos</option>
                                     <option value="México">México</option>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="form-group">
                             <label class="sr-only" for="inputPhone">Retype Password</label>
-                            <input type="password" class="form-control" id="inputPhone" name="phone" placeholder="Phone">
+                            <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Phone">
                         </div>
                         <div class="form-group clearfix">
                             <div class="checkbox-custom checkbox-inline checkbox-primary pull-left">
@@ -97,6 +97,10 @@
     </div>
 @endsection
 
-
-
-
+@section('script')
+    {{--<script src="vendor/formvalidation/formValidation.min.js"></script>--}}
+    {{--<script src="vendor/formvalidation/framework/bootstrap.min.js"></script>--}}
+    {!! HTML::script('vendor/formvalidation/formValidation.min.js') !!}
+    {!! HTML::script('vendor/formvalidation/framework/bootstrap.min.js') !!}
+    {!! HTML::script('validator.js') !!}
+@endsection
