@@ -17,17 +17,17 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <form method="post" role="form">
                         <div class="form-group">
-                            <div class="some-class" style="display: inline-block;">
-                                <input type="radio" class="radio" name="bronce" value="1" id="bronce"/>
-                                <label for="bronce"><img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark"></label>
+                            <div class="some-class" style="display: inline-block; margin: 10px 25px;">
+                                <input type="radio" class="radio" name="pack" value="1" id="bronce"/>
+                                <label for="bronce"><img class="navbar-brand-logo" src="/assets/images/logos/BRONZE_PACK.png" title="Remark"></label>
                             </div>
-                            <div class="some-class" style="display: inline-block;">
-                                <input type="radio" class="radio" name="plata" value="2" id="plata" />
-                                <label for="plata"><img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark"></label>
+                            <div class="some-class" style="display: inline-block; margin: 10px 25px;">
+                                <input type="radio" class="radio" name="pack" value="2" id="plata" />
+                                <label for="plata"><img class="navbar-brand-logo" src="/assets/images/logos/SILVER_PACK.png" title="Remark"></label>
                             </div>
-                            <div class="some-class" style="display: inline-block;">
-                                <input type="radio" class="radio" name="oro" value="3" id="oro" />
-                                <label for="oro"><img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark"></label>
+                            <div class="some-class" style="display: inline-block; margin: 10px 25px;">
+                                <input type="radio" class="radio" name="pack" value="3" id="oro" />
+                                <label for="oro"><img class="navbar-brand-logo" src="/assets/images/logos/GOLD_PACK.png" title="Remark"></label>
                             </div>
                         </div>
                         <div class="form-group">

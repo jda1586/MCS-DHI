@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
     <link rel="stylesheet" href="/vendor/waves/waves.css">
+    {{--<link rel="stylesheet" href="/treant-js-master/Treant.css">--}}
+
     <!-- Fonts -->
     <link rel="stylesheet" href="/fonts/material-design/material-design.min.css">
     <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
@@ -33,6 +35,8 @@
     <script src="/vendor/media-match/media.match.min.js"></script>
     <script src="/vendor/respond/respond.min.js"></script>
     <![endif]-->
+
+
     <!-- Scripts -->
     <script src="/vendor/modernizr/modernizr.js"></script>
     <script src="/vendor/breakpoints/breakpoints.js"></script>

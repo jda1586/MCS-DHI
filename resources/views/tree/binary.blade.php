@@ -1,16 +1,16 @@
 @extends('layouts.main')
 
 @section('head_scripts')
-    <link rel="stylesheet" href="/assets/Treat/treant-js-maste/Treant.css">
-    <link rel="stylesheet" href="/assets/Treat/treant-js-maste/vendor/perfect-scrollbar/perfect-scrollbar.css">
-
-    <script src="/assets/Treat/treant-js-maste/vendor/raphael.js"></script>
-    <script src="/assets/Treat/treant-js-maste/Treant.js"></script>
-    <script src="/assets/Treat/treant-js-maste/Treant.min.js"></script>
-    <script src="/assets/Treat/treant-js-maste/vendor/jquery.easing.js"></script>
-    <script src="/assets/Treat/treant-js-maste/vendor/jquery.min.js"></script>
-    <script src="/assets/Treat/treant-js-maste/vendor/jquery.mousewhell.js"></script>
-
+    <link rel="stylesheet" href="/assets/css/Treant.css">
+    <link rel="stylesheet" href="/assets/css/perfect-scrollbar.css">
+    {{--archivos para el arbol--}}
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="/assets/js/raphael.js"></script>
+    <script src="/assets/js/Treant.js"></script>
+    <script src="/assets/js/Treant.min.js"></script>
+    <script src="/assets/js/jquery.mousewhell.js"></script>
+    <script src="/assets/js/perfect-scrollbar.js"></script>
+    <script src="/assets/js/jquery.easing.js"></script>
     <script>
 
 
