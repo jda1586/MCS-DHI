@@ -48,14 +48,18 @@
             .page-login-v2:before {
                 background-image: url("{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}") !important;
             }
+
+            .page-login-v2, .page-dark, .layout-full:after{
+                background-color:white!important; content:none!important;
+            }
         }
 
-        g
+
     </style>
 </head>
 {{--<body class="page-login-v2 layout-full page-dark login">--}}
 <body class="page-login-v2 layout-full page-dark login"
-      style="background-image: url('{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}')!important;">
+      style="background-image: url('{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}')!important; background-color:white; content:none!important; " >
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
