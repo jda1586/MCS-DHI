@@ -387,6 +387,7 @@
 <script src="/js/components/switchery.js"></script>
 <script src="/js/components/tabs.js"></script>
 
+@yield('script')
 
 <script>
 

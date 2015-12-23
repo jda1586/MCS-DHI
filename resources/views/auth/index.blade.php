@@ -77,7 +77,7 @@
                 {{--<h3 class="brand-text font-size-40">Remark</h3>--}}
             </div>
             <h3 class="font-size-24">Sign In</h3>
-            <p>Texto que se ve en reoluciones pequeñas</p>
+            <p>Texto que se ve en resoluciones pequeñas</p>
             {!! Form::open(['route'=>'auth.login','method'=>'post','id'=>'loginForm'] ) !!}
             @if( Session::has('errors') )
                 <div style="text-align: center; color: red;">login {!! $registro = 'filed'  !!} : check fields</div>
