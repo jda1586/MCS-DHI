@@ -333,7 +333,7 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link"  href="{!! route('trees.unilevel') !!}">
+                                <a class="animsition-link" href="{!! route('trees.unilevel') !!}">
                                     <span class="site-menu-title">Unilevel Tree</span>
                                 </a>
                             </li>

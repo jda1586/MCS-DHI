@@ -2,6 +2,7 @@
 
 namespace DHI\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 
 use DHI\Http\Requests;
@@ -16,6 +17,6 @@ class MembersController extends Controller
 
     public function profile()
     {
-        return view('user.profile');
+        return view('user.profile', ['user' => Auth::User()]);
     }
 }
