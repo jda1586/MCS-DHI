@@ -39,7 +39,7 @@
         {{--</div>--}}
         <div id="form" class="col-md-12 col-md-offset-0 panel " style="">
             {{--{!! Form::open(['id'=>'deposito','class'=>'']) !!}--}}
-            {!! Form::open(['route'=>'confirmar','method'=>'post','id'=>'deposito'] ) !!}
+            {!! Form::open(['route'=>'deposits','method'=>'post','id'=>'deposito'] ) !!}
             <div class="col-md-4 col-md-offset-1    ">
                 <div class="example">
                     <div class="form-group" >choice a wallet</div>

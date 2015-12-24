@@ -10,6 +10,7 @@ namespace DHI\Http\Controllers;
 
 use DHI\Http\Requests;
 use DHI\Http\Controllers\Controller;
+use validator;
 
 class DepositsController extends Controller
 {
@@ -27,6 +28,10 @@ class DepositsController extends Controller
     public function deposits()
     {
         echo 'se agrego dinero';
+        $validator = Validator::make(Input::all(), [
+            'image' => 'required',
+//            'password' => 'required|min:8|max:255',
+        ]);
     }
 
 }
