@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('head_scripts')
+
     <link rel="stylesheet" href="/assets/css/Treant.css">
     <link rel="stylesheet" href="/assets/css/perfect-scrollbar.css">
     {{--archivos para el arbol--}}
@@ -16,10 +17,16 @@
 @endsection
 
 @section('content')
-    <div id="tree-simple" style="width: 800px; height: 800px;"></div>
+    <div class="col-md-12">
+        <h1>Arbol Binario</h1>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <div id="tree-simple" style="width: 800px; height: 400px;"></div>
+    </div>
+    <div class="col-md-2"></div>
+
     <script>
-
-
         var simple_chart_config = {
             chart: {
                 container: "#tree-simple",
@@ -31,7 +38,7 @@
                 siblingSeparation: 10,
                 padding: 30,
                 subTeeSeparation: 30,
-                connectors:{
+                connectors: {
                     type: 'bCurve',
                     style: {
                         stroke: 'blue'
@@ -43,8 +50,14 @@
             },
 
             nodeStructure: {
-                text: { name: "Parent node" },
-                image: "kate.jpeg",
+                text: {
+                    contact: {
+                        val: "Kate Upton",
+                        href: "http://kateupton.com/",
+                        target: "_blanck"
+                    }
+                },
+                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
                 collapsed: false,
                 children: [
                     {
@@ -55,29 +68,53 @@
                                 target: "_blanck"
                             }
                         },
-                        image: "kate.jpg",
+                        image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
                         collapsed: true,
                         children: [
                             {
-                                text: { name: "este A" },
-                                image: "kate2.jpeg",
+                                text: {
+                                    contact: {
+                                        val: "Kate Upton",
+                                        href: "http://kateupton.com/",
+                                        target: "_blanck"
+                                    }
+                                },
+                                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
                                 collapsed: true
                             },
                             {
-                                text: { name: "Second A " },
-                                image: "kate.jpg",
+                                text: {
+                                    contact: {
+                                        val: "Kate Upton",
+                                        href: "http://kateupton.com/",
+                                        target: "_blanck"
+                                    }
+                                },
+                                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
                                 collapsed: true
                             }
                         ]
                     },
                     {
-                        text: { name: "Child B" },
-                        image: "kate.jpg",
+                        text: {
+                            contact: {
+                                val: "Kate Upton",
+                                href: "http://kateupton.com/",
+                                target: "_blanck"
+                            }
+                        },
+                        image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
                         collapsed: true,
                         children: [
                             {
-                                text: { name: "First B" },
-                                image: "kate.jpg",
+                                text: {
+                                    contact: {
+                                        val: "Kate Upton",
+                                        href: "http://kateupton.com/",
+                                        target: "_blanck"
+                                    }
+                                },
+                                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
                                 collapsed: true
                             }
                         ]
@@ -89,4 +126,52 @@
         var my_chart = new Treant(simple_chart_config);
 
     </script>
+    <style type="text/css">
+        .node p {
+            font-size: 20px;
+            line-height: 20px;
+            height: 20px;
+            font-weight: bold;
+            padding: 3px;
+            margin: 0;
+            font-family: none;
+            text-align: center;
+        }
+
+        .node {
+            width: 120px;
+            height: 120px;
+        }
+
+        .node img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            right: 10px;
+        }
+
+        .Treant .collapse-switch {
+            width: 90px;
+            height: 89px;
+            display: block;
+            /* border: 1px solid black; */
+            position: absolute;
+            top: 0px;
+            right: 29px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .node a {
+            color: black;
+            text-decoration: none;
+            text-align: right;
+            text-transform: capitalize;
+
+        }
+
+        a:link {
+            font-size: 20px;
+        }
+    </style>
 @endsection
