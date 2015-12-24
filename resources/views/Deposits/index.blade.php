@@ -3,6 +3,14 @@
     <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
     <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
+    <style>
+        .pasos{
+            height:100px; margin:20px 0 20px 0;
+        }
+        .pasost{
+            width: 100%; height: 100%; text-align: center;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -10,21 +18,28 @@
     <div id="wrapper-main" class="col-md-12 col-md-offset-0">
         {{--<div id="titulo" class="col-md-10 col-md-offset-1 " style="margin-top: 20px">--}}
 
-                <div class="col-md-2 col-md-offset-1 panel" style="height:100px; margin-top:20px;">
-                    <span style="font-weight:500" >STEP 1: Deposit</span>
-                    <br>MAKE A TRANSFER TO THIS ACCOUNT BitCoins
+                <div class="col-md-4 col-md-offset-0 pasos" >
+                    <div class="panel pasost">
+                        <span style="font-weight:500" >STEP 1: Deposit</span>
+                        <br>MAKE A TRANSFER TO THIS ACCOUNT BitCoins
+                    </div>
                 </div>
-                <div class="col-md-2 col-md-offset-2 panel" style="height:100px; margin-top:20px;">
-                    <span style="font-weight:500" >STEP 2: Validate</span><br>
-                    send us a voucher
+                <div class="col-md-4 col-md-offset-0 pasos" >
+                    <div class="panel pasost">
+                        <span style="font-weight:500" >STEP 2: Validate</span><br>
+                        send us a voucher
+                    </div>
                 </div>
-                <div class="col-md-2 col-md-offset-2 panel" style="height:100px;margin-top:20px;">
-                    <span style="font-weight:500" >STEP 3: Waite</span><br>
-                    Your deposit will be available from 24 to 72 hours
+                <div class="col-md-4 col-md-offset-0 pasos" >
+                    <div class="panel pasost">
+                        <span style="font-weight:500" >STEP 3: Waite</span><br>
+                        Your deposit will be available from 24 to 72 hours
+                    </div>
                 </div>
         {{--</div>--}}
         <div id="form" class="col-md-12 col-md-offset-0 panel " style="">
-            {!! Form::open(['id'=>'deposito','class'=>'']) !!}
+            {{--{!! Form::open(['id'=>'deposito','class'=>'']) !!}--}}
+            {!! Form::open(['route'=>'confirmar','method'=>'post','id'=>'deposito'] ) !!}
             <div class="col-md-4 col-md-offset-1    ">
                 <div class="example">
                     <div class="form-group" >choice a wallet</div>
@@ -88,7 +103,7 @@
                             <p class="help-block">$999,999,999.99</p>
                         </div>
                     </div>
-                    <button type="submit" id="deposito" class="btn btn-primary btn-block waves-effect waves-light">Deposits</button>
+                    <button type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Deposits</button>
                 </div>
             </div>
             {!! Form::close() !!}

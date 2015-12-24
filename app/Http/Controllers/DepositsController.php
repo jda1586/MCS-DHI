@@ -24,4 +24,9 @@ class DepositsController extends Controller
         echo 'peticion de sacar dinero';
     }
 
+    public function deposits()
+    {
+        echo 'se agrego dinero';
+    }
+
 }
