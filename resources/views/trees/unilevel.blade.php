@@ -18,10 +18,10 @@
 
 @section('content')
     <div class="col-md-12">
-        <h1>Arbol Binario</h1>
+        <h1>Arbol Uninivel</h1>
     </div>
     <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div class="col-md-8 tree">
         <div id="tree-simple" style="width: 800px; height: 400px;"></div>
     </div>
     <div class="col-md-2"></div>
@@ -92,7 +92,30 @@
                                 },
                                 image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
                                 collapsed: true
+                            },
+                            {
+                                text: {
+                                    contact: {
+                                        val: "Kate Upton",
+                                        href: "http://kateupton.com/",
+                                        target: "_blanck"
+                                    }
+                                },
+                                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
+                                collapsed: true
+                            },
+                            {
+                                text: {
+                                    contact: {
+                                        val: "Kate Upton",
+                                        href: "http://kateupton.com/",
+                                        target: "_blanck"
+                                    }
+                                },
+                                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
+                                collapsed: true
                             }
+
                         ]
                     },
                     {
@@ -126,8 +149,9 @@
         var my_chart = new Treant(simple_chart_config);
 
     </script>
+
     <style type="text/css">
-        .node p {
+        .tree .node p {
             font-size: 20px;
             line-height: 20px;
             height: 20px;
@@ -138,19 +162,19 @@
             text-align: center;
         }
 
-        .node {
+        .tree .node {
             width: 120px;
             height: 120px;
         }
 
-        .node img {
+        .tree .node img {
             width: 90px;
             height: 90px;
             border-radius: 50%;
             right: 10px;
         }
 
-        .Treant .collapse-switch {
+        .tree .Treant .collapse-switch {
             width: 90px;
             height: 89px;
             display: block;
@@ -162,7 +186,7 @@
             border-radius: 50%;
         }
 
-        .node a {
+        .tree .node a {
             color: black;
             text-decoration: none;
             text-align: right;
@@ -170,7 +194,7 @@
 
         }
 
-        a:link {
+        .tree a:link {
             font-size: 20px;
         }
     </style>

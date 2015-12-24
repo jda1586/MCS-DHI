@@ -13,4 +13,9 @@ class MembersController extends Controller
     {
         return view('user.register');
     }
+
+    public function profile()
+    {
+        return view('user.profile');
+    }
 }

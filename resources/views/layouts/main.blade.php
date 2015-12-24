@@ -328,12 +328,12 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link"  href="{!! route('trees.binary') !!}">
                                     <span class="site-menu-title">Binary Tree</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link"  href="{!! route('trees.unilevel') !!}">
                                     <span class="site-menu-title">Unilevel Tree</span>
                                 </a>
                             </li>

@@ -11,11 +11,11 @@ class TreesController extends Controller
 {
     public function binary()
     {
-        return view('tree.binary');
+        return view('trees.binary');
     }
 
     public function unilevel()
     {
-        return view('tree.unilevel');
+        return view('trees.unilevel');
     }
 }
