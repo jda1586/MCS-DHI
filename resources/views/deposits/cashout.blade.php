@@ -143,7 +143,7 @@
                             <tr>
                                 <th data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="">Cash Out</th>
                                 <th data-tablesaw-sortable-col="">Wallet</th>
-                                <th id="third" data-tablesaw-sortable-col="">Amount Dollar</th>
+                                <th id="third" data-tablesaw-sortable-col="">Amount</th>
                                 {{--<th data-tablesaw-sortable-col="">
                                     <abbr title="Rotten Tomato Rating">Rating</abbr>
                                 </th>--}}
@@ -154,7 +154,6 @@
                             <tbody>
                                 <tr>
                                     <th>1</th>
-                                    {{--<td><a href="javascript:void(0)" data-rel="external">Boys Don't Cry</a></td>--}}
                                     {{--<td><a href="javascript:void(0)" data-rel="external">Boys Don't Cry</a></td>--}}
                                     <td>Utilities</td>
                                     <td>100.00</td>

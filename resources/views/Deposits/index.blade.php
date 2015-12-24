@@ -128,24 +128,24 @@
                         <table class="tablesaw table-bordered table-hover" data-tablesaw-mode="swipe" data-tablesaw-sortable="" data-tablesaw-sortable-switch="" style="width: 100%">
                             <thead>
                             <tr>
-                                <th data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="">Rank</th>
-                                <th data-tablesaw-sortable-col="">Movie Title</th>
-                                <th id="third" data-tablesaw-sortable-col="">Year</th>
-                                <th data-tablesaw-sortable-col="">
-                                    <abbr title="Rotten Tomato Rating">Rating</abbr>
-                                </th>
-                                <th>Reviews</th>
-                                <th data-tablesaw-sortable-col="" data-sortable-numeric="">Box Office</th>
+                                <th data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="">Deposits</th>
+                                <th data-tablesaw-sortable-col="">Wallet</th>
+                                {{--<th id="third" data-tablesaw-sortable-col=""></th>--}}
+                                {{--<th data-tablesaw-sortable-col="">
+                                    <abbr title="Rotten Tomato Rating">Amount</abbr>
+                                </th>--}}
+                                <th>Amount</th>
+                                <th data-tablesaw-sortable-col="" data-sortable-numeric="">Date</th>
                             </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th>1</th>
-                                    <td><a href="javascript:void(0)" data-rel="external">Boys Don't Cry</a></td>
-                                    <td>2013</td>
-                                    <td>100%</td>
-                                    <td>74</td>
-                                    <td>$2M</td>
+                                    {{--<td><a href="javascript:void(0)" data-rel="external">Boys Don't Cry</a></td>--}}
+                                    <td>Activation</td>
+                                    <td>100.00</td>
+                                    {{--<td>46565654dasdasr8as5d4asd65a4sd6as5d4</td>--}}
+                                    <td>2010/11/24</td>
                                 </tr>
                             </tbody>
                         </table>
