@@ -37,7 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
 
-    Route::get('/finance', ['as' => 'finance', 'uses' => 'DepositsController@index']);
+    Route::get('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@index']);
     Route::get('/cashOut', ['as' => 'cashOut', 'uses' => 'DepositsController@cashOut']);
 });
 

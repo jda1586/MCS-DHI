@@ -304,7 +304,7 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="{!! route('deposits') !!}">
                                     <span class="site-menu-title">Deposits</span>
                                 </a>
                             </li>

@@ -15,7 +15,7 @@ class DepositsController extends Controller
 {
     public function index()
     {
-        return view('finance.index');
+        return view('deposits.index');
 //        return redirect()->route('finance::index');
     }
 
