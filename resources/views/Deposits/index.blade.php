@@ -10,6 +10,11 @@
         .pasost{
             width: 100%; height: 100%; text-align: center;
         }
+        .wallets{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
     </style>
 @endsection
 
@@ -43,13 +48,13 @@
             @if( Session::has('errors') )
                 <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: choice a image</div>
             @endif
-            <div class="col-md-4 col-md-offset-1    ">
+            <div class="col-md-4 col-md-offset-0 ">
                 <div class="example">
-                    <div class="form-group" >choice a wallet</div>
+                    <div class="form-group wallets" >choice a wallet</div>
                     <div class="form-group">
                         <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="activation"
                                data-plugin="labelauty" checked="" id="labelauty-774694" style="display: none;">
-                        <label for="labelauty-774694">
+                        <label class="wallets" for="labelauty-774694">
                             <span class="labelauty-unchecked-image"></span>
                             <span class="labelauty-unchecked">Activation</span>
                             <span class="labelauty-checked-image"></span>
@@ -59,7 +64,7 @@
                     <div class="form-group">
                         <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Commissions"
                                data-plugin="labelauty" id="labelauty-486480" style="display: none;">
-                        <label for="labelauty-486480">
+                        <label class="wallets" for="labelauty-486480">
                             <span class="labelauty-unchecked-image"></span>
                             <span class="labelauty-unchecked">Commissions</span>
                             <span class="labelauty-checked-image"></span>
@@ -69,7 +74,7 @@
                     <div class="form-group">
                         <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Auctions"
                                data-plugin="labelauty" id="labelauty-684702" style="display: none;">
-                        <label for="labelauty-684702">
+                        <label class="wallets" for="labelauty-684702">
                             <span class="labelauty-unchecked-image"></span>
                             <span class="labelauty-unchecked">Auctions</span>
                             <span class="labelauty-checked-image"></span>
@@ -106,7 +111,11 @@
                             <p class="help-block">$999,999,999.99</p>
                         </div>
                     </div>--}}
-                    <button type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Deposits</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="example" style="" >
+                    <button style="margin-bottom: 15px;" type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Deposits</button>
                 </div>
             </div>
             {!! Form::close() !!}
