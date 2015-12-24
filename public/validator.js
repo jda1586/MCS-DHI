@@ -328,7 +328,7 @@
                 }
             });
     })();
-    // Example Validataion Login
+    // validacion de login
     // ---------------------------------
     (function() {
         $('#loginForm').formValidation({
@@ -377,7 +377,7 @@
             }
         });
     })();
-    // Example Validataion Login
+    // validacion de registro
     // ---------------------------------
     (function() {
         $('#register').formValidation({
@@ -469,7 +469,56 @@
                             message: 'The username is required and cannot be empty'
                         }
                     }
+                }
+            }
+        });
+    })();
+    // validacion de depositos
+    // ---------------------------------
+    (function() {
+        $('#loginForm').formValidation({
+            framework: "bootstrap",
+            /*button: {
+             selector: '#login',
+             disabled: 'disabled'
+             },*/
+            icon: null,
+            fields: {
+                user: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The name is required and cannot be empty'
+                        },
+                        stringLength: {
+                            min: 3
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z]+$/,
+                            message: 'only letters allowed'
+                        }
+                    }
                 },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The password is required'
+                        },
+                        stringLength: {
+                            min: 3
+                        }
+                    }
+                },
+                standard_content: {
+                    validators: {
+                        notEmpty: {
+                            message: 'The content is required and cannot be empty'
+                        },
+                        stringLength: {
+                            max: 500,
+                            message: 'The content must be less than 500 characters long'
+                        }
+                    }
+                }
             }
         });
     })();
