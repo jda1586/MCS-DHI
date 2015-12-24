@@ -328,7 +328,7 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link"  href="{!! route('trees.binary') !!}">
+                                <a class="animsition-link" href="{!! route('trees.binary') !!}">
                                     <span class="site-menu-title">Binary Tree</span>
                                 </a>
                             </li>

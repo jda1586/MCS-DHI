@@ -12,11 +12,11 @@ class MembersController extends Controller
 {
     public function register()
     {
-        return view('user.register');
+        return view('members.register');
     }
 
     public function profile()
     {
-        return view('user.profile', ['user' => Auth::User()]);
+        return view('members.profile', ['user' => Auth::User()]);
     }
 }
