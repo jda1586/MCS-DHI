@@ -5,12 +5,17 @@
     <link rel="stylesheet" href="/assets/css/perfect-scrollbar.css">
     {{--archivos para el arbol--}}
     <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/raphael.js"></script>
     <script src="/assets/js/Treant.js"></script>
-    <script src="/assets/js/Treant.min.js"></script>
-    <script src="/assets/js/jquery.mousewhell.js"></script>
-    <script src="/assets/js/perfect-scrollbar.js"></script>
     <script src="/assets/js/jquery.easing.js"></script>
+    <script src="/assets/js/raphael.js"></script>
+    <script src="/assets/js/Treant.min.js"></script>
+    <script src="/assets/js/jquery.mousewheel.js"></script>
+    <script src="/assets/js/perfect-scrollbar.js"></script>
+
+@endsection
+
+@section('content')
+    <div id="tree-simple" style="width: 800px; height: 800px;"></div>
     <script>
 
 
@@ -20,7 +25,7 @@
                 rootOrientation: "NORTH",
                 hideRootNode: false,
                 nodeAlign: 'center',
-                scrollbar: "fancy",
+//                scrollbar: "fancy",
                 levelSeparation: 20,
                 siblingSeparation: 10,
                 padding: 30,
@@ -38,7 +43,7 @@
 
             nodeStructure: {
                 text: { name: "Parent node" },
-                image: "kate3.jpg",
+                image: "{{public_path('/assets/images/logos/logo.png')}}}",
                 collapsed: false,
                 children: [
                     {
@@ -83,9 +88,4 @@
         var my_chart = new Treant(simple_chart_config);
 
     </script>
-
-@endsection
-
-@section('content')
-    <div id="tree-simple" style="width: 800px; height: 800px;"></div>
 @endsection
