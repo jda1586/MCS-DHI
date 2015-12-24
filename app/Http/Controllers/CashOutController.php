@@ -25,6 +25,19 @@ class CashOutController extends Controller
     public function cashOut()
     {
         echo 'peticion de sacar dinero';
+        $validator = Validator::make(Input::all(), [
+//            'image' => 'required',
+            'cantidad'=> 'required|min:1'
+//            'password' => 'required|min:8|max:255',
+        ]);
+
+        if ($validator->passes()) {
+            return redirect()->route('cashout')->with('success', 'registro-success');
+        }else{
+            echo 'ase falta archivo';
+//            dd($validator);
+            return redirect()->route('cashout')->withErrors($validator);
+        }
     }
 
     public function deposits()

@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@index']);
     Route::post('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@deposits']);
     Route::get('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@index']);
+    Route::post('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@cashOut']);
 });
 
 Route::group([], function () {
