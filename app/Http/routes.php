@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@index']);
     Route::post('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@deposits']);
-    Route::get('/cashOut', ['as' => 'cashOut', 'uses' => 'DepositsController@cashOut']);
+    Route::get('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@index']);
 });
 
 Route::group([], function () {

@@ -14,11 +14,11 @@ use Validator;
 use Input;
 use DHI\UserWallet;
 
-class DepositsController extends Controller
+class CashOutController extends Controller
 {
     public function index()
     {
-        return view('deposits.index');
+        return view('deposits.cashout');
 //        return redirect()->route('finance::index');
     }
 
@@ -29,26 +29,20 @@ class DepositsController extends Controller
 
     public function deposits()
     {
-//        echo 'se agrego dinero <br>';
+        echo 'se agrego dinero';
         $validator = Validator::make(Input::all(), [
-            'image' => 'required',
+//            'image' => 'required',
             'cantidad'=> 'required|min:1'
 //            'password' => 'required|min:8|max:255',
         ]);
 
         if ($validator->passes()) {
-//            $cantidad =  Input::get('cantidad');
-            /*if(preg_match("/^[0-9]/", $cantidad) ){
-                echo 'son iguales <br>'.$cantidad;
-            }else{
-                echo 'no son iguales<br>'.$cantidad;
-            }*/
 //            echo 'se  cargo';
+//            $datos=Input::all();
+//            dd($datos);
 //            dd($validator);
 
             $wallet = UserWallet::create(array(
-                'user_id' => '123456', 'commission'=>'0.00','auction'=>'00.00','utilities'=>'00.00','balance'=>'00.00',
-                'responsible_id'=>'654321',
                 Input::get('inputLableautyRadio') => Input::get('cantidad')
             ));
             return redirect()->route('deposits')->with('success', 'registro-success');

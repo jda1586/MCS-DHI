@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserWallet extends Model
 {
-    protected $fillable = ['user_id', 'activation', 'commission', 'auction', 'utillities', 'balance'];
+    protected $fillable = ['user_id', 'activation', 'commission', 'auction', 'utilities', 'balance','responsible_id'];
 
     // relationes
     public function user()

@@ -299,7 +299,7 @@
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="{!! route('cashout') !!}">
                                     <span class="site-menu-title">Cashouts</span>
                                 </a>
                             </li>
