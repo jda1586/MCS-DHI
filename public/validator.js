@@ -476,7 +476,7 @@
     // validacion de depositos
     // ---------------------------------
     (function() {
-        $('#loginForm').formValidation({
+        $('#deposito').formValidation({
             framework: "bootstrap",
             /*button: {
              selector: '#login',
@@ -484,21 +484,15 @@
              },*/
             icon: null,
             fields: {
-                user: {
+                image: {
                     validators: {
-                        notEmpty: {
-                            message: 'The name is required and cannot be empty'
-                        },
-                        stringLength: {
-                            min: 3
-                        },
-                        regexp: {
-                            regexp: /^[a-zA-Z]+$/,
-                            message: 'only letters allowed'
+                        file: {
+                            extension:'jpg',
+                            message: 'The image is required and cannot be empty'
                         }
                     }
                 },
-                password: {
+                cantidad: {
                     validators: {
                         notEmpty: {
                             message: 'The password is required'
