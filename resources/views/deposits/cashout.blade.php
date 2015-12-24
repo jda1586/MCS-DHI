@@ -20,14 +20,14 @@
 
                 <div class="col-md-4 col-md-offset-0 pasos" >
                     <div class="panel pasost">
-                        <span style="font-weight:500" >STEP 1: Deposit</span>
-                        <br>MAKE A TRANSFER TO THIS ACCOUNT BitCoins
+                        <span style="font-weight:500" >STEP 1: select wallet</span>
+                        {{--<br>MAKE A TRANSFER TO THIS ACCOUNT BitCoins--}}
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-0 pasos" >
                     <div class="panel pasost">
-                        <span style="font-weight:500" >STEP 2: Validate</span><br>
-                        send us a voucher
+                        <span style="font-weight:500" >STEP 2: your acount </span><br>
+                        paste the link of your account bitcoins
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-0 pasos" >
@@ -39,8 +39,11 @@
         {{--</div>--}}
         <div id="form" class="col-md-12 col-md-offset-0 panel " style="">
             {{--{!! Form::open(['id'=>'deposito','class'=>'']) !!}--}}
-            {!! Form::open(['route'=>'deposits','method'=>'post','id'=>'deposito'] ) !!}
-            <div class="col-md-4 col-md-offset-1    ">
+            {!! Form::open(['route'=>'deposits','method'=>'post','id'=>'depositos'] ) !!}
+            @if( Session::has('errors') )
+                <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: choice a image</div>
+            @endif
+            <div class="col-md-4 col-md-offset-0    ">
                 <div class="example">
                     <div class="form-group" >choice a wallet</div>
                     <div class="form-group">
@@ -77,15 +80,13 @@
             </div>
             <div class="col-md-4">
                 <div class="example">
-                    <div class="form-group"> selecciona una imagen</div>
-                    {{--<div class="form-group">
+                    <div class="form-group">
                         <div class="input-group ">
                             <span class="input-group-addon">$</span>
-                            <input type="text" class="form-control" placeholder="">
-                            <span class="input-group-addon">.00</span>
+                            <input type="text" class="form-control" placeholder="your account bitcoins ">
                         </div>
-                    </div>--}}
-                    <div class="form-group">
+                    </div>
+                    {{--<div class="form-group">
                         <div class="input-group input-group-file">
                             <input id="namefile" type="text" class="form-control" placeholder="select a image" readonly="">
 					    <span class="input-group-btn">
@@ -95,15 +96,26 @@
                             </span>
 					    </span>
                         </div>
-                    </div>
-                    <div class="form-group form-material">
+                    </div>--}}
+                    {{--<div class="form-group form-material">
                         <label class="col-sm-3 control-label">Currency</label>
                         <div class="col-sm-9">
                             <input type="text" class="form-control" id="inputCurrency" name="cantidad" data-plugin="formatter" data-pattern="$[[999]],[[999]],[[999]].[[99]]">
                             <p class="help-block">$999,999,999.99</p>
                         </div>
+                    </div>--}}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="example">
+                    <div class="form-group">
+                        <div class="input-group ">
+                            <span class="input-group-addon">$</span>
+                            <input type="text" class="form-control" placeholder="Currency ">
+                            <span class="input-group-addon"></span>
+                        </div>
                     </div>
-                    <button type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Deposits</button>
+                    <button type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Cash Out</button>
                 </div>
             </div>
             {!! Form::close() !!}
@@ -115,7 +127,7 @@
                 <div class="panel">
                     <header class="panel-heading">
                         <h3 class="panel-title">
-                            Deposits
+                            Cash Out
                 <span class="panel-desc">
                   Default appearance (with optional sortable-switch &lt;select&gt;)
                 </span>

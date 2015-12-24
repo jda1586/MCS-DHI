@@ -25,6 +25,7 @@
     {{--<link rel="stylesheet" href="/treant-js-master/Treant.css">--}}
 
             <!-- Fonts -->
+    <link rel="stylesheet" href="/load.css">
     <link rel="stylesheet" href="/fonts/material-design/material-design.min.css">
     <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
@@ -46,7 +47,7 @@
 </head>
 <body>
 
-<div id="loader" class="loader-wrapper loader-lg active">
+{{--<div id="loader" class="loader-wrapper loader-lg active">
     <div class="loader-layer loader-blue-only">
         <div class="loader-circle-left">
             <div class="circle"></div>
@@ -56,8 +57,8 @@
             <div class="circle"></div>
         </div>
     </div>
-</div>
-{{--<div id="loader" class="fullscreenTop"
+</div>--}}
+<div id="loader" class="fullscreenTop"
      style="position: fixed;
            left: 0px; right: 0px;
            top: 0px; bottom: 0px;
@@ -80,7 +81,6 @@
         </div>
     </div>
 </div>
---}}
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
@@ -299,7 +299,7 @@
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="{!! route('cashout') !!}">
                                     <span class="site-menu-title">Cashouts</span>
                                 </a>
                             </li>
