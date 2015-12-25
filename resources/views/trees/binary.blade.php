@@ -20,11 +20,25 @@
     <div class="col-md-12">
         <h1>Arbol Binario</h1>
     </div>
-    <div class="col-md-2"></div>
-    <div class="col-md-8 tree">
-        <div id="tree-simple" style="width: 800px; height: 400px;"></div>
+    <div class="col-md-6">
+        <div class="panel">
+            <h3 style="padding: 10px 25px;">Peso del lado izquierdo : </h3>
+        </div>
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-md-6">
+        <div class="panel">
+            <h3 style="padding: 10px 25px;">Peso del lado derecho : </h3>
+        </div>
+    </div>
+    {{--<div class="col-md-2"></div>--}}
+    <div class="col-md-12">
+        <div class="col-md-12 tree panel">
+            <div id="tree-simple" style="width: 800px; height: 400px; margin: 0 auto;"></div>
+            <button class="btn btn-floating btn-info waves-effect waves-float waves-light" type="button"
+                    style="top: -10px;" onclick="window.location ='{{ route("members.register") }}'"><i class="icon md-plus" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    {{--<div class="col-md-2"></div>--}}
 
     <script>
         var simple_chart_config = {
@@ -127,7 +141,7 @@
 
     </script>
     <style type="text/css">
-       .tree .node p {
+        .tree .node p {
             font-size: 20px;
             line-height: 20px;
             height: 20px;
@@ -138,19 +152,19 @@
             text-align: center;
         }
 
-       .tree .node {
+        .tree .node {
             width: 120px;
             height: 120px;
         }
 
-       .tree .node img {
+        .tree .node img {
             width: 90px;
             height: 90px;
             border-radius: 50%;
             right: 10px;
         }
 
-       .tree .Treant .collapse-switch {
+        .tree .Treant .collapse-switch {
             width: 90px;
             height: 89px;
             display: block;
@@ -162,7 +176,7 @@
             border-radius: 50%;
         }
 
-       .tree .node a {
+        .tree .node a {
             color: black;
             text-decoration: none;
             text-align: right;
@@ -170,7 +184,7 @@
 
         }
 
-       .tree a:link {
+        .tree a:link {
             font-size: 20px;
         }
     </style>
