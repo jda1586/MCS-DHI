@@ -43,8 +43,10 @@
         <div class="col-md-12 tree panel">
             <div id="tree-simple" style="width: 800px; height: 400px; margin: 0 auto;"></div>
         </div>
-        <button class="btn btn-floating btn-info  waves-light" type="button" id="button"
-                style="top: -10px;" onclick="window.location ='{{ route("members.register") }}'"><i class="icon md-plus" aria-hidden="true"></i></button>
+        <div class="col-md-12">
+            <button class="btn btn-floating btn-info  waves-light" type="button" id="button"
+                    style="top: -10px;" onclick="window.location ='{{ route("members.register") }}'"><i class="icon md-plus" aria-hidden="true"></i></button>
+        </div>
     </div>
 
     {{--<div class="col-md-2"></div>--}}
