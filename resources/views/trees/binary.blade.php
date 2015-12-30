@@ -14,6 +14,14 @@
 
     <script src="/assets/js/perfect-scrollbar.js"></script>
 
+    <style>
+        #button {
+            position:absolute;
+            bottom: -20px;
+            right: 20px;
+        }
+    </style>
+
 @endsection
 
 @section('content')
@@ -34,10 +42,11 @@
     <div class="col-md-12">
         <div class="col-md-12 tree panel">
             <div id="tree-simple" style="width: 800px; height: 400px; margin: 0 auto;"></div>
-            <button class="btn btn-floating btn-info waves-effect waves-float waves-light" type="button"
-                    style="top: -10px;" onclick="window.location ='{{ route("members.register") }}'"><i class="icon md-plus" aria-hidden="true"></i></button>
         </div>
+        <button class="btn btn-floating btn-info  waves-light" type="button" id="button"
+                style="top: -10px;" onclick="window.location ='{{ route("members.register") }}'"><i class="icon md-plus" aria-hidden="true"></i></button>
     </div>
+
     {{--<div class="col-md-2"></div>--}}
 
     <script>
