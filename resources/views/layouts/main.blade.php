@@ -58,7 +58,18 @@
         </div>
     </div>
 </div>--}}
-<div id="loader" class="fullscreenTop"
+{{--<div class="loader-wrapper active">
+    <div class="loader-layer loader-yellow-only">
+        <div class="loader-circle-left">
+            <div class="circle"></div>
+        </div>
+        <div class="loader-circle-gap"></div>
+        <div class="loader-circle-right">
+            <div class="circle"></div>
+        </div>
+    </div>
+</div>--}}
+{{--<div id="loader" class="fullscreenTop"
      style="position: fixed;
            left: 0px; right: 0px;
            top: 0px; bottom: 0px;
@@ -80,7 +91,7 @@
 
         </div>
     </div>
-</div>
+</div>--}}
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade

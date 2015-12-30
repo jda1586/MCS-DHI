@@ -10,6 +10,11 @@
         .pasost{
             width: 100%; height: 100%; text-align: center;
         }
+        .wallets{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
     </style>
 @endsection
 
@@ -38,42 +43,31 @@
                 </div>
         {{--</div>--}}
         <div id="form" class="col-md-12 col-md-offset-0 panel " style="">
-            {{--{!! Form::open(['id'=>'deposito','class'=>'']) !!}--}}
-            {!! Form::open(['route'=>'deposits','method'=>'post','id'=>'depositos'] ) !!}
+            {!! Form::open(['route'=>'cashout','method'=>'post','id'=>'depositos'] ) !!}
             @if( Session::has('errors') )
-                <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: choice a image</div>
+                <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check fields</div>
             @endif
             <div class="col-md-4 col-md-offset-0    ">
                 <div class="example">
-                    <div class="form-group" >choice a wallet</div>
+                    <div class="form-group wallets" >choice a wallet</div>
                     <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="activation"
+                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="utilities"
                                data-plugin="labelauty" checked="" id="labelauty-774694" style="display: none;">
-                        <label for="labelauty-774694">
+                        <label class="wallets" for="labelauty-774694">
                             <span class="labelauty-unchecked-image"></span>
-                            <span class="labelauty-unchecked">Activation</span>
+                            <span class="labelauty-unchecked">Utilities</span>
                             <span class="labelauty-checked-image"></span>
-                            <span class="labelauty-checked">Activation</span>
+                            <span class="labelauty-checked">Utilities</span>
                         </label>
                     </div>
                     <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Commissions"
+                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="commissions"
                                data-plugin="labelauty" id="labelauty-486480" style="display: none;">
-                        <label for="labelauty-486480">
+                        <label class="wallets" for="labelauty-486480">
                             <span class="labelauty-unchecked-image"></span>
                             <span class="labelauty-unchecked">Commissions</span>
                             <span class="labelauty-checked-image"></span>
                             <span class="labelauty-checked">Commissions</span>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Auctions"
-                               data-plugin="labelauty" id="labelauty-684702" style="display: none;">
-                        <label for="labelauty-684702">
-                            <span class="labelauty-unchecked-image"></span>
-                            <span class="labelauty-unchecked">Auctions</span>
-                            <span class="labelauty-checked-image"></span>
-                            <span class="labelauty-checked">Auctions</span>
                         </label>
                     </div>
                 </div>
@@ -111,7 +105,7 @@
                     <div class="form-group">
                         <div class="input-group ">
                             <span class="input-group-addon">$</span>
-                            <input type="text" class="form-control" placeholder="Currency ">
+                            <input type="text" class="form-control" name="cantidad" placeholder="Currency ">
                             <span class="input-group-addon"></span>
                         </div>
                     </div>
@@ -137,24 +131,24 @@
                         <table class="tablesaw table-bordered table-hover" data-tablesaw-mode="swipe" data-tablesaw-sortable="" data-tablesaw-sortable-switch="" style="width: 100%">
                             <thead>
                             <tr>
-                                <th data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="">Rank</th>
-                                <th data-tablesaw-sortable-col="">Movie Title</th>
-                                <th id="third" data-tablesaw-sortable-col="">Year</th>
-                                <th data-tablesaw-sortable-col="">
+                                <th data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="">Cash Out</th>
+                                <th data-tablesaw-sortable-col="">Wallet</th>
+                                <th id="third" data-tablesaw-sortable-col="">Amount</th>
+                                {{--<th data-tablesaw-sortable-col="">
                                     <abbr title="Rotten Tomato Rating">Rating</abbr>
-                                </th>
-                                <th>Reviews</th>
-                                <th data-tablesaw-sortable-col="" data-sortable-numeric="">Box Office</th>
+                                </th>--}}
+                                <th>Account bitcoin</th>
+                                <th data-tablesaw-sortable-col="" data-sortable-numeric="">date</th>
                             </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th>1</th>
-                                    <td><a href="javascript:void(0)" data-rel="external">Boys Don't Cry</a></td>
-                                    <td>2013</td>
-                                    <td>100%</td>
-                                    <td>74</td>
-                                    <td>$2M</td>
+                                    {{--<td><a href="javascript:void(0)" data-rel="external">Boys Don't Cry</a></td>--}}
+                                    <td>Utilities</td>
+                                    <td>100.00</td>
+                                    <td>46565654dasdasr8as5d4asd65a4sd6as5d4</td>
+                                    <td>2010/11/24</td>
                                 </tr>
                             </tbody>
                         </table>
