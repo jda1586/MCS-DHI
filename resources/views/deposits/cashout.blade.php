@@ -51,7 +51,7 @@
                 <div class="example">
                     <div class="form-group wallets" >choice a wallet</div>
                     <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="activation"
+                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="utilities"
                                data-plugin="labelauty" checked="" id="labelauty-774694" style="display: none;">
                         <label class="wallets" for="labelauty-774694">
                             <span class="labelauty-unchecked-image"></span>
@@ -61,7 +61,7 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Commissions"
+                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="commissions"
                                data-plugin="labelauty" id="labelauty-486480" style="display: none;">
                         <label class="wallets" for="labelauty-486480">
                             <span class="labelauty-unchecked-image"></span>
@@ -70,16 +70,6 @@
                             <span class="labelauty-checked">Commissions</span>
                         </label>
                     </div>
-                    {{--<div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Auctions"
-                               data-plugin="labelauty" id="labelauty-684702" style="display: none;">
-                        <label class="wallets" for="labelauty-684702">
-                            <span class="labelauty-unchecked-image"></span>
-                            <span class="labelauty-unchecked">Auctions</span>
-                            <span class="labelauty-checked-image"></span>
-                            <span class="labelauty-checked">Auctions</span>
-                        </label>
-                    </div>--}}
                 </div>
             </div>
             <div class="col-md-4">
@@ -115,7 +105,7 @@
                     <div class="form-group">
                         <div class="input-group ">
                             <span class="input-group-addon">$</span>
-                            <input type="text" class="form-control" placeholder="Currency ">
+                            <input type="text" class="form-control" name="cantidad" placeholder="Currency ">
                             <span class="input-group-addon"></span>
                         </div>
                     </div>

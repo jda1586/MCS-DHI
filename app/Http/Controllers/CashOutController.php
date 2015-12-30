@@ -26,12 +26,22 @@ class CashOutController extends Controller
     {
         echo 'peticion de sacar dinero';
         $validator = Validator::make(Input::all(), [
-//            'image' => 'required',
+//            'inputLableautyRadio' => 'required',
+
             'cantidad'=> 'required|min:1'
 //            'password' => 'required|min:8|max:255',
         ]);
 
         if ($validator->passes()) {
+            $wallet= UserWallet::where('user_id','=','123456')->get();
+//            dd($wallet);
+            $cartera=Input::get('inputLableautyRadio');   //[]
+//            if($wallet[$cartera]>0){
+            if($wallet['utilities']>0){
+                echo 'si tiene fondos';
+            }else{
+                echo 'no tiene fondos';
+            }
             return redirect()->route('cashout')->with('success', 'registro-success');
         }else{
             echo 'ase falta archivo';

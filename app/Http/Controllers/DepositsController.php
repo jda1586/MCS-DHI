@@ -45,12 +45,31 @@ class DepositsController extends Controller
             }*/
 //            echo 'se  cargo';
 //            dd($validator);
+            $cartera=Input::get('inputLableautyRadio');
+            switch($cartera){
+                case 'activation':
+                    $wallet = UserWallet::create(array(
+                        'user_id' => '123456', 'commission'=>'0.00','auction'=>'00.00','utilities'=>'00.00','balance'=>'00.00',
+                        'responsible_id'=>'654321',
+                        Input::get('inputLableautyRadio') => Input::get('cantidad')
+                    ));
+                    break;
+                case 'commissions':
+                    $wallet = UserWallet::create(array(
+                        'user_id' => '123456', 'activation'=>'0.00','auction'=>'00.00','utilities'=>'00.00','balance'=>'00.00',
+                        'responsible_id'=>'654321',
+                        Input::get('inputLableautyRadio') => Input::get('cantidad')
+                    ));
+                    break;
+                case 'auction':
+                    $wallet = UserWallet::create(array(
+                        'user_id' => '123456', 'commission'=>'0.00','activation'=>'0.00','utilities'=>'0.00','balance'=>'0.00',
+                        'responsible_id'=>'654321',
+                        Input::get('inputLableautyRadio') => Input::get('cantidad')
+                    ));
+                    break;
+            }
 
-            $wallet = UserWallet::create(array(
-                'user_id' => '123456', 'commission'=>'0.00','auction'=>'00.00','utilities'=>'00.00','balance'=>'00.00',
-                'responsible_id'=>'654321',
-                Input::get('inputLableautyRadio') => Input::get('cantidad')
-            ));
             return redirect()->route('deposits')->with('success', 'registro-success');
         }else{
             echo 'ase falta archivo';

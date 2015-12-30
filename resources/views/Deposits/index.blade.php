@@ -62,7 +62,7 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Commissions"
+                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="commissions"
                                data-plugin="labelauty" id="labelauty-486480" style="display: none;">
                         <label class="wallets" for="labelauty-486480">
                             <span class="labelauty-unchecked-image"></span>
@@ -72,7 +72,7 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="Auctions"
+                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="auctions"
                                data-plugin="labelauty" id="labelauty-684702" style="display: none;">
                         <label class="wallets" for="labelauty-684702">
                             <span class="labelauty-unchecked-image"></span>
