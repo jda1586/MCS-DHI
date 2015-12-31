@@ -58,21 +58,29 @@
         </div>
     </div>
 </div>--}}
-<div id="loader" class="loader-wrapper active"
+<div id="loader" class="fullscreenTop  "
      style="position: fixed;
            left: 0px; right: 0px;
            top: 0px; bottom: 0px;
            background-color: white;
-           z-index: 99;" >
-    <div class="loader-layer loader-yellow-only">
-        <div class="loader-circle-left">
-            <div class="circle"></div>
-        </div>
-        <div class="loader-circle-gap"></div>
-        <div class="loader-circle-right">
-            <div class="circle"></div>
+           z-index: 99; width: 100%" >
+    <div style="margin-top:100px;position: absolute;left:50%;margin-left:-30px">
+        <div class="loader-wrapper loader-lg active" style="width:68px;height:68px">
+            <div class="loader-layer loader-blue-only" style="width:68px;height: 68px">
+                {{--<div id="inner_loader" style="position: absolute;  top: 50%;left: 50%;  transform: translate(-50%, -50%);">--}}
+                <div class="loader-circle-left">
+                    <div class="circle"></div>
+                </div>
+                <div class="loader-circle-gap"></div>
+                <div class="loader-circle-right">
+                    <div class="circle"></div>
+                </div>
+                {{--</div>--}}
+            </div>
         </div>
     </div>
+
+
 </div>
 {{--<div id="loader" class="fullscreenTop"
      style="position: fixed;
@@ -416,7 +424,7 @@
 
     window.onload = function () {
         //remove loader
-        $("#loader").delay(10000).css("display", "none"); //css("display", "none")  fadeIn( 400 )
+        $("#loader").css("display", "none"); //css("display", "none")  fadeIn( 400 )
         /*TweenLite.to("#loader", .3, {
          "autoAlpha": 0, onComplete: function () {
          $("#loader").css("display", "none");
