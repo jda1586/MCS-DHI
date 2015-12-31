@@ -67,12 +67,12 @@
 <!-- Page -->
 <div class="page animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
     <div class="page-content">
-        <div class="page-brand-info">
+        <div class="page-brand-info" style="text-align:center;">
             <div class="brand">
                 <img class="brand-img" src="/assets/images/logos/dream_house.png" alt="Dream House">
                 {{--<h2 class="brand-text font-size-40">Remark</h2>--}}
             </div>
-            <p class="font-size-20">Texto que se ve en resoluciones grandes</p>
+            <p class="font-size-20" style="margin:auto;">Texto que se ve en resoluciones grandes</p>
         </div>
         <div class="page-login-main" style="padding-top: 80px !important; padding-bottom : 0px !important;">
             <div class="brand visible-xs">

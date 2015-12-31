@@ -58,7 +58,12 @@
         </div>
     </div>
 </div>--}}
-{{--<div class="loader-wrapper active">
+<div id="loader" class="loader-wrapper active"
+     style="position: fixed;
+           left: 0px; right: 0px;
+           top: 0px; bottom: 0px;
+           background-color: white;
+           z-index: 99;" >
     <div class="loader-layer loader-yellow-only">
         <div class="loader-circle-left">
             <div class="circle"></div>
@@ -68,7 +73,7 @@
             <div class="circle"></div>
         </div>
     </div>
-</div>--}}
+</div>
 {{--<div id="loader" class="fullscreenTop"
      style="position: fixed;
            left: 0px; right: 0px;
