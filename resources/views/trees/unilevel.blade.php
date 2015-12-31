@@ -14,17 +14,33 @@
 
     <script src="/assets/js/perfect-scrollbar.js"></script>
 
+    <style>
+        #button {
+            position:absolute;
+            bottom: -20px;
+            right: 20px;
+        }
+    </style>
+
 @endsection
 
 @section('content')
+    {{--<div class="col-md-1"></div>--}}
     <div class="col-md-12">
         <h1>Arbol Uninivel</h1>
     </div>
-    <div class="col-md-2"></div>
-    <div class="col-md-8 tree">
-        <div id="tree-simple" style="width: 800px; height: 400px;"></div>
+    {{--<div class="col-md-2"></div>--}}
+    {{--<div class="col-md-1"></div>--}}
+    <div class="col-md-12 ">
+        <div class="col-md-12 tree panel">
+            <div id="tree-simple" style="height: 450px; margin: 0 auto;"></div>
+        </div>
+        <div class="col-md-12">
+            <button class="btn btn-floating btn-info  waves-light" type="button" id="button"
+                    style="top: -10px;" onclick="window.location ='{{ route("members.register") }}'"><i class="icon md-plus" aria-hidden="true"></i></button>
+        </div>
     </div>
-    <div class="col-md-2"></div>
+    {{--<div class="col-md-2"></div>--}}
 
     <script>
         var simple_chart_config = {
