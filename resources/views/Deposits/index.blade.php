@@ -3,12 +3,19 @@
     <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
     <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
+    <link rel="stylesheet" href="/vendor/footable/footable.css">
     <style>
-        .pasos{
+        .paso1{
+            height:100px; margin:20px 0 20px 0; padding-left: 0px!important;
+        }
+        .paso2{
             height:100px; margin:20px 0 20px 0;
         }
+        .paso3{
+            height:100px; margin:20px 0 20px 0; padding-right:0px!important;
+        }
         .pasost{
-            width: 100%; height: 100%; text-align: center;
+            width: 100%; height: 100%; text-align: center; padding-top: 6px;
         }
         .wallets{
             width: 80%;
@@ -23,19 +30,19 @@
     <div id="wrapper-main" class="col-md-12 col-md-offset-0">
         {{--<div id="titulo" class="col-md-10 col-md-offset-1 " style="margin-top: 20px">--}}
 
-                <div class="col-md-4 col-md-offset-0 pasos" >
+                <div class="col-md-4 col-md-offset-0 paso1" >
                     <div class="panel pasost">
                         <span style="font-weight:500" >STEP 1: Deposit</span>
                         <br>MAKE A TRANSFER TO THIS ACCOUNT BitCoins
                     </div>
                 </div>
-                <div class="col-md-4 col-md-offset-0 pasos" >
+                <div class="col-md-4 col-md-offset-0 paso2" >
                     <div class="panel pasost">
                         <span style="font-weight:500" >STEP 2: Validate</span><br>
                         send us a voucher
                     </div>
                 </div>
-                <div class="col-md-4 col-md-offset-0 pasos" >
+                <div class="col-md-4 col-md-offset-0 paso3" >
                     <div class="panel pasost">
                         <span style="font-weight:500" >STEP 3: Waite</span><br>
                         Your deposit will be available from 24 to 72 hours
@@ -50,12 +57,12 @@
             @endif
             <div class="col-md-4 col-md-offset-0 ">
                 <div class="example">
-                    <div class="form-group wallets" >choice a wallet</div>
+                    <div class="form-group wallets" style="font-weight: 500" >Choice a wallet</div>
                     <div class="form-group">
                         <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="activation"
                                data-plugin="labelauty" checked="" id="labelauty-774694" style="display: none;">
                         <label class="wallets" for="labelauty-774694">
-                            <span class="labelauty-unchecked-image"></span>
+                            {{--<span class="labelauty-unchecked-image"></span>--}}
                             <span class="labelauty-unchecked">Activation</span>
                             <span class="labelauty-checked-image"></span>
                             <span class="labelauty-checked">Activation</span>
@@ -65,7 +72,7 @@
                         <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="commissions"
                                data-plugin="labelauty" id="labelauty-486480" style="display: none;">
                         <label class="wallets" for="labelauty-486480">
-                            <span class="labelauty-unchecked-image"></span>
+                            {{--<span class="labelauty-unchecked-image"></span>--}}
                             <span class="labelauty-unchecked">Commissions</span>
                             <span class="labelauty-checked-image"></span>
                             <span class="labelauty-checked">Commissions</span>
@@ -75,7 +82,7 @@
                         <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="auctions"
                                data-plugin="labelauty" id="labelauty-684702" style="display: none;">
                         <label class="wallets" for="labelauty-684702">
-                            <span class="labelauty-unchecked-image"></span>
+                            {{--<span class="labelauty-unchecked-image"></span>--}}
                             <span class="labelauty-unchecked">Auctions</span>
                             <span class="labelauty-checked-image"></span>
                             <span class="labelauty-checked">Auctions</span>
@@ -85,7 +92,8 @@
             </div>
             <div class="col-md-4">
                 <div class="example">
-                    <div class="form-group"> selecciona una imagen</div>
+                    <div class="form-group" style="font-weight: 500">  </div>
+                    <div class="form-group" style="font-weight: 500"> Choice a image</div>
                     <div class="form-group">
                         <div class="input-group input-group-file">
                             <input id="namefile" type="text" class="form-control" placeholder="select a image" readonly="">
@@ -99,7 +107,7 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group ">
-                            <span class="input-group-addon">$</span>
+                            <span class="input-group-addon">฿</span>
                             <input type="text" class="form-control" placeholder="999.99" name="cantidad" >
                             <span class="input-group-addon">Currency</span>
                         </div>
@@ -113,58 +121,324 @@
                     </div>--}}
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="margin-top: 4.8%;">
                 <div class="example" style="" >
                     <button style="margin-bottom: 15px;" type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Deposits</button>
                 </div>
             </div>
             {!! Form::close() !!}
-        </div>
-
-
-            <div id="list" class="col-md-12 col-md-offset-0 panel">
-                <!-- Panel Sortable -->
+        </div> {{--fin del segundo div  --}}
+        <div class="row"> {{-- tablas --}}
+            <div id="list" class="col-md-12 col-md-offset-0">
+                <!-- Panel Filtering -->
                 <div class="panel">
                     <header class="panel-heading">
-                        <h3 class="panel-title">
-                            Deposits
-                <span class="panel-desc">
-                  Default appearance (with optional sortable-switch &lt;select&gt;)
-                </span>
-                        </h3>
+                        <h3 class="panel-title"> Deposits </h3>
                     </header>
                     <div class="panel-body">
-                        <table class="tablesaw table-bordered table-hover" data-tablesaw-mode="swipe" data-tablesaw-sortable="" data-tablesaw-sortable-switch="" style="width: 100%">
+                        {{--<div class="padding-bottom-15">
+                            <button id="exampleCollapseBtn" class="btn btn-round btn-primary btn-sm btn-pill-left">Collapse All</button>
+                            <button id="exampleExpandBtn" class="btn btn-round btn-primary btn-sm btn-pill-right">Expand All</button>
+                        </div>--}}
+                        <table class="table toggle-circle" id="exampleFootableFiltering">
                             <thead>
                             <tr>
-                                <th data-tablesaw-sortable-col="" data-tablesaw-sortable-default-col="">Deposits</th>
-                                <th data-tablesaw-sortable-col="">Wallet</th>
-                                {{--<th id="third" data-tablesaw-sortable-col=""></th>--}}
-                                {{--<th data-tablesaw-sortable-col="">
-                                    <abbr title="Rotten Tomato Rating">Amount</abbr>
-                                </th>--}}
-                                <th>Amount</th>
-                                <th data-tablesaw-sortable-col="" data-sortable-numeric="">Date</th>
+                                <th data-toggle="true">First Name</th>
+                                <th>Last Name</th>
+                                <th data-hide="all">Job Title</th>
+                                <th data-hide="all">DOB</th>
+                                <th data-hide="all">Status</th>
                             </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    {{--<td><a href="javascript:void(0)" data-rel="external">Boys Don't Cry</a></td>--}}
-                                    <td>Activation</td>
-                                    <td>100.00</td>
-                                    {{--<td>46565654dasdasr8as5d4asd65a4sd6as5d4</td>--}}
-                                    <td>2010/11/24</td>
-                                </tr>
+                        <div class="form-inline padding-bottom-15">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Status</label>
+                                        <select id="filteringStatus" class="form-control">
+                                            <option value="">Show all</option>
+                                            <option value="active">Active</option>
+                                            <option value="disabled">Disabled</option>
+                                            <option value="suspended">Suspended</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <div class="form-group">
+                                        <input id="filteringSearch" type="text" placeholder="Search" class="form-control" autocomplete="off">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <tbody>
+                            <tr>
+                                <td>Shona</td>
+                                <td>Woldt</td>
+                                <td>Airline Transport Pilot</td>
+                                <td>3 Oct 2015</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lizzee</td>
+                                <td>Goodlow</td>
+                                <td>Technical Services Librarian</td>
+                                <td>1 Nov 2014</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Isidra</td>
+                                <td>Boudreaux</td>
+                                <td>Traffic Court Referee</td>
+                                <td>22 Jun 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Granville</td>
+                                <td>Leonardo</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>19 Apr 2013</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lauri</td>
+                                <td>Hyland</td>
+                                <td>Blackjack Supervisor</td>
+                                <td>15 Nov 2014</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Easer</td>
+                                <td>Dragoo</td>
+                                <td>Drywall Stripper</td>
+                                <td>13 Dec 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maple</td>
+                                <td>Halladay</td>
+                                <td>Aviation Tactical Readiness Officer</td>
+                                <td>30 Dec 2015</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maxine</td>
+                                <td>Woldt</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>17 Oct 2014</td>
+                                <td>
+                                    <span class="label label-table label-dark">Disabled</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lorraine</td>
+                                <td>Mcgaughy</td>
+                                <td>Hemodialysis Technician</td>
+                                <td>11 Nov 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Judi</td>
+                                <td>Badgett</td>
+                                <td>Electrical Lineworker</td>
+                                <td>23 Jun 2013</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Granville</td>
+                                <td>Leonardo</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>19 Apr 2013</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lauri</td>
+                                <td>Hyland</td>
+                                <td>Blackjack Supervisor</td>
+                                <td>15 Nov 2014</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Easer</td>
+                                <td>Dragoo</td>
+                                <td>Drywall Stripper</td>
+                                <td>13 Dec 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maple</td>
+                                <td>Halladay</td>
+                                <td>Aviation Tactical Readiness Officer</td>
+                                <td>30 Dec 2015</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maxine</td>
+                                <td>Woldt</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>17 Oct 2014</td>
+                                <td>
+                                    <span class="label label-table label-dark">Disabled</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lorraine</td>
+                                <td>Mcgaughy</td>
+                                <td>Hemodialysis Technician</td>
+                                <td>11 Nov 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Judi</td>
+                                <td>Badgett</td>
+                                <td>Electrical Lineworker</td>
+                                <td>23 Jun 2013</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Granville</td>
+                                <td>Leonardo</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>19 Apr 2013</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lauri</td>
+                                <td>Hyland</td>
+                                <td>Blackjack Supervisor</td>
+                                <td>15 Nov 2014</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Easer</td>
+                                <td>Dragoo</td>
+                                <td>Drywall Stripper</td>
+                                <td>13 Dec 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maple</td>
+                                <td>Halladay</td>
+                                <td>Aviation Tactical Readiness Officer</td>
+                                <td>30 Dec 2015</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maxine</td>
+                                <td>Woldt</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>17 Oct 2014</td>
+                                <td>
+                                    <span class="label label-table label-dark">Disabled</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Easer</td>
+                                <td>Dragoo</td>
+                                <td>Drywall Stripper</td>
+                                <td>13 Dec 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maple</td>
+                                <td>Halladay</td>
+                                <td>Aviation Tactical Readiness Officer</td>
+                                <td>30 Dec 2015</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maxine</td>
+                                <td>Woldt</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>17 Oct 2014</td>
+                                <td>
+                                    <span class="label label-table label-dark">Disabled</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Easer</td>
+                                <td>Dragoo</td>
+                                <td>Drywall Stripper</td>
+                                <td>13 Dec 2014</td>
+                                <td>
+                                    <span class="label label-table label-success">Active</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maple</td>
+                                <td>Halladay</td>
+                                <td>Aviation Tactical Readiness Officer</td>
+                                <td>30 Dec 2015</td>
+                                <td>
+                                    <span class="label label-table label-danger">Suspended</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Maxine</td>
+                                <td>Woldt</td>
+                                <td>Business Services Sales Representative</td>
+                                <td>17 Oct 2014</td>
+                                <td>
+                                    <span class="label label-table label-dark">Disabled</span>
+                                </td>
+                            </tr>
                             </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="5">
+                                    <div class="text-right">
+                                        <ul class="pagination"></ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tfoot>
                         </table>
                     </div>
-                </div>
-                <!-- End Panel Sortable -->
+                </div> <!-- End Panel Filtering -->
             </div>
-
-    </div>
-
+        </div> {{-- fin del div de la tabla--}}
+    </div> {{-- fin del graper main--}}
 
 @endsection
 
@@ -192,10 +466,15 @@
     {{--<script src="vendor/formvalidation/formValidation.min.js"></script>--}}
     {{--<script src="vendor/formvalidation/framework/bootstrap.min.js"></script>--}}
     {{--<script src="../../../global/js/components/formatter-js.js"></script>--}}
+    {{--<script src="vendor/footable/footable.all.min.js"></script>--}}
 
+
+    {!! HTML::script('vendor/footable/footable.all.min.js') !!}
+    {{--script--}}
     {!! HTML::script('vendor/formvalidation/formValidation.min.js') !!}
     {!! HTML::script('vendor/formvalidation/framework/bootstrap.min.js') !!}
     {!! HTML::script('validator.js') !!}
     {!! HTML::script('vendor/formatter-js/jquery.formatter.js') !!}  {{--para la mascara--}}
     {!! HTML::script('js/components/formatter-js.js') !!}
+        {!! HTML::script('assets/examples/js/tables/footable.js') !!}
 @endsection

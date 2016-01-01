@@ -22,10 +22,9 @@
     <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
     <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
     <link rel="stylesheet" href="/vendor/waves/waves.css">
-    {{--<link rel="stylesheet" href="/treant-js-master/Treant.css">--}}
-
-            <!-- Fonts -->
     <link rel="stylesheet" href="/load.css">
+    {{--<link rel="stylesheet" href="/treant-js-master/Treant.css">--}}
+            <!-- Fonts -->
     <link rel="stylesheet" href="/fonts/material-design/material-design.min.css">
     <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
@@ -36,8 +35,6 @@
     <script src="/vendor/media-match/media.match.min.js"></script>
     <script src="/vendor/respond/respond.min.js"></script>
     <![endif]-->
-
-
     <!-- Scripts -->
     <script src="/vendor/modernizr/modernizr.js"></script>
     <script src="/vendor/breakpoints/breakpoints.js"></script>
@@ -46,18 +43,7 @@
     </script>
 </head>
 <body>
-
-{{--<div id="loader" class="loader-wrapper loader-lg active">
-    <div class="loader-layer loader-blue-only">
-        <div class="loader-circle-left">
-            <div class="circle"></div>
-        </div>
-        <div class="loader-circle-gap"></div>
-        <div class="loader-circle-right">
-            <div class="circle"></div>
-        </div>
-    </div>
-</div>--}}
+{{--loader --}}
 <div id="loader" class="fullscreenTop  "
      style="position: fixed;
            left: 0px; right: 0px;
@@ -79,32 +65,7 @@
             </div>
         </div>
     </div>
-
-
 </div>
-{{--<div id="loader" class="fullscreenTop"
-     style="position: fixed;
-           left: 0px; right: 0px;
-           top: 0px; bottom: 0px;
-           background-color: white;
-           z-index: 99;">
-
-    <div style="position: relative; width: 100%; height: 100%;">
-        <div id="inner_loader"
-             style="position: absolute;  top: 50%;
-                 left: 50%;  transform: translate(-50%, -50%);">
-
-            <div class="cssload-loader">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-        </div>
-    </div>
-</div>--}}
 
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
