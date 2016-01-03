@@ -25,33 +25,33 @@
                 <div class="col-md-12">
                     <div class="col-md-3" onclick="commissions()">
                         <div class="panel wallets"  id="commissionsBtn" style="background-color: #CED8F6">
-                            <p class="title">Commissions</p>
+                            <p>Commissions</p>
                             <div class="current">
-                                <p> $ - 8545854</p>
+                                <h3 class="title"> $ - 8545854</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3" onclick="activations()" >
                         <div class="panel wallets" id="activationsBtn">
-                            <h3 class="title">Activations</h3>
+                            <p>Activations</p>
                             <div class="current">
-                                <p> $ - 8545854</p>
+                                <h3 class="title"> $ - 8545854</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3" onclick="utilities()" >
                         <div class="panel wallets" id="utilitiesBtn">
-                            <h3 class="title">Utilities</h3>
+                            <p>Utilities</p>
                             <div class="current">
-                                <p> $ - 8545854</p>
+                                <h3 class="title"> $ - 8545854</h3>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3" onclick="auctions()" >
                         <div class="panel wallets" id="auctionsBtn">
-                            <h3 class="title">Auctions</h3>
+                            <p>Auctions</p>
                             <div class="current">
-                                <p> $ - 8545854</p>
+                                <h3 class="title"> $ - 8545854</h3>
                             </div>
                         </div>
                     </div>
