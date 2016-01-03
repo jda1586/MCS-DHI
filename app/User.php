@@ -62,5 +62,10 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->belongsTo('DHI\Product');
     }
+
+    public function deposits()
+    {
+        return $this->hasMany('DHI\UserDeposit');
+    }
 // fin relaciones
 }

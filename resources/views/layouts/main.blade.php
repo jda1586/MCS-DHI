@@ -284,6 +284,11 @@
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">My Wallets</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
                                 <a class="animsition-link" href="{!! route('cashout') !!}">
                                     <span class="site-menu-title">Cashouts</span>
                                 </a>
@@ -291,11 +296,6 @@
                             <li class="site-menu-item">
                                 <a class="animsition-link" href="{!! route('deposits') !!}">
                                     <span class="site-menu-title">Deposits</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
-                                    <span class="site-menu-title">Movements</span>
                                 </a>
                             </li>
                         </ul>
