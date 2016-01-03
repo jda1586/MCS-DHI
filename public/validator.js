@@ -476,7 +476,7 @@
     // validacion de depositos
     // ---------------------------------
     (function() {
-        $('#deposito').formValidation({
+        $('#depositos').formValidation({
             framework: "bootstrap",
             icon: {
                 valid: 'glyphicon glyphicon-ok',
@@ -494,17 +494,17 @@
                             message: 'only image: jpg'
                         }
                     }
-                }
-                /*cantidad: {
+                },
+                amount: {
                     validators: {
                         notEmpty: {
-                            message: 'The password is required'
+                            message: 'The amount is required'
                         },
                         stringLength: {
-                            min: 3
+                            min: 1
                         }
                     }
-                }*/
+                }
             }
         })
         .on('err.field.fv', function(e, data) {
