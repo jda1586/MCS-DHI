@@ -24,9 +24,11 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/register', ['as' => 'register', 'uses' => 'MembersController@register']);
         Route::post('/register/store', ['as' => 'store', 'uses' => 'MembersController@store']);
         Route::get('/profile', ['as' => 'profile', 'uses' => 'MembersController@profile']);
+        Route::get('/commissions', ['as' => 'commissions', 'uses' => 'MembersController@commissions']);
     });
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
+        Route::get('/', ['as' => 'wallets', 'uses' => 'WalletsController@index']);
 
     });
     /* Subastas */
@@ -48,4 +50,7 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group([], function () {
     Route::get('/login', ['as' => 'auth.index', 'uses' => 'AuthController@index']);
     Route::post('/login', ['as' => 'auth.login', 'uses' => 'AuthController@login']);
+
+//    ruta temporal para correo
+    Route::get('/email',['as' => 'email', 'uses' => 'MembersController@email']);
 });

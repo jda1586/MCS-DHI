@@ -56,4 +56,14 @@ class MembersController extends Controller
     {
         return view('members.profile', ['user' => Auth::User()]);
     }
+
+    public function email()
+    {
+        return view('emails.welcome');
+    }
+
+    public function commissions()
+    {
+        return view('members.commissions');
+    }
 }
