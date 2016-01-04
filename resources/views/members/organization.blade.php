@@ -836,7 +836,7 @@
                 nodeAlign: 'center',
 //                scrollbar: "fancy",
                 levelSeparation: 20,
-                siblingSeparation: 10,
+                siblingSeparation: 100,
                 padding: 30,
                 subTeeSeparation: 30,
                 connectors: {
@@ -862,28 +862,10 @@
                 collapsed: true,
                 children: [
                     {
-                        text: {
-                            contact: {
-                                val: "Kate Upton",
-                                href: "http://kateupton.com/",
-                                target: "_blanck"
-                            }
-                        },
-                        image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                        collapsed: true,
-                        children: []
+                        text: { name: "Hijos de la izquierda " }
                     },
                     {
-                        text: {
-                            contact: {
-                                val: "Kate Upton",
-                                href: "http://kateupton.com/",
-                                target: "_blanck"
-                            }
-                        },
-                        image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                        collapsed: true,
-                        children: []
+                        text: { name: "Hijos de la derecha" }
                     }
                 ]
             }
@@ -899,7 +881,7 @@
                 nodeAlign: 'center',
 //                scrollbar: "fancy",
                 levelSeparation: 20,
-                siblingSeparation: 10,
+                siblingSeparation: 100,
                 padding: 30,
                 subTeeSeparation: 30,
                 connectors: {
@@ -925,42 +907,11 @@
                 collapsed: true,
                 children: [
                     {
-                        text: {
-                            contact: {
-                                val: "Kate Upton",
-                                href: "http://kateupton.com/",
-                                target: "_blanck"
-                            }
-                        },
-                        image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                        collapsed: true,
-                        children: []
+                        text: { name: "Hijos de la izquierda " }
                     },
                     {
-                        text: {
-                            contact: {
-                                val: "Kate Upton",
-                                href: "http://kateupton.com/",
-                                target: "_blanck"
-                            }
-                        },
-                        image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                        collapsed: true,
-                        children: []
-                    },
-                    {
-                        text: {
-                            contact: {
-                                val: "Kate Upton",
-                                href: "http://kateupton.com/",
-                                target: "_blanck"
-                            }
-                        },
-                        image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                        collapsed: true,
-                        children: []
+                        text: { name: "Hijos de la derecha" }
                     }
-
                 ]
             }
         };
