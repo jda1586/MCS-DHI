@@ -859,7 +859,7 @@
                     }
                 },
                 image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                collapsed: true,
+                collapsed: false,
                 children: [
                     {
                         text: { name: "Hijos de la izquierda " }
@@ -878,7 +878,7 @@
                 container: "#tree-simple2",
                 rootOrientation: "NORTH",
                 hideRootNode: false,
-                nodeAlign: 'center',
+                nodeAlign: 'left',
 //                scrollbar: "fancy",
                 levelSeparation: 20,
                 siblingSeparation: 100,
@@ -904,13 +904,16 @@
                     }
                 },
                 image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                collapsed: true,
+                collapsed: false,
                 children: [
                     {
-                        text: { name: "Hijos de la izquierda " }
+                        text: { name: "...." }
                     },
                     {
-                        text: { name: "Hijos de la derecha" }
+                        text: { name: "#200" }
+                    },
+                    {
+                        text: { name: "...." }
                     }
                 ]
             }
@@ -928,7 +931,7 @@
             padding: 3px;
             margin: 0;
             font-family: none;
-            text-align: center;
+            text-align: justify;
         }
 
         .tree .node {
@@ -966,6 +969,7 @@
         .tree a:link {
             font-size: 20px;
         }
+
     </style>
 
 @endsection
