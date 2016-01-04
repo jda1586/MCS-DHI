@@ -8,6 +8,11 @@
 
     <div class="page animsition" style="animation-duration: 800ms; opacity: 1;">
         <div class="page-content">
+            <ol class="breadcrumb">
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Tables</a></li>
+                <li class="active">FooTable</li>
+            </ol>
             <div class="col-md-4 col-sm-3"></div>
             <div class="col-md-4 col-sm-6">
                 <div class="page-register-main">

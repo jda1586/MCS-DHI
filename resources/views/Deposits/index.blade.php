@@ -28,6 +28,11 @@
 @section('content')
     {{--col-md-6 col-md-offset-3--}}
     <div id="wrapper-main" class="col-md-12 col-md-offset-0">
+        <ol class="breadcrumb">
+            <li><a href="javascript:void(0)">Home</a></li>
+            <li><a href="javascript:void(0)">Tables</a></li>
+            <li class="active">FooTable</li>
+        </ol>
         {{--<div id="titulo" class="col-md-10 col-md-offset-1 " style="margin-top: 20px">--}}
 
                 <div class="col-md-4 col-md-offset-0 paso1" >

@@ -66,4 +66,9 @@ class MembersController extends Controller
     {
         return view('members.commissions');
     }
+
+    public function organization()
+    {
+        return view('members.organization');
+    }
 }

@@ -21,6 +21,11 @@
         <div class="page animsition">
             <div class="page-content container-fluid">
                 <div class="row">
+                    <ol class="breadcrumb">
+                        <li><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="javascript:void(0)">Tables</a></li>
+                        <li class="active">FooTable</li>
+                    </ol>
                     <div class="col-md-3">
                         <!-- Page Widget -->
                         <div class="widget widget-shadow text-center">

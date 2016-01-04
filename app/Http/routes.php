@@ -25,6 +25,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::post('/register/store', ['as' => 'store', 'uses' => 'MembersController@store']);
         Route::get('/profile', ['as' => 'profile', 'uses' => 'MembersController@profile']);
         Route::get('/commissions', ['as' => 'commissions', 'uses' => 'MembersController@commissions']);
+        Route::get('/organization', ['as' => 'organization', 'uses' => 'MembersController@organization']);
     });
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
