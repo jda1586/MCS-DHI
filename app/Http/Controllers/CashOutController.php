@@ -12,13 +12,14 @@ use DHI\Http\Requests;
 use DHI\Http\Controllers\Controller;
 use Validator;
 use Input;
-use DHI\UserWallet;
+use DHI\UserDeposit;
 
 class CashOutController extends Controller
 {
     public function index()
     {
-        return view('deposits.cashout');
+        $salidas = UserDeposit::where('user_id', Auth()->user()->getAuthIdentifier())->take(10)->get();
+        return view('deposits.cashout',['salidas'=> $salidas]);
 //        return redirect()->route('finance::index');
     }
 
