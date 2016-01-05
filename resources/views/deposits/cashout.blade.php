@@ -15,10 +15,10 @@
             height:100px; margin:20px 0 20px 0; padding-right:0px!important;
         }
         .pasost{
-            width: 100%; height: 100%; text-align: center; padding-top: 6px;
+            width: 100%; height: 100%; text-align: center; padding-top: 10px;
         }
         .wallets{
-            width: 80%;
+            width: 100%;
             margin: auto;
             text-align: center;
         }
@@ -36,20 +36,21 @@
         {{-- PASOS PARA SACAR DINERO  --}}
                 <div class="col-md-4 col-md-offset-0 paso1" >
                     <div class="panel pasost">
-                        <span style="font-weight:500" >STEP 1: select wallet</span>
-                        {{--<br>MAKE A TRANSFER TO THIS ACCOUNT BitCoins--}}
+                        <span style="font-weight:500" >STEP 1: </span>
+                        <br> select a wallet
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-0 paso2" >
                     <div class="panel pasost">
-                        <span style="font-weight:500" >STEP 2: your acount </span><br>
-                        paste the link of your account bitcoins
+                        <span style="font-weight:500" >STEP 2:</span><br>
+                        Select your acount
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-0 paso3" >
                     <div class="panel pasost">
-                        <span style="font-weight:500" >STEP 3: Waite</span><br>
-                        Your deposit will be available from 24 to 72 hours
+                        <span style="font-weight:500" >STEP 3:</span><br>
+                        {{--Your deposit will be available from 24 to 72 hours--}}
+                        Send your request and wait 24 to 48 hours
                     </div>
                 </div>
         {{-- INICIO DEL FORM --}}
@@ -135,14 +136,14 @@
                         <h3 class="panel-title">CashOut</h3>
                     </header>
                     <div class="panel-body">
-                        <table class="table table-bordered table-hover toggle-circle" id="exampleFootableFiltering">
+                        <table class="table toggle-circle" id="exampleFootableFiltering">
                             <thead>
                             <tr>
-                                <th data-toggle="true">First Name</th>
-                                <th>Last Name</th>
-                                <th data-hide="phone, tablet">Job Title</th>
-                                <th data-hide="phone, tablet">DOB</th>
-                                <th data-hide="phone, tablet">Status</th>
+                                <th data-toggle="true">amount</th>
+                                <th>wallet</th>
+                                <th data-hide="all">Deposit date</th>
+                                <th data-hide="all">Status</th>
+                                {{--<th data-hide="all">Image Name</th>--}}
                             </tr>
                             </thead>
                             <div class="form-inline padding-bottom-15">
@@ -153,8 +154,8 @@
                                             <select id="filteringStatus" class="form-control">
                                                 <option value="">Show all</option>
                                                 <option value="active">Active</option>
-                                                <option value="disabled">Disabled</option>
-                                                <option value="suspended">Suspended</option>
+                                                <option value="pending">pending</option>
+                                                <option value="suspended">Rejected</option>
                                             </select>
                                         </div>
                                     </div>
@@ -166,258 +167,17 @@
                                 </div>
                             </div>
                             <tbody>
-                            <tr>
-                                <td>Shona</td>
-                                <td>Woldt</td>
-                                <td>Airline Transport Pilot</td>
-                                <td>3 Oct 2015</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lizzee</td>
-                                <td>Goodlow</td>
-                                <td>Technical Services Librarian</td>
-                                <td>1 Nov 2014</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Isidra</td>
-                                <td>Boudreaux</td>
-                                <td>Traffic Court Referee</td>
-                                <td>22 Jun 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Granville</td>
-                                <td>Leonardo</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>19 Apr 2013</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lauri</td>
-                                <td>Hyland</td>
-                                <td>Blackjack Supervisor</td>
-                                <td>15 Nov 2014</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 2015</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td>Woldt</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>17 Oct 2014</td>
-                                <td>
-                                    <span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lorraine</td>
-                                <td>Mcgaughy</td>
-                                <td>Hemodialysis Technician</td>
-                                <td>11 Nov 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Judi</td>
-                                <td>Badgett</td>
-                                <td>Electrical Lineworker</td>
-                                <td>23 Jun 2013</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Granville</td>
-                                <td>Leonardo</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>19 Apr 2013</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lauri</td>
-                                <td>Hyland</td>
-                                <td>Blackjack Supervisor</td>
-                                <td>15 Nov 2014</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 2015</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td>Woldt</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>17 Oct 2014</td>
-                                <td>
-                                    <span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lorraine</td>
-                                <td>Mcgaughy</td>
-                                <td>Hemodialysis Technician</td>
-                                <td>11 Nov 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Judi</td>
-                                <td>Badgett</td>
-                                <td>Electrical Lineworker</td>
-                                <td>23 Jun 2013</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Granville</td>
-                                <td>Leonardo</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>19 Apr 2013</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lauri</td>
-                                <td>Hyland</td>
-                                <td>Blackjack Supervisor</td>
-                                <td>15 Nov 2014</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 2015</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td>Woldt</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>17 Oct 2014</td>
-                                <td>
-                                    <span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 2015</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td>Woldt</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>17 Oct 2014</td>
-                                <td>
-                                    <span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Easer</td>
-                                <td>Dragoo</td>
-                                <td>Drywall Stripper</td>
-                                <td>13 Dec 2014</td>
-                                <td>
-                                    <span class="label label-table label-success">Active</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maple</td>
-                                <td>Halladay</td>
-                                <td>Aviation Tactical Readiness Officer</td>
-                                <td>30 Dec 2015</td>
-                                <td>
-                                    <span class="label label-table label-danger">Suspended</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Maxine</td>
-                                <td>Woldt</td>
-                                <td>Business Services Sales Representative</td>
-                                <td>17 Oct 2014</td>
-                                <td>
-                                    <span class="label label-table label-dark">Disabled</span>
-                                </td>
-                            </tr>
+                            @foreach($salidas as $deposit)
+                                <tr>
+                                    <td>{!! $deposit['amount'] !!}</td>
+                                    <td>{!! $deposit['wallet'] !!}</td>
+                                    <td>{!! $deposit['created_at'] !!}</td>
+                                    <td>
+                                        <span class="label label-table label-success">{!!$deposit['status']!!}</span>
+                                    </td>
+                                    {{--<td>{!! $deposit['image'] !!}</td>--}}
+                                </tr>
+                            @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
