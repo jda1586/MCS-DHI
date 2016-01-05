@@ -65,7 +65,7 @@
                     <div class="col-md-6">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Standard Mode</h3>
+                                <h3 class="panel-title">Add BitCoins Accounts</h3>
                             </div>
                             <div class="panel-body">
                                 <form class="form-horizontal fv-form fv-form-bootstrap" id="exampleStandardForm"

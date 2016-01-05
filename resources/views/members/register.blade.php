@@ -10,8 +10,8 @@
         <div class="page-content">
             <ol class="breadcrumb">
                 <li><a href="javascript:void(0)">Home</a></li>
-                <li><a href="javascript:void(0)">Tables</a></li>
-                <li class="active">FooTable</li>
+                <li><a href="javascript:void(0)">Members</a></li>
+                <li class="active">Register</li>
             </ol>
             <div class="col-md-4 col-sm-3"></div>
             <div class="col-md-4 col-sm-6">
@@ -26,18 +26,18 @@
                             <input type="radio" class="radio" name="pack" value="1" id="bronce"/>
                             <label for="bronce"><img class="navbar-brand-logo"
                                                      src="/assets/images/logos/BRONZE_PACK.png"
-                                                     title="Remark"></label>
+                                                     title="Remark" style="height: 75px; width: 75px"></label>
                         </div>
                         <div class="some-class" style="display: inline-block; margin: 10px 25px;">
                             <input type="radio" class="radio" name="pack" value="2" id="plata"/>
                             <label for="plata"><img class="navbar-brand-logo"
                                                     src="/assets/images/logos/SILVER_PACK.png"
-                                                    title="Remark"></label>
+                                                    title="Remark" style="height: 75px; width: 75px"></label>
                         </div>
                         <div class="some-class" style="display: inline-block; margin: 10px 25px;">
                             <input type="radio" class="radio" name="pack" value="3" id="oro"/>
                             <label for="oro"><img class="navbar-brand-logo" src="/assets/images/logos/GOLD_PACK.png"
-                                                  title="Remark"></label>
+                                                  title="Remark" style="height: 75px; width: 75px"></label>
                         </div>
                     </div>
                     <div class="form-group">
