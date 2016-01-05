@@ -3,7 +3,7 @@
 @section('head_scripts')
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/coin-slider/coin-slider/coin-slider.js"></script>
-    <link rel="stylesheet" href="/assets/coin-slider/coin-slider/coin-slider-s.css">
+    <link rel="stylesheet" href="/assets/coin-slider/coin-slider/coin-sliders.css">
     <script src="/assets/js/jquery.min.js"></script>
 
 
@@ -17,6 +17,12 @@
     <script src="/assets/examples/js/uikit/carousel.js"></script>
     <script src="/vendor/owl-carousel/owl.carousel.js"></script>
 
+
+    <link rel="stylesheet" href="/vendor/bootstrap-treeview/bootstrap-treeview.css">
+
+    <script src="/vendor/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <script src="/js/components/bootstrap-treeview.js"></script>
+    <script src="/assets/examples/js/advanced/treeview.js"></script>
 
 
 @endsection
