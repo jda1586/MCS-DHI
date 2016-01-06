@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
-        Route::get('/', ['as' => 'wallets', 'uses' => 'WalletsController@index']);
+        Route::get('/', ['as' => 'index', 'uses' => 'WalletsController@index']);
 
     });
     /* Subastas */
