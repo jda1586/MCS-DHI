@@ -25,8 +25,7 @@
                 <div class="col-md-12">
                     <ol class="breadcrumb">
                         <li><a href="javascript:void(0)">Home</a></li>
-                        <li><a href="javascript:void(0)">Tables</a></li>
-                        <li class="active">FooTable</li>
+                        <li class="active">Wallets</li>
                     </ol>
                     <div class="col-md-3" onclick="commissions()">
                         <div class="panel wallets"  id="commissionsBtn" style="background-color: #CED8F6">
