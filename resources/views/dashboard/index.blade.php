@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="/vendor/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="/vendor/slick-carousel/slick.css">
     <link rel="stylesheet" href="/assets/examples/css/uikit/carousel.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-treeview/bootstrap-treeview.css">
+
     <script src="/js/components/owl-carousel.js"></script>
     <script src="/assets/examples/js/uikit/carousel.js"></script>
     <script src="/vendor/owl-carousel/owl.carousel.js"></script>
@@ -126,9 +128,8 @@
                         <div class="example">
                             <div data-plugin="treeview" data-source="getExampleTreeview"
                                  data-expand-icon="icon md-check" data-collapse-icon="icon md-check-circle"
-                                 data-node-icon="icon md-account" data-show-tags="true" id="exampleTagsAsBadges"
-                                 class="treeview">
-                                <ul class="list-group">
+                                 data-node-icon="icon md-account" data-show-tags="true" id="exampleTagsAsBadges">
+                                {{--<ul class="list-group">
                                     <li class="list-group-item node-exampleTagsAsBadges" data-nodeid="0"
                                         style="color:undefined;background-color:undefined;"><span
                                                 class="icon expand-icon md-check"></span><span
@@ -154,7 +155,7 @@
                                                 class="icon"></span><span
                                                 class="icon node-icon md-account"></span>Parent 5<span
                                                 class="badge">0</span></li>
-                                </ul>
+                                </ul>--}}
                             </div>
                         </div>
                     </div>
@@ -234,7 +235,7 @@
                     <!-- Widget -->
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="../../../global/photos/placeholder.png" alt="">
+                            <img class="cover-image overlay-scale" src="/global/photos/placeholder.png" alt="">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -370,4 +371,40 @@
 
 @endsection
 
+@section('script')
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/bootstrap/bootstrap.js"></script>
+    <script src="/vendor/animsition/animsition.js"></script>
+    <script src="/vendor/asscroll/jquery-asScroll.js"></script>
+    <script src="/vendor/mousewheel/jquery.mousewheel.js"></script>
+    <script src="/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+    <script src="/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+    <script src="/vendor/waves/waves.js"></script>
+    <!-- Plugins -->
+    <script src="/vendor/switchery/switchery.min.js"></script>
+    <script src="/vendor/intro-js/intro.js"></script>
+    <script src="/vendor/screenfull/screenfull.js"></script>
+    <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="/vendor/toastr/toastr.js"></script>
+    <script src="/vendor/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+    <!-- Scripts -->
+    <script src="/js/core.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/sections/menu.js"></script>
+    <script src="/assets/js/sections/menubar.js"></script>
+    <script src="/assets/js/sections/sidebar.js"></script>
+    <script src="/js/configs/config-colors.js"></script>
+    <script src="/assets/js/configs/config-tour.js"></script>
+    <script src="/js/components/asscrollable.js"></script>
+    <script src="/js/components/animsition.js"></script>
+    <script src="/js/components/slidepanel.js"></script>
+    <script src="/js/components/switchery.js"></script>
+    <script src="/js/components/tabs.js"></script>
+    <script src="/js/components/toastr.js"></script>
+    <script src="/js/components/bootstrap-treeview.js"></script>
+    <script src="/assets/examples/js/advanced/treeview.js"></script>
 
+
+{{--<script src="/vendor/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+<script src="/assets/examples/js/advanced/treeview.js"></script>--}}
+@endsection
