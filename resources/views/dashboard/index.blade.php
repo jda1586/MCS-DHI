@@ -369,6 +369,107 @@
                     </div>
                     <!-- End Widget -->
                 </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <!-- Widget -->
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Widget -->
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <!-- Widget -->
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Widget -->
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <!-- Widget -->
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Widget -->
+                </div>
+
+
             </div>
         </div>
     </div>
