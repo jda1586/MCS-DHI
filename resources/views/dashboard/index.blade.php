@@ -175,7 +175,7 @@
                     <!-- Widget -->
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="../../../global/photos/placeholder.png" alt="">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -208,7 +208,7 @@
                     <!-- Widget -->
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="../../../global/photos/placeholder.png" alt="">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -241,7 +241,7 @@
                     <!-- Widget -->
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/global/photos/placeholder.png" alt="">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -274,7 +274,7 @@
                     <!-- Widget -->
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="../../../global/photos/placeholder.png" alt="">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -307,7 +307,7 @@
                     <!-- Widget -->
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="../../../global/photos/placeholder.png" alt="">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -340,7 +340,7 @@
                     <!-- Widget -->
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="../../../global/photos/placeholder.png" alt="">
+                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house.png" alt="">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
