@@ -337,8 +337,6 @@
 @endsection
 
 @section('script')
-    <script src="/vendor/jquery/jquery.js"></script>
-    <script src="/vendor/bootstrap/bootstrap.js"></script>
     <script src="/vendor/animsition/animsition.js"></script>
     <script src="/vendor/asscroll/jquery-asScroll.js"></script>
     <script src="/vendor/mousewheel/jquery.mousewheel.js"></script>
