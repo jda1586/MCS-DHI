@@ -49,7 +49,7 @@
            left: 0px; right: 0px;
            top: 0px; bottom: 0px;
            background-color: white;
-           z-index: 99; width: 100%" >
+           z-index: 99; width: 100%">
     <div style="margin-top:100px;position: absolute;left:50%;margin-left:-30px">
         <div class="loader-wrapper loader-lg active" style="width:68px;height:68px">
             <div class="loader-layer loader-blue-only" style="width:68px;height: 68px">
@@ -273,7 +273,7 @@
                     <li class="site-menu-item">
                         <a class="animsition-link" href="#">
                             <i class="site-menu-icon md-money" aria-hidden="true"></i>
-                            <span class="site-menu-title">Subastas</span>
+                            <span class="site-menu-title">Acutions</span>
                         </a>
                     </li>
                     <li class="site-menu-item has-sub">
@@ -313,12 +313,12 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('trees.binary') !!}">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Binary Tree</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('trees.unilevel') !!}">
+                                <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Unilevel Tree</span>
                                 </a>
                             </li>

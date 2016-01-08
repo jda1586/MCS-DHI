@@ -28,14 +28,14 @@
                         <li class="active">Wallets</li>
                     </ol>
                     <div class="col-md-3" onclick="commissions()">
-                        <div class="panel wallets"  id="commissionsBtn" style="background-color: #CED8F6">
+                        <div class="panel wallets" id="commissionsBtn" style="background-color: #CED8F6">
                             <p>Commissions</p>
                             <div class="current">
                                 <h3 class="title"> $ - 8545854</h3>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3" onclick="activations()" >
+                    <div class="col-md-3" onclick="activations()">
                         <div class="panel wallets" id="activationsBtn">
                             <p>Activations</p>
                             <div class="current">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3" onclick="utilities()" >
+                    <div class="col-md-3" onclick="utilities()">
                         <div class="panel wallets" id="utilitiesBtn">
                             <p>Utilities</p>
                             <div class="current">
@@ -51,7 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3" onclick="auctions()" >
+                    <div class="col-md-3" onclick="auctions()">
                         <div class="panel wallets" id="auctionsBtn">
                             <p>Auctions</p>
                             <div class="current">
@@ -72,7 +72,7 @@
                                     <button type="submit" class="fv-hidden-submit"
                                             style="display: none; width: 0px; height: 0px;"></button>
                                     <div class="form-group form-material">
-                                        <label class="col-sm-3 control-label">Full name</label>
+                                        <label class="col-sm-3 control-label">Name Account</label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" name="standard_fullName"
                                                    data-fv-field="standard_fullName">
@@ -83,22 +83,21 @@
                                         </div>
                                     </div>
                                     <div class="form-group form-material">
-                                        <label class="col-sm-3 control-label">Email</label>
+                                        <label class="col-sm-3 control-label">Account Number</label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" name="standard_email"
                                                    data-fv-field="standard_email">
                                             <small class="help-block" data-fv-validator="notEmpty"
                                                    data-fv-for="standard_email" data-fv-result="NOT_VALIDATED"
-                                                   style="display: none;">The email address is required and cannot be
+                                                   style="display: none;">The account number is required and cannot be
                                                 empty
-                                            </small>
-                                            <small class="help-block" data-fv-validator="emailAddress"
-                                                   data-fv-for="standard_email" data-fv-result="NOT_VALIDATED"
-                                                   style="display: none;">The email address is not valid
                                             </small>
                                         </div>
                                     </div>
                                     <div class="text-right">
+                                        <button type="button" class="btn btn-primary waves-effect waves-light"
+                                                id="validateButton1">Token
+                                        </button>
                                         <button type="submit" class="btn btn-primary waves-effect waves-light"
                                                 id="validateButton2">Submit
                                         </button>
@@ -111,7 +110,7 @@
                                             <tr>
                                                 <th>Name</th>
                                                 <th>Acount</th>
-                                                <th class="text-nowrap">Action</th>
+                                                <th class="text-nowrap">Action Report</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -137,19 +136,17 @@
                                                     </button>
                                                 </td>
                                             </tr>
-
                                             </tbody>
                                         </table>
-                                    </div>
+                                    </div>M
                                 </div>
-
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6" id="commissions">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Commissions</h3>
+                                <h3 class="panel-title">Commissions Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -173,20 +170,18 @@
                                                 <td>Lunar probe project</td>
                                                 <td>Lunar probe project</td>
                                             </tr>
-
                                             </tbody>
                                         </table>
                                     </div>
+                                    <a href="javascript:void(0);">See all movements</a>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                     <div class="col-md-6" style="display:none;" id="activations">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Activations</h3>
+                                <h3 class="panel-title">Activations Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -210,20 +205,18 @@
                                                 <td>Lunar probe project</td>
                                                 <td>Lunar probe project</td>
                                             </tr>
-
                                             </tbody>
                                         </table>
                                     </div>
+                                    <a href="javascript:void(0);">See all movements</a>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                     <div class="col-md-6" style="display:none;" id="utilities">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Utilities</h3>
+                                <h3 class="panel-title">Utilities Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -247,14 +240,12 @@
                                                 <td>Lunar probe project</td>
                                                 <td>Lunar probe project</td>
                                             </tr>
-
                                             </tbody>
                                         </table>
                                     </div>
+                                    <a href="javascript:void(0);">See all movements</a>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                     <div class="col-md-6" style="display: none" id="auctions">
@@ -284,18 +275,14 @@
                                                 <td>Lunar probe project</td>
                                                 <td>Lunar probe project</td>
                                             </tr>
-
                                             </tbody>
                                         </table>
                                     </div>
+                                    <a href="javascript:void(0);">See all movements</a>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -309,8 +296,7 @@
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}{{--tablas--}}
     <script type="text/javascript">
 
-        function commissions()
-        {
+        function commissions() {
             document.getElementById("commissionsBtn").style.backgroundColor = "#CED8F6";
             document.getElementById("activationsBtn").style.backgroundColor = "white";
             document.getElementById("utilitiesBtn").style.backgroundColor = "white";
@@ -320,8 +306,7 @@
             document.getElementById("utilities").style.display = "none";
             document.getElementById("auctions").style.display = "none";
         }
-        function activations()
-        {
+        function activations() {
             document.getElementById("commissionsBtn").style.backgroundColor = "white";
             document.getElementById("activationsBtn").style.backgroundColor = "#CED8F6";
             document.getElementById("utilitiesBtn").style.backgroundColor = "white";
@@ -332,8 +317,7 @@
             document.getElementById("auctions").style.display = "none";
         }
 
-        function utilities()
-        {
+        function utilities() {
             document.getElementById("commissionsBtn").style.backgroundColor = "white";
             document.getElementById("activationsBtn").style.backgroundColor = "white";
             document.getElementById("utilitiesBtn").style.backgroundColor = "#CED8F6";
@@ -344,8 +328,7 @@
             document.getElementById("auctions").style.display = "none";
         }
 
-        function auctions()
-        {
+        function auctions() {
             document.getElementById("commissionsBtn").style.backgroundColor = "white";
             document.getElementById("activationsBtn").style.backgroundColor = "white";
             document.getElementById("utilitiesBtn").style.backgroundColor = "white";
