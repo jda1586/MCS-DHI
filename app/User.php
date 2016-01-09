@@ -10,6 +10,34 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
+/**
+ * DHI\User
+ *
+ * @property integer $id
+ * @property string $user
+ * @property string $password
+ * @property string $email
+ * @property string $name
+ * @property string $lastname
+ * @property string $birthdate
+ * @property string $phone
+ * @property string $address
+ * @property string $renew
+ * @property integer $product_id
+ * @property integer $rol_id
+ * @property string $status
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property string $remember_token
+ * @property-read \DHI\UserWallet $wallets
+ * @property-read \DHI\UserPayment $payment
+ * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\UserPayment[] $sponsored_payments
+ * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\UserMovement[] $movements
+ * @property-read \DHI\Product $product
+ * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\UserDeposit[] $deposits
+ * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\UserCashout[] $cashout
+ * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\BitcoinAccount[] $bitcoin_accounts
+ */
 class User extends Model implements AuthenticatableContract,
     AuthorizableContract,
     CanResetPasswordContract
@@ -28,7 +56,10 @@ class User extends Model implements AuthenticatableContract,
      *
      * @var array
      */
-    protected $fillable = ['user', 'password', 'email', 'name', 'lastname', 'birthday', 'phone', 'address', 'renew', 'product_id', 'rol_id', 'status'];
+    protected $fillable = [
+        'user', 'password', 'email', 'name', 'lastname', 'birthday', 'phone',
+        'address', 'renew', 'product_id', 'rol_id', 'status', 'skype', 'whatsapp'
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -66,6 +97,16 @@ class User extends Model implements AuthenticatableContract,
     public function deposits()
     {
         return $this->hasMany('DHI\UserDeposit');
+    }
+
+    public function cashout()
+    {
+        return $this->hasMany('DHI\UserCashout');
+    }
+
+    public function bitcoin_accounts()
+    {
+        return $this->hasMany('DHI\BitcoinAccount');
     }
 // fin relaciones
 }

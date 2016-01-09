@@ -2,6 +2,7 @@
 
 namespace DHI\Http\Controllers;
 
+use DHI\User;
 use Illuminate\Http\Request;
 
 use DHI\Http\Requests;
