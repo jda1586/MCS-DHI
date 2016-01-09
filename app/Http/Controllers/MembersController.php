@@ -10,6 +10,7 @@ use DHI\Http\Requests;
 use DHI\Http\Controllers\Controller;
 use Input;
 use Validator;
+use DHI\User;
 
 class MembersController extends Controller
 {
