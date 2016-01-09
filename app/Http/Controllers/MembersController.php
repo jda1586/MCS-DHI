@@ -26,7 +26,7 @@ class MembersController extends Controller
             'lastname' => 'required',
             'user' => 'required|unique:users,user',
             'country' => 'required',
-            'email' => 'required',
+            'email' => 'required|confirmed',
             'password' => 'required|confirmed',
             'phone' => 'required',
         ]);
@@ -43,8 +43,9 @@ class MembersController extends Controller
                 'renew' => '0000-00-00',
                 'product_id' => Input::get('product_id'),
                 'rol_id' => Input::get('rol_id'),
-                'status' => 'pending '
-            ])) {
+                'status' => 'pending'
+            ])
+            ) {
 
             }
         } else {
