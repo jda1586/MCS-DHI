@@ -224,7 +224,7 @@
             <!-- End Navbar Toolbar Right -->
             <div class="navbar-brand navbar-brand-center">
                 <a href="{{route('home') }}">
-                    <img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Remark">
+                    <img class="navbar-brand-logo" src="/assets/images/logos/dream_house_200.png" title="Home">
                 </a>
             </div>
         </div>

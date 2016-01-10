@@ -42,10 +42,39 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if ($e instanceof ModelNotFoundException) {
+        /*if ($e instanceof ModelNotFoundException) {
             $e = new NotFoundHttpException($e->getMessage(), $e);
         }
-
-        return parent::render($request, $e);
+        return parent::render($request, $e);*/
+        $debug = env('APP_DEBUG');
+//        echo $debug;
+        if ($debug == 0) {  //si es falso no esta en modo debug y muestra la pagina
+//            echo $debug.'<br>  entro a 0';
+            if ($this->isHttpException($e)) {
+//                echo '<br> entro isHttpException ';
+                return $this->renderHttpException($e);
+            } else if ($e instanceof NotFoundHttpException) {
+//                echo '<br> entro no encontrado ';
+                return response()->view('errors.404', [], 400);
+            }elseif ($e instanceof FatalErrorException) {
+//                    dd('error fatal');
+                    return response()->view('errors.500', [], 500);
+            }elseif ($e instanceof handleError) {
+//                dd('exeption');
+                return response()->view('errors.500', [], 500);
+            }elseif ($e instanceof ModelNotFoundException) {
+                return response()->view('errors.500', [], 500);
+            }else
+            {
+//                dd('ninguno');
+                return response()->view('errors.500', [], 500);
+            }
+        }else if($debug == 1) {     //si es verdadero esta en modo debug y muestra el error
+            echo '<br> entro a 1';
+            if ($e instanceof ModelNotFoundException) {
+                $e = new NotFoundHttpException($e->getMessage(), $e);
+            }
+            return parent::render($request, $e);
+        }
     }
 }
