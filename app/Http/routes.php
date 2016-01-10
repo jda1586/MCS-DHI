@@ -23,6 +23,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
         Route::get('/register', ['as' => 'register', 'uses' => 'MembersController@register']);
         Route::post('/register/store', ['as' => 'store', 'uses' => 'MembersController@store']);
+        Route::get('/register/payment/{id}', ['as' => 'payment', 'uses' => 'MembersController@payment']);
+
         Route::get('/profile', ['as' => 'profile', 'uses' => 'MembersController@profile']);
         Route::get('/commissions', ['as' => 'commissions', 'uses' => 'MembersController@commissions']);
         Route::get('/organization', ['as' => 'organization', 'uses' => 'MembersController@organization']);

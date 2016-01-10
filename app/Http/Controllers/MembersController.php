@@ -44,33 +44,45 @@ class MembersController extends Controller
                 'renew' => '0000-00-00',
                 'product_id' => Input::get('product_id'),
                 'rol_id' => Input::get('rol_id'),
-                'status' => 'pending'
+                'status' => 'pending',
+                'skype' => Input::has('skype') ? Input::get('skype') : '',
+                'whatsapp' => Input::has('whatsapp') ? Input::get('whatsapp') : '',
             ])
             ) {
+                $new_user->trees()->create([
+                    'parent_id' => 0,
+                    'position' => 0,
+                    'sponsor_id' => auth()->user()->id,
+                    'matrix_parent' => 0,
+                    'product_id' => Input::get('product_id')
+                ]);
+                $new_user->wallets()->create([
+                    'activation' => 0,
+                    'commission' => 0,
+                    'auction' => 0,
+                    'utilities' => 0,
+                    'balance' => 0,
+                    'responsible_id' => 0,
+                ]);
 
+                return redirect()->route();
             }
         } else {
             return redirect()->route('members.register')->withErrors($validator);
         }
     }
 
-    public function profile()
+    public function payment($id)
     {
-        return view('members.profile', ['user' => Auth::User()]);
-    }
-
-    public function email()
-    {
-        return view('emails.welcome');
-    }
-
-    public function commissions()
-    {
-        return view('members.commissions');
-    }
-
-    public function organization()
-    {
-        return view('members.organization');
+        $new_user = User::find($id);
+        if ($new_user) {
+            if (auth()->user()->wallets->activation >= $new_user->product->price) {
+                return view('members.payment');
+            } else {
+                return view('members.payment_out');
+            }
+        } else {
+            return redirect()->route('members.organization');
+        }
     }
 }

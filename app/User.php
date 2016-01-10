@@ -108,5 +108,10 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('DHI\BitcoinAccount');
     }
+
+    public function trees()
+    {
+        return $this->hasOne('DHI\UserTree');
+    }
 // fin relaciones
 }
