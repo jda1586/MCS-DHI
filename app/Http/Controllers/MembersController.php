@@ -85,4 +85,10 @@ class MembersController extends Controller
             return redirect()->route('members.organization');
         }
     }
+
+//    ruta temporal para vista de admin (mandar dinero a sus miembros )
+    public function admin()
+    {
+        return view('admin.members');
+    }
 }

@@ -50,7 +50,7 @@
                                placeholder="Lastname">
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="inputUsername">Email</label>
+                        <label class="sr-only" for="inputUsername">Username</label>
                         <input type="text" class="form-control" id="inputUsername" name="user"
                                placeholder="Username">
                     </div>
@@ -67,13 +67,16 @@
                                 <option value="Ecuador">Ecuador</option>
                                 <option value="Puerto Rico">Puerto Rico</option>
                                 <option value="Panama">Panama</option>
-                                <option value="Cuba">Cuba</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="inputEmail">Email</label>
                         <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="inputEmail">Email Confirm</label>
+                        <input type="email" class="form-control" id="inputEmailConfirm" name="email_confirm" placeholder="Email Confirm">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="inputPassword">Password</label>
@@ -86,8 +89,16 @@
                                placeholder="Confirm Password">
                     </div>
                     <div class="form-group">
-                        <label class="sr-only" for="inputPhone">Retype Password</label>
-                        <input type="text" class="form-control" id="inputPhone" name="phone" placeholder="Phone">
+                        <label class="sr-only" for="inputPhone">Phone</label>
+                        <input type="text" class="form-control" id="Phone" name="phone" placeholder="Phone">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="inputPhone">Sype</label>
+                        <input type="text" class="form-control" id="Skype" name="skype" placeholder="Skype">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="inputPhone">Whatsapp</label>
+                        <input type="text" class="form-control" id="Whatsapp" name="whatsapp" placeholder="Whatsapp">
                     </div>
                     <div class="form-group clearfix">
                         <div class="checkbox-custom checkbox-inline checkbox-primary pull-left">

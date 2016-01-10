@@ -329,6 +329,30 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="site-menu-item has-sub">
+                        <a href="javascript:void(0)">
+                            <i class="site-menu-icon md-download" aria-hidden="true"></i>
+                            <span class="site-menu-title">Tools</span>
+                            <span class="site-menu-arrow"></span>
+                        </a>
+                        <ul class="site-menu-sub">
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Video´s</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Presentation´s</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Pdf´s</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

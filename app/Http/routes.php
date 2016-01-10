@@ -56,4 +56,7 @@ Route::group([], function () {
 
 //    ruta temporal para correo
     Route::get('/email',['as' => 'email', 'uses' => 'MembersController@email']);
+
+//    ruta temporal para vistas
+    Route::get('admin', ['as' => 'admin', 'uses' => 'MembersController@admin']);
 });
