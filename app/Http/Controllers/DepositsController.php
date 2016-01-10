@@ -59,7 +59,7 @@ class DepositsController extends Controller
                 $fileName = Hash::make(Input::file('image')->getClientOriginalName()).'.'.$extension;   //creo el nuevo nombre con hash del nombre anterior y le agrego la extencion
             }
             else {      //si la imagen se subio mal se regresa a la vista principal con error
-                return redirect()->route('deposits')->withErrors($validator);
+                return redirect()->route('wallets.deposits')->withErrors($validator);
             }
             /*if(preg_match("/^[0-9]/", $cantidad) ){
                 echo 'son iguales <br>'.$cantidad;
@@ -76,15 +76,15 @@ class DepositsController extends Controller
             ){      //si se guardo la informacion ahoa si muevo el archivo
                 echo 'se guardo';
                 Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
-                return redirect()->route('deposits')->with('success', 'registro-success');
+                return redirect()->route('wallets.deposits')->with('success', 'registro-success');
             }else{
                 echo 'no se guardo';
-                return redirect()->route('deposits')->withErrors($validator);
+                return redirect()->route('wallets.deposits')->withErrors($validator);
             }
         }else{
 //            echo 'ase falta archivo';
 //            dd($validator);
-            return redirect()->route('deposits')->withErrors($validator);
+            return redirect()->route('wallets.deposits')->withErrors($validator);
         }
     }
 

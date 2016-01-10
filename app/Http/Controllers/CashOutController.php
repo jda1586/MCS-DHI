@@ -10,15 +10,16 @@ namespace DHI\Http\Controllers;
 
 use DHI\Http\Requests;
 use DHI\Http\Controllers\Controller;
+use DHI\UserCashout;
 use Validator;
 use Input;
-use DHI\UserDeposit;
+
 
 class CashOutController extends Controller
 {
     public function index()
     {
-        $salidas = UserDeposit::where('user_id', Auth()->user()->getAuthIdentifier())->take(10)->get();
+        $salidas = UserCashout::where('user_id', Auth()->user()->getAuthIdentifier())->take(10)->get();
         return view('wallets.cashout',['salidas'=> $salidas]);
 //        return redirect()->route('finance::index');
     }
