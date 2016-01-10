@@ -398,7 +398,7 @@
                             max:30
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z]+$/,
+                            regexp: /^[a-zA-Z ]+$/,
                             message: 'only letters allowed'
                         }
                     }
@@ -413,7 +413,7 @@
                             max:30
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z]+$/,
+                            regexp: /^[a-zA-Z ]+$/,
                             message: 'only letters allowed'
                         }
                     }

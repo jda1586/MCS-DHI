@@ -4,8 +4,6 @@
     <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
     <script src="/js/components/formatter-js.js"></script>
     <link rel="stylesheet" href="/assets/examples/css/forms/masks.css">
-
-
 @endsection
 
 @section('content')
@@ -142,7 +140,5 @@
     {!! HTML::script('vendor/formvalidation/formValidation.min.js') !!}
     {!! HTML::script('vendor/formvalidation/framework/bootstrap.min.js') !!}
     {!! HTML::script('validator.js') !!}
-    <script src="/js/components/formatter-js.js"></script>
-    <script src="/vendor/formatter-js/jquery.formatter.js"></script>
 
 @endsection
