@@ -41,16 +41,17 @@
                         </div>
                         <div id="msj" class="col-md-7 col-md-offset-0" style="float: right; height: 50%">
                             <div style="margin: auto; height: 100px">
-                                <h3>ahead!</h3>
+                                <h3>ups!</h3>
                                 <span>
-                                    You're just one step, < name > pay package and start enjoying the benefits
+                                    you do not have the necessary funds
+                                </span><br>
+                                <span>
+                                    We invite you to make a deposit
                                 </span>
                             </div>
                             <div>
                                 <div style="float: right; margin-right: 50px">
-                                    <button class="btn btn-info waves-effect waves-light" style="width:110px; margin: 20px" type="button">cancel</button>
-
-                                    <button class="btn btn-info waves-effect waves-light" style="width: 110px" type="button">pay</button>
+                                    <button class="btn btn-info waves-effect waves-light" style="width:110px; margin: 20px" type="button">accept</button>
                                 </div>
                             </div>
                         </div>
