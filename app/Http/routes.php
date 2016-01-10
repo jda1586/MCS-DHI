@@ -32,7 +32,10 @@ Route::group(['middleware' => 'auth'], function () {
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
         Route::get('/', ['as' => 'index', 'uses' => 'WalletsController@index']);
-
+        Route::get('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@index']);
+        Route::post('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@deposits']);
+        Route::get('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@index']);
+        Route::post('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@cashOut']);
     });
     /* Subastas */
     Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
@@ -44,10 +47,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
 
-    Route::get('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@index']);
-    Route::post('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@deposits']);
-    Route::get('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@index']);
-    Route::post('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@cashOut']);
 });
 
 Route::group([], function () {
