@@ -13,14 +13,19 @@
     <img src="/assets/images/logos/dream_house_200.png" alt="">
 </div>
 <div style="width: 75%; margin: auto;">
-    <h2>Confirma tu Email </h2>
+    <h2>Welcome to Dream House </h2>
     <div>
-        <p>Estimado: {{''}}  gracias por registrarse en DreamHouse Industrie.<br>
-            Para poder acceder a la plataforma de Publisher solo necesitas confirmar tu cuenta haciendo click en el siguiente link:<br>
-            <a href="{{ ''}}"> confirmar registro</a>
+        <p>Estimado: {{''}} .<br>
+            Te damos la bienvenida a la mas grande oportunidad de tu vida. A continuacion te entregamos el acceso a la plataforma de  DreamHose International.<br><br>
+            User: jose  <br>
+            Password: 123456789    <br><br>
+
+            Bienvenido!
         </p>
-        <p>Atentamente:</p>
-        <p>DreamHouse Industrie.</p>
+        <p>Atentamente: <br>
+            DreamHouse International.
+        </p>
+
 
         {{--<p>Este correo se genero de forma automatica, no contestar. Si usted tiene alguna duda mandar un correo a la siguente dirección: "soporte&#64;enera.mx"</p>--}}
     </div>
