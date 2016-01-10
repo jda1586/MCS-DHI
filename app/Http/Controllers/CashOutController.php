@@ -19,7 +19,7 @@ class CashOutController extends Controller
     public function index()
     {
         $salidas = UserDeposit::where('user_id', Auth()->user()->getAuthIdentifier())->take(10)->get();
-        return view('deposits.cashout',['salidas'=> $salidas]);
+        return view('wallets.cashout',['salidas'=> $salidas]);
 //        return redirect()->route('finance::index');
     }
 

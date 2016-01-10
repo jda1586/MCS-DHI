@@ -289,12 +289,12 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('cashout') !!}">
+                                <a class="animsition-link" href="{!! route('wallets.cashout') !!}">
                                     <span class="site-menu-title">Cashouts</span>
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('deposits') !!}">
+                                <a class="animsition-link" href="{!! route('wallets.deposits') !!}">
                                     <span class="site-menu-title">Deposits</span>
                                 </a>
                             </li>

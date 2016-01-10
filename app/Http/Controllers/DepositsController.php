@@ -24,7 +24,7 @@ class DepositsController extends Controller
         //sacar la lista de de depositos que tiene este usuario
         $depositos = UserDeposit::where('user_id', Auth()->user()->getAuthIdentifier())->take(10)->get();
 //        dd($depositos);
-        return view('deposits.index',['depositos' => $depositos]);
+        return view('wallets.deposits',['depositos' => $depositos]);
     }
 
     public function cashOut()
