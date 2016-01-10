@@ -25,6 +25,7 @@ class MembersController extends Controller
             'pack' => 'required|exists:products,id',
             'name' => 'required',
             'lastname' => 'required',
+            'birthday' => 'required',
             'user' => 'required|unique:users,user',
             'country' => 'required',
             'email' => 'required|confirmed',
@@ -84,5 +85,10 @@ class MembersController extends Controller
         } else {
             return redirect()->route('members.organization');
         }
+    }
+
+    public function payment_store()
+    {
+
     }
 }
