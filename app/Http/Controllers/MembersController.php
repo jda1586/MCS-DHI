@@ -56,7 +56,8 @@ class MembersController extends Controller
                     'position' => 0,
                     'sponsor_id' => auth()->user()->id,
                     'matrix_parent' => 0,
-                    'product_id' => Input::get('product_id')
+                    'matrix_position' => 0,
+                    'product_id' => Input::get('pack')
                 ]);
                 $new_user->wallets()->create([
                     'activation' => 0,

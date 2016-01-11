@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class UserTree extends Model
 {
-    protected $fillable = ['user_id', 'parent_id', 'position', 'sponsor_id', 'matrix_parent', 'product_id'];
+    protected $fillable = ['user_id', 'parent_id', 'position', 'sponsor_id', 'matrix_parent','matrix_position', 'product_id'];
 
     // relaciones
     public function user()
