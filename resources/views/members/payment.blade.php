@@ -37,14 +37,14 @@
                 <div class="panel-body">
                     <div id="wrapper-main" class="col-md-10 col-md-offset-0">
                         <div id="producto" class="col-md-5 col-md-offset-0" style="float: left">
-                            <img src="/assets/images/logos/{!! $paquete !!}" alt="">
-                            <div id="precio" class="" style="margin:15px;padding-left:40px; "> ${!! $precio !!}</div>
+                            <img src="/assets/images/logos/{!! $new_user->product->image['url'] !!}" alt="">
+                            <div id="precio" class="" style="margin:15px;padding-left:40px; "> ${!! $new_user->product->price !!}</div>
                         </div>
                         <div id="msj" class="col-md-7 col-md-offset-0" style="float: right; height: 50%">
                             <div style="margin: auto; height: 100px">
                                 <h3>ahead!</h3>
                                 <span>
-                                    You're just one step, {!! $name !!} pay package and start enjoying the benefits
+                                    You're just one step, {!! $new_user->name !!} pay package and start enjoying the benefits
                                 </span>
                             </div>
                             <div>

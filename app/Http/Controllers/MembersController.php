@@ -80,7 +80,9 @@ class MembersController extends Controller
         $new_user = User::find($id);
         if ($new_user) {
             if (auth()->user()->wallets->activation >= $new_user->product->price) {
-                return view('members.payment');
+                return view('members.payment', [
+                    'new_user' => $new_user,
+                ]);
             } else {
                 return view('members.payment_out');
             }
@@ -92,9 +94,9 @@ class MembersController extends Controller
     public function payment_store($id)
     {
         $new_user = User::find($id);
-        if ($new_user) {
+        if ($new_user && $new_user->status == 'pending') {
             $validator = Validator::make(Input::all(), [
-                'price' => 'required',
+                'pack' => 'required',
             ]);
             if ($validator->passes()) {
 

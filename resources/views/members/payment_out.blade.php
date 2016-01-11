@@ -36,8 +36,9 @@
                 <div class="panel-body">
                     <div id="wrapper-main" class="col-md-10 col-md-offset-0">
                         <div id="producto" class="col-md-5 col-md-offset-0" style="float: left">
-                            <img src="/assets/images/logos/{!! $paquete !!}" alt="">
-                            <div id="precio" class="" style="margin:15px;padding-left:40px; ">${!! $precio !!} </div>
+                            <img src="/assets/images/logos/{!! $new_user->product->image['url'] !!}" alt="">
+                            <div id="precio" class="" style="margin:15px;padding-left:40px; ">
+                                ${!! $new_user->product->price !!}</div>
                         </div>
                         <div id="msj" class="col-md-7 col-md-offset-0" style="float: right; height: 50%">
                             <div style="margin: auto; height: 100px">
@@ -54,7 +55,8 @@
                                     {{--<button class="btn btn-info waves-effect waves-light" style="width:110px; margin: 20px" type="button">
                                         <a href="#" onclick="window.location='/wallets/deposits' " style="width: 100%;height: 100%;color: white">accept</a>
                                     </button>--}}
-                                    <button id="refil" class="btn btn-info waves-effect waves-light" style="width:110px; margin: 20px" type="button" >
+                                    <button id="refil" class="btn btn-info waves-effect waves-light"
+                                            style="width:110px; margin: 20px" type="button">
                                         accept
                                     </button>
                                 </div>
@@ -72,7 +74,7 @@
         var btn = $("#refil");
         btn.click(function () {
             console.log('click en el boton');
-            window.location.href ='/wallets/deposits';
+            window.location.href = '/wallets/deposits';
         });
     </script>
 
