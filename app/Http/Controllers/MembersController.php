@@ -68,7 +68,9 @@ class MembersController extends Controller
                     'responsible_id' => 0,
                 ]);
 
-                return redirect()->route('members.payment');
+                return redirect()->route('members.payment', [
+                    'id' => $new_user->id
+                ]);
             }
         } else {
             return redirect()->route('members.register')->withErrors($validator);
