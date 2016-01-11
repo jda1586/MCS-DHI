@@ -45,7 +45,7 @@ class MembersController extends Controller
                 'address' => Input::has('address')?Input::get('address'):'---',
                 'renew' => date('Y-m-d'),
                 'product_id' => Input::get('pack'),
-                'rol_id' => Input::get('rol_id'),
+                'rol_id' => 1,
                 'status' => 'pending',
                 'skype' => Input::has('skype') ? Input::get('skype') : '',
                 'whatsapp' => Input::has('whatsapp') ? Input::get('whatsapp') : '',
