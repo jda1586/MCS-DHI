@@ -42,7 +42,7 @@ class MembersController extends Controller
                 'lastname' => Input::get('lastname'),
                 'birthday' => Input::get('birthday'),
                 'phone' => Input::get('phone'),
-                'address' => Input::has('address')?Input::get('address'):'---',
+                'address' => Input::has('address') ? Input::get('address') : '---',
                 'renew' => date('Y-m-d'),
                 'product_id' => Input::get('pack'),
                 'rol_id' => 1,
@@ -68,7 +68,7 @@ class MembersController extends Controller
                     'responsible_id' => 0,
                 ]);
 
-                return redirect()->route();
+                return redirect()->route('members.payment');
             }
         } else {
             return redirect()->route('members.register')->withErrors($validator);
