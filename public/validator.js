@@ -348,8 +348,8 @@
                             min: 3
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z]+$/,
-                            message: 'only letters allowed'
+                            regexp: /^[a-zA-Z1-9]+$/,
+                            message: 'only letters and numbers allowed'
                         }
                     }
                 },

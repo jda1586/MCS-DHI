@@ -44,21 +44,16 @@ class DepositsController extends Controller
             'inputLableautyRadio'=>'required'
         ]);
 
-//        $file = array('image' => Input::file('image'));
-//        dd($file);
-
         if ($validator->passes()) {
 //            $wallet = UserDeposit::where('user_id','=',Auth()->user()->getAuthIdentifier())->first();
             $cartera=Input::get('inputLableautyRadio');
             $cantidad= Input::get('amount');
             $fileName= '';
             if (Input::file('image')->isValid()) { // si se subio todo hago los preparativos para moverlo a public
-//                echo '<br> es valdio';
                 $destinationPath = 'uploads'; // carpeta a donde se va a mover
                 $extension = Input::file('image')->getClientOriginalExtension(); // obtengo la extencion de la imagen para agregarsela al nuevo nombre
                 $fileName = Hash::make(Input::file('image')->getClientOriginalName()).'.'.$extension;   //creo el nuevo nombre con hash del nombre anterior y le agrego la extencion
-            }
-            else {      //si la imagen se subio mal se regresa a la vista principal con error
+            }else {      //si la imagen se subio mal se regresa a la vista principal con error
                 return redirect()->route('wallets.deposits')->withErrors($validator);
             }
             /*if(preg_match("/^[0-9]/", $cantidad) ){

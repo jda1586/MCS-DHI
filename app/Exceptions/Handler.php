@@ -70,7 +70,7 @@ class Handler extends ExceptionHandler
                 return response()->view('errors.500', [], 500);
             }
         }else if($debug == 1) {     //si es verdadero esta en modo debug y muestra el error
-            echo '<br> entro a 1';
+//            echo '<br> entro a 1';
             if ($e instanceof ModelNotFoundException) {
                 $e = new NotFoundHttpException($e->getMessage(), $e);
             }
