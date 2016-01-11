@@ -76,8 +76,8 @@
                         <label class="sr-only" for="inputBirthday">Birthday</label>
                         {{--<input type="text" class="form-control" id="inputBirthday" name="birthday"--}}
                                {{--placeholder="Birthday" data-plugin="datepicker">--}}
-                            <input type="text" class="form-control" id="inputDate2" data-plugin="formatter" data-pattern="[[99]]/[[99]]/[[9999]]">
-                            <p class="help-block">01/01/2015</p>
+                            <input name="birthday" type="text" class="form-control" id="inputDate2" data-plugin="formatter" data-pattern="[[9999]]/[[99]]/[[99]]">
+                            <p class="help-block">YYYY/MM/DD</p>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="inputEmail">Email</label>
@@ -117,11 +117,10 @@
                         </div>
                         <p class="margin-left-35">By clicking Sign Up, you agree to our <a href="#">Terms</a>.</p>
                     </div>
-                    <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                     <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Sign Up
                     </button>
                     {!! Form::close() !!}
-                    <p>Have account already? Please go to <a href="login-v2.html">Sign In</a></p>
+                    <p>Have account already? Please go to <a href="#">Sign In</a></p>
                 </div>
             </div>
             <div class="col-md-4 col-sm-3"></div>

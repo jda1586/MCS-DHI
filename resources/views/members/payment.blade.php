@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
     <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
     <link rel="stylesheet" href="/vendor/footable/footable.css">
+    <link rel="stylesheet" href="/assets/examples/css/forms/masks.css">
 @endsection
 
 @section('content')
@@ -48,12 +49,17 @@
                             </div>
                             <div>
                                 <div style="float: right; margin-right: 50px">
-                                    <button id="cancel" class="btn btn-info waves-effect waves-light" style="width:110px; margin: 20px" type="button">
-                                        cancel</a></button>
+                                    <button id="cancel" class="btn btn-info waves-effect waves-light"
+                                            style="width:110px; margin: 20px" type="button">
+                                        Cancel
+                                    </button>
                                     {{--<a href="#" onclick="window.location='/members/register' " style="width: 100%;height: 100%;color: white">--}}
-{{--                                    {{ Form::open() }}--}}
-                                    <button class="btn btn-info waves-effect waves-light" style="width: 110px" type="submit">pay</button>
-{{--                                    {{ Form::close() }}--}}
+                                    {{--{{ Form::open() }}--}}
+                                    <button class="btn btn-info waves-effect waves-light" style="width: 110px"
+                                            type="submit">
+                                        Pay
+                                    </button>
+                                    {{--{{ Form::close() }}--}}
                                 </div>
                             </div>
                         </div>
@@ -69,7 +75,7 @@
         var btn = $("#cancel");
         btn.click(function () {
             console.log('click en el boton');
-            window.location.href ='/members/register';
+            window.location.href = '/members/register';
         });
     </script>
 

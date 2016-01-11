@@ -21,6 +21,7 @@ class MembersController extends Controller
 
     public function store()
     {
+//        dd(Input::all());
         $validator = Validator::make(Input::all(), [
             'pack' => 'required|exists:products,id',
             'name' => 'required',
@@ -41,9 +42,9 @@ class MembersController extends Controller
                 'lastname' => Input::get('lastname'),
                 'birthday' => Input::get('birthday'),
                 'phone' => Input::get('phone'),
-                'address' => Input::get('address'),
-                'renew' => '0000-00-00',
-                'product_id' => Input::get('product_id'),
+                'address' => Input::has('address')?Input::get('address'):'---',
+                'renew' => date('Y-m-d'),
+                'product_id' => Input::get('pack'),
                 'rol_id' => Input::get('rol_id'),
                 'status' => 'pending',
                 'skype' => Input::has('skype') ? Input::get('skype') : '',
@@ -81,6 +82,23 @@ class MembersController extends Controller
                 return view('members.payment');
             } else {
                 return view('members.payment_out');
+            }
+        } else {
+            return redirect()->route('members.organization');
+        }
+    }
+
+    public function payment_store($id)
+    {
+        $new_user = User::find($id);
+        if ($new_user) {
+            $validator = Validator::make(Input::all(), [
+                'price' => 'required',
+            ]);
+            if ($validator->passes()) {
+
+            } else {
+
             }
         } else {
             return redirect()->route('members.organization');
