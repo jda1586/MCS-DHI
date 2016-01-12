@@ -58,7 +58,8 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $fillable = [
         'user', 'password', 'email', 'name', 'lastname', 'birthday', 'phone',
-        'address', 'renew', 'product_id', 'rol_id', 'status', 'skype', 'whatsapp'
+        'address', 'renew', 'product_id', 'rol_id', 'status', 'skype', 'whatsapp',
+        'country_id'
     ];
 
     /**
@@ -112,6 +113,11 @@ class User extends Model implements AuthenticatableContract,
     public function trees()
     {
         return $this->hasOne('DHI\UserTree');
+    }
+
+    public function country()
+    {
+        return $this->belongsTo('DHI\Country');
     }
 // fin relaciones
 }
