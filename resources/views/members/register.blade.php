@@ -58,18 +58,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-group">
-                            <select class="form-control" name="country">
-                                <option value="">Country</option>
-                                <option value="Estados Unidos">Estados Unidos</option>
-                                <option value="México">México</option>
-                                <option value="Canada">Canada</option>
-                                <option value="El Salvador">El Salvador</option>
-                                <option value="Brazil">Brazil</option>
-                                <option value="Guatemala">Guatemala</option>
-                                <option value="Ecuador">Ecuador</option>
-                                <option value="Puerto Rico">Puerto Rico</option>
-                                <option value="Panama">Panama</option>
-                            </select>
+                           {!! Form::select('Country',  \DHI\Country::all()->lists('name') , null, ['placeholder' => 'Country', 'class' => 'form-control', 'name' => 'country'])!!}
                         </div>
                     </div>
                     <div class="form-group">
