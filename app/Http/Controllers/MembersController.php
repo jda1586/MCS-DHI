@@ -124,8 +124,9 @@ class MembersController extends Controller
                 ]);
 
                 $new_user->status = 'active';
+                $new_user->save();
 
-                return redirect()->route('members.organization');
+                return redirect()->route('members.organization')->with('success', 'La cuenta se ha sido pagada y se encuentra activa.');
             } else {
                 return redirect()->route('members.organization')->withErrors($validator);
             }
