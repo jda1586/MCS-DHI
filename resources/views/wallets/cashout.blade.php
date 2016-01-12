@@ -4,6 +4,49 @@
     <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
     <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
     <link rel="stylesheet" href="/vendor/footable/footable.css">
+    {{--  ---------------------------------------------   --}}
+            <!-- Latest compiled and minified CSS -->
+
+    {{--<link rel="stylesheet" href="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="/vendor/select2/select2.css">--}}
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="/vendor/waves/waves.css">
+    <link rel="stylesheet" href="/vendor/select2/select2.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="/vendor/icheck/icheck.css">
+    <link rel="stylesheet" href="/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="/vendor/asrange/asRange.css">
+    <link rel="stylesheet" href="/vendor/asspinner/asSpinner.css">
+    <link rel="stylesheet" href="/vendor/clockpicker/clockpicker.css">
+    <link rel="stylesheet" href="/vendor/ascolorpicker/asColorPicker.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-touchspin/bootstrap-touchspin.css">
+    <link rel="stylesheet" href="/vendor/card/card.css">
+    <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-maxlength/bootstrap-maxlength.css">
+    <link rel="stylesheet" href="/vendor/jt-timepicker/jquery-timepicker.css">
+    <link rel="stylesheet" href="/vendor/jquery-strength/jquery-strength.css">
+    <link rel="stylesheet" href="/vendor/multi-select/multi-select.css">
+    <link rel="stylesheet" href="/vendor/typeahead-js/typeahead.css">
+    <link rel="stylesheet" href="/assets/examples/css/forms/advanced.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="/fonts/material-design/material-design.min.css">
+    <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+
+    <script src="/vendor/modernizr/modernizr.js"></script>
+    <script src="/vendor/breakpoints/breakpoints.js"></script>
+
     <style>
         .paso1{
             height:100px; margin:20px 0 20px 0; padding-left: 0px!important;
@@ -59,6 +102,9 @@
             @if( Session::has('errors') )
                 <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check fields</div>
             @endif
+            @foreach($errors->get('nfondos') as $m)
+                <div style="text-align: center; color: red;">{!! $m !!}</div>
+            @endforeach
             <div class="col-md-4 col-md-offset-0    ">
                 <div class="example">
                     <div class="form-group wallets" style="font-weight: 500" >Choice a wallet</div>
@@ -85,31 +131,15 @@
                 </div>
             </div>
             <div class="col-md-4" style="margin-top: 4%">
-                <div class="example">
-                    <div class="form-group">
-                        <div class="input-group ">
-                            <span class="input-group-addon">฿</span>
-                            <input type="text" class="form-control" placeholder="your account bitcoins ">
-                        </div>
+                <div class="form-group wallets" style="font-weight: 500" >Choice your account bitcoin</div>
+                <div class="example-wrap">
+                    <div class="example">
+                        <select name="bitcoinacount"  data-plugin="selectpicker" data-style="btn-primary">
+                            @foreach($cuentas as $cuenta)
+                                <option value="{!! $cuenta['id'] !!}">{!! $cuenta['name'] !!}</option>
+                            @endforeach
+                        </select>
                     </div>
-                    {{--<div class="form-group">
-                        <div class="input-group input-group-file">
-                            <input id="namefile" type="text" class="form-control" placeholder="select a image" readonly="">
-					    <span class="input-group-btn">
-                            <span class="btn btn-primary btn-file waves-effect waves-light">
-                                <i class="icon md-upload" aria-hidden="true"></i>
-                                <input id="img" type="file" name="image" multiple="">
-                            </span>
-					    </span>
-                        </div>
-                    </div>--}}
-                    {{--<div class="form-group form-material">
-                        <label class="col-sm-3 control-label">Currency</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputCurrency" name="cantidad" data-plugin="formatter" data-pattern="$[[999]],[[999]],[[999]].[[99]]">
-                            <p class="help-block">$999,999,999.99</p>
-                        </div>
-                    </div>--}}
                 </div>
             </div>
             <div class="col-md-4" style="margin-top: 2%;padding-bottom: 1px;">
@@ -118,7 +148,7 @@
                     <div class="form-group">
                         <div class="input-group ">
                             <span class="input-group-addon">฿</span>
-                            <input type="text" class="form-control" name="cantidad" placeholder="Currency ">
+                            <input type="text" class="form-control" name="amount" placeholder="Currency ">
                             <span class="input-group-addon">.00</span>
                         </div>
                     </div>
@@ -225,4 +255,60 @@
     {!! HTML::script('validator.js') !!}
     {!! HTML::script('vendor/formatter-js/jquery.formatter.js') !!}
     {!! HTML::script('js/components/formatter-js.js') !!}
+
+    {{--<script src="/js/components/bootstrap-select.js"></script>
+    <script src="/js/components/select2.js"></script>--}}
+
+    <!-- Plugins -->
+    <script src="/vendor/switchery/switchery.min.js"></script>
+    <script src="/vendor/intro-js/intro.js"></script>
+    <script src="/vendor/screenfull/screenfull.js"></script>
+    <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="/vendor/select2/select2.min.js"></script>
+    <script src="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
+    <script src="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="/vendor/bootstrap-select/bootstrap-select.js"></script>
+    <script src="/vendor/icheck/icheck.min.js"></script>
+    <script src="/vendor/switchery/switchery.min.js"></script>
+    <script src="/vendor/asrange/jquery-asRange.min.js"></script>
+    <script src="/vendor/asspinner/jquery-asSpinner.min.js"></script>
+    <script src="/vendor/clockpicker/bootstrap-clockpicker.min.js"></script>
+    <script src="/vendor/ascolor/jquery-asColor.min.js"></script>
+    <script src="/vendor/asgradient/jquery-asGradient.min.js"></script>
+    <script src="/vendor/ascolorpicker/jquery-asColorPicker.min.js"></script>
+    <script src="/vendor/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+    <script src="/vendor/jquery-knob/jquery.knob.js"></script>
+    <script src="/vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="/vendor/card/jquery.card.js"></script>
+    <script src="/vendor/jquery-labelauty/jquery-labelauty.js"></script>
+    <script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="/vendor/jt-timepicker/jquery.timepicker.min.js"></script>
+    <script src="/vendor/datepair-js/datepair.min.js"></script>
+    <script src="/vendor/datepair-js/jquery.datepair.min.js"></script>
+    <script src="/vendor/jquery-strength/jquery-strength.min.js"></script>
+    <script src="/vendor/multi-select/jquery.multi-select.js"></script>
+    <script src="/vendor/typeahead-js/bloodhound.min.js"></script>
+    <script src="/vendor/typeahead-js/typeahead.jquery.min.js"></script>
+    <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <!-- Scripts -->
+    <script src="/js/core.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/sections/menu.js"></script>
+    <script src="/assets/js/sections/menubar.js"></script>
+    <script src="/assets/js/sections/sidebar.js"></script>
+    <script src="/js/configs/config-colors.js"></script>
+    <script src="assets/js/configs/config-tour.js"></script>
+    <script src="/js/components/asscrollable.js"></script>
+    <script src="/js/components/animsition.js"></script>
+    <script src="/js/components/slidepanel.js"></script>
+    <script src="/js/components/switchery.js"></script>
+    <script src="/js/components/tabs.js"></script>
+    <script src="/js/components/select2.js"></script>
+    <script src="/js/components/bootstrap-tokenfield.js"></script>
+    <script src="/js/components/bootstrap-tagsinput.js"></script>
+    <script src="/js/components/bootstrap-select.js"></script>
+    <script src="/js/components/icheck.js"></script>
+    <script src="/js/components/switchery.js"></script>
+
+    {{--<script src="../../assets/examples/js/forms/advanced.js"></script>--}}
 @endsection
