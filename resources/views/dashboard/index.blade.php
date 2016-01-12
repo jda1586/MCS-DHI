@@ -38,7 +38,7 @@
                     <div class="example-wrap">
                         <h4 class="example-title">Categories</h4>
                         <div class="example">
-                            <div data-plugin="treeview" data-source="getExampleTreeview"
+                            <div data-plugin="treeview" data-source="getTreeview"
                                  data-expand-icon="icon md-check" data-collapse-icon="icon md-check-circle"
                                  data-node-icon="icon md-account" data-show-tags="true" id="exampleTagsAsBadges">
                             </div>
@@ -337,6 +337,69 @@
 @endsection
 
 @section('script')
+
+    <script>
+        window.getTreeview = function() {
+            return [{
+                text: 'Parent 1a',
+                href: '#parent1',
+                tags: ['2'],
+                nodes: [{
+                    text: 'Child 1',
+                    href: '#child1',
+                    tags: ['2'],
+                    nodes: [{
+                        text: 'Grandchild 1',
+                        href: '#grandchild1',
+                        tags: ['0']
+                    }, {
+                        text: 'Grandchild 2',
+                        href: '#grandchild2',
+                        tags: ['0']
+                    }]
+                }, {
+                    text: 'Child 2',
+                    href: '#child2',
+                    tags: ['0']
+                }]
+            }, {
+                text: 'Parent 2',
+                href: '#parent2',
+                tags: ['2'],
+                nodes: [{
+                    text: 'Child 1',
+                    href: '#child1',
+                    tags: ['0']
+                }, {
+                    text: 'Child 2',
+                    href: '#child2',
+                    tags: ['0']
+                }]
+
+            }, {
+                text: 'Parent 3',
+                href: '#parent3',
+                tags: ['0']
+            }, {
+                text: 'Parent 4',
+                href: '#parent4',
+                tags: ['0']
+            }, {
+                text: 'Parent 5',
+                href: '#parent5',
+                tags: ['0'],
+                nodes: [{
+                    text: 'Child 1',
+                    href: '#child1',
+                    tags: ['0']
+                }, {
+                    text: 'Child 2',
+                    href: '#child2',
+                    tags: ['0']
+                }]
+            }];
+        };
+    </script>
     <script src="/vendor/animsition/animsition.js"></script>
     <script src="/vendor/asscroll/jquery-asScroll.js"></script>
     <script src="/vendor/mousewheel/jquery.mousewheel.js"></script>
