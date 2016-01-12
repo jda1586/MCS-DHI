@@ -38,8 +38,10 @@
                         <div id="wrapper-main" class="col-md-10 col-md-offset-0">
                             <div id="producto" class="col-md-5 col-md-offset-0" style="float: left">
                                 <img src="/assets/images/logos/{!! $new_user->product->image['url'] !!}" alt="">
-                                <div id="precio" class="" style="margin:15px;padding:20px 0 0 60px;">
-                                    <span style="font-weight: bold; color: black ">$ {!! $new_user->product->price !!}</span>
+                                <div id="precio" class="text-left" style="margin:15px;">
+                                    <span style="font-weight: bold; color: black; font-size: x-large;">
+                                        $ {!! number_format($new_user->product->price,2,'.',',') !!}
+                                    </span>
                                 </div>
                             </div>
                             <div id="msj" class="col-md-7 col-md-offset-0" style="float: right; height: 50%">

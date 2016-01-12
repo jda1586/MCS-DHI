@@ -8,63 +8,66 @@
 @endsection
 
 @section('content')
-<div class="page-content">
-    {{--<div>
-    <div id="wrapper-main" class="col-md-10 col-md-offset-1">
-        <div id="producto" class="col-md-5 col-md-offset-0" style="float: left">
-            <img src="/assets/images/logos/SILVER_PACK.png" alt="">
-            <div id="precio"> $______.00</div>
+    <div class="page-content">
+        {{--<div>
+        <div id="wrapper-main" class="col-md-10 col-md-offset-1">
+            <div id="producto" class="col-md-5 col-md-offset-0" style="float: left">
+                <img src="/assets/images/logos/SILVER_PACK.png" alt="">
+                <div id="precio"> $______.00</div>
+            </div>
+            <div id="msj" class="col-md-7 col-md-offset-0" style="float: right">
+                <span>
+                    estas a paso, paga el paquete de < name > y comienza disfrutar de los beneficios
+                </span>
+            </div>
         </div>
-        <div id="msj" class="col-md-7 col-md-offset-0" style="float: right">
-            <span>
-                estas a paso, paga el paquete de < name > y comienza disfrutar de los beneficios
-            </span>
-        </div>
-    </div>
-</div>--}}
+    </div>--}}
 
-    <div class="page animsition" style="animation-duration: 800ms; opacity: 1;">
-        <ol class="breadcrumb">
-            <li><a href="javascript:void(0)">Home</a></li>
-            <li><a href="javascript:void(0)">Members</a></li>
-            <li class="active">Register</li>
-        </ol>
+        <div class="page animsition" style="animation-duration: 800ms; opacity: 1;">
+            <ol class="breadcrumb">
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Members</a></li>
+                <li class="active">Register</li>
+            </ol>
 
-        <div class="page-content">
-            <div class="panel">
-                {{--<div class="panel-heading">
-                    <h3 class="panel-title">DEMO CONTENT</h3>
-                </div>--}}
-                <div class="panel-body">
-                    <div id="wrapper-main" class="col-md-10 col-md-offset-0">
-                        <div id="producto" class="col-md-5 col-md-offset-0" style="float: left">
-                            <img src="/assets/images/logos/{!! $new_user->product->image['url'] !!}" alt="">
-                            <div id="precio" class="" style="margin:15px;padding-left:40px; ">
-                                <div id="precio" class="text-left" style="margin:15px;padding:20px 0 0 0;">
-                                    <span style="font-weight: bold; color: black ">$ {!! $new_user->product->price !!}</span>
+            <div class="page-content">
+                <div class="panel">
+                    {{--<div class="panel-heading">
+                        <h3 class="panel-title">DEMO CONTENT</h3>
+                    </div>--}}
+                    <div class="panel-body">
+                        <div id="wrapper-main" class="col-md-10 col-md-offset-0">
+                            <div id="producto" class="col-md-5 col-md-offset-0" style="float: left">
+                                <img src="/assets/images/logos/{!! $new_user->product->image['url'] !!}" alt="">
+                                <div id="precio" class="" style="margin:15px;padding-left:10px; ">
+                                    <div id="precio" class="text-left" style="margin:15px;">
+                                    <span style="font-weight: bold; color: black; font-size: x-large;">
+                                        $ {!! number_format($new_user->product->price,2,'.',',') !!}
+                                    </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="msj" class="col-md-7 col-md-offset-0" style="float: right; height: 50%">
-                            <div style="margin: auto; height: 100px">
-                                <h3>ahead!</h3>
-                                <span>
-                                    You're just one step, {!! $new_user->name !!} pay package and start enjoying the benefits
-                                </span>
-                            </div>
-                            <div>
-                                <div style="float: right; margin-right: 50px">
-                                    <button id="cancel" class="btn btn-info waves-effect waves-light"
-                                            style="width:110px; margin: 20px" type="button">
-                                        Cancel
-                                    </button>
-                                    {{--<a href="#" onclick="window.location='/members/register' " style="width: 100%;height: 100%;color: white">--}}
-                                    {{--{{ Form::open() }}--}}
-                                    <button class="btn btn-info waves-effect waves-light" style="width: 110px"
-                                            type="submit">
-                                        Pay
-                                    </button>
-                                    {{--{{ Form::close() }}--}}
+                            <div id="msj" class="col-md-7 col-md-offset-0" style="float: right; height: 50%">
+                                <div style="margin: auto; height: 100px">
+                                    <h3>ahead!</h3>
+                                    <span>
+                                        You're just one step, <b>{!! $new_user->name !!}</b> pay package and start enjoying the benefits
+                                    </span>
+                                </div>
+                                <div>
+                                    <div style="float: right; margin-right: 50px">
+                                        {!! Form::open(['route'=>['members.payment_store', $new_user->id]]) !!}
+                                        <input name="pack" value="{!! $new_user->product->id !!}" type="hidden"/>
+                                        <button id="cancel" class="btn btn-info waves-effect waves-light"
+                                                style="width:110px; margin: 20px" type="button">
+                                            Cancel
+                                        </button>
+                                        <button class="btn btn-info waves-effect waves-light" style="width: 110px"
+                                                type="submit">
+                                            Pay
+                                        </button>
+                                        {!! Form::close() !!}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +76,6 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
 
 @section('script')

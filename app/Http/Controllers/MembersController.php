@@ -103,9 +103,31 @@ class MembersController extends Controller
                 'pack' => 'required',
             ]);
             if ($validator->passes()) {
+                auth()->user()->wallets()->decrement('activation', $new_user->product->price);
+                $wallets = auth()->user()->wallets;
+                $wallets->balance = $wallets->activation + $wallets->commission + $wallets->auction + $wallets->utilities;
+                $wallets->save();
 
+                $user_movement = auth()->user()->movements()->create([
+                    'type' => 'outcome',
+                    'movement_id' => 1,
+                    'from' => 'activation',
+                    'to' => 'system',
+                    'amount' => $new_user->product->price,
+                    'note' => '-'
+                ]);
+
+                $new_user->payment()->create([
+                    'amount' => $new_user->product->price,
+                    'product_id' => $new_user->product->id,
+                    'sponsor_id' => auth()->user()->id,
+                ]);
+
+                $new_user->status = 'active';
+
+                return redirect()->route('members.organization');
             } else {
-
+                return redirect()->route('members.organization')->withErrors($validator);
             }
         } else {
             return redirect()->route('members.organization');

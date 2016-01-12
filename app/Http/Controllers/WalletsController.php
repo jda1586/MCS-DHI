@@ -16,6 +16,8 @@ class WalletsController extends Controller
      */
     public function index()
     {
-        return view('wallets.index');
+        return view('wallets.index', [
+            'wallets' => auth()->user()->wallets,
+        ]);
     }
 }

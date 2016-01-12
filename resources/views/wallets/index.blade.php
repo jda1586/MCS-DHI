@@ -31,7 +31,7 @@
                         <div class="panel wallets" id="commissionsBtn" style="background-color: #CED8F6">
                             <p>Commissions</p>
                             <div class="current">
-                                <h3 class="title"> $ - 8545854</h3>
+                                <h3 class="title">$ {{ number_format($wallets->commission,2,'.',',') }}</h3>
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         <div class="panel wallets" id="activationsBtn">
                             <p>Activations</p>
                             <div class="current">
-                                <h3 class="title"> $ - 8545854</h3>
+                                <h3 class="title">$ {{ number_format($wallets->activation,2,'.',',') }}</h3>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         <div class="panel wallets" id="utilitiesBtn">
                             <p>Utilities</p>
                             <div class="current">
-                                <h3 class="title"> $ - 8545854</h3>
+                                <h3 class="title">$ {{ number_format($wallets->utilities,2,'.',',') }}</h3>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                         <div class="panel wallets" id="auctionsBtn">
                             <p>Auctions</p>
                             <div class="current">
-                                <h3 class="title"> $ - 8545854</h3>
+                                <h3 class="title">$ {{ number_format($wallets->auction,2,'.',',') }}</h3>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,8 @@
                                             </tr>
                                             </tbody>
                                         </table>
-                                    </div>M
+                                    </div>
+                                    M
                                 </div>
                             </div>
                         </div>
