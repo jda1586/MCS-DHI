@@ -117,4 +117,9 @@ class MembersController extends Controller
     {
         return view('admin.members');
     }
+
+    public function organization()
+    {
+        return view('members.organization');
+    }
 }
