@@ -50,6 +50,7 @@ class MembersController extends Controller
                 'status' => 'pending',
                 'skype' => Input::has('skype') ? Input::get('skype') : '',
                 'whatsapp' => Input::has('whatsapp') ? Input::get('whatsapp') : '',
+                'country_id' => Input::has('country') ? Input::get('country') : 0,
             ])
             ) {
                 $new_user->trees()->create([
@@ -116,31 +117,36 @@ class MembersController extends Controller
                 'pack' => 'required',
             ]);
             if ($validator->passes()) {
-                auth()->user()->wallets()->decrement('activation', $new_user->product->price);
                 $wallets = auth()->user()->wallets;
-                $wallets->balance = $wallets->activation + $wallets->commission + $wallets->auction + $wallets->utilities;
-                $wallets->save();
+                if ($wallets->activation >= $new_user->product->price) {
+                    auth()->user()->wallets()->decrement('activation', $new_user->product->price);
 
-                $user_movement = auth()->user()->movements()->create([
-                    'type' => 'outcome',
-                    'movement_id' => 1,
-                    'from' => 'activation',
-                    'to' => 'system',
-                    'amount' => $new_user->product->price,
-                    'balance' => $wallets->balance,
-                    'note' => '-'
-                ]);
+                    $wallets->balance = $wallets->activation + $wallets->commission + $wallets->auction + $wallets->utilities;
+                    $wallets->save();
 
-                $new_user->payment()->create([
-                    'amount' => $new_user->product->price,
-                    'product_id' => $new_user->product->id,
-                    'sponsor_id' => auth()->user()->id,
-                ]);
+                    $user_movement = auth()->user()->movements()->create([
+                        'type' => 'outcome',
+                        'movement_id' => 1,
+                        'from' => 'activation',
+                        'to' => 'system',
+                        'amount' => $new_user->product->price,
+                        'balance' => $wallets->balance,
+                        'note' => '-'
+                    ]);
 
-                $new_user->status = 'active';
-                $new_user->save();
+                    $new_user->payment()->create([
+                        'amount' => $new_user->product->price,
+                        'product_id' => $new_user->product->id,
+                        'sponsor_id' => auth()->user()->id,
+                    ]);
 
-                return redirect()->route('members.organization')->with('success', 'La cuenta se ha sido pagada y se encuentra activa.');
+                    $new_user->status = 'active';
+                    $new_user->save();
+
+                    return redirect()->route('members.organization')->with('success', 'The account has been paid and is active.');
+                } else {
+                    return redirect()->route('members.organization')->with('error', 'You do not have sufficient funds');
+                }
             } else {
                 return redirect()->route('members.organization')->withErrors($validator);
             }

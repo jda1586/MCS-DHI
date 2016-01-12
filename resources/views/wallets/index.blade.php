@@ -187,25 +187,26 @@
                             <div class="panel-body">
                                 <div class="example-wrap">
                                     <div class="example table-responsive">
-                                        <table class="table table-bordered">
+                                        <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Id</th>
-                                                <th>Fecha</th>
-                                                <th>Action</th>
+                                                <th></th>
+                                                <th>ID</th>
+                                                <th>Description</th>
+                                                <th>Amount</th>
+                                                <th>Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
+                                            @foreach($activation_movements as $movement)
+                                                <tr>
+                                                    <td></td>
+                                                    <td>{{ $movement->id }}</td>
+                                                    <td>---</td>
+                                                    <td>$ {{ number_format($movement->amount,2,'.',',') }}</td>
+                                                    <td>{{ date('Y M d',strtotime($movement->created_at)) }}</td>
+                                                </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
