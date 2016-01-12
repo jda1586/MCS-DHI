@@ -386,11 +386,7 @@
              selector: '#login',
              disabled: 'disabled'
              },*/
-            icon: {
-                valid: 'glyphicon glyphicon-ok',
-                invalid: 'glyphicon glyphicon-remove',
-                validating: 'glyphicon glyphicon-refresh'
-            },
+            icon: null,
             fields: {
                 pack:{
                     validators:{
