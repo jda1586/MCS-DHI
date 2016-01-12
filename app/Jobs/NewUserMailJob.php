@@ -35,8 +35,8 @@ class NewUserMailJob extends Job implements SelfHandling, ShouldQueue
         $email = $this->data['email'];
         $name = $this->data['name'] . ' ' . $this->data['lastname'];
 
-        dd($this->data);
-        Mail::send('emails.welcome', ['data' => $this->data], function ($message) use ($email, $name) {
+//        dd($this->data);
+        Mail::send('emails.welcome',['data' => $this->data] , function ($message) use($email,$name)   {
             $message->from('servers@dreamhouseinternational.com', 'Dream House International');
             $message->to($email, $name)->subject('Confirmacion de registro');
         });
