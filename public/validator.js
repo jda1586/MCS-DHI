@@ -451,15 +451,15 @@
                     validators:{
                         notEmpty: {
                             message: 'The birthday is required and cannot be empty'
-                        },
-                        birthday: {
+                        }
+                        /*birthday: {
                             validators: {
                                 date: {
                                     format: 'YYYY/MM/DD',
                                     message: 'The value is not a valid date'
                                 }
                             }
-                        }
+                        }*/
                     }
                 },
                 email: {

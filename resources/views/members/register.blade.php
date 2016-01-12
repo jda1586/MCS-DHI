@@ -77,11 +77,8 @@
                         {{--<input type="text" class="form-control" id="inputBirthday" name="birthday"--}}
                                {{--placeholder="Birthday" data-plugin="datepicker">--}}
                         <p class="help-block">Birthday YYYY/MM/DD</p>
-                        <input name="birthday" type="text" class="form-control" id="inputDate2" placeholder="YYYY/MM/DD"
-                               data-fv-date="true"
-                               data-fv-date-format="YYYY/MM/DD"
-                               data-fv-date-message="The value is not a valid date">
-{{--data-plugin="formatter" data-pattern="[[9999]]/[[99]]/[[99]]--}}
+                        <input name="birthday" type="text" class="form-control" id="inputDate2" data-plugin="formatter" data-pattern="[[9999]]/[[99]]/[[99]]">
+
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="inputEmail">Email</label>
@@ -143,6 +140,6 @@
     {!! HTML::script('validator.js') !!}
     <script src="/vendor/formatter-js/jquery.formatter.js"></script>
     <!-- Scripts -->
-    {{--<script src="/js/components/formatter-js.js"></script>--}}
+    <script src="/js/components/formatter-js.js"></script>
 
 @endsection
