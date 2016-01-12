@@ -57,14 +57,13 @@
                                         <div class="example">
                                             <div id="exampleC3Pie" class="c3"
                                                  style="max-height: 320px; position: relative;">
+                                                <div id="chart1"></div>
+                                            </div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- End Example C3 Pie -->
-                                    <div id="chart1">
 
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,13 +78,12 @@
                                         <div class="example">
                                             <div id="exampleC3Pie" class="c3"
                                                  style="max-height: 320px; position: relative;">
+                                                <div id="chart2" style="margin: auto;"></div>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- End Example C3 Pie -->
-                                    <div id="chart2">
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -370,7 +368,12 @@
                 onclick: function (d, i) { console.log("onclick", d, i); },
                 onmouseover: function (d, i) { console.log("onmouseover", d, i); },
                 onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-            }
+            },
+             legend: {
+                 position: 'right'
+             },size: {
+                 width: 640
+             }
          });
         var chart2 = c3.generate({
             bindto: '#chart2',
@@ -384,6 +387,11 @@
                 onclick: function (d, i) { console.log("onclick", d, i); },
                 onmouseover: function (d, i) { console.log("onmouseover", d, i); },
                 onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+            },
+            legend: {
+                position: 'right'
+            },size: {
+                width: 640
             }
         });
     </script>
