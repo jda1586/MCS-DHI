@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class UserMovement extends Model
 {
-    protected $fillable = ['user_id', 'type', 'movement_id', 'from', 'to', 'amount', 'note'];
+    protected $fillable = ['user_id', 'type', 'movement_id', 'from', 'to', 'amount', 'balance', 'note'];
 
     // relaciones
     public function user()

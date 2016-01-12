@@ -114,6 +114,7 @@ class MembersController extends Controller
                     'from' => 'activation',
                     'to' => 'system',
                     'amount' => $new_user->product->price,
+                    'balance' => $wallets->balance,
                     'note' => '-'
                 ]);
 
