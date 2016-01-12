@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use DHI\Http\Requests;
 use DHI\Http\Controllers\Controller;
+use DHI\Jobs\NewUserMailJob;
 use Input;
 use Validator;
 use DHI\User;
@@ -67,6 +68,18 @@ class MembersController extends Controller
                     'balance' => 0,
                     'responsible_id' => 0,
                 ]);
+                //se  crea un array con los datos que se ocupan para formar el correo
+                $data['name'] = Input::get('name');
+                $data['lastname'] = Input::get('lastname');
+                $data['user'] = Input::get('user');
+                $data['email'] = Input::get('email');
+                $data['password'] = Input::get('password');
+                //                dd($data);
+                //se llama el job mandar correo confirmacion
+                $this->dispatch(new NewUserMailJob([
+                    'session' => session('_token'),
+                    $data
+                ]));
 
                 return redirect()->route('members.payment', [
                     'id' => $new_user->id

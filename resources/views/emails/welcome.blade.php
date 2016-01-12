@@ -15,10 +15,10 @@
 <div style="width: 75%; margin: auto;">
     <h2>Welcome to Dream House </h2>
     <div>
-        <p>Estimado: {{''}} .<br>
+        <p>Estimado: {!! $name.' '.$lastname  !!} .<br>
             Te damos la bienvenida a la mas grande oportunidad de tu vida. A continuacion te entregamos el acceso a la plataforma de  DreamHose International.<br><br>
-            User: jose  <br>
-            Password: 123456789    <br><br>
+            User: {!! $user  !!}  <br>
+            Password: {!! $password !!}    <br><br>
 
             Bienvenido!
         </p>
