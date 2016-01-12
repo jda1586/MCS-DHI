@@ -86,7 +86,9 @@ class MembersController extends Controller
                     'new_user' => $new_user,
                 ]);
             } else {
-                return view('members.payment_out');
+                return view('members.payment_out', [
+                    'new_user' => $new_user,
+                ]);
             }
         } else {
             return redirect()->route('members.organization');
