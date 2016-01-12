@@ -31,7 +31,7 @@
                 <ol class="breadcrumb">
                     <li><a href="javascript:void(0)">Home</a></li>
                     <li><a href="javascript:void(0)">Members</a></li>
-                    <li class="active">Wallets</li>
+                    <li class="active">My Organization</li>
                 </ol>
                 <div class="col-md-6">
                     <div class="panel tree">

@@ -308,7 +308,7 @@
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="{!! route('members.organization') !!}">
                                     <span class="site-menu-title">My Organization</span>
                                 </a>
                             </li>
