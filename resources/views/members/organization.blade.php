@@ -4,6 +4,8 @@
 
     <link rel="stylesheet" href="/assets/css/Treant.css">
     <link rel="stylesheet" href="/assets/css/perfect-scrollbar.css">
+    {!! HTML::style('/c3/c3.css') !!}
+
     {{--archivos para el arbol--}}
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/Treant.js"></script>
@@ -45,7 +47,7 @@
                         <div id="tree-simple2" style="width: 400px; height: 400px; margin: 0 auto;"></div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div id="grafica1" class="col-md-6">
                     <div class="panel">
                         <div class="panel-body">
                             <div class="row row-lg">
@@ -59,12 +61,15 @@
                                         </div>
                                     </div>
                                     <!-- End Example C3 Pie -->
+                                    <div id="chart1">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div id="grafica2" class="col-md-6">
                     <div class="panel">
                         <div class="panel-body">
                             <div class="row row-lg">
@@ -78,6 +83,9 @@
                                         </div>
                                     </div>
                                     <!-- End Example C3 Pie -->
+                                    <div id="chart2">
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -303,8 +311,80 @@
 @endsection
 
 @section('script')
+
+    {{--<script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>--}}
     <script src="/vendor/switchery/switchery.min.js"></script>
     <script src="/vendor/intro-js/intro.js"></script>
     {!! HTML::script('vendor/footable/footable.all.min.js') !!}{{--tablas--}}
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}{{--tablas--}}
+    {!! HTML::script('assets/examples/js/tables/footable.js') !!}{{--tablas--}}
+    {!! HTML::script('c3/d3.min.js') !!}    {{--grafica--}}
+    {!! HTML::script('c3/c3.js') !!}    {{--grafica--}}
+    <script>
+        /*var chart = c3.generate({
+            bindto: '#chart1',
+            data: {
+                x:'x',
+                columns: [
+                    ['x','5','10'],
+                    //                            ['interacciones por dia '],
+                    ['interacciones', 0,1,2,3,4]
+                ],
+                type: 'bar'
+            },
+            bar: {
+                width: {
+                    ratio: 0.5 // this makes bar width 50% of length between ticks
+                }
+                // or
+                //width: 100 // this makes bar width 100px
+            },
+            axis: {
+                y: {
+                    tick: {
+                        count: 2
+                    }
+                },
+                x: {
+                    type: 'timeseries',
+                    tick: {
+                        format: '%d'
+                        //                                format: '%Y-%m-%d'
+                    }
+                }
+            },
+            legend: {
+                show: false
+            }
+        });*/
+         var chart = c3.generate({
+            bindto: '#chart1',
+            data: {
+                // iris data from R
+                columns: [
+                    ['data1', 30],
+                    ['data2', 120],
+                ],
+                type : 'pie',
+                onclick: function (d, i) { console.log("onclick", d, i); },
+                onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+            }
+         });
+        var chart2 = c3.generate({
+            bindto: '#chart2',
+            data: {
+                // iris data from R
+                columns: [
+                    ['data1', 30],
+                    ['data2', 120],
+                ],
+                type : 'pie',
+                onclick: function (d, i) { console.log("onclick", d, i); },
+                onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+                onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+            }
+        });
+    </script>
 @endsection
