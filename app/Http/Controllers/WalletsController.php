@@ -16,8 +16,6 @@ class WalletsController extends Controller
      */
     public function index()
     {
-        dd( auth()->user()->movements()
-            ->where('from', 'activation')->orWhere('to', 'activation')->get());
         return view('wallets.index', [
             'wallets' => auth()->user()->wallets,
             'activation_movements' => auth()->user()->movements()
