@@ -348,7 +348,7 @@
                             min: 3
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z1-9]+$/,
+                            regexp: /^[a-zA-Z0-9]+$/,
                             message: 'only letters and numbers allowed'
                         }
                     }
@@ -386,8 +386,19 @@
              selector: '#login',
              disabled: 'disabled'
              },*/
-            icon: null,
+            icon: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
             fields: {
+                pack:{
+                    validators:{
+                        notEmpty: {
+                            message: 'select the package you want'
+                        }
+                    }
+                },
                 name: {
                     validators: {
                         notEmpty: {
@@ -418,7 +429,7 @@
                         }
                     }
                 },
-                username: {
+                user: {
                     validators: {
                         notEmpty: {
                             message: 'The username is required and cannot be empty'
@@ -429,10 +440,53 @@
                         }
                     }
                 },
-                Email: {
+                country: {
+                    validators:{
+                        notEmpty: {
+                            message: 'The country is required and cannot be empty'
+                        }
+                    }
+                },
+                birthday : {
+                    validators:{
+                        notEmpty: {
+                            message: 'The birthday is required and cannot be empty'
+                        },
+                        birthday: {
+                            validators: {
+                                date: {
+                                    format: 'YYYY/MM/DD',
+                                    message: 'The value is not a valid date'
+                                }
+                            }
+                        }
+                    }
+                },
+                email: {
                     validators: {
+                        notEmpty: {
+                            message: 'The email is required and cannot be empty'
+                        },
                         emailAddress: {
                             message: 'The email address is not valid'
+                        },
+                        identical: {
+                            field: 'email_confirm',
+                            message: 'The email and its confirm are not the same'
+                        }
+                    }
+                },
+                email_confirm:{
+                    validators: {
+                        notEmpty: {
+                            message: 'The email confirm is required and cannot be empty'
+                        },
+                        emailAddress: {
+                            message: 'The email address is not valid'
+                        },
+                        identical: {
+                            field: 'email',
+                            message: 'The email and its confirm are not the same'
                         }
                     }
                 },
@@ -443,35 +497,62 @@
                         },
                         stringLength: {
                             min: 8
+                        },
+                        identical: {
+                            field: 'password_confirmation',
+                            message: 'The password and its confirm are not the same'
                         }
                     }
                 },
-                passwordCheck: {
+                password_confirmation: {
                     validators: {
                         notEmpty: {
-                            message: 'The password is required'
+                            message: 'The password confirmation is required'
                         },
                         stringLength: {
                             min: 8
+                        },
+                        identical: {
+                            field: 'password',
+                            message: 'The password confirmation and its confirm are not the same'
                         }
                     }
                 },
-                phone: {
-                    validators: {
-                        phone: {
-                            message: 'The value is not an phone(US)'
-                        }
-                    }
-                },
-                pais: {
+                phone : {
                     validators: {
                         notEmpty: {
-                            message: 'The username is required and cannot be empty'
+                            message: 'The phone is required'
+                        },
+                        regexp: {
+                            regexp: /^[0-9 ]+$/,
+                            message: 'only numbers allowed'
+                        }
+                    }
+                },
+                term :{
+                    validators: {
+                        notEmpty: {
+                            message: 'accept terms '
                         }
                     }
                 }
             }
-        });
+        })      //fin de las validaciones
+        .on('err.field.fv', function(e, data) {
+            // $(e.target)  --> The field element
+            // data.fv      --> The FormValidation instance
+            // data.field   --> The field name
+            // data.element --> The field element
+
+            data.fv.disableSubmitButtons(false);
+        })
+            .on('success.field.fv', function(e, data) {
+                // e, data parameters are the same as in err.field.fv event handler
+                // Despite that the field is valid, by default, the submit button will be disabled if all the following conditions meet
+                // - The submit button is clicked
+                // - The form is invalid
+                data.fv.disableSubmitButtons(false);
+            });
     })();
     // validacion de depositos
     // ---------------------------------

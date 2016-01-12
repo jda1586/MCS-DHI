@@ -105,6 +105,9 @@
             @foreach($errors->get('nfondos') as $m)
                 <div style="text-align: center; color: red;">{!! $m !!}</div>
             @endforeach
+            @foreach($errors->get('bitcoinacount') as $m)
+                <div style="text-align: center; color: red;">{!! $m !!}</div>
+            @endforeach
             <div class="col-md-4 col-md-offset-0    ">
                 <div class="example">
                     <div class="form-group wallets" style="font-weight: 500" >Choice a wallet</div>

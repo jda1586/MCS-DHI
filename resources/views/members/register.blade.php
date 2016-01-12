@@ -2,7 +2,7 @@
 @section('head_scripts')
     <link rel="stylesheet" href="/assets/examples/css/pages/register-v2.css">
     <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
-    <script src="/js/components/formatter-js.js"></script>
+    {{--<script src="/js/components/formatter-js.js"></script>--}}
     <link rel="stylesheet" href="/assets/examples/css/forms/masks.css">
 @endsection
 
@@ -76,8 +76,12 @@
                         <label class="sr-only" for="inputBirthday">Birthday</label>
                         {{--<input type="text" class="form-control" id="inputBirthday" name="birthday"--}}
                                {{--placeholder="Birthday" data-plugin="datepicker">--}}
-                            <input name="birthday" type="text" class="form-control" id="inputDate2" data-plugin="formatter" data-pattern="[[9999]]/[[99]]/[[99]]">
-                            <p class="help-block">YYYY/MM/DD</p>
+                        <p class="help-block">Birthday YYYY/MM/DD</p>
+                        <input name="birthday" type="text" class="form-control" id="inputDate2" placeholder="YYYY/MM/DD"
+                               data-fv-date="true"
+                               data-fv-date-format="YYYY/MM/DD"
+                               data-fv-date-message="The value is not a valid date">
+{{--data-plugin="formatter" data-pattern="[[9999]]/[[99]]/[[99]]--}}
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="inputEmail">Email</label>
@@ -130,14 +134,15 @@
 
 @section('script')
 
-    <script src="/vendor/formatter-js/jquery.formatter.js"></script>
-    <!-- Scripts -->
-    <script src="/js/components/formatter-js.js"></script>
+
 
     {{--<script src="vendor/formvalidation/formValidation.min.js"></script>--}}
     {{--<script src="vendor/formvalidation/framework/bootstrap.min.js"></script>--}}
     {!! HTML::script('vendor/formvalidation/formValidation.min.js') !!}
     {!! HTML::script('vendor/formvalidation/framework/bootstrap.min.js') !!}
     {!! HTML::script('validator.js') !!}
+    <script src="/vendor/formatter-js/jquery.formatter.js"></script>
+    <!-- Scripts -->
+    {{--<script src="/js/components/formatter-js.js"></script>--}}
 
 @endsection

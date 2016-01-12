@@ -24,6 +24,10 @@ class CashOutController extends Controller
     {
         $salidas = UserCashout::where('user_id', Auth()->user()->getAuthIdentifier())->take(10)->get();
         $cuentas = BitcoinAccount::where('user_id',Auth()->user()->getAuthIdentifier())->get(['name','id']);
+        /*if($cuentas==null | $cuentas->count()<=0){
+            $cuentas[0]=['id'=>0,'name'=>'add bitcoin acount '];
+            echo  'no hay cuenta';
+        }*/
 //        dd($cuentas);
         return view('wallets.cashout',['salidas'=> $salidas,'cuentas'=> $cuentas]);
 //        return redirect()->route('finance::index');
