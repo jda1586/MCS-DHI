@@ -10,7 +10,7 @@
 
 
 <div style="text-align: center;">
-    <img src="/assets/images/logos/dream_house_200.png" alt="">
+    <img src="http://www.dreamhouseinternational.com/wp-content/uploads/2015/10/Logo-mini5.png" alt="">
 </div>
 <div style="width: 75%; margin: auto;">
     <h2>Welcome to Dream House </h2>
