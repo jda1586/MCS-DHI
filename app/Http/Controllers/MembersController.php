@@ -3,6 +3,7 @@
 namespace DHI\Http\Controllers;
 
 use Auth;
+use DHI\UserTree;
 use Hash;
 use Illuminate\Http\Request;
 
@@ -163,6 +164,13 @@ class MembersController extends Controller
 
     public function organization()
     {
-        return view('members.organization');
+        $user = auth()->user();
+//        usuario inilevel
+        $goldU = UserTree::where('product_id', 3)->where('sponsor_id', $user->id)->count();
+        $silverU = UserTree::where('product_id', 2)->where('sponsor_id', $user->id)->count();
+        $bronzeU = UserTree::where('product_id', 1)->where('sponsor_id', $user->id)->count();
+
+
+        return view('members.organization',['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU] );
     }
 }

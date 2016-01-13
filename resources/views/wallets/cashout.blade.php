@@ -73,8 +73,8 @@
     <div id="wrapper-main" class="col-md-12 col-md-offset-0">
         <ol class="breadcrumb">
             <li><a href="javascript:void(0)">Home</a></li>
-            <li><a href="javascript:void(0)">Tables</a></li>
-            <li class="active">FooTable</li>
+            <li><a href="javascript:void(0)">Wallets</a></li>
+            <li class="active">Cash out</li>
         </ol>
         {{-- PASOS PARA SACAR DINERO  --}}
                 <div class="col-md-4 col-md-offset-0 paso1" >

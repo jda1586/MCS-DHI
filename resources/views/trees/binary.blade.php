@@ -25,16 +25,16 @@
 
 @section('content')
     <div class="col-md-12">
-        <h1>Arbol Binario</h1>
+        <h1>Binary Tree</h1>
     </div>
     <div class="col-md-6">
         <div class="panel">
-            <h3 style="padding: 10px 25px;">Peso del lado izquierdo : </h3>
+            <h3 style="padding: 10px 25px;">Weight of left side: </h3>
         </div>
     </div>
     <div class="col-md-6">
         <div class="panel">
-            <h3 style="padding: 10px 25px;">Peso del lado derecho : </h3>
+            <h3 style="padding: 10px 25px;">Weight of right side: </h3>
         </div>
     </div>
     {{--<div class="col-md-2"></div>--}}

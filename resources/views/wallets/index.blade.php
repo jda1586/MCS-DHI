@@ -139,7 +139,6 @@
                                             </tbody>
                                         </table>
                                     </div>
-                                    M
                                 </div>
                             </div>
                         </div>

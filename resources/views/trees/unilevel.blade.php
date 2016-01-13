@@ -27,7 +27,7 @@
 @section('content')
     {{--<div class="col-md-1"></div>--}}
     <div class="col-md-12">
-        <h1>Arbol Uninivel</h1>
+        <h1>Unilevel Tree</h1>
     </div>
     {{--<div class="col-md-2"></div>--}}
     {{--<div class="col-md-1"></div>--}}

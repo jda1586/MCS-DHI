@@ -196,10 +196,10 @@
                 collapsed: false,
                 children: [
                     {
-                        text: { name: "Hijos de la izquierda " }
+                        text: { name: "number sons of left" }
                     },
                     {
-                        text: { name: "Hijos de la derecha" }
+                        text: { name: "number sons of right" }
                     }
                 ]
             }
@@ -244,7 +244,7 @@
                         text: { name: "...." }
                     },
                     {
-                        text: { name: "#200" }
+                        text: { name: "number sons in unilevel" }
                     },
                     {
                         text: { name: "...." }
@@ -359,39 +359,53 @@
          var chart = c3.generate({
             bindto: '#chart1',
             data: {
-                // iris data from R
+                // arbol binario
                 columns: [
-                    ['data1', 30],
-                    ['data2', 120],
+                    ['Gold', 90],
+                    ['Silver', 120],
+                    ['Bronze', 120]
                 ],
-                type : 'pie',
-                onclick: function (d, i) { console.log("onclick", d, i); },
-                onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                type : 'pie'
             },
              legend: {
                  position: 'right'
              },size: {
                  width: 640
+             },
+             color: {
+                 pattern: ['#FFFF00', '#D8D8D8','#B40404']
              }
          });
         var chart2 = c3.generate({
             bindto: '#chart2',
             data: {
-                // iris data from R
+                // arbol uninivel
                 columns: [
-                    ['data1', 30],
-                    ['data2', 120],
+                    ['Gold', {{$goldU}}],
+                    ['Silver', {{$silverU}}],
+                    ['Bronze', {{$bronzeU}}]
                 ],
-                type : 'pie',
-                onclick: function (d, i) { console.log("onclick", d, i); },
-                onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-                onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+                type : 'pie'
             },
             legend: {
                 position: 'right'
             },size: {
                 width: 640
+            },
+            color: {
+                pattern: ['#FFFF00', '#D8D8D8','#B40404']
+            },
+            pie: {
+                label: {
+                    format: function (value, ratio, id) {
+                        return d3.format(' ')(value);
+                    }
+                }
+            },
+            tooltip: {
+                format: {
+                    value: function (value, ratio, id, index) { return value; }
+                }
             }
         });
     </script>
