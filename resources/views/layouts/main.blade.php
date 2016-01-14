@@ -195,7 +195,7 @@
                     <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
                        data-animation="scale-up" role="button">
               <span class="avatar avatar-online">
-                <img src="/assets/images/users/13.jpg" alt="...">
+                <img src="/assets/images/logos/avatar.png" alt="...">
                 <i></i>
               </span>
                     </a>
@@ -251,7 +251,7 @@
              style="background-image: url('/assets//examples/images/menubar-header.jpg')">
             <div class="vertical-align-middle">
                 <a class="avatar avatar-lg" href="javascript:void(0)">
-                    <img src="/assets/images/users/13.jpg" alt="Machi">
+                    <img src="/assets/images/logos/avatar.png" alt="Machi">
                 </a>
                 <div class="site-menubar-info">
                     <h5 class="site-menubar-user">Machi</h5>

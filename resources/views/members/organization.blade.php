@@ -34,17 +34,37 @@
                     <li class="active">My Organization</li>
                 </ol>
                 <div class="col-md-6">
-                    <div class="panel tree">
+                    <div class="panel" style="height: 300px;">
                         <div>
-                            <p class="title">Pending</p>
+                            <p class="title">Binary</p>
+                            <div class="col-md-12" style="height: 150px;">
+                                <img src="/assets/images/logos/avatar.png" alt="..." style="padding: auto; ">
+                            </div>
+                            <div class="col-md-6" style="text-align: center;">
+                                <span>Left</span>
+                                <span style="border: solid 1px black; padding: 25px; border-radius: 25%; background-color: lightgrey;">
+                                    200</span>
+                            </div>
+                            <div class="col-md0-6" style="text-align: center;">
+                                <span style="border: solid 1px black; padding: 25px; border-radius: 25%; background-color: lightgrey;">
+                                    200</span>
+                                <span>Right</span>
+                            </div>
                         </div>
-                        <div id="tree-simple" style="width: 400px; height: 400px; margin: 0 auto;"></div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="panel tree">
+                    <div class="panel" style="height: 300px;">
                         <p class="title">Unilievel</p>
-                        <div id="tree-simple2" style="width: 400px; height: 400px; margin: 0 auto;"></div>
+                        <div class="col-md-12" style="height: 150px;">
+                            <img src="/assets/images/logos/avatar.png" alt="..." style="padding: auto; ">
+                        </div>
+                        <div class="col-md-12" style="text-align: center;">
+                            <span>Number of members</span>
+
+                            <span style="border: solid 1px black; padding: 25px 50px; border-radius: 25%; background-color: lightgrey;">
+                                añsjdlfk</span>
+                        </div>
                     </div>
                 </div>
                 <div id="grafica1" class="col-md-6">
@@ -59,10 +79,10 @@
                                                  style="max-height: 320px; position: relative;">
                                                 <div id="chart1"></div>
                                             </div>
-                                            </div>
                                         </div>
                                     </div>
-                                    <!-- End Example C3 Pie -->
+                                </div>
+                                <!-- End Example C3 Pie -->
 
                             </div>
                         </div>
@@ -95,7 +115,7 @@
                         <div class="panel-body">
                             <div class="example-wrap">
                                 <div class="example table-responsive">
-                                    <table class="table table-bordered">
+                                    <table class="table">
                                         <thead>
                                         <tr>
                                             <th>Id</th>
@@ -129,7 +149,7 @@
                         <div class="panel-body">
                             <div class="example-wrap">
                                 <div class="example table-responsive">
-                                    <table class="table table-bordered">
+                                    <table class="table">
                                         <thead>
                                         <tr>
                                             <th>Id</th>
@@ -161,147 +181,15 @@
         </div>
     </div>
 
-    <script>
-        var simple_chart_config = {
-            chart: {
-                container: "#tree-simple",
-                rootOrientation: "NORTH",
-                hideRootNode: false,
-                nodeAlign: 'center',
-//                scrollbar: "fancy",
-                levelSeparation: 20,
-                siblingSeparation: 100,
-                padding: 30,
-                subTeeSeparation: 30,
-                connectors: {
-                    type: 'bCurve',
-                    style: {
-                        stroke: 'blue'
-                    }
-                },
-                node: {
-                    collapsable: true
-                }
-            },
-
-            nodeStructure: {
-                text: {
-                    contact: {
-                        val: "Kate Upton",
-                        href: "http://kateupton.com/",
-                        target: "_blanck"
-                    }
-                },
-                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                collapsed: false,
-                children: [
-                    {
-                        text: { name: "number sons of left" }
-                    },
-                    {
-                        text: { name: "number sons of right" }
-                    }
-                ]
-            }
-        };
-
-        var my_chart = new Treant(simple_chart_config);
-
-        var simple_chart_config2 = {
-            chart: {
-                container: "#tree-simple2",
-                rootOrientation: "NORTH",
-                hideRootNode: false,
-                nodeAlign: 'left',
-//                scrollbar: "fancy",
-                levelSeparation: 20,
-                siblingSeparation: 100,
-                padding: 30,
-                subTeeSeparation: 30,
-                connectors: {
-                    type: 'bCurve',
-                    style: {
-                        stroke: 'blue'
-                    }
-                },
-                node: {
-                    collapsable: true
-                }
-            },
-
-            nodeStructure: {
-                text: {
-                    contact: {
-                        val: "Kate Upton",
-                        href: "http://kateupton.com/",
-                        target: "_blanck"
-                    }
-                },
-                image: '{{ URL::to('/assets/images/logos/avatar.png') }}',
-                collapsed: false,
-                children: [
-                    {
-                        text: { name: "...." }
-                    },
-                    {
-                        text: { name: "number sons in unilevel" }
-                    },
-                    {
-                        text: { name: "...." }
-                    }
-                ]
-            }
-        };
-
-        var my_chart2 = new Treant(simple_chart_config2);
-
-    </script>
     <style type="text/css">
-        .tree .node p {
-            font-size: 20px;
-            line-height: 20px;
-            height: 20px;
-            font-weight: bold;
-            padding: 3px;
-            margin: 0;
-            font-family: none;
-            text-align: justify;
-        }
 
-        .tree .node {
-            width: 120px;
-            height: 120px;
-        }
-
-        .tree .node img {
+        img {
             width: 90px;
             height: 90px;
             border-radius: 50%;
             right: 10px;
-        }
-
-        .tree .Treant .collapse-switch {
-            width: 90px;
-            height: 89px;
             display: block;
-            /* border: 1px solid black; */
-            position: absolute;
-            top: 0px;
-            right: 29px;
-            cursor: pointer;
-            border-radius: 50%;
-        }
-
-        .tree .node a {
-            color: black;
-            text-decoration: none;
-            text-align: right;
-            text-transform: capitalize;
-
-        }
-
-        .tree a:link {
-            font-size: 20px;
+            margin: 0 auto;
         }
 
     </style>
@@ -320,43 +208,7 @@
     {!! HTML::script('c3/d3.min.js') !!}    {{--grafica--}}
     {!! HTML::script('c3/c3.js') !!}    {{--grafica--}}
     <script>
-        /*var chart = c3.generate({
-            bindto: '#chart1',
-            data: {
-                x:'x',
-                columns: [
-                    ['x','5','10'],
-                    //                            ['interacciones por dia '],
-                    ['interacciones', 0,1,2,3,4]
-                ],
-                type: 'bar'
-            },
-            bar: {
-                width: {
-                    ratio: 0.5 // this makes bar width 50% of length between ticks
-                }
-                // or
-                //width: 100 // this makes bar width 100px
-            },
-            axis: {
-                y: {
-                    tick: {
-                        count: 2
-                    }
-                },
-                x: {
-                    type: 'timeseries',
-                    tick: {
-                        format: '%d'
-                        //                                format: '%Y-%m-%d'
-                    }
-                }
-            },
-            legend: {
-                show: false
-            }
-        });*/
-         var chart = c3.generate({
+        var chart = c3.generate({
             bindto: '#chart1',
             data: {
                 // arbol binario
@@ -365,35 +217,15 @@
                     ['Silver', 120],
                     ['Bronze', 120]
                 ],
-                type : 'pie'
-            },
-             legend: {
-                 position: 'right'
-             },size: {
-                 width: 640
-             },
-             color: {
-                 pattern: ['#FFFF00', '#D8D8D8','#B40404']
-             }
-         });
-        var chart2 = c3.generate({
-            bindto: '#chart2',
-            data: {
-                // arbol uninivel
-                columns: [
-                    ['Gold', {{$goldU}}],
-                    ['Silver', {{$silverU}}],
-                    ['Bronze', {{$bronzeU}}]
-                ],
-                type : 'pie'
+                type: 'pie'
             },
             legend: {
                 position: 'right'
-            },size: {
+            }, size: {
                 width: 640
             },
             color: {
-                pattern: ['#FFFF00', '#D8D8D8','#B40404']
+                pattern: ['#DBA901', '#D8D8D8', '#B40404']
             },
             pie: {
                 label: {
@@ -404,7 +236,60 @@
             },
             tooltip: {
                 format: {
-                    value: function (value, ratio, id, index) { return value; }
+                    value: function (value, ratio, id, index) {
+                        return value;
+                    }
+                }
+            }
+        });
+        var chart2 = c3.generate({
+            bindto: '#chart2',
+            data: {
+                // arbol uninivel
+                columns: [
+                    ['Gold', {{$goldU}}],
+                    ['Silver', {{$silverU}}],
+                    ['Bronze', {{$bronzeU}}]
+                ],
+                type: 'pie'
+            },
+            legend: {
+                position: 'right'
+            }, size: {
+                width: 640
+            },
+            color: {
+                pattern: ['#DBA901', '#D8D8D8', '#B40404']
+            },
+            pie: {
+                label: {
+                    format: function (value, ratio, id) {
+                        return d3.format(' ')(value);
+                    }
+                }
+            },
+            tooltip: {
+                format: {
+                    value: function (value, ratio, id, index) {
+                        return value;
+                    }
+                }
+            },
+            color: {
+                pattern: ['#DBA901', '#D8D8D8', '#B40404']
+            },
+            pie: {
+                label: {
+                    format: function (value, ratio, id) {
+                        return d3.format(' ')(value);
+                    }
+                }
+            },
+            tooltip: {
+                format: {
+                    value: function (value, ratio, id, index) {
+                        return value;
+                    }
                 }
             }
         });
