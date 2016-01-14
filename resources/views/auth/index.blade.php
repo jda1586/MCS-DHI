@@ -72,7 +72,7 @@
                 <img class="brand-img" src="/assets/images/logos/dream_house.png" alt="Dream House">
                 {{--<h2 class="brand-text font-size-40">Remark</h2>--}}
             </div>
-            <p class="font-size-20" style="margin:auto;">Texto que se ve en resoluciones grandes</p>
+            {{--<p class="font-size-20" style="margin:auto;">Texto que se ve en resoluciones grandes</p>--}}
         </div>
         <div class="page-login-main" style="padding-top: 80px !important; padding-bottom : 0px !important;">
             <div class="brand visible-xs">
@@ -81,7 +81,7 @@
                 {{--<h3 class="brand-text font-size-40">Remark</h3>--}}
             </div>
             <h3 class="font-size-24">Sign In</h3>
-            <p>Texto que se ve en resoluciones pequeñas</p>
+            {{--<p>Texto que se ve en resoluciones pequeñas</p>--}}
             {!! Form::open(['route'=>'auth.login','method'=>'post','id'=>'loginForm'] ) !!}
             @if( Session::has('errors') )
                 <div style="text-align: center; color: red;">login {!! $registro = 'filed'  !!} : check fields</div>
@@ -111,7 +111,7 @@
             </div>
             <button type="submit" id="login" class="btn btn-primary btn-block">Sign in</button>
             {!! Form::close() !!}
-            <p>No account? <a href="register-v2.html">Sign Up</a></p>
+            {{--<p>No account? <a href="register-v2.html">Sign Up</a></p>--}}
             {{--<footer class="page-copyright">--}}
             {{--<p>WEBSITE BY amazingSurge</p>--}}
             {{--<p>© 2015. All RIGHT RESERVED.</p>--}}
@@ -165,22 +165,9 @@
 {!! HTML::script('bower_components/parsleyjs/src/i18n/es.js') !!}--}}
 <script src="vendor/formvalidation/formValidation.min.js"></script>
 <script src="vendor/formvalidation/framework/bootstrap.min.js"></script>
-{{--{!! HTML::script('assets/examples/js/forms/validation.js') !!}--}}
+{!! HTML::script('vendor/formvalidation/formValidation.min.js') !!}
+{!! HTML::script('vendor/formvalidation/framework/bootstrap.min.js') !!}
 {!! HTML::script('validator.js') !!}
-{{--<script src="../../assets/examples/js/forms/validation.js"></script>--}}
-<script>
-    /* (function (document, window, $) {
-     'use strict';
-     var Site = window.Site;
-     $(document).ready(function () {
-     console.log(Site);
-     Site.run();
-     });
-     })(document, window, jQuery);*/
 
-    //    altair_forms.parsley_validation_config();
-    //        llamada al parsley
-    //    $('#form_validation').parsley();
-</script>
 </body>
 </html>
