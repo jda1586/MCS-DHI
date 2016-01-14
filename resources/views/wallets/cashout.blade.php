@@ -105,12 +105,13 @@
             @foreach($errors->get('nfondos') as $m)
                 <div style="text-align: center; color: red;">{!! $m !!}</div>
             @endforeach
-            @foreach($errors->get('bitcoinacount') as $m)
-                <div style="text-align: center; color: red;">{!! $m !!}</div>
-            @endforeach
-            <div class="col-md-4 col-md-offset-0    ">
+
+            <div class="col-md-4 col-md-offset-0 ">
                 <div class="example">
-                    <div class="form-group wallets" style="font-weight: 500" >Choice a wallet</div>
+                    @foreach($errors->get('inputLableautyRadio') as $m)
+                        <div style="text-align: center; color: red;">{!! $m !!}</div>
+                    @endforeach
+                    <div class="form-group wallets" style="font-weight: 500" >Select a wallet</div>
                     <div class="form-group">
                         <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="utilities"
                                data-plugin="labelauty" checked="" id="labelauty-774694" style="display: none;">
@@ -134,6 +135,9 @@
                 </div>
             </div>
             <div class="col-md-4" style="margin-top: 4%">
+                @foreach($errors->get('bitcoinacount') as $m)
+                    <div style="text-align: center; color: red;">{!! $m !!}</div>
+                @endforeach
                 <div class="form-group wallets" style="font-weight: 500" >Choice your account bitcoin</div>
                 <div class="example-wrap">
                     <div class="example">
@@ -146,12 +150,15 @@
                 </div>
             </div>
             <div class="col-md-4" style="margin-top: 2%;padding-bottom: 1px;">
+                @foreach($errors->get('amount') as $m)
+                    <div style="text-align: center; color: red;">{!! $m !!}</div>
+                @endforeach
                 <div class="example">
                     {{--<div class="form-group wallets" style="font-weight: 500" > </div>--}}
                     <div class="form-group">
                         <div class="input-group ">
                             <span class="input-group-addon">฿</span>
-                            <input type="text" class="form-control" name="amount" placeholder="Currency ">
+                            <input type="text" class="form-control" name="amount" placeholder="amount ">
                             <span class="input-group-addon">.00</span>
                         </div>
                     </div>
@@ -173,8 +180,8 @@
                             <thead>
                             <tr>
                                 <th data-toggle="true">amount</th>
-                                <th>wallet</th>
-                                <th data-hide="all">Deposit date</th>
+                                <th>from</th>
+                                <th data-hide="all">cashout date</th>
                                 <th data-hide="all">Status</th>
                                 {{--<th data-hide="all">Image Name</th>--}}
                             </tr>
@@ -203,7 +210,7 @@
                             @foreach($salidas as $deposit)
                                 <tr>
                                     <td>{!! $deposit['amount'] !!}</td>
-                                    <td>{!! $deposit['wallet'] !!}</td>
+                                    <td>{!! $deposit['from'] !!}</td>
                                     <td>{!! $deposit['created_at'] !!}</td>
                                     <td>
                                         <span class="label label-table label-success">{!!$deposit['status']!!}</span>
@@ -252,66 +259,21 @@
             $("#namefile").val(fileName);
         });
     </script>
+
+    {!! HTML::script('vendor/formvalidation/formValidation.min.js') !!}
+    {!! HTML::script('vendor/formvalidation/framework/bootstrap.min.js') !!}
+    {!! HTML::script('validator.js') !!}
+
     {!! HTML::script('vendor/footable/footable.all.min.js') !!}{{--tablas--}}
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}{{--tablas--}}
-    {!! HTML::script('vendor/formvalidation/formValidation.min.js') !!}
-    {!! HTML::script('validator.js') !!}
     {!! HTML::script('vendor/formatter-js/jquery.formatter.js') !!}
     {!! HTML::script('js/components/formatter-js.js') !!}
 
-    {{--<script src="/js/components/bootstrap-select.js"></script>
-    <script src="/js/components/select2.js"></script>--}}
-
     <!-- Plugins -->
-    <script src="/vendor/switchery/switchery.min.js"></script>
-    <script src="/vendor/intro-js/intro.js"></script>
-    <script src="/vendor/screenfull/screenfull.js"></script>
-    <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
-    <script src="/vendor/select2/select2.min.js"></script>
-    <script src="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
-    <script src="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    {{--<script src="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>--}}
     <script src="/vendor/bootstrap-select/bootstrap-select.js"></script>
-    <script src="/vendor/icheck/icheck.min.js"></script>
-    <script src="/vendor/switchery/switchery.min.js"></script>
-    <script src="/vendor/asrange/jquery-asRange.min.js"></script>
-    <script src="/vendor/asspinner/jquery-asSpinner.min.js"></script>
-    <script src="/vendor/clockpicker/bootstrap-clockpicker.min.js"></script>
-    <script src="/vendor/ascolor/jquery-asColor.min.js"></script>
-    <script src="/vendor/asgradient/jquery-asGradient.min.js"></script>
-    <script src="/vendor/ascolorpicker/jquery-asColorPicker.min.js"></script>
-    <script src="/vendor/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
-    <script src="/vendor/jquery-knob/jquery.knob.js"></script>
-    <script src="/vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-    <script src="/vendor/card/jquery.card.js"></script>
-    <script src="/vendor/jquery-labelauty/jquery-labelauty.js"></script>
-    <script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-    <script src="/vendor/jt-timepicker/jquery.timepicker.min.js"></script>
-    <script src="/vendor/datepair-js/datepair.min.js"></script>
-    <script src="/vendor/datepair-js/jquery.datepair.min.js"></script>
-    <script src="/vendor/jquery-strength/jquery-strength.min.js"></script>
-    <script src="/vendor/multi-select/jquery.multi-select.js"></script>
-    <script src="/vendor/typeahead-js/bloodhound.min.js"></script>
-    <script src="/vendor/typeahead-js/typeahead.jquery.min.js"></script>
-    <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-    <!-- Scripts -->
-    <script src="/js/core.js"></script>
-    <script src="/assets/js/site.js"></script>
-    <script src="/assets/js/sections/menu.js"></script>
-    <script src="/assets/js/sections/menubar.js"></script>
-    <script src="/assets/js/sections/sidebar.js"></script>
-    <script src="/js/configs/config-colors.js"></script>
-    <script src="assets/js/configs/config-tour.js"></script>
-    <script src="/js/components/asscrollable.js"></script>
-    <script src="/js/components/animsition.js"></script>
-    <script src="/js/components/slidepanel.js"></script>
-    <script src="/js/components/switchery.js"></script>
-    <script src="/js/components/tabs.js"></script>
-    <script src="/js/components/select2.js"></script>
-    <script src="/js/components/bootstrap-tokenfield.js"></script>
-    <script src="/js/components/bootstrap-tagsinput.js"></script>
-    <script src="/js/components/bootstrap-select.js"></script>
-    <script src="/js/components/icheck.js"></script>
-    <script src="/js/components/switchery.js"></script>
 
-    {{--<script src="../../assets/examples/js/forms/advanced.js"></script>--}}
+    <!-- Scripts -->
+    <script src="/js/components/bootstrap-select.js"></script>
+
 @endsection
