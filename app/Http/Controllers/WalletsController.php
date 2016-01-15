@@ -19,13 +19,13 @@ class WalletsController extends Controller
         return view('wallets.index', [
             'wallets' => auth()->user()->wallets,
             'commission_movements' => auth()->user()->movements()
-                ->where('from', 'commission')->orWhere('to', 'commission')->get(),
+                ->where('from', 'commission')->orWhere('to', 'commission')->take(20)->get(),
             'activation_movements' => auth()->user()->movements()
-                ->where('from', 'activation')->orWhere('to', 'activation')->get(),
+                ->where('from', 'activation')->orWhere('to', 'activation')->take(20)->get(),
             'utilities_movements' => auth()->user()->movements()
-                ->where('from', 'utilities')->orWhere('to', 'utilities')->get(),
+                ->where('from', 'utilities')->orWhere('to', 'utilities')->take(20)->get(),
             'auction_movements' => auth()->user()->movements()
-                ->where('from', 'auction')->orWhere('to', 'auction')->get(),
+                ->where('from', 'auction')->orWhere('to', 'auction')->take(20)->get(),
             'bitcoin_acounts' => auth()->user()->bitcoin_accounts,
         ]);
     }
