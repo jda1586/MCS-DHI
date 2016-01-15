@@ -65,6 +65,11 @@
             margin: auto;
             text-align: center;
         }
+        .wallets label{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+        }
     </style>
 @endsection
 
@@ -112,26 +117,17 @@
                         <div style="text-align: center; color: red;">{!! $m !!}</div>
                     @endforeach
                     <div class="form-group wallets" style="font-weight: 500" >Select a wallet</div>
-                    <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="utilities"
-                               data-plugin="labelauty" checked="" id="labelauty-774694" style="display: none;">
-                        <label class="wallets" for="labelauty-774694">
-                            {{--<span class="labelauty-unchecked-image"></span>--}}
-                            <span class="labelauty-unchecked">Utilities</span>
-                            <span class="labelauty-checked-image"></span>
-                            <span class="labelauty-checked">Utilities</span>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <input type="radio" class="to-labelauty labelauty" name="inputLableautyRadio" value="commissions"
-                               data-plugin="labelauty" id="labelauty-486480" style="display: none;">
-                        <label class="wallets" for="labelauty-486480">
-                            {{--<span class="labelauty-unchecked-image"></span>--}}
-                            <span class="labelauty-unchecked">Commissions</span>
-                            <span class="labelauty-checked-image"></span>
-                            <span class="labelauty-checked">Commissions</span>
-                        </label>
-                    </div>
+                        <div class="form-group wallets">
+                            <input type="radio" class="to-labelauty wallets" name="inputLableautyRadio" data-plugin="labelauty" value="Utilities"
+                                   data-labelauty="Utilities|selected Utilities" checked/>
+                        </div>
+                        <div class="form-group wallets">
+                            <input type="radio" class="to-labelauty" name="inputLableautyRadio" data-plugin="labelauty" value="Commissions"
+                                   data-labelauty="Commissions|Commissions" />
+                        </div>
+                </div>
+                <div class="example">
+
                 </div>
             </div>
             <div class="col-md-4" style="margin-top: 4%">
@@ -157,7 +153,7 @@
                     {{--<div class="form-group wallets" style="font-weight: 500" > </div>--}}
                     <div class="form-group">
                         <div class="input-group ">
-                            <span class="input-group-addon">฿</span>
+                            <span class="input-group-addon">$</span>
                             <input type="text" class="form-control" name="amount" placeholder="amount ">
                             <span class="input-group-addon">.00</span>
                         </div>
@@ -272,8 +268,10 @@
     <!-- Plugins -->
     {{--<script src="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>--}}
     <script src="/vendor/bootstrap-select/bootstrap-select.js"></script>
+    <script src="/vendor/jquery-labelauty/jquery-labelauty.js"></script>
 
     <!-- Scripts -->
+    <script src="/js/components/jquery-labelauty.js"></script>
     <script src="/js/components/bootstrap-select.js"></script>
 
 @endsection

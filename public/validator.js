@@ -305,6 +305,11 @@
                             },
                             stringLength: {
                                 min: 1
+                            },
+                            numeric: {
+                                message: 'The value is not a number'
+                                // The default separators
+
                             }
                         }
                     }
