@@ -70,17 +70,14 @@ class MembersController extends Controller
                     'balance' => 0,
                     'responsible_id' => 0,
                 ]);
-                //se  crea un array con los datos que se ocupan para formar el correo
-                $data['name'] = Input::get('name');
-                $data['lastname'] = Input::get('lastname');
-                $data['user'] = Input::get('user');
-                $data['email'] = Input::get('email');
-                $data['password'] = Input::get('password');
-                //                dd($data);
+
                 //se llama el job mandar correo confirmacion
                 $this->dispatch(new NewUserMailJob([
-                    'session' => session('_token'),
-                    $data
+                    'name' => Input::get('name'),
+                    'lastname' => Input::get('lastname'),
+                    'user' => Input::get('user'),
+                    'email' => Input::get('email'),
+                    'password' => Input::get('password'),
                 ]));
 
                 return redirect()->route('members.payment', [
@@ -139,6 +136,7 @@ class MembersController extends Controller
                         'amount' => $new_user->product->price,
                         'product_id' => $new_user->product->id,
                         'sponsor_id' => auth()->user()->id,
+
                     ]);
 
                     $new_user->status = 'active';
@@ -171,6 +169,6 @@ class MembersController extends Controller
         $bronzeU = UserTree::where('product_id', 1)->where('sponsor_id', $user->id)->count();
 
 
-        return view('members.organization',['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU] );
+        return view('members.organization', ['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU]);
     }
 }

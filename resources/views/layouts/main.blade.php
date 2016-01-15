@@ -254,8 +254,8 @@
                     <img src="/assets/images/logos/avatar.png" alt="Machi">
                 </a>
                 <div class="site-menubar-info">
-                    <h5 class="site-menubar-user">Machi</h5>
-                    <p class="site-menubar-email">machidesign@gmail.com</p>
+                    <h5 class="site-menubar-user">{{ auth()->user()->name }}</h5>
+                    <p class="site-menubar-email">{{ auth()->user()->email }}</p>
                 </div>
             </div>
         </div>

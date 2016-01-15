@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class UserPayment extends Model
 {
-    protected $fillable = ['user_id', 'amount', 'product_id', 'sponsor_id'];
+    protected $fillable = ['user_id', 'amount', 'product_id', 'sponsor_id', 'user_movement_id'];
 
     // relaciones
     public function user()
@@ -30,6 +30,16 @@ class UserPayment extends Model
     public function sponsor()
     {
         return $this->belongsTo('DHI\User', 'sponsor_id');
+    }
+
+    public function user_movement()
+    {
+        return $this->belongsTo('DHI\UserMovement');
+    }
+
+    public function product()
+    {
+        return $this->belongsTo('DHI\Product');
     }
     // fin relaciones
 }
