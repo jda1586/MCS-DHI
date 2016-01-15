@@ -2,19 +2,19 @@
 @section('head_scripts')
     <link rel="stylesheet" href="/vendor/footable/footable.css">
 
-    <link rel="stylesheet" href="/assets/css/Treant.css">
-    <link rel="stylesheet" href="/assets/css/perfect-scrollbar.css">
-    {!! HTML::style('/c3/c3.css') !!}
+    {{--<link rel="stylesheet" href="/assets/css/Treant.css">--}}
+    {{--<link rel="stylesheet" href="/assets/css/perfect-scrollbar.css">--}}
+    {{--{!! HTML::style('/c3/c3.css') !!}--}}
 
     {{--archivos para el arbol--}}
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/Treant.js"></script>
-    <script src="/assets/js/jquery.easing.js"></script>
-    <script src="/assets/js/raphael.js"></script>
-    <script src="/assets/js/Treant.min.js"></script>
-    <script src="/assets/js/jquery.mousewheel.js"></script>
+    {{--<script src="/assets/js/jquery.min.js"></script>--}}
+    {{--<script src="/assets/js/Treant.js"></script>--}}
+    {{--<script src="/assets/js/jquery.easing.js"></script>--}}
+    {{--<script src="/assets/js/raphael.js"></script>--}}
+    {{--<script src="/assets/js/Treant.min.js"></script>--}}
+    {{--<script src="/assets/js/jquery.mousewheel.js"></script>--}}
 
-    <script src="/assets/js/perfect-scrollbar.js"></script>
+    {{--<script src="/assets/js/perfect-scrollbar.js"></script>--}}
 
     <style>
         .title {
@@ -71,13 +71,16 @@
                     <div class="panel">
                         <div class="panel-body">
                             <div class="row row-lg">
+                                <div class="col-md-12" style="text-align: right;">
+                                    <span>Member in Binary tree</span>
+                                </div>
                                 <div class="col-md-6">
                                     <!-- Example C3 Pie -->
-                                    <div class="example-wrap margin-md-0">
+                                    <div class="example-wrap ">
                                         <div class="example">
-                                            <div id="exampleC3Pie" class="c3"
-                                                 style="max-height: 320px; position: relative;">
-                                                <div id="chart1"></div>
+                                            <div id="exampleC3Pie"
+                                                 style="max-height: 320px;">
+                                                <div id="binary" style="height: 250px;"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -92,13 +95,16 @@
                     <div class="panel">
                         <div class="panel-body">
                             <div class="row row-lg">
+                                <div class="col-md-12" style="text-align: right;">
+                                    <span>Member in Unilevel tree</span>
+                                </div>
                                 <div class="col-md-6">
                                     <!-- Example C3 Pie -->
                                     <div class="example-wrap margin-md-0">
                                         <div class="example">
                                             <div id="exampleC3Pie" class="c3"
                                                  style="max-height: 320px; position: relative;">
-                                                <div id="chart2" style="margin: auto;"></div>
+                                                <div id="unilevel" style="height: 250px;"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -207,91 +213,32 @@
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}{{--tablas--}}
     {!! HTML::script('c3/d3.min.js') !!}    {{--grafica--}}
     {!! HTML::script('c3/c3.js') !!}    {{--grafica--}}
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    {{--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>--}}
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
     <script>
-        var chart = c3.generate({
-            bindto: '#chart1',
-            data: {
-                // arbol binario
-                columns: [
-                    ['Gold', 90],
-                    ['Silver', 120],
-                    ['Bronze', 120]
-                ],
-                type: 'pie'
-            },
-            legend: {
-                position: 'right'
-            }, size: {
-                width: 640
-            },
-            color: {
-                pattern: ['#DBA901', '#D8D8D8', '#B40404']
-            },
-            pie: {
-                label: {
-                    format: function (value, ratio, id) {
-                        return d3.format(' ')(value);
-                    }
-                }
-            },
-            tooltip: {
-                format: {
-                    value: function (value, ratio, id, index) {
-                        return value;
-                    }
-                }
-            }
+        Morris.Donut({
+            element: 'unilevel',
+            data: [
+                {label: "Gold", value: 12},
+                {label: "Silver", value: 30},
+                {label: "Bronze", value: 20}
+            ],
+            colors: ['#DBA901', '#D8D8D8', '#B40404']
         });
-        var chart2 = c3.generate({
-            bindto: '#chart2',
-            data: {
-                // arbol uninivel
-                columns: [
-                    ['Gold', {{$goldU}}],
-                    ['Silver', {{$silverU}}],
-                    ['Bronze', {{$bronzeU}}]
-                ],
-                type: 'pie'
-            },
-            legend: {
-                position: 'right'
-            }, size: {
-                width: 640
-            },
-            color: {
-                pattern: ['#DBA901', '#D8D8D8', '#B40404']
-            },
-            pie: {
-                label: {
-                    format: function (value, ratio, id) {
-                        return d3.format(' ')(value);
-                    }
-                }
-            },
-            tooltip: {
-                format: {
-                    value: function (value, ratio, id, index) {
-                        return value;
-                    }
-                }
-            },
-            color: {
-                pattern: ['#DBA901', '#D8D8D8', '#B40404']
-            },
-            pie: {
-                label: {
-                    format: function (value, ratio, id) {
-                        return d3.format(' ')(value);
-                    }
-                }
-            },
-            tooltip: {
-                format: {
-                    value: function (value, ratio, id, index) {
-                        return value;
-                    }
-                }
-            }
+
+        Morris.Donut({
+            element: 'binary',
+            data: [
+                {label: "Gold", value: 12},
+                {label: "Silver", value: 30},
+                {label: "Bronze", value: 20}
+            ],
+            colors: ['#DBA901', '#D8D8D8', '#B40404']
         });
+
     </script>
 @endsection
