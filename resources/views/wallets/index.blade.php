@@ -151,25 +151,19 @@
                             <div class="panel-body">
                                 <div class="example-wrap">
                                     <div class="example table-responsive">
-                                        <table class="table table-bordered">
+                                        <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Id</th>
-                                                <th>Fecha</th>
-                                                <th>Action</th>
+                                                <th>ID</th>
+                                                <th>Description</th>
+                                                <th>Amount</th>
+                                                <th>Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
+                                            @foreach($commission_movements as $movement)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -215,25 +209,19 @@
                             <div class="panel-body">
                                 <div class="example-wrap">
                                     <div class="example table-responsive">
-                                        <table class="table table-bordered">
+                                        <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Id</th>
-                                                <th>Fecha</th>
-                                                <th>Action</th>
+                                                <th>ID</th>
+                                                <th>Description</th>
+                                                <th>Amount</th>
+                                                <th>Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
+                                            @foreach($utilities_movements as $movement)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -250,25 +238,19 @@
                             <div class="panel-body">
                                 <div class="example-wrap">
                                     <div class="example table-responsive">
-                                        <table class="table table-bordered">
+                                        <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Id</th>
-                                                <th>Fecha</th>
-                                                <th>Action</th>
+                                                <th>ID</th>
+                                                <th>Description</th>
+                                                <th>Amount</th>
+                                                <th>Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                            </tr>
+                                            @foreach($auction_movements as $movement)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
