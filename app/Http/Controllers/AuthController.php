@@ -32,6 +32,7 @@ class AuthController extends Controller
             'password' => 'required|min:8|max:255',
         ]);
         if ($validator->passes()) {
+
             if (auth()->attempt(['user' => Input::get('user'), 'password' => Input::get('password'), 'status' => 'active'], Input::get('remember'))) {
                 return redirect()->route('home');
             } else {

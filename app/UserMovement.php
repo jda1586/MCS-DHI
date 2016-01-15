@@ -28,5 +28,16 @@ class UserMovement extends Model
     {
         return $this->belongsTo('DHI\User');
     }
+
+    public function movement()
+    {
+        return $this->belongsTo('DHI\Movement');
+    }
+
+    public function payment()
+    {
+        return $this->hasOne('DHI\UserPayment');
+
+    }
     // fin relaciones
 }

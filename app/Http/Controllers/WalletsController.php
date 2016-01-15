@@ -18,8 +18,15 @@ class WalletsController extends Controller
     {
         return view('wallets.index', [
             'wallets' => auth()->user()->wallets,
+            'commission_movements' => auth()->user()->movements()
+                ->where('from', 'commission')->orWhere('to', 'commission')->get(),
             'activation_movements' => auth()->user()->movements()
                 ->where('from', 'activation')->orWhere('to', 'activation')->get(),
+            'utilities_movements' => auth()->user()->movements()
+                ->where('from', 'utilities')->orWhere('to', 'utilities')->get(),
+            'auction_movements' => auth()->user()->movements()
+                ->where('from', 'auction')->orWhere('to', 'auction')->get(),
+            'bitcoin_acounts' => auth()->user()->bitcoin_accounts,
         ]);
     }
 }

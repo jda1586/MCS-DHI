@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RemoveNameToCashoutTable extends Migration
+class AddUserMovementIdToUserPaymentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,8 +12,8 @@ class RemoveNameToCashoutTable extends Migration
      */
     public function up()
     {
-        Schema::table('user_cashouts', function (Blueprint $table) {
-            $table->dropColumn('name');
+        Schema::table('user_payments', function (Blueprint $table) {
+            $table->integer('user_movement_id')->default(0);
         });
     }
 
@@ -24,8 +24,8 @@ class RemoveNameToCashoutTable extends Migration
      */
     public function down()
     {
-        Schema::table('user_cashouts', function (Blueprint $table) {
-            $table->string('name')->after('user_id');
+        Schema::table('user_payments', function (Blueprint $table) {
+            $table->dropColumn('user_movement_id');
         });
     }
 }

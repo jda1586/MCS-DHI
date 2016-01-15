@@ -189,7 +189,6 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
-                                                <th></th>
                                                 <th>ID</th>
                                                 <th>Description</th>
                                                 <th>Amount</th>
@@ -198,13 +197,7 @@
                                             </thead>
                                             <tbody>
                                             @foreach($activation_movements as $movement)
-                                                <tr>
-                                                    <td></td>
-                                                    <td>{{ $movement->id }}</td>
-                                                    <td>---</td>
-                                                    <td>$ {{ number_format($movement->amount,2,'.',',') }}</td>
-                                                    <td>{{ date('Y M d',strtotime($movement->created_at)) }}</td>
-                                                </tr>
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
                                             @endforeach
                                             </tbody>
                                         </table>

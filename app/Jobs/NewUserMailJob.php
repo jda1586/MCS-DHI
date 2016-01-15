@@ -12,11 +12,11 @@ class NewUserMailJob extends Job implements SelfHandling
      * Create a new job instance.
      *
      */
-    protected $data=array();
+    protected $data = array();
 
     public function __construct($data)
     {
-         $this->data=$data;
+        $this->data = $data;
     }
 
     /**
@@ -26,13 +26,13 @@ class NewUserMailJob extends Job implements SelfHandling
      */
     public function handle()
     {
-        $this->data=$this->data[0];
+        $this->data = $this->data[0];
 //        $user=$this->data['user'];
-        $email=$this->data['email'];
-        $name=$this->data['name'].' '.$this->data['lastname'];
+        $email = $this->data['email'];
+        $name = $this->data['name'] . ' ' . $this->data['lastname'];
 
 //        dd($this->data);
-        Mail::send('emails.welcome',['data' => $this->data] , function ($message) use($email,$name)   {
+        Mail::send('emails.welcome', ['data' => $this->data], function ($message) use ($email, $name) {
             $message->from('servers@dreamhouseinternational.com', 'Dream House International');
             $message->to($email, $name)->subject('Confirmacion de registro');
         });
