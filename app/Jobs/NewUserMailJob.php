@@ -26,7 +26,7 @@ class NewUserMailJob extends Job implements SelfHandling
      */
     public function handle()
     {
-        $this->data = $this->data[0];
+//        $this->data = $this->data[0];
 //        $user=$this->data['user'];
         $email = $this->data['email'];
         $name = $this->data['name'] . ' ' . $this->data['lastname'];
