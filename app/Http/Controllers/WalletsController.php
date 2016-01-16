@@ -26,7 +26,7 @@ class WalletsController extends Controller
                 ->where('from', 'utilities')->orWhere('to', 'utilities')->orderBy('created_at', 'DESC')->take(20)->get(),
             'auction_movements' => auth()->user()->movements()
                 ->where('from', 'auction')->orWhere('to', 'auction')->orderBy('created_at', 'DESC')->take(20)->get(),
-            'bitcoin_acounts' => auth()->user()->bitcoin_accounts,
+            'bitcoin_accounts' => auth()->user()->bitcoin_accounts,
         ]);
     }
 }

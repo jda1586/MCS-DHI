@@ -105,24 +105,26 @@
                                 </form>
                                 <div class="example-wrap">
                                     <div class="example table-responsive">
-                                        <table class="table table-bordered">
+                                        <table class="table">
                                             <thead>
                                             <tr>
-                                                <th>Name</th>
+                                                <th width="80%">Name</th>
                                                 <th class="text-nowrap">Action</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr>
-                                                <td>Lunar probe project</td>
-                                                <td class="text-nowrap">
-                                                    <button type="button"
-                                                            class="btn btn-sm btn-icon btn-flat btn-default"
-                                                            data-toggle="tooltip" data-original-title="Delete">
-                                                        <i class="icon md-close" aria-hidden="true"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
+                                            @foreach($bitcoin_accounts as $account)
+                                                <tr>
+                                                    <td>{{ $account->name }}</td>
+                                                    <td class="text-nowrap">
+                                                        <button type="button"
+                                                                class="btn btn-sm btn-icon btn-flat btn-default"
+                                                                data-toggle="tooltip" data-original-title="Delete">
+                                                            <i class="icon md-close" aria-hidden="true"></i>
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
