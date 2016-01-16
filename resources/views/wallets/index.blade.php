@@ -109,24 +109,11 @@
                                             <thead>
                                             <tr>
                                                 <th>Name</th>
-                                                <th>Acount</th>
-                                                <th class="text-nowrap">Action Report</th>
+                                                <th class="text-nowrap">Action</th>
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                <td>Lunar probe project</td>
-                                                <td>Lunar probe project</td>
-                                                <td class="text-nowrap">
-                                                    <button type="button"
-                                                            class="btn btn-sm btn-icon btn-flat btn-default"
-                                                            data-toggle="tooltip" data-original-title="Delete">
-                                                        <i class="icon md-close" aria-hidden="true"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Lunar probe project</td>
                                                 <td>Lunar probe project</td>
                                                 <td class="text-nowrap">
                                                     <button type="button"
