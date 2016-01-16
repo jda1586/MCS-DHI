@@ -52,7 +52,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/CASA_01.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -83,7 +83,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/CASA_02.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -114,7 +114,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/1_00000.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -145,7 +145,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/2_00000.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -176,7 +176,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/3_00000.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -207,7 +207,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/4_00000.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -238,7 +238,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/5_00000.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -269,7 +269,7 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/6_00000.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
@@ -300,7 +300,317 @@
                 <div class="col-md-4 col-xs-12 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/logos/dream_house_200.png" alt="" width="200" height="200">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/7_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/8_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/10_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/11_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/12_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/14_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/15_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/16_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/17_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/18_00000.png" alt="" width="200" height="200">
+                        </div>
+                        <div class="widget-body">
+                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <p class="widget-metas">Jan 16, 2015</p>
+                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
+                                rationibus periculum opinor propterea intuemur poetarum efficeretur
+                                interpretaris, labefactant aeternum reformidans, laborum inquit
+                            </p>
+                            <div class="widget-body-footer">
+                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
+                                <div class="widget-actions pull-right">
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-share"></i>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-favorite"></i>
+                                        <span>25</span>
+                                    </a>
+                                    <a href="javascript:void(0)">
+                                        <i class="icon md-comment"></i>
+                                        <span>18</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12 masonry-item">
+                    <div class="widget widget-article widget-shadow">
+                        <div class="widget-header cover overlay overlay-hover">
+                            <img class="cover-image overlay-scale" src="/assets/images/products/19_00000.png" alt="" width="200" height="200">
                         </div>
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus fugiendum verborum</h3>
