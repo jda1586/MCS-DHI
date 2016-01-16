@@ -21,6 +21,21 @@
             padding: 15px;
         }
 
+        .divider-vertical
+        {
+        max-height: 100%;
+        border-right: 1px solid gray;
+        opacity: 1;
+        margin:  15px 0;
+        }
+
+        .left
+        {
+            max-height: 100%;
+            opacity: 1;
+            margin:  15px 0;
+        }
+
     </style>
 @endsection
 
@@ -37,18 +52,20 @@
                     <div class="panel" style="height: 300px;">
                         <div>
                             <p class="title">Binary</p>
-                            <div class="col-md-12" style="height: 150px;">
+                            <div class="col-md-12">
                                 <img src="/assets/images/logos/avatar.png" alt="..." style="padding: auto; ">
                             </div>
-                            <div class="col-md-6" style="text-align: center;">
-                                <span>Left</span>
-                                <span style="border: solid 1px black; padding: 25px; border-radius: 25%; background-color: lightgrey;">
-                                    200</span>
+                            <div class="col-md-6 divider-vertical">
+                                <div>
+                                    <p class="title">Child in left side</p>
+                                    <h3 class="" style="text-align: center;"> # 200</h3>
+                                </div>
                             </div>
-                            <div class="col-md0-6" style="text-align: center;">
-                                <span style="border: solid 1px black; padding: 25px; border-radius: 25%; background-color: lightgrey;">
-                                    200</span>
-                                <span>Right</span>
+                            <div class="col-md-6 left" style="">
+                                <div>
+                                    <p class="title" style="text-align: right">Child in right side</p>
+                                    <h3 class="" style="text-align: center;"> # 200</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -56,14 +73,14 @@
                 <div class="col-md-6">
                     <div class="panel" style="height: 300px;">
                         <p class="title">Unilievel</p>
-                        <div class="col-md-12" style="height: 150px;">
+                        <div class="col-md-12">
                             <img src="/assets/images/logos/avatar.png" alt="..." style="padding: auto; ">
                         </div>
-                        <div class="col-md-12" style="text-align: center;">
-                            <span>Number of members</span>
-
-                            <span style="border: solid 1px black; padding: 25px 50px; border-radius: 25%; background-color: lightgrey;">
-                                añsjdlfk</span>
+                        <div class="col-md-12 left">
+                            <div>
+                                <p class="title">Child in the organization</p>
+                                <h3 class="" style="text-align: center;"> # 200</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
