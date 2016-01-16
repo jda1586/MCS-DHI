@@ -118,10 +118,9 @@ class MembersController extends Controller
                 $wallets = auth()->user()->wallets;
                 if ($wallets->activation >= $new_user->product->price) {
                     auth()->user()->wallets()->decrement('activation', $new_user->product->price);
+                    auth()->user()->wallets()->decrement('balance', $new_user->product->price);
 
                     $wallets = auth()->user()->wallets;
-                    $wallets->balance = $wallets->activation + $wallets->commission + $wallets->auction + $wallets->utilities;
-                    $wallets->save();
 
                     $user_movement = auth()->user()->movements()->create([
                         'type' => 'outcome',
