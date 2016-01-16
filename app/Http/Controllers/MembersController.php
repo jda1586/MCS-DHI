@@ -136,7 +136,7 @@ class MembersController extends Controller
                         'amount' => $new_user->product->price,
                         'product_id' => $new_user->product->id,
                         'sponsor_id' => auth()->user()->id,
-
+                        'user_movement_id' => $user_movement->id,
                     ]);
 
                     $new_user->status = 'active';
