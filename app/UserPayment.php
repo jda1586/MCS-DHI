@@ -16,6 +16,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Carbon\Carbon $updated_at
  * @property-read \DHI\User $user
  * @property-read \DHI\User $sponsor
+ * @property integer $user_movement_id
+ * @property-read \DHI\UserMovement $user_movement
+ * @property-read \DHI\Product $product
  */
 class UserPayment extends Model
 {

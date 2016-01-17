@@ -18,6 +18,9 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \DHI\User $user
+ * @property float $balance
+ * @property-read \DHI\Movement $movement
+ * @property-read \DHI\UserPayment $payment
  */
 class UserMovement extends Model
 {

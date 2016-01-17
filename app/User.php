@@ -37,6 +37,13 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
  * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\UserDeposit[] $deposits
  * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\UserCashout[] $cashout
  * @property-read \Illuminate\Database\Eloquent\Collection|\DHI\BitcoinAccount[] $bitcoin_accounts
+ * @property string $skype
+ * @property string $whatsapp
+ * @property string $birthday
+ * @property integer $country_id
+ * @property-read \DHI\UserTree $trees
+ * @property-read \DHI\Country $country
+ * @property-read \DHI\Role $role
  */
 class User extends Model implements AuthenticatableContract,
     AuthorizableContract,
@@ -118,6 +125,11 @@ class User extends Model implements AuthenticatableContract,
     public function country()
     {
         return $this->belongsTo('DHI\Country');
+    }
+
+    public function role()
+    {
+        return $this->hasOne('DHI\Role', 'rol_id');
     }
 // fin relaciones
 }
