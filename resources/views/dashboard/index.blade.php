@@ -34,7 +34,7 @@
         <div class="row" style="padding: 25px 0;">
             <div class="col-md-3">
 
-                <div class="col-lg-12 col-sm-12 panel">
+                <div class="col-lg-12 col-sm-12  panel">
                     <div class="example-wrap">
                         <h4 class="example-title">Categories</h4>
                         <div class="example">
@@ -49,7 +49,7 @@
             </div>
 
             <div class="col-md-9">
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/CASA_01.png" alt="" width="200" height="200">
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/CASA_02.png" alt="" width="200" height="200">
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/1_00000.png" alt="" width="200" height="200">
@@ -142,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/2_00000.png" alt="" width="200" height="200">
@@ -173,7 +173,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/3_00000.png" alt="" width="200" height="200">
@@ -204,7 +204,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/4_00000.png" alt="" width="200" height="200">
@@ -235,7 +235,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12  col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/5_00000.png" alt="" width="200" height="200">
@@ -266,7 +266,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/6_00000.png" alt="" width="200" height="200">
@@ -297,7 +297,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/7_00000.png" alt="" width="200" height="200">
@@ -328,7 +328,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/8_00000.png" alt="" width="200" height="200">
@@ -359,7 +359,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/10_00000.png" alt="" width="200" height="200">
@@ -390,7 +390,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/11_00000.png" alt="" width="200" height="200">
@@ -421,7 +421,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/12_00000.png" alt="" width="200" height="200">
@@ -452,7 +452,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/14_00000.png" alt="" width="200" height="200">
@@ -483,7 +483,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/15_00000.png" alt="" width="200" height="200">
@@ -514,7 +514,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/16_00000.png" alt="" width="200" height="200">
@@ -545,7 +545,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/17_00000.png" alt="" width="200" height="200">
@@ -576,7 +576,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/18_00000.png" alt="" width="200" height="200">
@@ -607,7 +607,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-xs-12 masonry-item">
+                <div class="col-md-4 col-xs-12 col-sm-6  masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/19_00000.png" alt="" width="200" height="200">
