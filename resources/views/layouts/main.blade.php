@@ -331,6 +331,40 @@
                     </li>
                     <li class="site-menu-item has-sub">
                         <a href="javascript:void(0)">
+                            <i class="site-menu-icon md-settings" aria-hidden="true"></i>
+                            <span class="site-menu-title">Admin</span>
+                            <span class="site-menu-arrow"></span>
+                        </a>
+                        <ul class="site-menu-sub">
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Members</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Movements</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Rol´s</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Items</span>
+                                </a>
+                            </li>
+                            <li class="site-menu-item">
+                                <a class="animsition-link" href="#">
+                                    <span class="site-menu-title">Auctions</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="site-menu-item has-sub">
+                        <a href="javascript:void(0)">
                             <i class="site-menu-icon md-download" aria-hidden="true"></i>
                             <span class="site-menu-title">Tools</span>
                             <span class="site-menu-arrow"></span>
