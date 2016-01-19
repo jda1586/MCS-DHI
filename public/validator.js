@@ -28,7 +28,7 @@
                         },
                         stringLength: {
                             min: 6,
-                            max: 30
+                            max: 18
                         },
                         regexp: {
                             regexp: /^[a-zA-Z0-9]+$/,
@@ -74,11 +74,11 @@
                             message: 'The name is required and cannot be empty'
                         },
                         stringLength: {
-                            min: 3,
-                            max:30
+                            min: 4,
+                            max:255
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z ]+$/,
+                            regexp: /^[a-zA-Z ñáéíóú]+$/,
                             message: 'only letters allowed'
                         }
                     }
@@ -89,11 +89,11 @@
                             message: 'The lastname is required and cannot be empty'
                         },
                         stringLength: {
-                            min: 3,
-                            max:30
+                            min: 4,
+                            max:255
                         },
                         regexp: {
-                            regexp: /^[a-zA-Z ]+$/,
+                            regexp: /^[a-zA-Z ñáéíóú]+$/,
                             message: 'only letters allowed'
                         }
                     }
@@ -104,8 +104,13 @@
                             message: 'The username is required and cannot be empty'
                         },
                         stringLength: {
-                            max: 30,
+                            min: 6,
+                            max: 18,
                             message: 'The content must be less than 30 characters long'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                            message: 'only letters and numbers allowed'
                         }
                     }
                 },
@@ -165,7 +170,8 @@
                             message: 'The password is required'
                         },
                         stringLength: {
-                            min: 8
+                            min: 8,
+                            max:255
                         },
                         identical: {
                             field: 'password_confirmation',
@@ -179,7 +185,8 @@
                             message: 'The password confirmation is required'
                         },
                         stringLength: {
-                            min: 8
+                            min: 8,
+                            max:255
                         },
                         identical: {
                             field: 'password',
