@@ -28,8 +28,9 @@
                     </ol>
                     <div class="col-md-3" onclick="commissions()">
                         <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-light-blue-a400" id="commissionsBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-assignment" aria-hidden="true"></i></div>
+                            <div class="widget-content padding-30 bg-light-blue-a400" id="commissionsBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i
+                                            class="icon md-assignment" aria-hidden="true"></i></div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->comission,2,'.',',') }}</span>
@@ -41,8 +42,10 @@
                     </div>
                     <div class="col-md-3" onclick="activations()">
                         <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-blue-900" id="activationsBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-lock" aria-hidden="true"></i></div>
+                            <div class="widget-content padding-30 bg-blue-900" id="activationsBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-lock"
+                                                                                               aria-hidden="true"></i>
+                                </div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->activation,2,'.',',') }}</span>
@@ -55,8 +58,9 @@
                     </div>
                     <div class="col-md-3" onclick="utilities()">
                         <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-cyan-700" id="utilitiesBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-pin-account" aria-hidden="true"></i></div>
+                            <div class="widget-content padding-30 bg-cyan-700" id="utilitiesBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i
+                                            class="icon md-pin-account" aria-hidden="true"></i></div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->utilities,2,'.',',') }}</span>
@@ -69,8 +73,10 @@
                     </div>
                     <div class="col-md-3" onclick="auctions()">
                         <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-indigo-a400" id="auctionsBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-tag" aria-hidden="true"></i></div>
+                            <div class="widget-content padding-30 bg-indigo-a400" id="auctionsBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-tag"
+                                                                                               aria-hidden="true"></i>
+                                </div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->auction,2,'.',',') }}</span>
@@ -86,7 +92,8 @@
                     <div class="col-md-6">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Add BitCoins Accounts</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
+                                                           aria-hidden="true"></i>Add BitCoins Accounts</h3>
                             </div>
                             <div class="panel-body">
                                 <form class="form-horizontal fv-form fv-form-bootstrap" id="exampleStandardForm"
@@ -138,7 +145,7 @@
                                             @foreach($bitcoin_accounts as $account)
                                                 <tr>
                                                     <td>{{ $account->name }}</td>
-                                                    <td class="text-nowrap">
+                                                    <td class="text-nowrap" width="50px;">
                                                         <button type="button"
                                                                 class="btn btn-sm btn-icon btn-flat btn-default"
                                                                 data-toggle="tooltip" data-original-title="Delete">
@@ -157,7 +164,8 @@
                     <div class="col-md-6" id="commissions">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Commissions Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
+                                                           aria-hidden="true"></i>Commissions Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -186,7 +194,8 @@
                     <div class="col-md-6" style="display:none;" id="activations">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Activations Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
+                                                           aria-hidden="true"></i>Activations Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -215,7 +224,8 @@
                     <div class="col-md-6" style="display:none;" id="utilities">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Utilities Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
+                                                           aria-hidden="true"></i>Utilities Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -244,7 +254,8 @@
                     <div class="col-md-6" style="display: none" id="auctions">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Auctions Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
+                                                           aria-hidden="true"></i>Auctions Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">

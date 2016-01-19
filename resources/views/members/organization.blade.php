@@ -21,19 +21,25 @@
             padding: 15px;
         }
 
-        .divider-vertical
-        {
-        max-height: 100%;
-        border-right: 1px solid gray;
-        opacity: 1;
-        margin:  15px 0;
+        .divider-vertical {
+            max-height: 100%;
+            border-right: 1px solid gray;
+            opacity: 1;
+            margin: 15px 0;
+            padding-bottom: 25px;
         }
 
-        .left
-        {
+        @media screen and (max-width: 991px) {
+            .divider-vertical {
+                border-right: none;
+            }
+        }
+
+        .left {
             max-height: 100%;
             opacity: 1;
-            margin:  15px 0;
+            margin: 15px 0;
+            padding-bottom: 25px;
         }
 
     </style>
@@ -43,14 +49,17 @@
     <div class="content">
         <div class="row">
             <div class="col-md-12" style="margin: 20px 0;">
-                <ol class="breadcrumb">
-                    <li><a href="javascript:void(0)">Home</a></li>
-                    <li><a href="javascript:void(0)">Members</a></li>
-                    <li class="active">My Organization</li>
-                </ol>
+                <div class="page-header">
+                    <h1 class="page-title">My Organization</h1>
+                    <ol class="breadcrumb">
+                        <li><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="javascript:void(0)">Members</a></li>
+                        <li class="active">My Organization</li>
+                    </ol>
+                </div>
                 <div class="col-md-6">
-                    <div class="panel" style="height: 300px;">
-                        <div>
+                    <div class="panel">
+                        <div class="clearfix">
                             <p class="title">Binary</p>
                             <div class="col-md-12">
                                 <img src="/assets/images/logos/avatar.png" alt="..." style="padding: auto; ">
@@ -71,15 +80,17 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="panel" style="height: 300px;">
-                        <p class="title">Unilievel</p>
-                        <div class="col-md-12">
-                            <img src="/assets/images/logos/avatar.png" alt="..." style="padding: auto; ">
-                        </div>
-                        <div class="col-md-12 left">
-                            <div>
-                                <p class="title">Child in the organization</p>
-                                <h3 class="" style="text-align: center;"> # 200</h3>
+                    <div class="panel">
+                        <div class="clearfix">
+                            <p class="title">Unilievel</p>
+                            <div class="col-md-12">
+                                <img src="/assets/images/logos/avatar.png" alt="..." style="padding: auto; ">
+                            </div>
+                            <div class="col-md-12 left">
+                                <div>
+                                    <p class="title">Child in the organization</p>
+                                    <h3 class="" style="text-align: center;"> # 200</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -141,23 +152,23 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th>Id</th>
-                                            <th>Fecha</th>
+                                            <th>Name</th>
                                             <th>Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                        </tr>
-
+                                        @foreach($pending as $p)
+                                            <tr>
+                                                <td>{{ $p->name .' ' . $p->lastname }}</td>
+                                                <td class="text-nowrap" width="20px;">
+                                                    <button type="button"
+                                                            class="btn btn-sm btn-icon btn-flat btn-default"
+                                                            data-toggle="tooltip" data-original-title="Delete">
+                                                        <i class="icon md-close" aria-hidden="true"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
@@ -176,22 +187,20 @@
                                         <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Fecha</th>
-                                            <th>Action</th>
+                                            <th>Name</th>
+                                            <th>User</th>
+                                            <th>Date</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                            <td>Lunar probe project</td>
-                                        </tr>
-
+                                        @foreach($last as $l)
+                                            <tr>
+                                                <td>{{$l->id}}</td>
+                                                <td>{{$l->user->name.' '.$l->user->lastname}}</td>
+                                                <td>{{$l->user->user}}</td>
+                                                <td>{{$l->created_at}}</td>
+                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>

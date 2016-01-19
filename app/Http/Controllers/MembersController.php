@@ -167,8 +167,8 @@ class MembersController extends Controller
         $goldU = UserTree::where('product_id', 3)->where('sponsor_id', $user->id)->count();
         $silverU = UserTree::where('product_id', 2)->where('sponsor_id', $user->id)->count();
         $bronzeU = UserTree::where('product_id', 1)->where('sponsor_id', $user->id)->count();
-
-
-        return view('members.organization', ['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU]);
+        $pending = User::where('status', 'pending')->get();
+        $last = UserTree::where('sponsor_id', $user->id)->orderby('created_at', 'desc')->take(10)->get();
+        return view('members.organization', ['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU, 'pending' => $pending, 'last'=> $last]);
     }
 }
