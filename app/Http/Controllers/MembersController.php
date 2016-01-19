@@ -26,7 +26,7 @@ class MembersController extends Controller
 //        dd(Input::all());
         $validator = Validator::make(Input::all(), [
             'pack' => 'required|exists:products,id',
-            'name' => 'required',
+            'name' => 'required|min:6|max:18',
             'lastname' => 'required',
             'birthday' => 'required',
             'user' => 'required|unique:users,user',

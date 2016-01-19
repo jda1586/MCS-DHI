@@ -254,8 +254,11 @@
                     <img src="/assets/images/logos/avatar.png" alt="Machi">
                 </a>
                 <div class="site-menubar-info">
-                    <h5 class="site-menubar-user">{{ auth()->user()->name }}</h5>
-                    <p class="site-menubar-email">{{ auth()->user()->email }}</p>
+                    <h7 class="site-menubar-user">{{ auth()->user()->user }}</h7>
+                    <p class="site-menubar-email">
+                        {{ auth()->user()->name }}<br>
+                        {{ auth()->user()->email }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -273,7 +276,7 @@
                     <li class="site-menu-item">
                         <a class="animsition-link" href="#">
                             <i class="site-menu-icon md-money" aria-hidden="true"></i>
-                            <span class="site-menu-title">Acutions</span>
+                            <span class="site-menu-title">Auctions</span>
                         </a>
                     </li>
                     <li class="site-menu-item has-sub">
