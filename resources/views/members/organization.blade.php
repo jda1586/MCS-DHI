@@ -198,7 +198,7 @@
                                                 <td>{{$l->id}}</td>
                                                 <td>{{$l->user->name.' '.$l->user->lastname}}</td>
                                                 <td>{{$l->user->user}}</td>
-                                                <td>{{$l->created_at}}</td>
+                                                <td>{{$l->user->created_at}}</td>
                                             </tr>
                                         @endforeach
                                         </tbody>
