@@ -160,22 +160,22 @@
             </div>
         </div>
         <!-- Site Action -->
-        <div class="site-action">
-            <button type="button" class="site-action-toggle btn-raised btn btn-success btn-floating">
-                <i class="front-icon wb-plus animation-scale-up" aria-hidden="true"></i>
-                <i class="back-icon wb-close animation-scale-up" aria-hidden="true"></i>
-            </button>
-            <div class="site-action-buttons">
-                <button type="button" data-action="trash"
-                        class="btn-raised btn btn-success btn-floating animation-slide-bottom">
-                    <i class="icon wb-trash" aria-hidden="true"></i>
-                </button>
-                <button type="button" data-action="folder"
-                        class="btn-raised btn btn-success btn-floating animation-slide-bottom">
-                    <i class="icon wb-folder" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
+        {{--<div class="site-action">--}}
+            {{--<button type="button" class="site-action-toggle btn-raised btn btn-success btn-floating">--}}
+                {{--<i class="front-icon wb-plus animation-scale-up" aria-hidden="true"></i>--}}
+                {{--<i class="back-icon wb-close animation-scale-up" aria-hidden="true"></i>--}}
+            {{--</button>--}}
+            {{--<div class="site-action-buttons">--}}
+                {{--<button type="button" data-action="trash"--}}
+                        {{--class="btn-raised btn btn-success btn-floating animation-slide-bottom">--}}
+                    {{--<i class="icon wb-trash" aria-hidden="true"></i>--}}
+                {{--</button>--}}
+                {{--<button type="button" data-action="folder"--}}
+                        {{--class="btn-raised btn btn-success btn-floating animation-slide-bottom">--}}
+                    {{--<i class="icon wb-folder" aria-hidden="true"></i>--}}
+                {{--</button>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <!-- End Site Action -->
         <!-- Add Mail Form -->
         <div class="modal fade" id="addUserForm" aria-hidden="true" aria-labelledby="addUserForm"
