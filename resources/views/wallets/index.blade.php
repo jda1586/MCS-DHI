@@ -5,11 +5,11 @@
         .wallets {
             cursor: pointer;
         }
-        .shadow
-        {
-            -webkit-box-shadow: 4px 3px 17px 1px rgba(0,0,0,0.75);
-            -moz-box-shadow: 4px 3px 17px 1px rgba(0,0,0,0.75);
-            box-shadow: 4px 3px 17px 1px rgba(0,0,0,0.75);
+
+        .shadow {
+            -webkit-box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
+            box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
         }
     </style>
 @endsection
@@ -19,10 +19,13 @@
         <div class="row">
             <div style="margin: 20px 0;">
                 <div class="col-md-12">
-                    <ol class="breadcrumb">
-                        <li><a href="javascript:void(0)">Home</a></li>
-                        <li class="active">Wallets</li>
-                    </ol>
+                    <div class="page-header">
+                        <h1 class="page-title">Wallets</h1>
+                        <ol class="breadcrumb">
+                            <li><a href="../index.html">Home</a></li>
+                            <li class="active">Wallets</li>
+                        </ol>
+                    </div>
                     <div class="col-md-3" onclick="commissions()">
                         <div class="widget wallets shadow" id="commissionsBtn">
                             <div class="widget-content padding-30 bg-light-blue-a400" id="commissionsBtn">
@@ -100,10 +103,10 @@
                                     <div class="form-group form-material">
                                         <label class="col-sm-3 control-label">Name Account</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="standard_fullName"
-                                                   data-fv-field="standard_fullName">
+                                            <input type="text" class="form-control" name="account"
+                                                   data-fv-field="account">
                                             <small class="help-block" data-fv-validator="notEmpty"
-                                                   data-fv-for="standard_fullName" data-fv-result="NOT_VALIDATED"
+                                                   data-fv-for="account" data-fv-result="NOT_VALIDATED"
                                                    style="display: none;">The full name is required and cannot be empty
                                             </small>
                                         </div>
@@ -111,10 +114,22 @@
                                     <div class="form-group form-material">
                                         <label class="col-sm-3 control-label">Account Number</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="standard_email"
-                                                   data-fv-field="standard_email">
+                                            <input type="text" class="form-control" name="number"
+                                                   data-fv-field="number">
                                             <small class="help-block" data-fv-validator="notEmpty"
-                                                   data-fv-for="standard_email" data-fv-result="NOT_VALIDATED"
+                                                   data-fv-for="number" data-fv-result="NOT_VALIDATED"
+                                                   style="display: none;">The account number is required and cannot be
+                                                empty
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-material">
+                                        <label class="col-sm-3 control-label">Token Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="token"
+                                                   data-fv-field="token">
+                                            <small class="help-block" data-fv-validator="notEmpty"
+                                                   data-fv-for="token" data-fv-result="NOT_VALIDATED"
                                                    style="display: none;">The account number is required and cannot be
                                                 empty
                                             </small>
@@ -177,9 +192,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($commission_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($commission_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -207,9 +222,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($activation_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($activation_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -237,9 +252,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($utilities_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($utilities_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -267,9 +282,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($auction_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($auction_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
