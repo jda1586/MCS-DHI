@@ -45,12 +45,14 @@
 
 @section('content')
     <div id="wrapper-main" class="col-md-12 col-md-offset-0">
-        <ol class="breadcrumb">
-            <li><a href="javascript:void(0)">Home</a></li>
-            <li><a href="javascript:void(0)">Admin</a></li>
-            {{--<li><a href="javascript:void(0)">Members</a></li>--}}
-            <li class="active">Members</li>
-        </ol>
+        <div class="page-header">
+            <h1 class="page-title">Admin Members</h1>
+            <ol class="breadcrumb">
+                <li><a href="javascript:void(0)">Home</a></li>
+                <li><a href="javascript:void(0)">Admin</a></li>
+                <li class="active">Members</li>
+            </ol>
+        </div>
 
 
         {{-- INICIO DEL FORM --}}
@@ -116,93 +118,29 @@
                     </div>
                     <div class="page-aside-section">
                         <h5 class="page-aside-title">LABEL</h5>
-                        <div class="list-group has-actions">
+                        <div class="list-group">
                             <div class="list-group-item">
                                 <div class="list-content">
                                     <span class="item-right">10</span>
                                     <span class="list-text">Work</span>
-                                    <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
-                                                    class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
-                                                                               aria-hidden="true"></i></span>
-                                    </div>
-                                </div>
-                                <div class="list-editable">
-                                    <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label"
-                                               data-bind=".list-text"
-                                               value="Work">
-                                        <button type="button" class="input-editable-close icon wb-close"
-                                                data-toggle="list-editable-close"
-                                                aria-label="Close" aria-expanded="true"></button>
-                                    </div>
                                 </div>
                             </div>
                             <div class="list-group-item">
                                 <div class="list-content">
                                     <span class="item-right">5</span>
                                     <span class="list-text">Family</span>
-                                    <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
-                                                    class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
-                                                                               aria-hidden="true"></i></span>
-                                    </div>
-                                </div>
-                                <div class="list-editable">
-                                    <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label"
-                                               data-bind=".list-text"
-                                               value="Family">
-                                        <button type="button" class="input-editable-close icon wb-close"
-                                                data-toggle="list-editable-close"
-                                                aria-label="Close" aria-expanded="true"></button>
-                                    </div>
                                 </div>
                             </div>
                             <div class="list-group-item">
                                 <div class="list-content">
                                     <span class="item-right">16</span>
                                     <span class="list-text">Private</span>
-                                    <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
-                                                    class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
-                                                                               aria-hidden="true"></i></span>
-                                    </div>
-                                </div>
-                                <div class="list-editable">
-                                    <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label"
-                                               data-bind=".list-text"
-                                               value="Private">
-                                        <button type="button" class="input-editable-close icon wb-close"
-                                                data-toggle="list-editable-close"
-                                                aria-label="Close" aria-expanded="true"></button>
-                                    </div>
                                 </div>
                             </div>
                             <div class="list-group-item">
                                 <div class="list-content">
                                     <span class="item-right">30</span>
                                     <span class="list-text">Friends</span>
-                                    <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
-                                                    class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
-                                                                               aria-hidden="true"></i></span>
-                                    </div>
-                                </div>
-                                <div class="list-editable">
-                                    <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label"
-                                               data-bind=".list-text"
-                                               value="Friends">
-                                        <button type="button" class="input-editable-close icon wb-close"
-                                                data-toggle="list-editable-close"
-                                                aria-label="Close" aria-expanded="true"></button>
-                                    </div>
                                 </div>
                             </div>
                             <a class="list-group-item" href="javascript:void(0)">
@@ -379,23 +317,10 @@
                             </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" data-dismiss="modal" type="submit">Send</button>
-                        <a class="btn btn-sm btn-white" data-dismiss="modal" href="javascript:void(0)">Cancel</a>
-                    </div>
                 </div>
             </div>
         </div>
         <!-- End Add Mail Form -->
-        <!-- Footer -->
-        <footer class="site-footer">
-            <div class="site-footer-legal">© 2015 <a
-                        href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a>
-            </div>
-            <div class="site-footer-right">
-                Crafted with <i class="red-600 wb wb-heart"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
-            </div>
-        </footer>
         <!-- Core  -->
         <script src="/vendor/jquery/jquery.js"></script>
         <script src="/vendor/bootstrap/bootstrap.js"></script>
