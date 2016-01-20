@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => ['auth', 'roles']], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'DashboardController@index']);
 
     /* Arboles */

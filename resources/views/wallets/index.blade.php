@@ -6,13 +6,10 @@
             cursor: pointer;
         }
 
-        .title {
-            margin: 0;
-        }
-
-        .current {
-            text-align: center;
-            margin: 10px;
+        .shadow {
+            -webkit-box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
+            box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
         }
     </style>
 @endsection
@@ -22,14 +19,18 @@
         <div class="row">
             <div style="margin: 20px 0;">
                 <div class="col-md-12">
-                    <ol class="breadcrumb">
-                        <li><a href="javascript:void(0)">Home</a></li>
-                        <li class="active">Wallets</li>
-                    </ol>
+                    <div class="page-header">
+                        <h1 class="page-title">Wallets</h1>
+                        <ol class="breadcrumb">
+                            <li><a href="../index.html">Home</a></li>
+                            <li class="active">Wallets</li>
+                        </ol>
+                    </div>
                     <div class="col-md-3" onclick="commissions()">
-                        <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-light-blue-a400" id="commissionsBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-assignment" aria-hidden="true"></i></div>
+                        <div class="widget wallets shadow" id="commissionsBtn">
+                            <div class="widget-content padding-30 bg-light-blue-a400" id="commissionsBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i
+                                            class="icon md-mall" aria-hidden="true"></i></div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->comission,2,'.',',') }}</span>
@@ -40,9 +41,11 @@
                         </div>
                     </div>
                     <div class="col-md-3" onclick="activations()">
-                        <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-blue-900" id="activationsBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-lock" aria-hidden="true"></i></div>
+                        <div class="widget wallets" id="activationsBtn">
+                            <div class="widget-content padding-30 bg-blue-900" id="activationsBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-check"
+                                                                                               aria-hidden="true"></i>
+                                </div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->activation,2,'.',',') }}</span>
@@ -54,9 +57,10 @@
                         </div>
                     </div>
                     <div class="col-md-3" onclick="utilities()">
-                        <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-cyan-700" id="utilitiesBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-pin-account" aria-hidden="true"></i></div>
+                        <div class="widget wallets" id="utilitiesBtn">
+                            <div class="widget-content padding-30 bg-cyan-700" id="utilitiesBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i
+                                            class="icon md-male-female" aria-hidden="true"></i></div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->utilities,2,'.',',') }}</span>
@@ -68,9 +72,11 @@
                         </div>
                     </div>
                     <div class="col-md-3" onclick="auctions()">
-                        <div class="widget wallets">
-                            <div class="widget-content padding-30 bg-indigo-a400" id="auctionsBtn" >
-                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-tag" aria-hidden="true"></i></div>
+                        <div class="widget wallets" id="auctionsBtn">
+                            <div class="widget-content padding-30 bg-indigo-a400" id="auctionsBtn">
+                                <div class="widget-watermark darker font-size-60 margin-15"><i class="icon md-star"
+                                                                                               aria-hidden="true"></i>
+                                </div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
                                         <span class="counter-number">$ {{ number_format($wallets->auction,2,'.',',') }}</span>
@@ -86,7 +92,8 @@
                     <div class="col-md-6">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Add BitCoins Accounts</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
+                                                           aria-hidden="true"></i>Add BitCoins Accounts</h3>
                             </div>
                             <div class="panel-body">
                                 <form class="form-horizontal fv-form fv-form-bootstrap" id="exampleStandardForm"
@@ -96,10 +103,10 @@
                                     <div class="form-group form-material">
                                         <label class="col-sm-3 control-label">Name Account</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="standard_fullName"
-                                                   data-fv-field="standard_fullName">
+                                            <input type="text" class="form-control" name="account"
+                                                   data-fv-field="account">
                                             <small class="help-block" data-fv-validator="notEmpty"
-                                                   data-fv-for="standard_fullName" data-fv-result="NOT_VALIDATED"
+                                                   data-fv-for="account" data-fv-result="NOT_VALIDATED"
                                                    style="display: none;">The full name is required and cannot be empty
                                             </small>
                                         </div>
@@ -107,10 +114,22 @@
                                     <div class="form-group form-material">
                                         <label class="col-sm-3 control-label">Account Number</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="standard_email"
-                                                   data-fv-field="standard_email">
+                                            <input type="text" class="form-control" name="number"
+                                                   data-fv-field="number">
                                             <small class="help-block" data-fv-validator="notEmpty"
-                                                   data-fv-for="standard_email" data-fv-result="NOT_VALIDATED"
+                                                   data-fv-for="number" data-fv-result="NOT_VALIDATED"
+                                                   style="display: none;">The account number is required and cannot be
+                                                empty
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-material">
+                                        <label class="col-sm-3 control-label">Token Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" name="token"
+                                                   data-fv-field="token">
+                                            <small class="help-block" data-fv-validator="notEmpty"
+                                                   data-fv-for="token" data-fv-result="NOT_VALIDATED"
                                                    style="display: none;">The account number is required and cannot be
                                                 empty
                                             </small>
@@ -138,7 +157,7 @@
                                             @foreach($bitcoin_accounts as $account)
                                                 <tr>
                                                     <td>{{ $account->name }}</td>
-                                                    <td class="text-nowrap">
+                                                    <td class="text-nowrap" width="50px;">
                                                         <button type="button"
                                                                 class="btn btn-sm btn-icon btn-flat btn-default"
                                                                 data-toggle="tooltip" data-original-title="Delete">
@@ -157,7 +176,8 @@
                     <div class="col-md-6" id="commissions">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Commissions Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-mall"
+                                                           aria-hidden="true"></i>Commissions Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -172,9 +192,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($commission_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($commission_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -186,7 +206,8 @@
                     <div class="col-md-6" style="display:none;" id="activations">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Activations Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-check"
+                                                           aria-hidden="true"></i>Activations Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -201,9 +222,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($activation_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($activation_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -215,7 +236,8 @@
                     <div class="col-md-6" style="display:none;" id="utilities">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Utilities Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-male-female"
+                                                           aria-hidden="true"></i>Utilities Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -230,9 +252,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($utilities_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($utilities_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -244,7 +266,8 @@
                     <div class="col-md-6" style="display: none" id="auctions">
                         <div class="panel">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments" aria-hidden="true"></i>Auctions Report</h3>
+                                <h3 class="panel-title"><i class="panel-title-icon icon md-star"
+                                                           aria-hidden="true"></i>Auctions Report</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="example-wrap">
@@ -259,9 +282,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($auction_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            {{--@foreach($auction_movements as $movement)--}}
+                                            {{--{!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}--}}
+                                            {{--@endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -284,20 +307,20 @@
     <script type="text/javascript">
 
         function commissions() {
-            document.getElementById("commissionsBtn").style.backgroundColor = "#CED8F6";
-            document.getElementById("activationsBtn").style.backgroundColor = "white";
-            document.getElementById("utilitiesBtn").style.backgroundColor = "white";
-            document.getElementById("auctionsBtn").style.backgroundColor = "white";
+            document.getElementById("commissionsBtn").className = "widget wallets shadow";
+            document.getElementById("activationsBtn").className = "widget wallets";
+            document.getElementById("utilitiesBtn").className = "widget wallets";
+            document.getElementById("auctionsBtn").className = "widget wallets";
             document.getElementById("commissions").style.display = "block";
             document.getElementById("activations").style.display = "none";
             document.getElementById("utilities").style.display = "none";
             document.getElementById("auctions").style.display = "none";
         }
         function activations() {
-            document.getElementById("commissionsBtn").style.backgroundColor = "white";
-            document.getElementById("activationsBtn").style.backgroundColor = "#CED8F6";
-            document.getElementById("utilitiesBtn").style.backgroundColor = "white";
-            document.getElementById("auctionsBtn").style.backgroundColor = "white";
+            document.getElementById("commissionsBtn").className = "widget wallets";
+            document.getElementById("activationsBtn").className = "widget wallets shadow";
+            document.getElementById("utilitiesBtn").className = "widget wallets";
+            document.getElementById("auctionsBtn").className = "widget wallets";
             document.getElementById("commissions").style.display = "none";
             document.getElementById("activations").style.display = "block";
             document.getElementById("utilities").style.display = "none";
@@ -305,10 +328,10 @@
         }
 
         function utilities() {
-            document.getElementById("commissionsBtn").style.backgroundColor = "white";
-            document.getElementById("activationsBtn").style.backgroundColor = "white";
-            document.getElementById("utilitiesBtn").style.backgroundColor = "#CED8F6";
-            document.getElementById("auctionsBtn").style.backgroundColor = "white";
+            document.getElementById("commissionsBtn").className = "widget wallets";
+            document.getElementById("activationsBtn").className = "widget wallets";
+            document.getElementById("utilitiesBtn").className = "widget wallets shadow";
+            document.getElementById("auctionsBtn").className = "widget wallets";
             document.getElementById("commissions").style.display = "none";
             document.getElementById("activations").style.display = "none";
             document.getElementById("utilities").style.display = "block";
@@ -316,10 +339,10 @@
         }
 
         function auctions() {
-            document.getElementById("commissionsBtn").style.backgroundColor = "white";
-            document.getElementById("activationsBtn").style.backgroundColor = "white";
-            document.getElementById("utilitiesBtn").style.backgroundColor = "white";
-            document.getElementById("auctionsBtn").style.backgroundColor = "#CED8F6";
+            document.getElementById("commissionsBtn").className = "widget wallets";
+            document.getElementById("activationsBtn").className = "widget wallets";
+            document.getElementById("utilitiesBtn").className = "widget wallets";
+            document.getElementById("auctionsBtn").className = "widget wallets shadow";
             document.getElementById("commissions").style.display = "none";
             document.getElementById("activations").style.display = "none";
             document.getElementById("utilities").style.display = "none";
