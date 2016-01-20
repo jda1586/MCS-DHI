@@ -58,46 +58,45 @@
         </div> --}}{{-- fin del fomr--}}
 
 
-
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-            <meta name="description" content="bootstrap admin template">
-            <meta name="author" content="">
-            <title>Contacts | Remark Admin Template</title>
-            <link rel="apple-touch-icon" href="../../../assets/images/apple-touch-icon.png">
-            <link rel="shortcut icon" href="../../../assets/images/favicon.ico">
-            <!-- Stylesheets -->
-            <link rel="stylesheet" href="../../../../global/css/bootstrap.min.css">
-            <link rel="stylesheet" href="../../../../global/css/bootstrap-extend.min.css">
-            <link rel="stylesheet" href="../../../assets/css/site.min.css">
-            <!-- Plugins -->
-            <link rel="stylesheet" href="../../../../global/vendor/animsition/animsition.css">
-            <link rel="stylesheet" href="../../../../global/vendor/asscrollable/asScrollable.css">
-            <link rel="stylesheet" href="../../../../global/vendor/switchery/switchery.css">
-            <link rel="stylesheet" href="../../../../global/vendor/intro-js/introjs.css">
-            <link rel="stylesheet" href="../../../../global/vendor/slidepanel/slidePanel.css">
-            <link rel="stylesheet" href="../../../../global/vendor/flag-icon-css/flag-icon.css">
-            <link rel="stylesheet" href="../../../../global/vendor/filament-tablesaw/tablesaw.css">
-            <link rel="stylesheet" href="../../../../global/vendor/slidepanel/slidePanel.css">
-            <link rel="stylesheet" href="../../../assets/examples/css/apps/contacts.css">
-            <!-- Fonts -->
-            <link rel="stylesheet" href="../../../../global/fonts/web-icons/web-icons.min.css">
-            <link rel="stylesheet" href="../../../../global/fonts/brand-icons/brand-icons.min.css">
-            <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
-            <!--[if lt IE 9]>
-            <script src="../../../../global/vendor/html5shiv/html5shiv.min.js"></script>
-            <![endif]-->
-            <!--[if lt IE 10]>
-            <script src="../../../../global/vendor/media-match/media.match.min.js"></script>
-            <script src="../../../../global/vendor/respond/respond.min.js"></script>
-            <![endif]-->
-            <!-- Scripts -->
-            <script src="../../../../global/vendor/modernizr/modernizr.js"></script>
-            <script src="../../../../global/vendor/breakpoints/breakpoints.js"></script>
-            <script>
-                Breakpoints();
-            </script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta name="description" content="bootstrap admin template">
+        <meta name="author" content="">
+        <title>Contacts | Remark Admin Template</title>
+        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
+        <link rel="stylesheet" href="/assets/css/site.min.css">
+        <!-- Plugins -->
+        <link rel="stylesheet" href="/vendor/animsition/animsition.css">
+        <link rel="stylesheet" href="/vendor/asscrollable/asScrollable.css">
+        <link rel="stylesheet" href="/vendor/switchery/switchery.css">
+        <link rel="stylesheet" href="/vendor/intro-js/introjs.css">
+        <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
+        <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
+        <link rel="stylesheet" href="/vendor/filament-tablesaw/tablesaw.css">
+        <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
+        <link rel="stylesheet" href="/assets/examples/css/apps/contacts.css">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="/fonts/web-icons/web-icons.min.css">
+        <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+        <!--[if lt IE 9]>
+        <script src="/vendor/html5shiv/html5shiv.min.js"></script>
+        <![endif]-->
+        <!--[if lt IE 10]>
+        <script src="/vendor/media-match/media.match.min.js"></script>
+        <script src="/vendor/respond/respond.min.js"></script>
+        <![endif]-->
+        <!-- Scripts -->
+        <script src="/vendor/modernizr/modernizr.js"></script>
+        <script src="/vendor/breakpoints/breakpoints.js"></script>
+        <script>
+            Breakpoints();
+        </script>
 
 
         <div class="page bg-white animsition">
@@ -111,7 +110,8 @@
                     <div class="page-aside-section">
                         <div class="list-group">
                             <a class="list-group-item" href="javascript:void(0)">
-                                <span class="item-right">61</span><i class="icon wb-inbox" aria-hidden="true"></i>All contacts</a>
+                                <span class="item-right">61</span><i class="icon wb-inbox" aria-hidden="true"></i>All
+                                contacts</a>
                         </div>
                     </div>
                     <div class="page-aside-section">
@@ -122,15 +122,19 @@
                                     <span class="item-right">10</span>
                                     <span class="list-text">Work</span>
                                     <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
+                                                    class="icon wb-edit" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
+                                                                               aria-hidden="true"></i></span>
                                     </div>
                                 </div>
                                 <div class="list-editable">
                                     <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                                        <input type="text" class="form-control empty" name="label"
+                                               data-bind=".list-text"
                                                value="Work">
-                                        <button type="button" class="input-editable-close icon wb-close" data-toggle="list-editable-close"
+                                        <button type="button" class="input-editable-close icon wb-close"
+                                                data-toggle="list-editable-close"
                                                 aria-label="Close" aria-expanded="true"></button>
                                     </div>
                                 </div>
@@ -140,15 +144,19 @@
                                     <span class="item-right">5</span>
                                     <span class="list-text">Family</span>
                                     <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
+                                                    class="icon wb-edit" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
+                                                                               aria-hidden="true"></i></span>
                                     </div>
                                 </div>
                                 <div class="list-editable">
                                     <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                                        <input type="text" class="form-control empty" name="label"
+                                               data-bind=".list-text"
                                                value="Family">
-                                        <button type="button" class="input-editable-close icon wb-close" data-toggle="list-editable-close"
+                                        <button type="button" class="input-editable-close icon wb-close"
+                                                data-toggle="list-editable-close"
                                                 aria-label="Close" aria-expanded="true"></button>
                                     </div>
                                 </div>
@@ -158,15 +166,19 @@
                                     <span class="item-right">16</span>
                                     <span class="list-text">Private</span>
                                     <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
+                                                    class="icon wb-edit" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
+                                                                               aria-hidden="true"></i></span>
                                     </div>
                                 </div>
                                 <div class="list-editable">
                                     <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                                        <input type="text" class="form-control empty" name="label"
+                                               data-bind=".list-text"
                                                value="Private">
-                                        <button type="button" class="input-editable-close icon wb-close" data-toggle="list-editable-close"
+                                        <button type="button" class="input-editable-close icon wb-close"
+                                                data-toggle="list-editable-close"
                                                 aria-label="Close" aria-expanded="true"></button>
                                     </div>
                                 </div>
@@ -176,15 +188,19 @@
                                     <span class="item-right">30</span>
                                     <span class="list-text">Friends</span>
                                     <div class="item-actions">
-                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i class="icon wb-edit" aria-hidden="true"></i></span>
-                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon" data-toggle="list-editable"><i
+                                                    class="icon wb-edit" aria-hidden="true"></i></span>
+                                        <span class="btn btn-pure btn-icon"><i class="icon wb-trash"
+                                                                               aria-hidden="true"></i></span>
                                     </div>
                                 </div>
                                 <div class="list-editable">
                                     <div class="form-group form-material">
-                                        <input type="text" class="form-control empty" name="label" data-bind=".list-text"
+                                        <input type="text" class="form-control empty" name="label"
+                                               data-bind=".list-text"
                                                value="Friends">
-                                        <button type="button" class="input-editable-close icon wb-close" data-toggle="list-editable-close"
+                                        <button type="button" class="input-editable-close icon wb-close"
+                                                data-toggle="list-editable-close"
                                                 aria-label="Close" aria-expanded="true"></button>
                                     </div>
                                 </div>
@@ -226,12 +242,14 @@
                                     <li><a href="javascript:void(0)">More</a></li>
                                 </ul>
                             </div>
-                            <button type="button" class="btn btn-outline btn-default btn-md empty-btn">Empty All</button>
+                            <button type="button" class="btn btn-outline btn-default btn-md empty-btn">Empty All
+                            </button>
                         </div>
                         <div class="btn-group">
                             <div class="dropdown">
                                 <button class="btn btn-icon btn-pure btn-default dropdown-toggle" data-toggle="dropdown"
-                                        aria-expanded="false" type="button"><i class="icon wb-folder" aria-hidden="true"></i></button>
+                                        aria-expanded="false" type="button"><i class="icon wb-folder"
+                                                                               aria-hidden="true"></i></button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="javascript:void(0)">work</a></li>
                                     <li><a href="javascript:void(0)">Family</a></li>
@@ -244,7 +262,8 @@
                             </div>
                             <div class="dropdown">
                                 <button class="btn btn-icon btn-pure btn-default dropdown-toggle" data-toggle="dropdown"
-                                        aria-expanded="false" type="button"><i class="icon wb-tag" aria-hidden="true"></i></button>
+                                        aria-expanded="false" type="button"><i class="icon wb-tag"
+                                                                               aria-hidden="true"></i></button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="javascript:void(0)">work</a></li>
                                     <li><a href="javascript:void(0)">Family</a></li>
@@ -261,13 +280,16 @@
                         <tr>
                             <th class="cell-60" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                 <span class="checkbox-custom checkbox-primary checkbox-lg contacts-select-all">
-                  <input type="checkbox" class="contacts-checkbox selectable-all" id="select_all"
-                  />
+                  <input type="checkbox" class="contacts-checkbox selectable-all" id="select_all"/>
                   <label for="select_all"></label>
                 </span>
                             </th>
-                            <th class="cell-300" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">Name</th>
-                            <th class="cell-300" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">Phone</th>
+                            <th class="cell-300" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                                Name
+                            </th>
+                            <th class="cell-300" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                                Phone
+                            </th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">Email</th>
                         </tr>
                         </thead>
@@ -275,14 +297,13 @@
                         <tr data-url="panel.tpl" data-toggle="slidePanel">
                             <td class="cell-60 responsive-hide">
                 <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_1"
-                  />
+                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_1"/>
                   <label for="contacts_1"></label>
                 </span>
                             </td>
                             <td class="cell-300">
                                 <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/1.jpg" alt="...">
+                                    <img class="img-responsive" src="/portraits/1.jpg" alt="...">
                                 </a>
                                 Herman Beck
                             </td>
@@ -292,150 +313,13 @@
                         <tr data-url="panel.tpl" data-toggle="slidePanel">
                             <td class="cell-60 responsive-hide">
                 <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_2"
-                  />
-                  <label for="contacts_2"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/2.jpg" alt="...">
-                                </a>
-                                Mary Adams
-                            </td>
-                            <td class="cell-300">(838)-780-5116</td>
-                            <td>heidi.morrison77@hotmail.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_3"
-                  />
-                  <label for="contacts_3"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/3.jpg" alt="...">
-                                </a>
-                                Caleb Richards
-                            </td>
-                            <td class="cell-300">(861)-579-6099</td>
-                            <td>raymond.byrd19@aol.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_4"
-                  />
-                  <label for="contacts_4"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/4.jpg" alt="...">
-                                </a>
-                                June Lane
-                            </td>
-                            <td class="cell-300">(210)-727-1136</td>
-                            <td>eileen.gordon24@yahoo.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_5"
-                  />
-                  <label for="contacts_5"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/5.jpg" alt="...">
-                                </a>
-                                Edward Fletcher
-                            </td>
-                            <td class="cell-300">(729)-682-8842</td>
-                            <td>jim.hunter32@gmail.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_6"
-                  />
-                  <label for="contacts_6"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/6.jpg" alt="...">
-                                </a>
-                                Crystal Bates
-                            </td>
-                            <td class="cell-300">(916)-801-4120</td>
-                            <td>zoe.perez69@yahoo.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_7"
-                  />
-                  <label for="contacts_7"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/7.jpg" alt="...">
-                                </a>
-                                Nathan Watts
-                            </td>
-                            <td class="cell-300">(320)-725-3333</td>
-                            <td>esther.kelly84@hotmail.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_8"
-                  />
-                  <label for="contacts_8"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/8.jpg" alt="...">
-                                </a>
-                                Heather Harper
-                            </td>
-                            <td class="cell-300">(386)-653-1983</td>
-                            <td>jacob.morgan95@gmail.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_9"
-                  />
-                  <label for="contacts_9"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/9.jpg" alt="...">
-                                </a>
-                                Willard Wood
-                            </td>
-                            <td class="cell-300">(130)-591-7236</td>
-                            <td>jacob.morgan95@gmail.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_10"
-                  />
+                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_2"/>
                   <label for="contacts_10"></label>
                 </span>
                             </td>
                             <td class="cell-300">
                                 <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="../../../../global/portraits/10.jpg" alt="...">
+                                    <img class="img-responsive" src="/portraits/10.jpg" alt="...">
                                 </a>
                                 Ronnie Ellis
                             </td>
@@ -455,10 +339,12 @@
                 <i class="back-icon wb-close animation-scale-up" aria-hidden="true"></i>
             </button>
             <div class="site-action-buttons">
-                <button type="button" data-action="trash" class="btn-raised btn btn-success btn-floating animation-slide-bottom">
+                <button type="button" data-action="trash"
+                        class="btn-raised btn btn-success btn-floating animation-slide-bottom">
                     <i class="icon wb-trash" aria-hidden="true"></i>
                 </button>
-                <button type="button" data-action="folder" class="btn-raised btn btn-success btn-floating animation-slide-bottom">
+                <button type="button" data-action="folder"
+                        class="btn-raised btn btn-success btn-floating animation-slide-bottom">
                     <i class="icon wb-folder" aria-hidden="true"></i>
                 </button>
             </div>
@@ -476,16 +362,16 @@
                     <div class="modal-body">
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Name" />
+                                <input type="text" class="form-control" name="name" placeholder="Name"/>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="phone" placeholder="Phone" />
+                                <input type="text" class="form-control" name="phone" placeholder="Phone"/>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="email" placeholder="Email" />
+                                <input type="text" class="form-control" name="email" placeholder="Email"/>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="address" placeholder="Address" />
+                                <input type="text" class="form-control" name="address" placeholder="Address"/>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="form-control" name="birthday" placeholder="Birthday"
@@ -503,52 +389,53 @@
         <!-- End Add Mail Form -->
         <!-- Footer -->
         <footer class="site-footer">
-            <div class="site-footer-legal">© 2015 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
+            <div class="site-footer-legal">© 2015 <a
+                        href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a>
+            </div>
             <div class="site-footer-right">
                 Crafted with <i class="red-600 wb wb-heart"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
             </div>
         </footer>
         <!-- Core  -->
-        <script src="../../../../global/vendor/jquery/jquery.js"></script>
-        <script src="../../../../global/vendor/bootstrap/bootstrap.js"></script>
-        <script src="../../../../global/vendor/animsition/animsition.js"></script>
-        <script src="../../../../global/vendor/asscroll/jquery-asScroll.js"></script>
-        <script src="../../../../global/vendor/mousewheel/jquery.mousewheel.js"></script>
-        <script src="../../../../global/vendor/asscrollable/jquery.asScrollable.all.js"></script>
-        <script src="../../../../global/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
+        <script src="/vendor/jquery/jquery.js"></script>
+        <script src="/vendor/bootstrap/bootstrap.js"></script>
+        <script src="/vendor/animsition/animsition.js"></script>
+        <script src="/vendor/asscroll/jquery-asScroll.js"></script>
+        <script src="/vendor/mousewheel/jquery.mousewheel.js"></script>
+        <script src="/vendor/asscrollable/jquery.asScrollable.all.js"></script>
+        <script src="/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
         <!-- Plugins -->
-        <script src="../../../../global/vendor/switchery/switchery.min.js"></script>
-        <script src="../../../../global/vendor/intro-js/intro.js"></script>
-        <script src="../../../../global/vendor/screenfull/screenfull.js"></script>
-        <script src="../../../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
-        <script src="../../../../global/vendor/filament-tablesaw/tablesaw.js"></script>
-        <script src="../../../../global/vendor/slidepanel/jquery-slidePanel.js"></script>
-        <script src="../../../../global/vendor/aspaginator/jquery.asPaginator.min.js"></script>
-        <script src="../../../../global/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+        <script src="/vendor/switchery/switchery.min.js"></script>
+        <script src="/vendor/intro-js/intro.js"></script>
+        <script src="/vendor/screenfull/screenfull.js"></script>
+        <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
+        <script src="/vendor/filament-tablesaw/tablesaw.js"></script>
+        <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
+        <script src="/vendor/aspaginator/jquery.asPaginator.min.js"></script>
+        <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
         <!-- Scripts -->
-        <script src="../../../../global/js/core.js"></script>
-        <script src="../../../assets/js/site.js"></script>
-        <script src="../../../assets/js/sections/menu.js"></script>
-        <script src="../../../assets/js/sections/menubar.js"></script>
-        <script src="../../../assets/js/sections/gridmenu.js"></script>
-        <script src="../../../assets/js/sections/sidebar.js"></script>
-        <script src="../../../../global/js/configs/config-colors.js"></script>
-        <script src="../../../assets/js/configs/config-tour.js"></script>
-        <script src="../../../../global/js/components/asscrollable.js"></script>
-        <script src="../../../../global/js/components/animsition.js"></script>
-        <script src="../../../../global/js/components/slidepanel.js"></script>
-        <script src="../../../../global/js/components/switchery.js"></script>
-        <script src="../../../../global/js/plugins/sticky-header.js"></script>
-        <script src="../../../../global/js/plugins/action-btn.js"></script>
-        <script src="../../../../global/js/plugins/selectable.js"></script>
-        <script src="../../../../global/js/components/aspaginator.js"></script>
-        <script src="../../../../global/js/components/animate-list.js"></script>
-        <script src="../../../../global/js/components/jquery-placeholder.js"></script>
-        <script src="../../../../global/js/components/material.js"></script>
-        <script src="../../../../global/js/components/selectable.js"></script>
-        <script src="../../../assets/js/app.js"></script>
-        <script src="../../../assets/examples/js/apps/contacts.js"></script>
-
+        <script src="/js/core.js"></script>
+        <script src="/assets/js/site.js"></script>
+        <script src="/assets/js/sections/menu.js"></script>
+        <script src="/assets/js/sections/menubar.js"></script>
+        <script src="/assets/js/sections/gridmenu.js"></script>
+        <script src="/assets/js/sections/sidebar.js"></script>
+        <script src="/js/configs/config-colors.js"></script>
+        <script src="/assets/js/configs/config-tour.js"></script>
+        <script src="/js/components/asscrollable.js"></script>
+        <script src="/js/components/animsition.js"></script>
+        <script src="/js/components/slidepanel.js"></script>
+        <script src="/js/components/switchery.js"></script>
+        <script src="/js/plugins/sticky-header.js"></script>
+        <script src="/js/plugins/action-btn.js"></script>
+        <script src="/js/plugins/selectable.js"></script>
+        <script src="/js/components/aspaginator.js"></script>
+        <script src="/js/components/animate-list.js"></script>
+        <script src="/js/components/jquery-placeholder.js"></script>
+        <script src="/js/components/material.js"></script>
+        <script src="/js/components/selectable.js"></script>
+        <script src="/assets/js/app.js"></script>
+        <script src="/assets/examples/js/apps/contacts.js"></script>
 
 
     </div> {{-- fin del div wraper--}}
@@ -573,7 +460,7 @@
     <script src="/vendor/bootbox/bootbox.js"></script>
 
     <!-- Scripts -->
-
+    <script src="/assets/js/sections/gridmenu.min.js"></script>
     <script src="/js/plugins/sticky-header.min.js"></script>
     <script src="/js/plugins/action-btn.min.js"></script>
     <script src="/js/plugins/selectable.min.js"></script>
@@ -592,9 +479,9 @@
 
     <!-- Google Analytics -->
     <script>
-        (function(i, s, o, g, r, a, m) {
+        (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
+            i[r] = i[r] || function () {
                         (i[r].q = i[r].q || []).push(arguments)
                     }, i[r].l = 1 * new Date();
             a = s.createElement(o),
