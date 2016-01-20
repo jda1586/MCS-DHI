@@ -69,6 +69,8 @@ class User extends Model implements AuthenticatableContract,
         'country_id'
     ];
 
+    protected $dates = ['created_at', 'updated_at'];
+
     /**
      * The attributes excluded from the model's JSON form.
      *

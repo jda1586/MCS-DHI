@@ -110,7 +110,7 @@
                     <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">Sign Up
                     </button>
                     {!! Form::close() !!}
-                    <p>Have account already? Please go to <a href="#">Sign In</a></p>
+                    {{--<p>Have account already? Please go to <a href="#">Sign In</a></p>--}}
                 </div>
             </div>
             <div class="col-md-4 col-sm-3"></div>
