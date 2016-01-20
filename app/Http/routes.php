@@ -66,3 +66,10 @@ Route::group([], function () {
 //    ruta temporal para vistas
     Route::get('admin', ['as' => 'admin', 'uses' => 'MembersController@admin']);
 });
+
+/* Productos */
+Route::group(['as' => 'items.', 'prefix' => 'items'], function () {
+    Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
+    Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
+    Route::get('/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
+});
