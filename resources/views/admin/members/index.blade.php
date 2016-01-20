@@ -59,43 +59,6 @@
         {{--<div id="form" class="col-md-12 col-md-offset-0 panel " style="height: 500px;">
         </div> --}}{{-- fin del fomr--}}
 
-
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <meta name="description" content="bootstrap admin template">
-        <meta name="author" content="">
-        <title>Contacts | Remark Admin Template</title>
-        <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-        <link rel="shortcut icon" href="/assets/images/favicon.ico">
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
-        <link rel="stylesheet" href="/assets/css/site.min.css">
-        <!-- Plugins -->
-        <link rel="stylesheet" href="/vendor/animsition/animsition.css">
-        <link rel="stylesheet" href="/vendor/asscrollable/asScrollable.css">
-        <link rel="stylesheet" href="/vendor/switchery/switchery.css">
-        <link rel="stylesheet" href="/vendor/intro-js/introjs.css">
-        <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
-        <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
-        <link rel="stylesheet" href="/vendor/filament-tablesaw/tablesaw.css">
-        <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
-        <link rel="stylesheet" href="/assets/examples/css/apps/contacts.css">
-        <!-- Fonts -->
-        <link rel="stylesheet" href="/fonts/web-icons/web-icons.min.css">
-        <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
-        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
-        <!--[if lt IE 9]>
-        <script src="/vendor/html5shiv/html5shiv.min.js"></script>
-        <![endif]-->
-        <!--[if lt IE 10]>
-        <script src="/vendor/media-match/media.match.min.js"></script>
-        <script src="/vendor/respond/respond.min.js"></script>
-        <![endif]-->
-        <!-- Scripts -->
-        <script src="/vendor/modernizr/modernizr.js"></script>
-        <script src="/vendor/breakpoints/breakpoints.js"></script>
         <script>
             Breakpoints();
         </script>
@@ -232,37 +195,37 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
+                        <tr data-url="panel.tpl" data-toggle="slidePanel" class="animation-fade" style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                             <td class="cell-60 responsive-hide">
                 <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_1"/>
-                  <label for="contacts_1"></label>
+                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_2">
+                  <label for="contacts_2"></label>
                 </span>
                             </td>
                             <td class="cell-300">
                                 <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="/portraits/1.jpg" alt="...">
+                                    <img class="img-responsive" src="../../../../global/portraits/2.jpg" alt="...">
                                 </a>
-                                Herman Beck
+                                Mary Adams
                             </td>
-                            <td class="cell-300">(119)-298-8025</td>
-                            <td>julio.williamson73@gmail.com</td>
+                            <td class="cell-300">(838)-780-5116</td>
+                            <td>heidi.morrison77@hotmail.com</td>
                         </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel">
+                        <tr data-url="panel.tpl" data-toggle="slidePanel" class="animation-fade" style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 200ms;">
                             <td class="cell-60 responsive-hide">
                 <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_2"/>
-                  <label for="contacts_10"></label>
+                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_4">
+                  <label for="contacts_4"></label>
                 </span>
                             </td>
                             <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
-                                    <img class="img-responsive" src="/portraits/10.jpg" alt="...">
+                                <a class="avatar" href="">
+                                    <img class="img-responsive" src="../../../../global/portraits/4.jpg" alt="...">
                                 </a>
-                                Ronnie Ellis
+                                June Lane
                             </td>
-                            <td class="cell-300">(769)-963-2966</td>
-                            <td>erin.miller29@yahoo.com</td>
+                            <td class="cell-300">(210)-727-1136</td>
+                            <td>eileen.gordon24@yahoo.com</td>
                         </tr>
                         </tbody>
                     </table>
@@ -321,47 +284,6 @@
             </div>
         </div>
         <!-- End Add Mail Form -->
-        <!-- Core  -->
-        <script src="/vendor/jquery/jquery.js"></script>
-        <script src="/vendor/bootstrap/bootstrap.js"></script>
-        <script src="/vendor/animsition/animsition.js"></script>
-        <script src="/vendor/asscroll/jquery-asScroll.js"></script>
-        <script src="/vendor/mousewheel/jquery.mousewheel.js"></script>
-        <script src="/vendor/asscrollable/jquery.asScrollable.all.js"></script>
-        <script src="/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
-        <!-- Plugins -->
-        <script src="/vendor/switchery/switchery.min.js"></script>
-        <script src="/vendor/intro-js/intro.js"></script>
-        <script src="/vendor/screenfull/screenfull.js"></script>
-        <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
-        <script src="/vendor/filament-tablesaw/tablesaw.js"></script>
-        <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
-        <script src="/vendor/aspaginator/jquery.asPaginator.min.js"></script>
-        <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-        <!-- Scripts -->
-        <script src="/js/core.js"></script>
-        <script src="/assets/js/site.js"></script>
-        <script src="/assets/js/sections/menu.js"></script>
-        <script src="/assets/js/sections/menubar.js"></script>
-        <script src="/assets/js/sections/gridmenu.js"></script>
-        <script src="/assets/js/sections/sidebar.js"></script>
-        <script src="/js/configs/config-colors.js"></script>
-        <script src="/assets/js/configs/config-tour.js"></script>
-        <script src="/js/components/asscrollable.js"></script>
-        <script src="/js/components/animsition.js"></script>
-        <script src="/js/components/slidepanel.js"></script>
-        <script src="/js/components/switchery.js"></script>
-        <script src="/js/plugins/sticky-header.js"></script>
-        <script src="/js/plugins/action-btn.js"></script>
-        <script src="/js/plugins/selectable.js"></script>
-        <script src="/js/components/aspaginator.js"></script>
-        <script src="/js/components/animate-list.js"></script>
-        <script src="/js/components/jquery-placeholder.js"></script>
-        <script src="/js/components/material.js"></script>
-        <script src="/js/components/selectable.js"></script>
-        <script src="/assets/js/app.js"></script>
-        <script src="/assets/examples/js/apps/contacts.js"></script>
-
 
     </div> {{-- fin del div wraper--}}
 @endsection
@@ -379,7 +301,7 @@
 
     <!-- Plugins For This Page -->
     <script src="/vendor/filament-tablesaw/tablesaw.js"></script>
-    <script src="/vendor/slidepanel/jquery-slidePanel.min.js"></script>
+    {{--<script src="/vendor/slidepanel/jquery-slidePanel.min.js"></script>--}}
     <script src="/vendor/aspaginator/jquery.asPaginator.min.js"></script>
     <script src="/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
     <script src="/vendor/bootbox/bootbox.js"></script>
@@ -395,29 +317,7 @@
     <script src="/js/components/material.min.js"></script>
     <script src="/js/components/selectable.min.js"></script>
     <script src="/js/components/bootbox.min.js"></script>
+    {{--<script src="/assets/js/app.min.js"></script>--}}
+    {{--<script src="/assets/examples/js/apps/contacts.min.js"></script>--}}
 
-
-    <script src="/assets/js/app.min.js"></script>
-
-    <script src="/assets/examples/js/apps/contacts.min.js"></script>
-
-
-    <!-- Google Analytics -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js',
-                'ga');
-
-        ga('create', 'UA-65522665-1', 'auto');
-        ga('send', 'pageview');
-    </script>
 @endsection
