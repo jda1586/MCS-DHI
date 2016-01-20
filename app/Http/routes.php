@@ -49,7 +49,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     /* Admins */
     Route::group(['as' => 'admin', 'prefix' => 'admin'], function () {
-
+        Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
+        });
+        /*Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
+        });*/
     });
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
