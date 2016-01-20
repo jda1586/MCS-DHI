@@ -48,7 +48,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
     });
 
     /* Admins */
-    Route::group(['as' => 'admin', 'prefix' => 'admin'], function () {
+    Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
         Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
         });

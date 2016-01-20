@@ -9,11 +9,18 @@
 namespace DHI\Http\Controllers;
 
 
-class AdminMembersController  extends Controller
+use DHI\Product;
+use DHI\User;
+
+class AdminMembersController extends Controller
 {
 
     public function index()
     {
-        return view('admin.members.index');
+        return view('admin.members.index', [
+            'packegs' => Product::where('status', 'active')->get(),
+            'total' => User::all()->count(),
+            'users' => User::where('id', '>', 1)->paginate(50),
+        ]);
     }
 }

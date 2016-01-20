@@ -74,41 +74,26 @@
                 <div class="page-aside-inner">
                     <div class="page-aside-section">
                         <div class="list-group">
-                            <a class="list-group-item" href="javascript:void(0)">
-                                <span class="item-right">61</span><i class="icon wb-inbox" aria-hidden="true"></i>All
-                                contacts</a>
+                            <a class="list-group-item" href="{{ route('admin.members.index') }}">
+                                <span class="item-right">{{ $total }}</span>
+                                <i class="icon wb-inbox" aria-hidden="true"></i>
+                                All members
+                            </a>
                         </div>
                     </div>
                     <div class="page-aside-section">
-                        <h5 class="page-aside-title">LABEL</h5>
+                        <h5 class="page-aside-title">
+                            Packegs
+                        </h5>
                         <div class="list-group">
+                            @foreach($packegs as $packeg)
                             <div class="list-group-item">
                                 <div class="list-content">
-                                    <span class="item-right">10</span>
-                                    <span class="list-text">Work</span>
+                                    <span class="item-right">{{ $packeg->users->count() }}</span>
+                                    <span class="list-text">{{ $packeg->name }}</span>
                                 </div>
                             </div>
-                            <div class="list-group-item">
-                                <div class="list-content">
-                                    <span class="item-right">5</span>
-                                    <span class="list-text">Family</span>
-                                </div>
-                            </div>
-                            <div class="list-group-item">
-                                <div class="list-content">
-                                    <span class="item-right">16</span>
-                                    <span class="list-text">Private</span>
-                                </div>
-                            </div>
-                            <div class="list-group-item">
-                                <div class="list-content">
-                                    <span class="item-right">30</span>
-                                    <span class="list-text">Friends</span>
-                                </div>
-                            </div>
-                            <a class="list-group-item" href="javascript:void(0)">
-                                <i class="icon wb-plus" aria-hidden="true"></i> Add New Label
-                            </a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -117,7 +102,7 @@
             <div class="page-main">
                 <!-- Contacts Content Header -->
                 <div class="page-header">
-                    <h1 class="page-title">Contact List</h1>
+                    <h1 class="page-title">Members List</h1>
                     <div class="page-header-actions">
                         <form>
                             <div class="input-search input-search-dark">
@@ -130,103 +115,44 @@
                 <!-- Contacts Content -->
                 <div class="page-content page-content-table">
                     <!-- Actions -->
-                    <div class="page-content-actions">
-                        <div class="pull-right">
-                            <div class="dropdown">
-                                <button type="button" class="btn btn-pure dropdown-toggle" data-toggle="dropdown"
-                                        aria-expanded="false">
-                                    More
-                                    <span class="icon wb-chevron-down-mini" aria-hidden="true"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="javascript:void(0)">More</a></li>
-                                    <li><a href="javascript:void(0)">More</a></li>
-                                </ul>
-                            </div>
-                            <button type="button" class="btn btn-outline btn-default btn-md empty-btn">Empty All
-                            </button>
-                        </div>
-                        <div class="btn-group">
-                            <div class="dropdown">
-                                <button class="btn btn-icon btn-pure btn-default dropdown-toggle" data-toggle="dropdown"
-                                        aria-expanded="false" type="button"><i class="icon wb-folder"
-                                                                               aria-hidden="true"></i></button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="javascript:void(0)">work</a></li>
-                                    <li><a href="javascript:void(0)">Family</a></li>
-                                    <li><a href="javascript:void(0)">Private</a></li>
-                                    <li><a href="javascript:void(0)">Friends</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="javascript:void(0)">Trash</a></li>
-                                    <li><a href="javascript:void(0)">Spam</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown">
-                                <button class="btn btn-icon btn-pure btn-default dropdown-toggle" data-toggle="dropdown"
-                                        aria-expanded="false" type="button"><i class="icon wb-tag"
-                                                                               aria-hidden="true"></i></button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="javascript:void(0)">work</a></li>
-                                    <li><a href="javascript:void(0)">Family</a></li>
-                                    <li><a href="javascript:void(0)">Private</a></li>
-                                    <li><a href="javascript:void(0)">Friends</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                     <!-- Contacts -->
                     <table class="table tablesaw" data-tablesaw-mode="stack" data-plugin="animateList"
                            data-animate="fade" data-child="tr" data-selectable="selectable">
                         <thead>
                         <tr>
                             <th class="cell-60" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
-                <span class="checkbox-custom checkbox-primary checkbox-lg contacts-select-all">
-                  <input type="checkbox" class="contacts-checkbox selectable-all" id="select_all"/>
-                  <label for="select_all"></label>
-                </span>
+
                             </th>
-                            <th class="cell-300" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                                User
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                                Email
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
                                 Name
                             </th>
-                            <th class="cell-300" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
-                                Phone
-                            </th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">Email</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel" class="animation-fade" style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_2">
-                  <label for="contacts_2"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="javascript:void(0)">
+                        @foreach($users as $user)
+                            <tr data-url="panel.tpl" data-toggle="slidePanel" class="animation-fade"
+                                style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
+                                <td>
                                     <img class="img-responsive" src="../../../../global/portraits/2.jpg" alt="...">
-                                </a>
-                                Mary Adams
-                            </td>
-                            <td class="cell-300">(838)-780-5116</td>
-                            <td>heidi.morrison77@hotmail.com</td>
-                        </tr>
-                        <tr data-url="panel.tpl" data-toggle="slidePanel" class="animation-fade" style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 200ms;">
-                            <td class="cell-60 responsive-hide">
-                <span class="checkbox-custom checkbox-primary checkbox-lg">
-                  <input type="checkbox" class="contacts-checkbox selectable-item" id="contacts_4">
-                  <label for="contacts_4"></label>
-                </span>
-                            </td>
-                            <td class="cell-300">
-                                <a class="avatar" href="">
-                                    <img class="img-responsive" src="../../../../global/portraits/4.jpg" alt="...">
-                                </a>
-                                June Lane
-                            </td>
-                            <td class="cell-300">(210)-727-1136</td>
-                            <td>eileen.gordon24@yahoo.com</td>
-                        </tr>
+                                </td>
+                                <td class="cell-300">
+                                    {{ $user->user }}
+                                </td>
+                                <td>
+                                    {{ $user->email }}
+                                </td>
+                                <td>
+                                    {{ $user->name.' '.$user->lastname }}
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                     <ul data-plugin="paginator" data-total="50" data-skin="pagination-gap"></ul>

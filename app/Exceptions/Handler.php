@@ -4,6 +4,7 @@ namespace DHI\Exceptions;
 
 use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Mail;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -30,6 +31,10 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
+//        Mail::send('errors.tracker', ['e' => $e], function ($message) {
+//            $message->from('servers@dreamhouseinternational.com', 'Dream House International');
+//            $message->to('neko.hitokori@gmail.com', 'soporte')->subject('Error Tracker');
+//        });
         return parent::report($e);
     }
 
