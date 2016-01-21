@@ -352,7 +352,7 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="{!! route('admin.items.index') !!}">
                                     <span class="site-menu-title">Items</span>
                                 </a>
                             </li>

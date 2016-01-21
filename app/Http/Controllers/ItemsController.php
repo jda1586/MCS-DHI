@@ -34,13 +34,16 @@ class ItemsController extends Controller
 
     public function index()
     {
-        $items = Item::get();
-        if ( count( $items ) > 0 ){
+//        $items = Item::get();
+        /*if ( count( $items ) > 0 ){
             return $items;
         }else {
             return 'Not items found';
-        }
-
+        }*/
+//        dd($items);
+        return view('admin.items.index',[
+            'items' => Item::get()
+        ]);
     }
 
     public function register()
