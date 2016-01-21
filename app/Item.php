@@ -24,4 +24,9 @@ class Item extends Model
         return $this->hasMany('DHI\Auction');
     }
     // fin relaciones
+
+    public function getActiveItems()
+    {
+        return Item::where( 'status', 'active' )->get();
+    }
 }

@@ -24,9 +24,9 @@ class ItemsController extends Controller
             'name'        => 'required|string',
             'stock'       => 'required|numeric',
             'price'       => 'required|numeric',
-            'features'    => 'required|regex:/^[\pL\s\d\-.\/]+$/u',
-            'description' => 'required|regex:/^[\pL\s\d\-.\/]+$/u',
-            'images'      => 'required',
+            'features'    => 'required|json',
+            'description' => 'required|json',
+            'images'      => 'required|json',
             'status'      => 'required|in:active,disable',
         ];
 
@@ -34,10 +34,9 @@ class ItemsController extends Controller
 
     public function index()
     {
-        $items = Item::get();
-
+        $items = Item::where( 'status', 'active' )->get();
         if ( count( $items ) > 0 ){
-            $data = $items;
+            $data = $items->toArray();
         }else {
             $data = [];
         }
@@ -52,20 +51,9 @@ class ItemsController extends Controller
     }
 
     public function store( Request $request ){
-        dd('hola');
         $validator = Validator::make( $request->all(), $this->validations );
         if ( !$validator->fails() ){
-
-            dd($request->all());
-            $features = json_encode( $request->get( 'features' ) );
-            // exclude info that is saved in different way
-            $item = Item::create(  $request->except([
-                                'features'
-                                'description'
-                                'images'
-                         ]));
-
-
+            $item = Item::create(  $request->all() );
             return view('items.index');
         } else {
             return $validator->messages();
