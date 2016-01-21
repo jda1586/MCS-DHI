@@ -137,10 +137,10 @@
                         </thead>
                         <tbody>
                         @foreach($users as $user)
-                            <tr data-url="panel.tpl" data-toggle="slidePanel" class="animation-fade"
+                            <tr data-url=" ../partial" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
-                                    <img class="img-responsive" src="../../../../global/portraits/2.jpg" alt="...">
+                                    <img class="img-responsive" src="assets/images/users/13.jpg" alt="...">
                                 </td>
                                 <td class="cell-300">
                                     {{ $user->user }}
@@ -227,7 +227,7 @@
 
     <!-- Plugins For This Page -->
     <script src="/vendor/filament-tablesaw/tablesaw.js"></script>
-    {{--<script src="/vendor/slidepanel/jquery-slidePanel.min.js"></script>--}}
+    <script src="/vendor/slidepanel/jquery-slidePanel.min.js"></script>
     <script src="/vendor/aspaginator/jquery.asPaginator.min.js"></script>
     <script src="/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
     <script src="/vendor/bootbox/bootbox.js"></script>
@@ -243,7 +243,7 @@
     <script src="/js/components/material.min.js"></script>
     <script src="/js/components/selectable.min.js"></script>
     <script src="/js/components/bootbox.min.js"></script>
-    {{--<script src="/assets/js/app.min.js"></script>--}}
-    {{--<script src="/assets/examples/js/apps/contacts.min.js"></script>--}}
+    <script src="/assets/js/app.min.js"></script>
+    <script src="/assets/examples/js/apps/contacts.min.js"></script>
 
 @endsection

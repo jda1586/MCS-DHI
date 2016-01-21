@@ -38,10 +38,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         Route::get('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@index']);
         Route::post('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@cashOut']);
     });
-    /* Subastas */
-    Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
 
-    });
     /* Perfil */
     Route::group(['as' => 'profile.', 'prefix' => 'profile'], function () {
 
@@ -58,6 +55,10 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
             Route::get('/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
         });
+        /* Subastas */
+        Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
+            Route::get('/', ['as' => 'index', 'uses' => 'AuctionsController@index']);
+        });
     });
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
@@ -73,4 +74,5 @@ Route::group([], function () {
 
 //    ruta temporal para vistas
     Route::get('admin', ['as' => 'admin', 'uses' => 'MembersController@admin']);
+    Route::get('partial', ['as' => 'partial', 'uses' => 'MembersController@partial']);
 });

@@ -12,10 +12,10 @@
     {{--col-md-6 col-md-offset-3--}}
     <div id="wrapper-main" class="col-md-12 col-md-offset-0">
         <div class="page-header">
-            <h1 class="page-title">Items</h1>
+            <h1 class="page-title">Auctions</h1>
             <ol class="breadcrumb">
                 <li><a href="../index.html">Home</a></li>
-                <li class="active">Admin/Items</li>
+                <li class="active">Admin/Auctions</li>
             </ol>
         </div>
 
@@ -31,12 +31,12 @@
                         <table class="table toggle-circle" id="exampleFootableFiltering">
                             <thead>
                             <tr>
-                                <th data-toggle="true">SKU</th>
-                                <th>Description</th>
-                                <th>owner</th>
-                                <th>Auctions</th>
-                                <th>Stook</th>
-                                <th data-hide="all">status</th>
+                                <th data-toggle="true">ID</th>
+                                <th>Item</th>
+                                <th>Pool</th>
+                                <th>Price</th>
+                                <th>Create</th>
+                                <th>Dead Line</th>
                                 {{--<th data-hide="all">Image Name</th>--}}
                             </tr>
                             </thead>
@@ -59,21 +59,22 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6 text-right">
-                                        <button style="max-width: 300px;" type="button" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">+ New Item</button>
+                                        <button style="max-width: 300px;" type="button" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">+ New Auction</button>
                                     </div>
                                 </div>
                             </div>
                             <tbody>
-                            @foreach($items as $item)
+                            @foreach($auctions as $auction)
                                 <tr>
-                                    <td>{!! $item['amount'] !!}</td>
-                                    <td>{!! $item['Description'] !!}</td>
-                                    <td>{!! $item['owner'] !!}</td>
-                                    <td>{!! $item['Auctions'] !!}</td>
-                                    <td>{!! $item['Stook'] !!}</td>
-                                    <td>
-                                        <span class="label label-table label-success">{!!$item['status']!!}</span>
-                                    </td>
+                                    <td>{!! $auction['id'] !!}</td>
+                                    <td>{!! $auction['name'] !!}</td>
+                                    <td>{!! $auction['pool'] !!}</td>
+                                    <td>{!! $auction['price'] !!}</td>
+                                    <td>{!! $auction['time_start'] !!}</td>
+                                    <td>{!! $auction['time_end'] !!}</td>
+                                    {{--<td>
+                                        <span class="label label-table label-success">{!!$auction['status']!!}</span>
+                                    </td>--}}
                                     {{--<td>{!! $deposit['image'] !!}</td>--}}
                                 </tr>
                             @endforeach

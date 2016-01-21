@@ -17,7 +17,8 @@ class AuctionsController extends Controller
      */
     public function index()
     {
-        return view('admin.auction.index');
+        $auctions=[];
+        return view('admin.auctions.index',['auctions'=>$auctions]);
     }
 
     /**
