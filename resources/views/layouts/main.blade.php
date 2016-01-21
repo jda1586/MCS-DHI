@@ -273,7 +273,7 @@
                     <li class="site-menu-item">
                         <a class="animsition-link" href="#">
                             <i class="site-menu-icon md-money" aria-hidden="true"></i>
-                            <span class="site-menu-title">Acutions</span>
+                            <span class="site-menu-title">Auctions</span>
                         </a>
                     </li>
                     <li class="site-menu-item has-sub">
