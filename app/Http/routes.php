@@ -48,13 +48,16 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
     });
 
     /* Admins */
-    Route::group(['as' => 'admin', 'prefix' => 'admin'], function () {
+    Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
         Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
         });
-        /*Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
-            Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
-        });*/
+        /* Items */
+        Route::group(['as' => 'items.', 'prefix' => 'items'], function () {
+            Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
+            Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
+            Route::get('/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
+        });
     });
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
@@ -72,9 +75,4 @@ Route::group([], function () {
     Route::get('admin', ['as' => 'admin', 'uses' => 'MembersController@admin']);
 });
 
-/* Productos */
-Route::group(['as' => 'items.', 'prefix' => 'items'], function () {
-    Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
-    Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
-    Route::get('/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
-});
+

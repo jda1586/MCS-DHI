@@ -337,7 +337,7 @@
                         </a>
                         <ul class="site-menu-sub">
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('adminmembers.index') !!}">
+                                <a class="animsition-link" href="{!! route('admin.members.index') !!}">
                                     <span class="site-menu-title">Members</span>
                                 </a>
                             </li>
@@ -352,7 +352,7 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="{!! route('admin.items.index') !!}">
                                     <span class="site-menu-title">Items</span>
                                 </a>
                             </li>
