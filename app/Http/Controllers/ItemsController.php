@@ -73,11 +73,32 @@ class ItemsController extends Controller
 
     }
 
-     public function FunctionName( Request $request )
+     public function delete( $item_id )
     {
-        $item_id = $request->input('item_id');
+        $item = Item::find( $item_id );
+        if ( $item ){
+            $item->delete();
+            $data = 'Item deleted';
+        }else{
+            $data = 'Item dont found';
+        }
 
+        return $data;
     }
+
+    public function desactivateItem( $item_id )
+   {
+       $item = Item::find( $item_id );
+       if ( $item ){
+           $item->status = 'inactive';
+           $item->save();
+           $data           = 'Item desactivated';
+       }else{
+           $data           = 'Item dont found';
+       }
+
+       return $data;
+   }
 
 
 }
