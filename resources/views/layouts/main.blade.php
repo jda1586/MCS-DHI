@@ -357,7 +357,7 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="{!! route('admin.auctions.index') !!}">
                                     <span class="site-menu-title">Auctions</span>
                                 </a>
                             </li>
