@@ -34,15 +34,15 @@ class ItemsController extends Controller
 
     public function index()
     {
-//        $items = Item::get();
-        /*if ( count( $items ) > 0 ){
-            return $items;
+        $items = Item::get();
+
+        if ( count( $items ) > 0 ){
+            $data = $items;
         }else {
-            return 'Not items found';
-        }*/
-//        dd($items);
+            $data = [];
+        }
         return view('admin.items.index',[
-            'items' => Item::get()
+            'items' => $data
         ]);
     }
 
@@ -52,10 +52,20 @@ class ItemsController extends Controller
     }
 
     public function store( Request $request ){
-
+        dd('hola');
         $validator = Validator::make( $request->all(), $this->validations );
         if ( !$validator->fails() ){
-            $item = Item::create( $request->all() );
+
+            dd($request->all());
+            $features = json_encode( $request->get( 'features' ) );
+            // exclude info that is saved in different way
+            $item = Item::create(  $request->except([
+                                'features'
+                                'description'
+                                'images'
+                         ]));
+
+
             return view('items.index');
         } else {
             return $validator->messages();
@@ -72,6 +82,12 @@ class ItemsController extends Controller
         }
 
         return $data;
+
+    }
+
+     public function FunctionName( Request $request )
+    {
+        $item_id = $request->input('item_id');
 
     }
 

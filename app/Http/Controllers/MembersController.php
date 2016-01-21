@@ -23,13 +23,12 @@ class MembersController extends Controller
 
     public function store()
     {
-//        dd(Input::all());
         $validator = Validator::make(Input::all(), [
             'pack' => 'required|exists:products,id',
             'name' => 'required|min:6|max:18',
             'lastname' => 'required',
             'birthday' => 'required',
-            'user' => 'required|unique:users,user',
+            'user' => 'required|unique:users,user|min:6|max:18',
             'country' => 'required',
             'email' => 'required|confirmed',
             'password' => 'required|confirmed',
@@ -71,7 +70,7 @@ class MembersController extends Controller
                     'responsible_id' => 0,
                 ]);
 
-                //se llama el job mandar correo confirmacion
+                //se llama el job para enviar correo confirmacion
                 $this->dispatch(new NewUserMailJob([
                     'name' => Input::get('name'),
                     'lastname' => Input::get('lastname'),

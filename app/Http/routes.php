@@ -75,5 +75,3 @@ Route::group([], function () {
 //    ruta temporal para vistas
     Route::get('admin', ['as' => 'admin', 'uses' => 'MembersController@admin']);
 });
-
-

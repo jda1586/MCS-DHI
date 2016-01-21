@@ -18,7 +18,7 @@ class AdminMembersController extends Controller
     public function index()
     {
         return view('admin.members.index', [
-            'packegs' => Product::where('status', 'active')->get(),
+            'packegs' => Product::where('status', 'active')->orderBy('id', 'DESC')->get(),
             'total' => User::all()->count(),
             'users' => User::where('id', '>', 1)->paginate(50),
         ]);
