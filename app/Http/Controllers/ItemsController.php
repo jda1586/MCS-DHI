@@ -100,5 +100,19 @@ class ItemsController extends Controller
        return $data;
    }
 
+   public function activateItem( $item_id )
+  {
+      $item = Item::find( $item_id );
+      if ( $item ){
+          $item->status = 'active';
+          $item->save();
+          $data           = 'Item activated';
+      }else{
+          $data           = 'Item dont found';
+      }
+
+      return $data;
+  }
+
 
 }
