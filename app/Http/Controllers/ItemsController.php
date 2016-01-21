@@ -72,5 +72,11 @@ class ItemsController extends Controller
 
     }
 
+     public function FunctionName( Request $request )
+    {
+        $item_id = $request->input('item_id');
+
+    }
+
 
 }
