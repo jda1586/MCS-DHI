@@ -47,7 +47,7 @@ class ItemsController extends Controller
 
     public function register()
     {
-        return view('items.register');
+        return view('admin.items.register');
     }
 
     public function store( Request $request ){

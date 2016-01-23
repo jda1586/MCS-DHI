@@ -12,40 +12,8 @@
     <link rel="stylesheet" href="/vendor/select2/select2.css">--}}
 
     <!-- Plugins -->
-    <link rel="stylesheet" href="/vendor/animsition/animsition.css">
-    <link rel="stylesheet" href="/vendor/asscrollable/asScrollable.css">
-    <link rel="stylesheet" href="/vendor/switchery/switchery.css">
-    <link rel="stylesheet" href="/vendor/intro-js/introjs.css">
-    <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
-    <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
-    <link rel="stylesheet" href="/vendor/waves/waves.css">
-    <link rel="stylesheet" href="/vendor/select2/select2.css">
-    <link rel="stylesheet" href="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
-    <link rel="stylesheet" href="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
     <link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
-    <link rel="stylesheet" href="/vendor/icheck/icheck.css">
-    <link rel="stylesheet" href="/vendor/switchery/switchery.css">
-    <link rel="stylesheet" href="/vendor/asrange/asRange.css">
-    <link rel="stylesheet" href="/vendor/asspinner/asSpinner.css">
-    <link rel="stylesheet" href="/vendor/clockpicker/clockpicker.css">
-    <link rel="stylesheet" href="/vendor/ascolorpicker/asColorPicker.css">
-    <link rel="stylesheet" href="/vendor/bootstrap-touchspin/bootstrap-touchspin.css">
-    <link rel="stylesheet" href="/vendor/card/card.css">
-    <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
-    <link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="/vendor/bootstrap-maxlength/bootstrap-maxlength.css">
-    <link rel="stylesheet" href="/vendor/jt-timepicker/jquery-timepicker.css">
-    <link rel="stylesheet" href="/vendor/jquery-strength/jquery-strength.css">
-    <link rel="stylesheet" href="/vendor/multi-select/multi-select.css">
-    <link rel="stylesheet" href="/vendor/typeahead-js/typeahead.css">
     <link rel="stylesheet" href="/assets/examples/css/forms/advanced.css">
-    <!-- Fonts -->
-    <link rel="stylesheet" href="/fonts/material-design/material-design.min.css">
-    <link rel="stylesheet" href="/fonts/brand-icons/brand-icons.min.css">
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
-
-    <script src="/vendor/modernizr/modernizr.js"></script>
-    <script src="/vendor/breakpoints/breakpoints.js"></script>
 
     <style>
         .paso1{
@@ -76,11 +44,13 @@
 @section('content')
     {{--col-md-6 col-md-offset-3--}}
     <div id="wrapper-main" class="col-md-12 col-md-offset-0">
-        <ol class="breadcrumb">
-            <li><a href="javascript:void(0)">Home</a></li>
-            <li><a href="javascript:void(0)">Wallets</a></li>
-            <li class="active">Cash out</li>
-        </ol>
+        <div class="page-header">
+            <h1 class="page-title">Cash Out</h1>
+            <ol class="breadcrumb">
+                <li><a href="../index.html">Home</a></li>
+                <li class="active">Cash Out</li>
+            </ol>
+        </div>
         {{-- PASOS PARA SACAR DINERO  --}}
                 <div class="col-md-4 col-md-offset-0 paso1" >
                     <div class="panel pasost">

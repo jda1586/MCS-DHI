@@ -15,11 +15,15 @@
     <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
     <link rel="stylesheet" href="/assets/css/site.min.css">
     <!-- Plugins -->
-    <link rel="stylesheet" href="/vendor/animsition/animsition.css">
-    <link rel="stylesheet" href="/vendor/asscrollable/asScrollable.css">
+    {!! HTML::style('vendor/animsition/animsition.css') !!}
+    {!! HTML::style('vendor/asscrollable/asScrollable.css') !!}
+    {!! HTML::style('vendor/slidepanel/slidePanel.css') !!}
+    {!! HTML::style('vendor/asscrollable/asScrollable.css') !!}
+    {{--<link rel="stylesheet" href="/vendor/animsition/animsition.css">--}}
+    {{--<link rel="stylesheet" href="/vendor/asscrollable/asScrollable.css">--}}
     <link rel="stylesheet" href="/vendor/switchery/switchery.css">
     <link rel="stylesheet" href="/vendor/intro-js/introjs.css">
-    <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
+    {{--<link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">--}}
     <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
     <link rel="stylesheet" href="/vendor/waves/waves.css">
     <link rel="stylesheet" href="/load.css">
@@ -419,7 +423,8 @@
 <script src="/vendor/ashoverscroll/jquery-asHoverScroll.js"></script>
 <script src="/vendor/waves/waves.js"></script>
 <!-- Plugins -->
-<script src="/vendor/switchery/switchery.min.js"></script>
+{!! HTML::script('vendor/switchery/switchery.min.js') !!}
+{{--<script src="/vendor/switchery/switchery.min.js"></script>--}}
 <script src="/vendor/intro-js/intro.js"></script>
 <script src="/vendor/screenfull/screenfull.js"></script>
 <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
@@ -435,7 +440,9 @@
 <script src="/js/components/animsition.js"></script>
 <script src="/js/components/slidepanel.js"></script>
 <script src="/js/components/switchery.js"></script>
-<script src="/js/components/tabs.js"></script>
+{{--<script src="/js/components/tabs.js"></script>--}}
+{!! HTML::script('/js/components/tabs.min.js') !!}
+{!! HTML::script('/js/components/formatter-js.js') !!}
 
 @yield('script')
 

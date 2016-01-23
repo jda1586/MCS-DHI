@@ -23,4 +23,9 @@ class AdminMembersController extends Controller
             'users' => User::where('id', '>', 1)->paginate(50),
         ]);
     }
+
+    public function addCredit()
+    {
+        return view('admin.members.addcredit');
+    }
 }
