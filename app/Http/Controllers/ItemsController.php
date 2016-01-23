@@ -114,5 +114,21 @@ class ItemsController extends Controller
       return $data;
   }
 
+  public function itemsList()
+  {
+      $items = Item::where( 'status', 'active' )->get( [ 'id', 'name' ] );
+
+      if ( $items ){
+          $data['items']     = $items->toArray();
+          $data['message']   = 'OK';
+      }else{
+          $data['items']     = NULL;
+          $data['message']   = 'Not items found';
+      }
+
+      return $data;
+
+  }
+
 
 }

@@ -29,5 +29,10 @@ class Auction extends Model
     {
         return $this->belongsTo('DHI\Item');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('DHI\User')->withPivot('user_auctions', 'status');
+    }
     // fin relaciones
 }

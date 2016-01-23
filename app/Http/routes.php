@@ -11,6 +11,9 @@
 |
 */
 
+//Constates
+define('ACTIVE', 'active');
+
 Route::group(['middleware' => ['auth', 'roles']], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'DashboardController@index']);
 
@@ -29,6 +32,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         Route::get('/profile', ['as' => 'profile', 'uses' => 'MembersController@profile']);
         Route::get('/commissions', ['as' => 'commissions', 'uses' => 'MembersController@commissions']);
         Route::get('/organization', ['as' => 'organization', 'uses' => 'MembersController@organization']);
+        Route::get('/list', ['as' => 'list', 'uses' => 'MembersController@usersList']);
     });
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
@@ -54,6 +58,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
             Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
             Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
             Route::get('/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
+            Route::get('/list/activeItems', ['as' => 'list', 'uses' => 'ItemsController@itemsList']);
             Route::get('desactivate/{id}', ['as' => 'desactivateItem', 'uses' => 'ItemsController@desactivateItem']);
             Route::get('activate/{id}', ['as' => 'activateItem', 'uses' => 'ItemsController@activateItem']);
             Route::delete('/{id}', ['as' => 'delete', 'uses' => 'ItemsController@delete']);
@@ -61,6 +66,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         /* Subastas */
         Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AuctionsController@index']);
+            Route::post('register/store', ['as' => 'store', 'uses' => 'AuctionsController@store']);
         });
     });
 

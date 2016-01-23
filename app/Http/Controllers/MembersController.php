@@ -175,4 +175,19 @@ class MembersController extends Controller
     {
         return view('admin.members.partial');
     }
+
+    public function usersList()
+    {
+        $users = User::where( 'status', 'active' )->get( [ 'id', 'user' ] );
+        if ( $users ){
+            $data['users']     = $users->toArray();
+            $data['message']   = 'OK';
+        }else{
+            $data['users']     = NULL;
+            $data['message']   = 'Not users found'; 
+        }
+
+        return $data;
+
+    }
 }

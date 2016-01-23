@@ -133,5 +133,15 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasOne('DHI\Role', 'rol_id');
     }
+
+    public function items()
+    {
+        return $this->hasMany('DHI\Item');
+    }
+
+    public function auctions()
+    {
+        return $this->hasMany('DHI\Auction')->withPivot('user_auctions', 'status');
+    }
 // fin relaciones
 }

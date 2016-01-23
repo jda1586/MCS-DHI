@@ -23,6 +23,12 @@ class Item extends Model
     {
         return $this->hasMany('DHI\Auction');
     }
+
+
+    public function country()
+    {
+        return $this->belongsTo('DHI\User');
+    }
     // fin relaciones
 
     public function getActiveItems()
