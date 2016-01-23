@@ -8,9 +8,11 @@
 
 namespace DHI\Http\Controllers;
 
-
+use Validator;
 use DHI\Product;
 use DHI\User;
+use Input;
+use DateTime;
 
 class AdminMembersController extends Controller
 {
@@ -24,8 +26,23 @@ class AdminMembersController extends Controller
         ]);
     }
 
+
     public function addCredit()
     {
+//        dd('se agrego credito');
         return view('admin.members.addcredit');
+    }
+
+    public function credit()
+    {
+        echo 'agregar credito';
+        /*$validator = Validator::make(Input::all(), [
+            'inputLableautyRadio' => 'required',
+            'amount'=> 'required|min:1',
+            'bitcoinacount' => 'required'
+        ]);*/
+
+
+
     }
 }

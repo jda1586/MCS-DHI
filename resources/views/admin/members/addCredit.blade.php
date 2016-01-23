@@ -37,14 +37,15 @@
                         <div class="example-wrap margin-md-0">
                             <h4 class="example-title">Add Credits</h4>
                             <div class="example">
-                                <form class="form-horizontal fv-form fv-form-bootstrap" id="exampleConstraintsForm"
-                                      novalidate="novalidate" autocomplete="off">
+                                {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleConstraintsForm"
+                                      novalidate="novalidate" autocomplete="off">--}}
+                                {!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
                                     <button class="fv-hidden-submit" style="width: 0px; height: 0px; display: none;"
                                             type="submit"></button>
                                     <div class="form-group form-material">
-                                        <label class="col-sm-3 control-label">Required</label>
+                                        <label class="col-sm-3 control-label">User</label>
                                         <div class="col-sm-9">
-                                            <input name="requiredInput" class="form-control" type="text"
+                                            <input name="user" class="form-control" type="text"
                                                    data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                    data-fv-field="requiredInput">
                                             <small class="help-block" style="display: none;"
@@ -56,7 +57,7 @@
                                     <div class="form-group form-material">
                                         <label class="col-sm-3 control-label">Wallet</label>
                                         <div class="col-sm-9">
-                                            <select name="requiredSelect" class="form-control" data-fv-notempty="true"
+                                            <select name="Wallet" class="form-control" data-fv-notempty="true"
                                                     data-fv-field="requiredSelect">
                                                 <option value="">Please choose</option>
                                                 <option value="foo">Activation</option>
@@ -73,7 +74,7 @@
                                     <div class="form-group form-material">
                                         <label class="col-sm-3 control-label">Amount</label>
                                         <div class="col-sm-9">
-                                            <input name="requiredInput" class="form-control" type="text"
+                                            <input name="amount" class="form-control" type="text"
                                                    data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                    data-fv-field="requiredInput">
                                             <small class="help-block" style="display: none;"
@@ -89,13 +90,15 @@
                                             </button>
                                         </div>
                                     </div>
-                                </form>
+                                {!! Form::close() !!}
+                                {{--</form>--}}
                             </div>
                         </div>
                         <!-- End Example Basic Constraints -->
                     </div>
                 </div>
             </div>
+
             <div class="col-md-6">
                 <div class="panel clearfix" style="padding: 10px">
                     <div class="col-md-12">
