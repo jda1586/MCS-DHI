@@ -65,6 +65,8 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AuctionsController@index']);
         });
+
+
     });
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);
