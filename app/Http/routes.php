@@ -50,15 +50,19 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
 
     /* Admins */
     Route::group(['as' => 'admin.', 'prefix' => 'admin'], function () {
+        /* Members */
         Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
+            Route::get('/addcredit', ['as' => 'addcredit', 'uses' => 'AdminMembersController@addCredit']);
+            Route::post('/addcredit', ['as' => 'addcredit', 'uses' => 'AdminMembersController@credit']);
         });
         /* Items */
         Route::group(['as' => 'items.', 'prefix' => 'items'], function () {
-            Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
             Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
             Route::get('/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
             Route::get('/list/activeItems', ['as' => 'list', 'uses' => 'ItemsController@itemsList']);
+            Route::get('/register', ['as' => 'register', 'uses' => 'ItemsController@register']);
+            Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
             Route::get('desactivate/{id}', ['as' => 'desactivateItem', 'uses' => 'ItemsController@desactivateItem']);
             Route::get('activate/{id}', ['as' => 'activateItem', 'uses' => 'ItemsController@activateItem']);
             Route::delete('/{id}', ['as' => 'delete', 'uses' => 'ItemsController@delete']);
@@ -68,6 +72,8 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AuctionsController@index']);
             Route::post('register/store', ['as' => 'store', 'uses' => 'AuctionsController@store']);
         });
+
+
     });
 
     Route::match(['post', 'get'], '/logout', ['as' => 'auth.logout', 'uses' => 'AuthController@logout']);

@@ -140,7 +140,7 @@
                             <tr data-url=" ../partial" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
-                                    <img class="img-responsive" src="assets/images/users/13.jpg" alt="...">
+                                    <img class="img-responsive" src="{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" alt="...">
                                 </td>
                                 <td class="cell-300">
                                     {{ $user->user }}

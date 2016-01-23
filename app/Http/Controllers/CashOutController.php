@@ -35,7 +35,7 @@ class CashOutController extends Controller
 
     public function cashOut()
     {
-        echo 'peticion de sacar dinero';
+//        echo 'peticion de sacar dinero';
         $validator = Validator::make(Input::all(), [
             'inputLableautyRadio' => 'required',
             'amount'=> 'required|min:1',
