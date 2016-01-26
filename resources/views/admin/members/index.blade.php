@@ -89,8 +89,10 @@
                             @foreach($packegs as $packeg)
                                 <div class="list-group-item">
                                     <div class="list-content">
-                                        <span class="item-right">{{ $packeg->users->count() }}</span>
-                                        <span class="list-text">{{ $packeg->name }}</span>
+                                        <a href="?packeg={!! $packeg->id !!}">
+                                            <span class="item-right">{{ $packeg->users->count() }}</span>
+                                            <span class="list-text">{{ $packeg->name }}</span>
+                                        </a>
                                     </div>
                                 </div>
                             @endforeach

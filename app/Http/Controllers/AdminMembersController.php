@@ -22,7 +22,16 @@ class AdminMembersController extends Controller
         return view('admin.members.index', [
             'packegs' => Product::where('status', 'active')->orderBy('id', 'DESC')->get(),
             'total' => User::all()->count(),
-            'users' => User::where('id', '>', 1)->paginate(50),
+            'users' => User::where('id', '>', 1)
+                ->where(function ($q) {
+                    if (Input::has('search')) {
+                        $q->where('user', 'like', Input::get('search'));
+                    }
+                    if (Input::has('packeg')) {
+                        $q->where('product_id',Input::get('packeg'));
+                    }
+                })
+                ->paginate(50),
         ]);
     }
 
@@ -41,7 +50,6 @@ class AdminMembersController extends Controller
             'amount'=> 'required|min:1',
             'bitcoinacount' => 'required'
         ]);*/
-
 
 
     }
