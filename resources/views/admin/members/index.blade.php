@@ -262,7 +262,7 @@
                 var $this = $(this);
                 if (e.which == 13) {
                     var url = "{!! route('admin.members.index') !!}?search=" + $this.val();
-                    window.location = url;
+                    window.location.href = url;
                 }
             });
         });
