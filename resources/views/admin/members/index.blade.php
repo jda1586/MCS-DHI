@@ -261,6 +261,7 @@
             $('#search').keypress(function (e) {
                 var $this = $(this);
                 if (e.which == 13) {
+                    console.log($this.val());
                     window.location = "{!! route('admin.members.index') !!}?search=" + $this.val();
                 }
             });
