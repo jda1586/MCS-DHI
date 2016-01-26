@@ -173,9 +173,8 @@ class MembersController extends Controller
 
     public function partial($user)
     {
-        $user= User::where('user',$user)->get();
-        dd($user);
-        return view('admin.members.partial',[$user]);
+        $user= User::where('user',$user)->first();
+        return view('admin.members.partial', ['user' => $user]);
     }
 
     public function usersList()

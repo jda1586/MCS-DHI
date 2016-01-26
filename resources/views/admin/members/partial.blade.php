@@ -1,94 +1,92 @@
-<header class="slidePanel-header overlay" style="background-image: url({!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}) !important;">
-
+<head>
     <style>
-        .avatar img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            border: 0 none;
-            border-radius: 1000px;
+        #content {
+            position: relative;
         }
+        #content img {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+        }
+        #content #cruz {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #content #edit{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+
     </style>
+</head>
+<body>
+<header class="slidePanel-header overlay"  id="content"
+        style="background-image: url({!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}) !important; height: 200px; position: relative;">
+    <img src="{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" alt="..." style="width: 100px; height: 100px; border-radius: 50%;">
+    <button type="button" class="btn btn-pure btn-inverse slidePanel-close icon md-close" id="cruz"
+            aria-hidden="true"></button>
 
-    <div class="overlay-panel overlay-background vertical-align">
-        <div class="slidePanel-actions">
-            <div class="btn-group">
-                <button type="button" class="btn btn-pure btn-inverse icon md-folder"
-                        aria-hidden="true"></button>
-                <button type="button" class="btn btn-pure btn-inverse icon md-delete"
-                        aria-hidden="true"></button>
-                <button type="button" class="btn btn-pure btn-inverse slidePanel-close icon md-close"
-                        aria-hidden="true"></button>
-            </div>
-        </div>
-        <div class="vertical-align-middle">
-            <a class="avatar" href="javascript:void(0)">
-                <img src="{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" alt="...">
-            </a>
-            <h3 class="name">Seevisual</h3>
-            <div class="tags">
-                <button type="button" class="btn btn-outline btn-inverse">Desginer</button>
-                <button type="button" class="btn btn-outline btn-inverse">UI</button>
-                <button type="button" class="btn btn-outline btn-inverse">Rocker</button>
-            </div>
-        </div>
-        <button type="button" class="edit btn btn-success btn-floating" data-toggle="edit">
-            <i class="icon wb-pencil animation-scale-up" aria-hidden="true"></i>
-            <i class="icon wb-close animation-scale-up" aria-hidden="true"></i>
-        </button>
-    </div>
+    <h3 style="color: white;">{{$user->name}}</h3>
+    <h4 style="color: white;">{{$user->user}}</h4>
+    <h4 style="color: white;">{{$user->email}}</h4>
+
+    <button type="button" class="edit btn btn-success btn-floating" data-toggle="edit" id="edit">
+        <i class="icon md-edit animation-scale-up" aria-hidden="true"></i>
+    </button>
 </header>
-<div class="slidePanel-inner">
-    <table class="user-info">
-        <tbody>
-        <tr>
-            <td class="info-label">Email:</td>
-            <td>
-                <span>mazhesee@gmail.com</span>
-                <div class="form-group form-material floating">
-                    <input type="email" class="form-control empty" name="inputFloatingEmail" value="mazhesee@gmail.com">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="info-label">Phone:</td>
-            <td>
-                <span>13581729789</span>
-                <div class="form-group form-material floating">
-                    <input type="text" class="form-control empty" name="inputFloatingPhone" value="13581729789">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="info-label">Address:</td>
-            <td>
-                <span>Fuzhou</span>
-                <div class="form-group form-material floating">
-                    <input type="text" class="form-control empty" name="inputFloatingAddress" value="Fuzhou">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="info-label">Birthday:</td>
-            <td>
-                <span>1990/2/15</span>
-                <div class="form-group form-material floating">
-                    <input type="text" class="form-control empty" name="inputFloatingBirthday" value="1990/2/15">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="info-label">URL:</td>
-            <td>
-                <span>http://amazingSurge.com</span>
-                <div class="form-group form-material floating">
-                    <input type="text" class="form-control empty" name="inputFloatingURL" value="http://amazingSurge.com">
-                </div>
-            </td>
-        </tr>
-        </tbody>
-    </table>
+<div style="padding: 25px;">
+    <div class="slidePanel-inner">
+        <table class="user-info">
+            <tbody>
+            <tr>
+                <td class="info-label">Address:</td>
+                <td>
+                    <span>{!! $user->address !!}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="info-label">Email:</td>
+                <td>
+                    <span>{!! $user->email !!}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="info-label">Phone:</td>
+                <td>
+                    <span>{!! $user->phone !!}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="info-label">Skype:</td>
+                <td>
+                    <span>{!! $user->phone !!}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="info-label">Whatsapp:</td>
+                <td>
+                    <span>{!! $user->whatsapp !!}</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="info-label">Address:</td>
+                <td>
+                    <span>Fuzhou</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-    <link rel="stylesheet" href="/assets/examples/css/apps/contacts.min.css">
-    <script src="/assets/examples/js/apps/contacts.min.js"></script>
+
+    </div>
 </div>
+</body>

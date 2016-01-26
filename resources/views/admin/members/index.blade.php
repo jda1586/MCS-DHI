@@ -30,17 +30,22 @@
     <!--[if lt IE 10]>
     <script src="/vendor/media-match/media.match.min.js"></script>
     <script src="/vendor/respond/respond.min.js"></script>
+    <script src="/assets/examples/js/apps/contacts.js"></script>
     <![endif]-->
 
     <!-- Scripts -->
     <script src="/vendor/modernizr/modernizr.min.js"></script>
     <script src="/vendor/breakpoints/breakpoints.min.js"></script>
+
+    <script src="/vendor/filament-tablesaw/tablesaw.js"></script>
+    <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="/vendor/aspaginator/jquery.asPaginator.min.js"></script>
+    <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
     <script>
         Breakpoints();
     </script>
-    <style>
 
-    </style>
 @endsection
 
 @section('content')
