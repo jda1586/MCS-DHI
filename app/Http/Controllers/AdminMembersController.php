@@ -25,10 +25,11 @@ class AdminMembersController extends Controller
             'users' => User::where('id', '>', 1)
                 ->where(function ($q) {
                     if (Input::has('search')) {
-                        $q->where('user', 'like', Input::get('search'));
+                        $q->where('user', 'like', '%' . Input::get('search') . '%')
+                            ->orWhere('name', 'like', '%' . Input::get('search') . '%');
                     }
                     if (Input::has('packeg')) {
-                        $q->where('product_id',Input::get('packeg'));
+                        $q->where('product_id', Input::get('packeg'));
                     }
                 })
                 ->paginate(50),
