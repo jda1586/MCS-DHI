@@ -59,7 +59,7 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6 text-right">
-                                        <button style="max-width: 300px;" type="button" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">+ New Item</button>
+                                        <button style="max-width: 300px;" onclick="myFunction()" type="button" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">+ New Item</button>
                                     </div>
                                 </div>
                             </div>
@@ -98,23 +98,9 @@
 
 @section('script')
     <script>
-        $(':file').change(function()
-        {
-            //obtenemos un array con los datos del archivo
-            var file = $("#img")[0].files[0];
-            //obtenemos el nombre del archivo
-            var fileName = file.name;
-            console.log(fileName);
-            //obtenemos la extensión del archivo
-            fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
-            //obtenemos el tamaño del archivo
-            var fileSize = file.size;
-            //obtenemos el tipo de archivo image/png ejemplo
-            var fileType = file.type;
-            //mensaje con la información del archivo
-//            showMessage("<span class='info'>Archivo para subir: "+fileName+", peso total: "+fileSize+" bytes.</span>");
-            $("#namefile").val(fileName);
-        });
+        function myFunction() {
+            window.location = "{!! route('admin.items.register') !!}";
+        }
     </script>
     {{--<script src="../../../global/vendor/formatter-js/jquery.formatter.js"></script>--}}
     {{--<script src="vendor/formvalidation/formValidation.min.js"></script>--}}

@@ -56,18 +56,17 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
             Route::get('/addcredit', ['as' => 'addcredit', 'uses' => 'AdminMembersController@addCredit']);
             Route::post('/addcredit', ['as' => 'addcredit', 'uses' => 'AdminMembersController@credit']);
-
         });
         /* Items */
         Route::group(['as' => 'items.', 'prefix' => 'items'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
-            Route::get('/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
+            Route::get('/show/{id}', ['as' => 'show', 'uses' => 'ItemsController@show']);
             Route::get('/list/activeItems', ['as' => 'list', 'uses' => 'ItemsController@itemsList']);
             Route::get('/register', ['as' => 'register', 'uses' => 'ItemsController@register']);
             Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
             Route::get('desactivate/{id}', ['as' => 'desactivateItem', 'uses' => 'ItemsController@desactivateItem']);
             Route::get('activate/{id}', ['as' => 'activateItem', 'uses' => 'ItemsController@activateItem']);
-            Route::delete('/{id}', ['as' => 'delete', 'uses' => 'ItemsController@delete']);
+            Route::delete('/delete/{id}', ['as' => 'delete', 'uses' => 'ItemsController@delete']);
         });
         /* Subastas */
         Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
