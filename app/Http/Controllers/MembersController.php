@@ -171,9 +171,11 @@ class MembersController extends Controller
         return view('members.organization', ['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU, 'pending' => $pending, 'last'=> $last]);
     }
 
-    public function partial()
+    public function partial($user)
     {
-        return view('admin.members.partial');
+        $user= User::where('user',$user)->get();
+        dd($user);
+        return view('admin.members.partial',[$user]);
     }
 
     public function usersList()

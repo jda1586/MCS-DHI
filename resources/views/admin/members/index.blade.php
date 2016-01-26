@@ -137,7 +137,7 @@
                         </thead>
                         <tbody>
                         @foreach($users as $user)
-                            <tr data-url=" ../partial" data-toggle="slidePanel" class="animation-fade"
+                            <tr data-url="/partial/{!! $user->user !!}" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
                                     <img class="img-responsive" src="{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" alt="...">
