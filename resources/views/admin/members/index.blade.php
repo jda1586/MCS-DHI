@@ -261,8 +261,7 @@
             $('#search').keypress(function (e) {
                 var $this = $(this);
                 if (e.which == 13) {
-                    var url = "{!! route('admin.members.index') !!}?search=" + $this.val();
-                    window.location.href = url;
+                    window.location.href = "{!! route('admin.members.index') !!}?search=" + $this.val();
                 }
             });
         });
