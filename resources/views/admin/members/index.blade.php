@@ -54,7 +54,6 @@
             </ol>
         </div>
 
-
         {{-- INICIO DEL FORM --}}
         {{--<div id="form" class="col-md-12 col-md-offset-0 panel " style="height: 500px;">
         </div> --}}{{-- fin del fomr--}}
@@ -62,7 +61,6 @@
         <script>
             Breakpoints();
         </script>
-
 
         <div class="page bg-white animsition">
             <div class="page-aside">
@@ -237,7 +235,7 @@
 
     <!-- Plugins For This Page -->
     <script src="/vendor/filament-tablesaw/tablesaw.js"></script>
-    <script src="/vendor/slidepanel/jquery-slidePanel.min.js"></script>
+    <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
     <script src="/vendor/aspaginator/jquery.asPaginator.min.js"></script>
     <script src="/vendor/jquery-placeholder/jquery.placeholder.min.js"></script>
     <script src="/vendor/bootbox/bootbox.js"></script>
