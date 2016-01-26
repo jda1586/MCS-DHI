@@ -156,7 +156,7 @@
                                     {{ $user->name }}
                                 </td>
                                 <td>
-                                    {{ number_format($user->wallets->balance,2,'.',',') }}
+                                    $ {{ number_format($user->wallets->balance,2,'.',',') }}
                                 </td>
                             </tr>
                         @endforeach
