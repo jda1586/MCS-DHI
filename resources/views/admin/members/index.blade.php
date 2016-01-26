@@ -164,7 +164,8 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <ul data-plugin="paginator" data-total="50" data-skin="pagination-gap"></ul>
+                    {!! $users->render() !!}
+                    {{--<ul data-plugin="paginator" data-total="50" data-skin="pagination-gap"></ul>--}}
                 </div>
             </div>
         </div>
