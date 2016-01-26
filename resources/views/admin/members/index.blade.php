@@ -109,7 +109,7 @@
                         <form>
                             <div class="input-search input-search-dark">
                                 <i class="input-search-icon wb-search" aria-hidden="true"></i>
-                                <input type="text" class="form-control" name="" placeholder="Search...">
+                                <input id="search" type="text" class="form-control" name="" placeholder="Search...">
                             </div>
                         </form>
                     </div>
@@ -255,5 +255,16 @@
     <script src="/js/components/bootbox.min.js"></script>
     <script src="/assets/js/app.min.js"></script>
     <script src="/assets/examples/js/apps/contacts.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#search').keypress(function (e) {
+                var $this = $(this);
+                if (e.which == 13) {
+                    window.location = "{!! route('admin.members.index') !!}?search=" + $this.val();
+                }
+            });
+        });
+    </script>
 
 @endsection
