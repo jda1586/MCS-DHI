@@ -87,12 +87,12 @@
                         </h5>
                         <div class="list-group">
                             @foreach($packegs as $packeg)
-                            <div class="list-group-item">
-                                <div class="list-content">
-                                    <span class="item-right">{{ $packeg->users->count() }}</span>
-                                    <span class="list-text">{{ $packeg->name }}</span>
+                                <div class="list-group-item">
+                                    <div class="list-content">
+                                        <span class="item-right">{{ $packeg->users->count() }}</span>
+                                        <span class="list-text">{{ $packeg->name }}</span>
+                                    </div>
                                 </div>
-                            </div>
                             @endforeach
                         </div>
                     </div>
@@ -133,6 +133,9 @@
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
                                 Name
                             </th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
+                                Balance
+                            </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -140,7 +143,8 @@
                             <tr data-url="/partial/{!! $user->user !!}" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
-                                    <img class="img-responsive" src="{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" alt="...">
+                                    <img class="img-responsive"
+                                         src="{!! URL::asset('assets/images/fondo_dh_temp.jpg') !!}" alt="...">
                                 </td>
                                 <td class="cell-300">
                                     {{ $user->user }}
@@ -149,7 +153,10 @@
                                     {{ $user->email }}
                                 </td>
                                 <td>
-                                    {{ $user->name.' '.$user->lastname }}
+                                    {{ $user->name }}
+                                </td>
+                                <td>
+                                    {{ $user->wallets->balance }}
                                 </td>
                             </tr>
                         @endforeach
@@ -161,22 +168,22 @@
         </div>
         <!-- Site Action -->
         {{--<div class="site-action">--}}
-            {{--<button type="button" class="site-action-toggle btn-raised btn btn-success btn-floating">--}}
-                {{--<i class="front-icon wb-plus animation-scale-up" aria-hidden="true"></i>--}}
-                {{--<i class="back-icon wb-close animation-scale-up" aria-hidden="true"></i>--}}
-            {{--</button>--}}
-            {{--<div class="site-action-buttons">--}}
-                {{--<button type="button" data-action="trash"--}}
-                        {{--class="btn-raised btn btn-success btn-floating animation-slide-bottom">--}}
-                    {{--<i class="icon wb-trash" aria-hidden="true"></i>--}}
-                {{--</button>--}}
-                {{--<button type="button" data-action="folder"--}}
-                        {{--class="btn-raised btn btn-success btn-floating animation-slide-bottom">--}}
-                    {{--<i class="icon wb-folder" aria-hidden="true"></i>--}}
-                {{--</button>--}}
-            {{--</div>--}}
+        {{--<button type="button" class="site-action-toggle btn-raised btn btn-success btn-floating">--}}
+        {{--<i class="front-icon wb-plus animation-scale-up" aria-hidden="true"></i>--}}
+        {{--<i class="back-icon wb-close animation-scale-up" aria-hidden="true"></i>--}}
+        {{--</button>--}}
+        {{--<div class="site-action-buttons">--}}
+        {{--<button type="button" data-action="trash"--}}
+        {{--class="btn-raised btn btn-success btn-floating animation-slide-bottom">--}}
+        {{--<i class="icon wb-trash" aria-hidden="true"></i>--}}
+        {{--</button>--}}
+        {{--<button type="button" data-action="folder"--}}
+        {{--class="btn-raised btn btn-success btn-floating animation-slide-bottom">--}}
+        {{--<i class="icon wb-folder" aria-hidden="true"></i>--}}
+        {{--</button>--}}
         {{--</div>--}}
-        <!-- End Site Action -->
+        {{--</div>--}}
+                <!-- End Site Action -->
         <!-- Add Mail Form -->
         <div class="modal fade" id="addUserForm" aria-hidden="true" aria-labelledby="addUserForm"
              role="dialog" tabindex="-1">

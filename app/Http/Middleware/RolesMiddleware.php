@@ -15,7 +15,17 @@ class RolesMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $route = $request->route()->getName();
+        if (auth()->check()) {
+            $route = $request->route()->getName();
+            $permissions = auth()->user()->role->permissions;
+            $access_user = isset($permissions['user']) ? in_array($route, $permissions['user']) : false;
+            $access_admin = isset($permissions['admin']) ?
+                in_array($route, $permissions['admin']) :
+                (strpos($route, 'admin') !== false ? true : false);
+            if ($access_user || $access_admin) {
+                return redirect()->route('home');
+            }
+        }
         return $next($request);
     }
 }
