@@ -334,7 +334,7 @@
                             </li>
                         </ul>
                     </li>
-                    @if(in_array('admin', auth()->user()->role->permissions))
+                    @if(isset(auth()->user()->role->permissions['admin']))
                         <li class="site-menu-item has-sub">
                             <a href="javascript:void(0)">
                                 <i class="site-menu-icon md-settings" aria-hidden="true"></i>
