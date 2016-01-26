@@ -131,7 +131,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function role()
     {
-        return $this->hasOne('DHI\Role', 'rol_id');
+        return $this->belongsTo('DHI\Role', 'rol_id');
     }
 
     public function items()

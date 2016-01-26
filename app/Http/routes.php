@@ -22,6 +22,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         Route::get('/binary', ['as' => 'binary', 'uses' => 'TreesController@binary']);
         Route::get('/unilevel', ['as' => 'unilevel', 'uses' => 'TreesController@unilevel']);
     });
+
     /* Miembros */
     Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
         Route::get('/register', ['as' => 'register', 'uses' => 'MembersController@register']);

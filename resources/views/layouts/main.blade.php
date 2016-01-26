@@ -258,7 +258,8 @@
                     <img src="/assets/images/logos/avatar.png" alt="Machi">
                 </a>
                 <div class="site-menubar-info">
-                    <h5 class="site-menubar-user">{{ auth()->user()->name }}</h5>
+                    <h7 class="site-menubar-user">{{ auth()->user()->user }}</h7>
+                    <p class="site-menubar-email">{{ auth()->user()->name }}</p>
                     <p class="site-menubar-email">{{ auth()->user()->email }}</p>
                 </div>
             </div>
@@ -333,40 +334,42 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="site-menu-item has-sub">
-                        <a href="javascript:void(0)">
-                            <i class="site-menu-icon md-settings" aria-hidden="true"></i>
-                            <span class="site-menu-title">Admin</span>
-                            <span class="site-menu-arrow"></span>
-                        </a>
-                        <ul class="site-menu-sub">
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('admin.members.index') !!}">
-                                    <span class="site-menu-title">Members</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
-                                    <span class="site-menu-title">Movements</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
-                                    <span class="site-menu-title">Rol´s</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('admin.items.index') !!}">
-                                    <span class="site-menu-title">Items</span>
-                                </a>
-                            </li>
-                            <li class="site-menu-item">
-                                <a class="animsition-link" href="{!! route('admin.auctions.index') !!}">
-                                    <span class="site-menu-title">Auctions</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                    @if(in_array('admin', auth()->user()->role->permissions))
+                        <li class="site-menu-item has-sub">
+                            <a href="javascript:void(0)">
+                                <i class="site-menu-icon md-settings" aria-hidden="true"></i>
+                                <span class="site-menu-title">Admin</span>
+                                <span class="site-menu-arrow"></span>
+                            </a>
+                            <ul class="site-menu-sub">
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="{!! route('admin.members.index') !!}">
+                                        <span class="site-menu-title">Members</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="#">
+                                        <span class="site-menu-title">Movements</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="#">
+                                        <span class="site-menu-title">Rol´s</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="{!! route('admin.items.index') !!}">
+                                        <span class="site-menu-title">Items</span>
+                                    </a>
+                                </li>
+                                <li class="site-menu-item">
+                                    <a class="animsition-link" href="{!! route('admin.auctions.index') !!}">
+                                        <span class="site-menu-title">Auctions</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    @endif
                     <li class="site-menu-item has-sub">
                         <a href="javascript:void(0)">
                             <i class="site-menu-icon md-download" aria-hidden="true"></i>
