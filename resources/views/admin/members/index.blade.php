@@ -151,11 +151,11 @@
                             <tr data-url="/partial/{!! $user->user !!}" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
-                                    {{ $user->id }}
-                                </td>
-                                <td>
                                     <img class="img-responsive"
                                          src="/assets/images/logos/{!! $user->product->image['url'] !!}">
+                                </td>
+                                <td>
+                                    {{ $user->id }}
                                 </td>
                                 <td>
                                     {{ $user->user }}
