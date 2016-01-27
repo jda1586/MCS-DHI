@@ -32,8 +32,7 @@ class AdminMembersController extends Controller
                         $q->where('user', 'like', '%' . Input::get('search') . '%')
                             ->orWhere('name', 'like', '%' . Input::get('search') . '%')
                             ->orWhere('lastname', 'like', '%' . Input::get('search') . '%')
-                            ->orWhere('email', 'like', '%' . Input::get('search') . '%')
-                            ->orWhere('id', Input::get('search'));
+                            ->orWhere('email', 'like', '%' . Input::get('search') . '%');
                     }
                     if (Input::has('packeg')) {
                         $q->where('product_id', Input::get('packeg'));
