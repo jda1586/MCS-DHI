@@ -39,7 +39,7 @@ class AdminMembersController extends Controller
                         $q->where('product_id', Input::get('packeg'));
                     }
                 })
-                ->paginate(50),
+                ->orderBy('id', 'DESC')->paginate(50),
         ]);
     }
 
