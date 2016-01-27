@@ -79,7 +79,8 @@ class ItemsController extends Controller
 
             return view('items.index');
         } else {
-            return $validator->messages();
+            return redirect()->route('admin.items.register')->withErrors($validator);
+//            return view('items.register')->withErrors($validator);
         }
     }
 

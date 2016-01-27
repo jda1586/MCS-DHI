@@ -34,8 +34,11 @@ class AdminMembersController extends Controller
                             ->orWhere('lastname', 'like', '%' . Input::get('search') . '%')
                             ->orWhere('email', 'like', '%' . Input::get('search') . '%');
                     }
+                    if (Input::has('search') && is_numeric(Input::get('search'))) {
+                        $q->orWhere('id', Input::get('search'));
+                    }
                     if (Input::has('packeg')) {
-                        $q->where('product_id', Input::get('packeg'));
+                        $q->orWhere('product_id', Input::get('packeg'));
                     }
                 })
                 ->orderBy('id', 'DESC')->paginate(50),
