@@ -265,7 +265,7 @@
             $('#search').keypress(function (e) {
                 var $this = $(this);
                 if (e.which == 13) {
-                    var url = "{!! route('admin.members.index', $appends) !!}?search=" + $this.val();
+                    var url = "{!! route('admin.members.index', $appends) !!}&search=" + $this.val();
                     window.location.href = url;
                 }
             });
