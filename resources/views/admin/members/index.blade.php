@@ -148,8 +148,7 @@
                             <tr data-url="/partial/{!! $user->user !!}" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
-                                    <img class="img-responsive"
-                                         src="/assets/images/logos/{{ ($user->product_id == 1) ? 'BRONZE_PACK.png' : ($user->product_id == 2) ? 'SILVER_PACK.png' : 'GOLD_PACK.png'}}" alt="...">
+                                    <img class="img-responsive" src="/assets/images/logos/{!! $user->product->image['url'] !!}">
                                 </td>
                                 <td class="cell-300">
                                     {{ $user->user }}
