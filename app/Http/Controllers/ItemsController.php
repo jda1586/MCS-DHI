@@ -56,7 +56,8 @@ class ItemsController extends Controller
             $item = Item::create(  $request->all() );
             return view('items.index');
         } else {
-            return $validator->messages();
+            return redirect()->route('admin.items.register')->withErrors($validator);
+//            return view('items.register')->withErrors($validator);
         }
     }
 
