@@ -322,11 +322,11 @@
                                     <span class="site-menu-title">Binary Tree</span>
                                 </a>
                             </li>
-                            <li class="site-menu-item">
+                            {{--<li class="site-menu-item">
                                 <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Unilevel Tree</span>
                                 </a>
-                            </li>
+                            </li>--}}
                             <li class="site-menu-item">
                                 <a class="animsition-link" href="{!! route('members.register') !!}">
                                     <span class="site-menu-title">New members</span>
