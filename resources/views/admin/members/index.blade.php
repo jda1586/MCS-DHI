@@ -165,7 +165,9 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <p style="width: 100%; text-align: center;">{!! $users->render() !!}</p>
+                    <div style="width: 100%; text-align: center;">
+                        {!! $users->appends($appends)->render() !!}
+                    </div>
                     {{--<ul data-plugin="paginator" data-total="50" data-skin="pagination-gap"></ul>--}}
                 </div>
             </div>

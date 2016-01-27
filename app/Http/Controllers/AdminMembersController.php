@@ -20,6 +20,9 @@ class AdminMembersController extends Controller
     public function index()
     {
         return view('admin.members.index', [
+            'appends' => [
+                'packeg' => Input::has('packeq') ? Input::get('packeq') : null,
+            ],
             'packegs' => Product::where('status', 'active')->orderBy('id', 'DESC')->get(),
             'total' => User::all()->count(),
             'users' => User::where('id', '>', 1)
