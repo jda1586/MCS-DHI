@@ -126,7 +126,10 @@
                            data-animate="fade" data-child="tr" data-selectable="selectable">
                         <thead>
                         <tr>
-                            <th class="cell-60" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
 
                             </th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
@@ -135,10 +138,10 @@
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 Email
                             </th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 Name
                             </th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 Balance
                             </th>
                         </tr>
@@ -148,16 +151,20 @@
                             <tr data-url="/partial/{!! $user->user !!}" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
+                                    {{ $user->id }}
+                                </td>
+                                <td>
                                     <img class="img-responsive"
                                          src="/assets/images/logos/{!! $user->product->image['url'] !!}">
                                 </td>
-                                <td class="cell-300">
-                                {{ $user->user }}
+                                <td>
+                                    {{ $user->user }}
+                                </td>
                                 <td>
                                     {{ $user->email }}
                                 </td>
                                 <td>
-                                    {{ $user->name }}
+                                    {{ $user->name.' '.$user->lastname }}
                                 </td>
                                 <td>
                                     $ {{ number_format($user->wallets->balance,2,'.',',') }}

@@ -30,7 +30,10 @@ class AdminMembersController extends Controller
                 ->where(function ($q) {
                     if (Input::has('search')) {
                         $q->where('user', 'like', '%' . Input::get('search') . '%')
-                            ->orWhere('name', 'like', '%' . Input::get('search') . '%');
+                            ->orWhere('name', 'like', '%' . Input::get('search') . '%')
+                            ->orWhere('lastname', 'like', '%' . Input::get('search') . '%')
+                            ->orWhere('email', 'like', '%' . Input::get('search') . '%')
+                            ->orWhere('id', Input::get('search'));
                     }
                     if (Input::has('packeg')) {
                         $q->where('product_id', Input::get('packeg'));
@@ -44,7 +47,7 @@ class AdminMembersController extends Controller
     public function addCredit()
     {
 //        dd('se agrego credito');
-        return view('admin.members.addcredit');
+        return view('admin . members . addcredit');
     }
 
     public function credit()
@@ -52,7 +55,7 @@ class AdminMembersController extends Controller
         echo 'agregar credito';
         /*$validator = Validator::make(Input::all(), [
             'inputLableautyRadio' => 'required',
-            'amount'=> 'required|min:1',
+            'amount'=> 'required | min:1',
             'bitcoinacount' => 'required'
         ]);*/
 
