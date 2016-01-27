@@ -126,7 +126,7 @@
                            data-animate="fade" data-child="tr" data-selectable="selectable">
                         <thead>
                         <tr>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                            <th class="cell-60" scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
 
                             </th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
