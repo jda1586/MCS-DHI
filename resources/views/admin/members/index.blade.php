@@ -109,12 +109,12 @@
                 <div class="page-header">
                     <h1 class="page-title">Members List</h1>
                     <div class="page-header-actions">
-                        <form>
-                            <div class="input-search input-search-dark">
-                                <i class="input-search-icon wb-search" aria-hidden="true"></i>
-                                <input id="search" type="text" class="form-control" name="" placeholder="Search...">
-                            </div>
-                        </form>
+
+                        <div class="input-search input-search-dark">
+                            <i class="input-search-icon wb-search" aria-hidden="true"></i>
+                            <input id="search" type="text" class="form-control" name="" placeholder="Search...">
+                        </div>
+
                     </div>
                 </div>
                 <!-- Contacts Content -->
@@ -148,10 +148,11 @@
                             <tr data-url="/partial/{!! $user->user !!}" data-toggle="slidePanel" class="animation-fade"
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
-                                    <img class="img-responsive" src="/assets/images/logos/{!! $user->product->image['url'] !!}">
+                                    <img class="img-responsive"
+                                         src="/assets/images/logos/{!! $user->product->image['url'] !!}">
                                 </td>
                                 <td class="cell-300">
-                                    {{ $user->user }}
+                                {{ $user->user }}
                                 <td>
                                     {{ $user->email }}
                                 </td>
@@ -264,7 +265,8 @@
             $('#search').keypress(function (e) {
                 var $this = $(this);
                 if (e.which == 13) {
-                    window.location.href = "{!! route('admin.members.index') !!}?search=" + $this.val();
+                    var url = "{!! route('admin.members.index', $appends) !!}?search=" + $this.val();
+                    window.location.href = url;
                 }
             });
         });
