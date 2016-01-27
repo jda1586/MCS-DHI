@@ -130,7 +130,7 @@
 
                             </th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
-
+                                Id
                             </th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 User
@@ -272,7 +272,7 @@
             $('#search').keypress(function (e) {
                 var $this = $(this);
                 if (e.which == 13) {
-                    var url = "{!! route('admin.members.index', $appends) !!}&search=" + $this.val();
+                    var url = "{!! route('admin.members.index') !!}?search=" + $this.val();
                     window.location.href = url;
                 }
             });
