@@ -16,9 +16,35 @@
     <link rel="stylesheet" href="/assets/examples/css/forms/advanced.css">
     <link rel="stylesheet" href="/vendor/bootstrap-maxlength/bootstrap-maxlength.css">
     <link rel="stylesheet" href="/vendor/asspinner/asSpinner.css">
+    <link rel="stylesheet" href="/vendor/animsition/animsition.css">
+    <link rel="stylesheet" href="/vendor/asscrollable/asScrollable.css">
+    <link rel="stylesheet" href="/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="/vendor/intro-js/introjs.css">
+    <link rel="stylesheet" href="/vendor/slidepanel/slidePanel.css">
+    <link rel="stylesheet" href="/vendor/flag-icon-css/flag-icon.css">
+    <link rel="stylesheet" href="/vendor/select2/select2.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-select/bootstrap-select.css">
+    <link rel="stylesheet" href="/vendor/icheck/icheck.css">
+    <link rel="stylesheet" href="/vendor/switchery/switchery.css">
+    <link rel="stylesheet" href="/vendor/asrange/asRange.css">
+    <link rel="stylesheet" href="/vendor/asspinner/asSpinner.css">
+    <link rel="stylesheet" href="/vendor/clockpicker/clockpicker.css">
+    <link rel="stylesheet" href="/vendor/ascolorpicker/asColorPicker.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-touchspin/bootstrap-touchspin.css">
+    <link rel="stylesheet" href="/vendor/card/card.css">
+    <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-datepicker/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-maxlength/bootstrap-maxlength.css">
+    <link rel="stylesheet" href="/vendor/jt-timepicker/jquery-timepicker.css">
+    <link rel="stylesheet" href="/vendor/jquery-strength/jquery-strength.css">
+    <link rel="stylesheet" href="/vendor/multi-select/multi-select.css">
+    <link rel="stylesheet" href="/vendor/typeahead-js/typeahead.css">
+    <link rel="stylesheet" href="/assets/examples/css/forms/advanced.css">
     <style>
         .spinnerUi {
-            width: 100%!important;
+            width: 100% !important;
         }
     </style>
 @endsection
@@ -36,7 +62,7 @@
 
         {{-- INICIO DEL FORM --}}
         <div id="form" class="col-md-12 col-md-offset-0 panel " style="">
-            {!! Form::open(['route'=>'wallets.cashout','method'=>'post','id'=>'salidas'] ) !!}
+            {!! Form::open(['route'=>'admin.items.store','method'=>'post','id'=>'newitem'] ) !!}
             @if( Session::has('errors') )
                 <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check fields</div>
             @endif
@@ -71,7 +97,7 @@
                 <div class="example">
                     <div class="col-md-6" style="padding-left:0px;float: left">
                         <div class="example">
-                            <h4 class="example-title">Default Spinner</h4>
+                            <h4 class="example-title">Name </h4>
                             <label class="sr-only" for="inputName">Full Name</label>
                             <input type="text" class="form-control" id="inputName" name="name" placeholder="Name"
                                    data-fv-field="name">
@@ -88,35 +114,33 @@
                                    data-fv-result="NOT_VALIDATED" style="display: none;">only letters allowed
                             </small>
                         </div>
-
-                    </div>
-                    <div class="col-md-6" style="padding-right:0px; float:right">
-                        <div class="example" style="width:100%;">
-                            <h4 class="example-title">Stock</h4>
-                            <div tabindex="0" class="spinnerUi" style="width:100%;">
-                                <input type="text" class="form-control" style="width:50%" data-plugin="asSpinner" value="0">
-                            </div>
-                        </div>
                         <div class="example">
                             <h4 class="example-title">Price</h4>
-                            <div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button
-                                            class="btn btn-default bootstrap-touchspin-down" type="button">-
-                                    </button></span><span
-                                        class="input-group-addon bootstrap-touchspin-prefix">$</span><input type="text"
-                                                                                                            class="form-control"
-                                                                                                            name="touchSpinPrefix"
-                                                                                                            data-plugin="TouchSpin"
-                                                                                                            data-min="-1000000000"
-                                                                                                            data-max="1000000000"
-                                                                                                            data-stepinterval="50"
-                                                                                                            data-maxboostedstep="10000000"
-                                                                                                            data-prefix="$"
-                                                                                                            value="0"
-                                                                                                            style="display: block;"><span
-                                        class="input-group-addon bootstrap-touchspin-postfix"
-                                        style="display: none;"></span><span class="input-group-btn"><button
-                                            class="btn btn-default bootstrap-touchspin-up" type="button">+
-                                    </button></span></div>
+                            <input type="text" class="form-control" name="touchSpinPrefix" data-plugin="TouchSpin"
+                                   data-min="-1000000000" data-max="1000000000" data-stepinterval="50"
+                                   data-maxboostedstep="10000000" data-prefix="$" value="0" />
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="padding-right:0px; float:right">
+                        <div class="example">
+                            <div class="form-group">
+                                <h4 class="example-title">Choice a image </h4>
+                                <div class="input-group input-group-file">
+                                    <input id="namefile" type="text" class="form-control" placeholder="select a image" readonly="">
+					    <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file waves-effect waves-light">
+                                <i class="icon md-upload" aria-hidden="true"></i>
+                                <input id="img" type="file" name="image" multiple="">
+                            </span>
+					    </span>
+                                </div>
+                            </div>
+                            <div class="example" style="width:100%;">
+                                <h4 class="example-title">Stock</h4>
+                                <div tabindex="0" class="spinnerUi" style="width:100%;">
+                                    <input type="text" class="form-control" data-plugin="asSpinner" value="0" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -133,14 +157,16 @@
                             data-placement="bottom-right-inside"
                             maxlength="100" rows="3" placeholder="Descripción en Español."></textarea>
                 </div>
-                <div class="form-group wallets" style="font-weight: 500">Choice your account bitcoin</div>
-                <div class="example-wrap">
-                    <div class="example">
-                        <select name="bitcoinacount" data-plugin="selectpicker" data-style="btn-primary">
-                            {{--@foreach($cuentas as $cuenta)
-                                <option value="{!! $cuenta['id'] !!}">{!! $cuenta['name'] !!}</option>
-                            @endforeach--}}
-                        </select>
+                <div class="example">
+                    <span>feactures</span>
+                  <textarea class="maxlength-textarea form-control" data-plugin="maxlength"
+                            data-placement="bottom-right-inside"
+                            maxlength="100" rows="3" placeholder="Descripción en Español."></textarea>
+                </div>
+
+                <div class="example" style="width: 100%">
+                    <div class="example" style="margin: auto" >
+                        <button style="margin-left:25%;max-width:300px" type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Save Item</button>
                     </div>
                 </div>
             </div>
@@ -209,5 +235,71 @@
     <script src="/js/components/bootstrap-select.js"></script>
     <script src="/js/components/bootstrap-maxlength.js"></script>
     <script src="/js/components/asspinner.js"></script>
+    <!-- Plugins -->
+    <script src="/vendor/switchery/switchery.min.js"></script>
+    <script src="/vendor/intro-js/intro.js"></script>
+    <script src="/vendor/screenfull/screenfull.js"></script>
+    <script src="/vendor/slidepanel/jquery-slidePanel.js"></script>
+    <script src="/vendor/select2/select2.min.js"></script>
+    <script src="/vendor/bootstrap-tokenfield/bootstrap-tokenfield.min.js"></script>
+    <script src="/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="/vendor/bootstrap-select/bootstrap-select.js"></script>
+    <script src="/vendor/icheck/icheck.min.js"></script>
+    <script src="/vendor/switchery/switchery.min.js"></script>
+    <script src="/vendor/asrange/jquery-asRange.min.js"></script>
+    <script src="/vendor/asspinner/jquery-asSpinner.min.js"></script>
+    <script src="/vendor/clockpicker/bootstrap-clockpicker.min.js"></script>
+    <script src="/vendor/ascolor/jquery-asColor.min.js"></script>
+    <script src="/vendor/asgradient/jquery-asGradient.min.js"></script>
+    <script src="/vendor/ascolorpicker/jquery-asColorPicker.min.js"></script>
+    <script src="/vendor/bootstrap-maxlength/bootstrap-maxlength.js"></script>
+    <script src="/vendor/jquery-knob/jquery.knob.js"></script>
+    <script src="/vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="/vendor/card/jquery.card.js"></script>
+    <script src="/vendor/jquery-labelauty/jquery-labelauty.js"></script>
+    <script src="/vendor/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="/vendor/jt-timepicker/jquery.timepicker.min.js"></script>
+    <script src="/vendor/datepair-js/datepair.min.js"></script>
+    <script src="/vendor/datepair-js/jquery.datepair.min.js"></script>
+    <script src="/vendor/jquery-strength/jquery-strength.min.js"></script>
+    <script src="/vendor/multi-select/jquery.multi-select.js"></script>
+    <script src="/vendor/typeahead-js/bloodhound.min.js"></script>
+    <script src="/vendor/typeahead-js/typeahead.jquery.min.js"></script>
+    <script src="/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+    <!-- Scripts -->
+    <script src="/js/core.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/sections/menu.js"></script>
+    <script src="/assets/js/sections/menubar.js"></script>
+    <script src="/assets/js/sections/gridmenu.js"></script>
+    <script src="/assets/js/sections/sidebar.js"></script>
+    <script src="/js/configs/config-colors.js"></script>
+    <script src="/assets/js/configs/config-tour.js"></script>
+    <script src="/js/components/asscrollable.js"></script>
+    <script src="/js/components/animsition.js"></script>
+    <script src="/js/components/slidepanel.js"></script>
+    <script src="/js/components/switchery.js"></script>
+    <script src="/js/components/select2.js"></script>
+    <script src="/js/components/bootstrap-tokenfield.js"></script>
+    <script src="/js/components/bootstrap-tagsinput.js"></script>
+    <script src="/js/components/bootstrap-select.js"></script>
+    <script src="/js/components/icheck.js"></script>
+    <script src="/js/components/switchery.js"></script>
+    <script src="/js/components/asrange.js"></script>
+    <script src="/js/components/asspinner.js"></script>
+    <script src="/js/components/clockpicker.js"></script>
+    <script src="/js/components/ascolorpicker.js"></script>
+    <script src="/js/components/bootstrap-maxlength.js"></script>
+    <script src="/js/components/jquery-knob.js"></script>
+    <script src="/js/components/bootstrap-touchspin.js"></script>
+    <script src="/js/components/card.js"></script>
+    <script src="/js/components/jquery-labelauty.js"></script>
+    <script src="/js/components/bootstrap-datepicker.js"></script>
+    <script src="/js/components/jt-timepicker.js"></script>
+    <script src="/js/components/datepair-js.js"></script>
+    <script src="/js/components/jquery-strength.js"></script>
+    <script src="/js/components/multi-select.js"></script>
+    <script src="/js/components/jquery-placeholder.js"></script>
+    <script src="/assets/examples/js/forms/advanced.js"></script>
 
 @endsection
