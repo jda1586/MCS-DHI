@@ -109,12 +109,12 @@
                 <div class="page-header">
                     <h1 class="page-title">Members List</h1>
                     <div class="page-header-actions">
-                        <form>
-                            <div class="input-search input-search-dark">
-                                <i class="input-search-icon wb-search" aria-hidden="true"></i>
-                                <input id="search" type="text" class="form-control" name="" placeholder="Search...">
-                            </div>
-                        </form>
+
+                        <div class="input-search input-search-dark">
+                            <i class="input-search-icon wb-search" aria-hidden="true"></i>
+                            <input id="search" type="text" class="form-control" name="" placeholder="Search...">
+                        </div>
+
                     </div>
                 </div>
                 <!-- Contacts Content -->
@@ -130,15 +130,18 @@
 
                             </th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
+                                Id
+                            </th>
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 User
                             </th>
                             <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 Email
                             </th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 Name
                             </th>
-                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="4">
+                            <th scope="col" data-tablesaw-sortable-col data-tablesaw-priority="3">
                                 Balance
                             </th>
                         </tr>
@@ -149,16 +152,19 @@
                                 style="animation-fill-mode: backwards; animation-duration: 250ms; animation-delay: 100ms;">
                                 <td>
                                     <img class="img-responsive"
-                                         src="/assets/images/logos/{{ ($user->product_id == 1) ? 'BRONZE_PACK.png' : ($user->product_id == 2) ? 'SILVER_PACK.png' : 'GOLD_PACK.png'}}"
-                                         alt="...">
+                                         src="/assets/images/logos/{!! $user->product->image['url'] !!}">
                                 </td>
-                                <td class="cell-300">
-                                {{ $user->user }}
+                                <td>
+                                    {{ $user->id }}
+                                </td>
+                                <td>
+                                    {{ $user->user }}
+                                </td>
                                 <td>
                                     {{ $user->email }}
                                 </td>
                                 <td>
-                                    {{ $user->name }}
+                                    {{ $user->name.' '.$user->lastname }}
                                 </td>
                                 <td>
                                     $ {{ number_format($user->wallets->balance,2,'.',',') }}
@@ -167,7 +173,9 @@
                         @endforeach
                         </tbody>
                     </table>
-                    <p style="width: 100%; text-align: center;">{!! $users->render() !!}</p>
+                    <div style="width: 100%; text-align: center;">
+                        {!! $users->appends($appends)->render() !!}
+                    </div>
                     {{--<ul data-plugin="paginator" data-total="50" data-skin="pagination-gap"></ul>--}}
                 </div>
             </div>
@@ -264,7 +272,8 @@
             $('#search').keypress(function (e) {
                 var $this = $(this);
                 if (e.which == 13) {
-                    window.location.href = "{!! route('admin.members.index') !!}?search=" + $this.val();
+                    var url = "{!! route('admin.members.index') !!}?search=" + $this.val();
+                    window.location.href = url;
                 }
             });
         });

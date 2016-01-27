@@ -196,7 +196,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+                    <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="" aria-expanded="false"
                        data-animation="scale-up" role="button">
               <span class="avatar avatar-online">
                 <img src="/assets/images/logos/avatar.png" alt="...">
@@ -276,7 +276,7 @@
                         </a>
                     </li>
                     <li class="site-menu-item">
-                        <a class="animsition-link" href="#">
+                        <a class="animsition-link" href="">
                             <i class="site-menu-icon md-money" aria-hidden="true"></i>
                             <span class="site-menu-title">Auctions</span>
                         </a>
@@ -318,15 +318,15 @@
                                 </a>
                             </li>
                             <li class="site-menu-item">
-                                <a class="animsition-link" href="#">
+                                <a class="animsition-link" href="">
                                     <span class="site-menu-title">Binary Tree</span>
                                 </a>
                             </li>
-                            <li class="site-menu-item">
+                            {{--<li class="site-menu-item">
                                 <a class="animsition-link" href="#">
                                     <span class="site-menu-title">Unilevel Tree</span>
                                 </a>
-                            </li>
+                            </li>--}}
                             <li class="site-menu-item">
                                 <a class="animsition-link" href="{!! route('members.register') !!}">
                                     <span class="site-menu-title">New members</span>
