@@ -13,6 +13,7 @@ use DHI\Jobs\NewUserMailJob;
 use Input;
 use Validator;
 use DHI\Item;
+use App\Helpers\Utiles;
 
 
 class ItemsController extends Controller
@@ -51,9 +52,31 @@ class ItemsController extends Controller
     }
 
     public function store( Request $request ){
+
+
         $validator = Validator::make( $request->all(), $this->validations );
+        $current_year  = date('Y');
+        $current_month = date('m');
+        $file_path     = $current_year . '/' . $current_month; // relative path to the file
+
         if ( !$validator->fails() ){
-            $item = Item::create(  $request->all() );
+
+            Utiles::createDirs();
+            $item = Item::create(  $request->except('images') );
+
+            if ( $request->hasFile ( 'images' ) )  {
+                    $file      = $request->file( 'images' );
+                    $extension = $file->getClientOriginalExtension();
+                    $filename  = $current_month.$current_year.str_random(25).'.'.$extension;
+
+                    $file->move(FILES . '/' . $file_path, $filename);
+
+                    $item->images                     = $file_path . '/' . $filename;
+                    $item->original_filename         = $file->getClientOriginalName();
+                }
+
+                $item->save();
+
             return view('items.index');
         } else {
             return $validator->messages();
