@@ -407,7 +407,7 @@
     // validacion de depositos
     // ---------------------------------
     (function() {
-        $('#newitem2').formValidation({
+        $('#newitem').formValidation({
                 framework: "bootstrap",
                 icon: {
                     valid: 'glyphicon glyphicon-ok',
@@ -415,6 +415,22 @@
                     validating: 'glyphicon glyphicon-refresh'
                 },
                 fields: {
+                    name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The name is required and cannot be empty'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 18,
+                                message: 'The content must be less than 30 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                                message: 'only letters and numbers allowed'
+                            }
+                        }
+                    },
                     image: {
                         validators: {
                             notEmpty: {
@@ -433,6 +449,56 @@
                             },
                             stringLength: {
                                 min: 1
+                            },
+                            numeric: {
+                                message: 'The value is not a number'
+                                // The default separators
+                            }
+                        }
+                    },
+                    stock: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The amount is required'
+                            },
+                            stringLength: {
+                                min: 1
+                            },
+                            numeric: {
+                                message: 'The value is not a number'
+                                // The default separators
+                            }
+                        }
+                    },
+                    feactures: {
+                        validators: {
+                            /*notEmpty: {
+                                message: 'The feacture is required and cannot be empty'
+                            },*/
+                            stringLength: {
+                                min: 10,
+                                max: 255,
+                                message: 'The content must be less than 30 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                                message: 'only letters and numbers allowed'
+                            }
+                        }
+                    },
+                    description : {
+                        validators: {
+                            notEmpty: {
+                                message: 'The description is required and cannot be empty'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 255,
+                                message: 'The content must be less than 30 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                                message: 'only letters and numbers allowed'
                             }
                         }
                     }

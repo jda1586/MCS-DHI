@@ -97,28 +97,18 @@
                 <div class="example">
                     <div class="col-md-6" style="padding-left:0px;float: left">
                         <div class="example">
-                            <h4 class="example-title">Name </h4>
-                            <label class="sr-only" for="inputName">Full Name</label>
-                            <input type="text" class="form-control" id="inputName" name="name" placeholder="Name"
-                                   data-fv-field="name">
-                            <small class="help-block" data-fv-validator="notEmpty" data-fv-for="name"
-                                   data-fv-result="NOT_VALIDATED" style="display: none;">The name is required and cannot
-                                be
-                                empty
-                            </small>
-                            <small class="help-block" data-fv-validator="stringLength" data-fv-for="name"
-                                   data-fv-result="NOT_VALIDATED" style="display: none;">Please enter a value with valid
-                                length
-                            </small>
-                            <small class="help-block" data-fv-validator="regexp" data-fv-for="name"
-                                   data-fv-result="NOT_VALIDATED" style="display: none;">only letters allowed
-                            </small>
-                        </div>
-                        <div class="example">
-                            <h4 class="example-title">Price</h4>
-                            <input type="text" class="form-control" name="touchSpinPrefix" data-plugin="TouchSpin"
-                                   data-min="-1000000000" data-max="1000000000" data-stepinterval="50"
-                                   data-maxboostedstep="10000000" data-prefix="$" value="0" />
+                            <div class="form-group">
+                                <h4 class="example-title">Name </h4>
+                                <label class="sr-only" for="inputName">Full Name</label>
+                                <input type="text" class="form-control" id="inputName" name="name" placeholder="Name"
+                                       data-fv-field="name">
+                            </div>
+                            <div class="form-group">
+                                <h4 class="example-title">Price</h4>
+                                <input type="text" class="form-control" name="amount" data-plugin="TouchSpin"
+                                       data-min="-1000000000" data-max="1000000000" data-stepinterval="50"
+                                       data-maxboostedstep="10000000" data-prefix="$" value="0"/>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6" style="padding-right:0px; float:right">
@@ -126,19 +116,20 @@
                             <div class="form-group">
                                 <h4 class="example-title">Choice a image </h4>
                                 <div class="input-group input-group-file">
-                                    <input id="namefile" type="text" class="form-control" placeholder="select a image" readonly="">
-					    <span class="input-group-btn">
-                            <span class="btn btn-primary btn-file waves-effect waves-light">
-                                <i class="icon md-upload" aria-hidden="true"></i>
-                                <input id="img" type="file" name="image" multiple="">
-                            </span>
-					    </span>
+                                    <input id="namefile" type="text" class="form-control" placeholder="select a image" readonly=""/>
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file waves-effect waves-light">
+                                                <i class="icon md-upload" aria-hidden="true"></i>
+                                                <input id="img" type="file" name="image" multiple="">
+                                            </span>
+                                        </span>
                                 </div>
                             </div>
-                            <div class="example" style="width:100%;">
+                            <div class="form-group" style="width:100%;">
                                 <h4 class="example-title">Stock</h4>
                                 <div tabindex="0" class="spinnerUi" style="width:100%;">
-                                    <input type="text" class="form-control" data-plugin="asSpinner" value="0" />
+                                    <input type="text" name="stock" class="form-control" data-plugin="asSpinner"
+                                           value="0"/>
                                 </div>
                             </div>
                         </div>
@@ -148,25 +139,28 @@
                 <div class="example">
                     <span>English</span>
                   <textarea class="maxlength-textarea form-control" data-plugin="maxlength"
-                            data-placement="bottom-right-inside"
-                            maxlength="100" rows="3" placeholder="Description in English."></textarea>
+                            data-placement="bottom-right-inside" name="decription"
+                            maxlength="255" rows="3" placeholder="Description in English."></textarea>
                 </div>
-                <div class="example">
+                {{--<div class="example">
                     <span>Español</span>
                   <textarea class="maxlength-textarea form-control" data-plugin="maxlength"
                             data-placement="bottom-right-inside"
                             maxlength="100" rows="3" placeholder="Descripción en Español."></textarea>
-                </div>
+                </div>--}}
+                    <div class="example" style="width: 100%;">Feactures</div>
                 <div class="example">
-                    <span>feactures</span>
+                    <span>English</span>
                   <textarea class="maxlength-textarea form-control" data-plugin="maxlength"
-                            data-placement="bottom-right-inside"
-                            maxlength="100" rows="3" placeholder="Descripción en Español."></textarea>
+                            data-placement="bottom-right-inside" name="feactures"
+                            maxlength="255" rows="3" placeholder="Description in English."></textarea>
                 </div>
 
                 <div class="example" style="width: 100%">
-                    <div class="example" style="margin: auto" >
-                        <button style="margin-left:25%;max-width:300px" type="submit" id="deposito" name="deposito" class="btn btn-primary btn-block waves-effect waves-light">Save Item</button>
+                    <div class="example" style="margin: auto">
+                        <button style="margin-left:25%;max-width:300px" type="submit" id="deposito" name="deposito"
+                                class="btn btn-primary btn-block waves-effect waves-light">Save Item
+                        </button>
                     </div>
                 </div>
             </div>
