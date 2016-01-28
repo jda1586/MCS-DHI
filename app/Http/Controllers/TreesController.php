@@ -18,4 +18,9 @@ class TreesController extends Controller
     {
         return view('trees.unilevel');
     }
+
+    public function tree()
+    {
+        return view('trees.tree');
+    }
 }

@@ -93,13 +93,13 @@ function LoadCard(member, CardIdSequence, level, parentId) {
         var iconType = '';
         switch (member.type) {
             case 1:
-                iconType = 'icon-gold.png';
+                iconType = '/assets/BinaryTree SourceCode/icon-gold.png';
                 break;
             case 2:
-                iconType = 'icon-silver.png';
+                iconType = '/assets/BinaryTree SourceCode/icon-silver.png';
                 break;
             case 3:
-                iconType = 'icon-copper.png';
+                iconType = '/assets/BinaryTree SourceCode/icon-copper.png';
                 break;
             default:
                 iconType: '';
