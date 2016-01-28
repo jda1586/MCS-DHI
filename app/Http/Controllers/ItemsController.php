@@ -3,7 +3,6 @@
 namespace DHI\Http\Controllers;
 
 use Auth;
-use DHI\UserTree;
 use Hash;
 use Illuminate\Http\Request;
 
@@ -79,8 +78,7 @@ class ItemsController extends Controller
 
             return view('items.index');
         } else {
-            return redirect()->route('admin.items.register')->withErrors($validator);
-//            return view('items.register')->withErrors($validator);
+            return $validator->messages();
         }
     }
 
