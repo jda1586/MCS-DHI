@@ -66,11 +66,11 @@
                             <tbody>
                             @foreach($items as $item)
                                 <tr>
-                                    <td>{!! $item['amount'] !!}</td>
-                                    <td>{!! $item['Description'] !!}</td>
-                                    <td>{!! $item['owner'] !!}</td>
-                                    <td>{!! $item['Auctions'] !!}</td>
-                                    <td>{!! $item['Stook'] !!}</td>
+                                    <td>{!! $item['price'] !!}</td>
+                                    <td>{!! $item['description'] !!}</td>
+                                    <td>{!! $item['name'] !!}</td>
+                                    <td>{!! $item['features'] !!}</td>
+                                    <td>{!! $item['stock'] !!}</td>
                                     <td>
                                         <span class="label label-table label-success">{!!$item['status']!!}</span>
                                     </td>

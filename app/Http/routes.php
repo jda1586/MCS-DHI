@@ -64,8 +64,8 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
             Route::get('/list/activeItems', ['as' => 'list', 'uses' => 'ItemsController@itemsList']);
             Route::get('/register', ['as' => 'register', 'uses' => 'ItemsController@register']);
             Route::post('/register/store', ['as' => 'store', 'uses' => 'ItemsController@store']);
-            Route::get('desactivate/{id}', ['as' => 'desactivateItem', 'uses' => 'ItemsController@desactivateItem']);
-            Route::get('activate/{id}', ['as' => 'activateItem', 'uses' => 'ItemsController@activateItem']);
+            Route::get('/desactivate/{id}', ['as' => 'desactivateItem', 'uses' => 'ItemsController@desactivateItem']);
+            Route::get('/activate/{id}', ['as' => 'activateItem', 'uses' => 'ItemsController@activateItem']);
             Route::delete('/delete/{id}', ['as' => 'delete', 'uses' => 'ItemsController@delete']);
         });
         /* Subastas */

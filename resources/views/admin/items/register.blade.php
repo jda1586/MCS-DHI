@@ -55,14 +55,14 @@
             <h1 class="page-title">New Item</h1>
             <ol class="breadcrumb">
                 <li><a href="{!! route('home') !!}">Home</a></li>
-                <li><a href="javascript:void(0)">Items</a></li>
+                <li><a href="{!! route('admin.items.index') !!}">Items</a></li>
                 <li class="active">Register</li>
             </ol>
         </div>
 
         {{-- INICIO DEL FORM --}}
         <div id="form" class="col-md-12 col-md-offset-0 panel " style="">
-            {!! Form::open(['route'=>'admin.items.store','method'=>'post','id'=>'newitem'] ) !!}
+            {!! Form::open(['route'=>'admin.items.store','method'=>'post','files'=>true,'id'=>'newitem'] ) !!}
             @if( Session::has('errors') )
                 <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check fields</div>
             @endif
@@ -71,23 +71,7 @@
             @endforeach
 
             <div class="col-md-3 col-md-offset-0 ">
-                {{--<div class="example">
-                    @foreach($errors->get('inputLableautyRadio') as $m)
-                        <div style="text-align: center; color: red;">{!! $m !!}</div>
-                    @endforeach
-                    <div class="form-group wallets" style="font-weight: 500">Select a wallet</div>
-                    <div class="form-group wallets">
-                        <input type="radio" class="to-labelauty wallets" name="inputLableautyRadio"
-                               data-plugin="labelauty"
-                               value="Utilities"
-                               data-labelauty="Utilities|selected Utilities" checked/>
-                    </div>
-                    <div class="form-group wallets">
-                        <input type="radio" class="to-labelauty" name="inputLableautyRadio" data-plugin="labelauty"
-                               value="Commissions"
-                               data-labelauty="Commissions|Commissions"/>
-                    </div>
-                </div>--}}
+
             </div>
             <div class="col-md-6" style="margin-top: 4%">
 
@@ -105,7 +89,7 @@
                             </div>
                             <div class="form-group">
                                 <h4 class="example-title">Price</h4>
-                                <input type="text" class="form-control" name="amount" data-plugin="TouchSpin"
+                                <input type="text" class="form-control" name="price" data-plugin="TouchSpin"
                                        data-min="-1000000000" data-max="1000000000" data-stepinterval="50"
                                        data-maxboostedstep="10000000" data-prefix="$" value="0"/>
                             </div>
@@ -139,7 +123,7 @@
                 <div class="example">
                     <span>English</span>
                   <textarea class="maxlength-textarea form-control" data-plugin="maxlength"
-                            data-placement="bottom-right-inside" name="decription"
+                            data-placement="bottom-right-inside" name="description"
                             maxlength="255" rows="3" placeholder="Description in English."></textarea>
                 </div>
                 {{--<div class="example">
@@ -152,7 +136,7 @@
                 <div class="example">
                     <span>English</span>
                   <textarea class="maxlength-textarea form-control" data-plugin="maxlength"
-                            data-placement="bottom-right-inside" name="feactures"
+                            data-placement="bottom-right-inside" name="features"
                             maxlength="255" rows="3" placeholder="Description in English."></textarea>
                 </div>
 
@@ -165,22 +149,7 @@
                 </div>
             </div>
             <div class="col-md-3" style="margin-top: 2%;padding-bottom: 1px;">
-                {{--@foreach($errors->get('amount') as $m)
-                    <div style="text-align: center; color: red;">{!! $m !!}</div>
-                @endforeach
-                <div class="example">
-                    --}}{{--<div class="form-group wallets" style="font-weight: 500" > </div>--}}{{--
-                    <div class="form-group">
-                        <div class="input-group ">
-                            <span class="input-group-addon">$</span>
-                            <input type="text" class="form-control" name="amount" placeholder="amount ">
-                            <span class="input-group-addon">.00</span>
-                        </div>
-                    </div>
-                    <button type="submit" id="deposito" name="deposito"
-                            class="btn btn-primary btn-block waves-effect waves-light">Cash Out
-                    </button>
-                </div>--}}
+
             </div>
             {!! Form::close() !!}
         </div> {{-- fin del fomr--}}

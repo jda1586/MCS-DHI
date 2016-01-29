@@ -105,7 +105,7 @@
                         },
                         stringLength: {
                             min: 6,
-                            max: 18,
+                            max: 30,
                             message: 'The content must be less than 30 characters long'
                         },
                         regexp: {
@@ -356,7 +356,7 @@
                             },
                             stringLength: {
                                 min: 6,
-                                max: 18,
+                                max: 30,
                                 message: 'The content must be less than 30 characters long'
                             },
                             regexp: {
@@ -422,11 +422,11 @@
                             },
                             stringLength: {
                                 min: 6,
-                                max: 18,
+                                max: 30,
                                 message: 'The content must be less than 30 characters long'
                             },
                             regexp: {
-                                regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                                regexp: /^[a-zA-Z0-9 ñáéíóú]+$/,
                                 message: 'only letters and numbers allowed'
                             }
                         }
@@ -448,7 +448,7 @@
                                 message: 'The amount is required'
                             },
                             stringLength: {
-                                min: 1
+                                min: 2
                             },
                             numeric: {
                                 message: 'The value is not a number'
@@ -462,7 +462,8 @@
                                 message: 'The amount is required'
                             },
                             stringLength: {
-                                min: 1
+                                min: 1,
+                                higher: 0
                             },
                             numeric: {
                                 message: 'The value is not a number'
