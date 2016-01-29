@@ -2,10 +2,13 @@
 
 namespace DHI\Http\Controllers;
 
+use DHI\BitcoinAccount;
 use Illuminate\Http\Request;
 
 use DHI\Http\Requests;
 use DHI\Http\Controllers\Controller;
+use Input;
+use Validator;
 
 class WalletsController extends Controller
 {
@@ -28,5 +31,39 @@ class WalletsController extends Controller
                 ->where('from', 'auction')->orWhere('to', 'auction')->orderBy('created_at', 'DESC')->take(20)->get(),
             'bitcoin_accounts' => auth()->user()->bitcoin_accounts,
         ]);
+    }
+
+    public function store()
+    {
+        $validator = Validator::make(Input::all(), [
+            'nameaccount' => 'required|min:6',
+            'numberaccount'=> 'required|min:27|max:34',
+        ]);
+
+        if ($validator->passes()) {
+//            $wallet = UserDeposit::where('user_id','=',Auth()->user()->getAuthIdentifier())->first();
+            $nameAccount=Input::get('nameaccount');
+            $numberAccount= Input::get('numberaccount');
+
+            if($wallet = BitcoinAccount::create(array(
+                'user_id' => Auth()->user()->getAuthIdentifier(),
+                'name'=>$nameAccount,
+                'number_account'=>$numberAccount,
+                'status'=>'active',
+                'balance_in'=>0,
+                'balance_out'=>0,
+                ))
+            ){      //si se guardo la informacion ahoa si muevo el archivo
+                echo 'se guardo';
+                return redirect()->route('wallets.index');
+            }else{
+                echo 'no se guardo';
+                return redirect()->route('wallets.index')->withErrors($validator);
+            }
+        }else{
+//            echo 'ase falta archivo';
+//            dd($validator);
+            return redirect()->route('wallets.deposits')->withErrors($validator);
+        }
     }
 }

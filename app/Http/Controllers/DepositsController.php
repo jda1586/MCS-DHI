@@ -27,11 +27,6 @@ class DepositsController extends Controller
         return view('wallets.deposits',['depositos' => $depositos]);
     }
 
-    public function cashOut()
-    {
-        echo 'peticion de sacar dinero';
-    }
-
     /**
      * @param Request $request
      * @return $this|\Illuminate\Http\RedirectResponse
@@ -66,7 +61,7 @@ class DepositsController extends Controller
             ){      //si se guardo la informacion ahoa si muevo el archivo
                 echo 'se guardo';
                 Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
-                return redirect()->route('wallets.deposits')->with('success', 'registro-success');
+                return redirect()->route('wallets.deposits');
             }else{
                 echo 'no se guardo';
                 return redirect()->route('wallets.deposits')->withErrors($validator);

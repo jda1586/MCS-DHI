@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
         Route::get('/', ['as' => 'index', 'uses' => 'WalletsController@index']);
+        Route::post('/store', ['as' => 'store', 'uses' => 'WalletsController@store']);
         Route::get('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@index']);
         Route::post('/deposits', ['as' => 'deposits', 'uses' => 'DepositsController@deposits']);
         Route::get('/cashout', ['as' => 'cashout', 'uses' => 'CashOutController@index']);

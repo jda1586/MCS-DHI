@@ -49,7 +49,7 @@ class AdminMembersController extends Controller
     public function addCredit()
     {
 //        dd('se agrego credito');
-        return view('admin . members . addcredit');
+        return view('admin.members.addcredit');
     }
 
     public function credit()

@@ -91,59 +91,81 @@
                 <div class="col-md-12">
                     <div class="col-md-6">
                         <div class="panel">
-                            <div class="panel-heading">
-                                <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
-                                                           aria-hidden="true"></i>Add BitCoins Accounts</h3>
+                            <div class="panel-heading" style="height: 50px;">
+                                <div class="form-group">
+                                    <div style="float: left">
+                                        <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
+                                                                   aria-hidden="true"></i>My BitCoins Accounts</h3>
+                                    </div>
+                                    <div style="float: right; padding: 15px;">
+                                        <button class="btn btn-outline btn-primary btn-default"
+                                                data-target="#exampleNiftyFadeScale"
+                                                data-toggle="modal" type="button">Add BitCoins Accounts
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                                <div class="modal fade modal-fade-in-scale-up" id="exampleNiftyFadeScale"
+                                     aria-hidden="true"
+                                     aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                                <h4 class="modal-title">Add BitCoins Accounts</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                {{--<p>One fine body…</p>--}}
+                                                    {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleStandardForm" autocomplete="off" novalidate="novalidate">--}}
+                                                {!! Form::open(['route'=>'wallets.store','method'=>'post','id'=>'walletstore'] ) !!}
+                                                    <button type="submit" class="fv-hidden-submit"
+                                                            style="display: none; width: 0px; height: 0px;"></button>
+                                                    <div class="form-group form-material">
+                                                        <label class="col-sm-3 control-label">Name Account</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="nameaccount"
+                                                                   data-fv-field="account">
+                                                            <small class="help-block" data-fv-validator="notEmpty"
+                                                                   data-fv-for="account" data-fv-result="NOT_VALIDATED"
+                                                                   style="display: none;">The full name is required and cannot be empty
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group form-material">
+                                                        <label class="col-sm-3 control-label">Account Number</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" name="numberaccount"
+                                                                   data-fv-field="number">
+                                                            <small class="help-block" data-fv-validator="notEmpty"
+                                                                   data-fv-for="number" data-fv-result="NOT_VALIDATED"
+                                                                   style="display: none;">The account number is required and cannot be
+                                                                empty
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-right">
+                                                        <button type="submit" class="btn btn-primary waves-effect waves-light" style="width:100px; margin:13px 14px 0px 0px;"
+                                                                id="validateButton2">Save
+                                                        </button>
+                                                    </div>
+                                                {!! Form::close() !!}
+                                            </div>
+                                            {{--<div class="modal-footer">
+                                                <button type="button" class="btn btn-default margin-0"
+                                                        data-dismiss="modal">Close
+                                                </button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>--}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Modal -->
                             </div>
-                            <div class="panel-body">
-                                <form class="form-horizontal fv-form fv-form-bootstrap" id="exampleStandardForm"
-                                      autocomplete="off" novalidate="novalidate">
-                                    <button type="submit" class="fv-hidden-submit"
-                                            style="display: none; width: 0px; height: 0px;"></button>
-                                    <div class="form-group form-material">
-                                        <label class="col-sm-3 control-label">Name Account</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="account"
-                                                   data-fv-field="account">
-                                            <small class="help-block" data-fv-validator="notEmpty"
-                                                   data-fv-for="account" data-fv-result="NOT_VALIDATED"
-                                                   style="display: none;">The full name is required and cannot be empty
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-material">
-                                        <label class="col-sm-3 control-label">Account Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="number"
-                                                   data-fv-field="number">
-                                            <small class="help-block" data-fv-validator="notEmpty"
-                                                   data-fv-for="number" data-fv-result="NOT_VALIDATED"
-                                                   style="display: none;">The account number is required and cannot be
-                                                empty
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="form-group form-material">
-                                        <label class="col-sm-3 control-label">Token Number</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="token"
-                                                   data-fv-field="token">
-                                            <small class="help-block" data-fv-validator="notEmpty"
-                                                   data-fv-for="token" data-fv-result="NOT_VALIDATED"
-                                                   style="display: none;">The account number is required and cannot be
-                                                empty
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="text-right">
-                                        <button type="button" class="btn btn-primary waves-effect waves-light"
-                                                id="validateButton1">Token
-                                        </button>
-                                        <button type="submit" class="btn btn-primary waves-effect waves-light"
-                                                id="validateButton2">Submit
-                                        </button>
-                                    </div>
-                                </form>
+                            <div class="panel-body" style="margin-top: 20px;">
+
                                 <div class="example-wrap">
                                     <div class="example table-responsive">
                                         <table class="table">
@@ -193,7 +215,7 @@
                                             </thead>
                                             <tbody>
                                             @foreach($commission_movements as $movement)
-                                            {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -223,7 +245,7 @@
                                             </thead>
                                             <tbody>
                                             @foreach($activation_movements as $movement)
-                                            {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -253,7 +275,7 @@
                                             </thead>
                                             <tbody>
                                             @foreach($utilities_movements as $movement)
-                                            {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -283,7 +305,7 @@
                                             </thead>
                                             <tbody>
                                             @foreach($auction_movements as $movement)
-                                            {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
