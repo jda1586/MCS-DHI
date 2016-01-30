@@ -514,7 +514,7 @@
                 <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/products/14_00000.png" alt=""
+                            <img class="cover-image overlay-scale" src="/assets/images/products/15_00000.png" alt=""
                                  width="200" height="200">
                         </div>
                         <div class="widget-body">
@@ -549,7 +549,7 @@
                 <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/products/15_00000.png" alt=""
+                            <img class="cover-image overlay-scale" src="/assets/images/products/16_00000.png" alt=""
                                  width="200" height="200">
                         </div>
                         <div class="widget-body">
@@ -562,74 +562,6 @@
                                 31J automatic movement is running and keeping time. This preowned watch is in excellent
                                 condition and comes with box, booklets, warranty card and hang tag. This is an excellent
                                 opportunity to own a like-new 18K Diamond.
-                            </p>
-                            <div class="widget-body-footer">
-                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
-                                <div class="widget-actions pull-right">
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-share"></i>
-                                    </a>
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-favorite"></i>
-                                        <span>25</span>
-                                    </a>
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-comment"></i>
-                                        <span>18</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
-                    <div class="widget widget-article widget-shadow">
-                        <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/products/16_00000.png" alt=""
-                                 width="200" height="200">
-                        </div>
-                        <div class="widget-body">
-                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
-                            <p class="widget-metas">Jan 16, 2015</p>
-                            <p>This Rolex has undergone a thorough inspection of water resistance, accuracy,
-                                functionality and condition to determine the level of reconditioning required to meet
-                                our strict standards. It has also been referenced against technical documents and
-                                manufacturer records where available to ensure authenticity and a clean history.
-                                Rolex Daytona 116523. It has a 40mm Steel & Yellow Gold case, a Champagne Baton dial, a
-                                Steel & Yellow Gold (Oyster) bracelet, and is powered by an Automatic movement. The case
-                                has a k764xxx serial making it approximately 15 years old.
-                            </p>
-                            <div class="widget-body-footer">
-                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
-                                <div class="widget-actions pull-right">
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-share"></i>
-                                    </a>
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-favorite"></i>
-                                        <span>25</span>
-                                    </a>
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-comment"></i>
-                                        <span>18</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
-                    <div class="widget widget-article widget-shadow">
-                        <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/products/17_00000.png" alt=""
-                                 width="200" height="200">
-                        </div>
-                        <div class="widget-body">
-                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
-                            <p class="widget-metas">Jan 16, 2015</p>
-                            <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
-                                rationibus periculum opinor propterea intuemur poetarum efficeretur
-                                interpretaris, labefactant aeternum reformidans, laborum inquit
                             </p>
                             <div class="widget-body-footer">
                                 <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
