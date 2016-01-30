@@ -65,7 +65,8 @@
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>All of our houses are QUALITY CERTIFICATED.
-                                    We make sure everything is beautiful & running for you, all you got do is to take the
+                                    We make sure everything is beautiful & running for you, all you got do is to take
+                                    the
                                     key
                                     Believe on your dreams make your beat & win a house for One Bitcoin, that can be a
                                     business for you.
@@ -103,7 +104,8 @@
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>All of our houses are QUALITY CERTIFICATED.
-                                    We make sure everything is beautiful & running for you, all you got do is to take the
+                                    We make sure everything is beautiful & running for you, all you got do is to take
+                                    the
                                     key
                                     Believe on your dreams make your beat & win a house for One Bitcoin, that can be a
                                     business for you.
@@ -172,40 +174,6 @@
                 <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
                     <div class="widget widget-article widget-shadow">
                         <div class="widget-header cover overlay overlay-hover">
-                            <img class="cover-image overlay-scale" src="/assets/images/products/2_00000.png" alt=""
-                                 width="200" height="200">
-                        </div>
-                        <div class="widget-body">
-                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
-                            <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
-                                <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
-                                    rationibus periculum opinor propterea intuemur poetarum efficeretur
-                                    interpretaris, labefactant aeternum reformidans, laborum inquit
-                                </p>
-                            </div>
-                            <div class="widget-body-footer">
-                                <a class="btn btn-info waves-effect waves-light" href="javascript:void(0)">READ MORE</a>
-                                <div class="widget-actions pull-right">
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-share"></i>
-                                    </a>
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-favorite"></i>
-                                        <span>25</span>
-                                    </a>
-                                    <a href="javascript:void(0)">
-                                        <i class="icon md-comment"></i>
-                                        <span>18</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-xs-12 col-sm-6 masonry-item">
-                    <div class="widget widget-article widget-shadow">
-                        <div class="widget-header cover overlay overlay-hover">
                             <img class="cover-image overlay-scale" src="/assets/images/products/3_00000.png" alt=""
                                  width="200" height="200">
                         </div>
@@ -213,10 +181,12 @@
                             <h3 class="widget-title">The Samsung monitor</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
-                                <p> Samsung UE590 UHD monitor offers PC viewing, gaming and more, all in stunning Ultra HD
+                                <p> Samsung UE590 UHD monitor offers PC viewing, gaming and more, all in stunning Ultra
+                                    HD
                                     picture quality. With resolution that's
                                     four times higher than Full HD, this ultra high-definition (UHD) monitor delivers
-                                    stunning images that use a staggering 8 million pixels for unparalleled realism. Enjoy
+                                    stunning images that use a staggering 8 million pixels for unparalleled realism.
+                                    Enjoy
                                     the
                                     latest 4K content with incredible lifelike detail that makes you feel like you're
                                     actually
@@ -249,15 +219,18 @@
                                  width="200" height="200">
                         </div>
                         <div class="widget-body">
-                            <h3 class="widget-title">The Apple 27" Thunderbolt</h3>
+                            <h3 class="widget-title">The  Thunderbolt 27"</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>The Apple 27" Thunderbolt Display introduces Thunderbolt technology to the market,
-                                    providing ultra-fast speeds. Thunderbolt is 20 times faster than USB 2.0 and up to 12
-                                    times faster that FireWire 800, poising this monitor in a position to change the way you
+                                    providing ultra-fast speeds. Thunderbolt is 20 times faster than USB 2.0 and up to
+                                    12
+                                    times faster that FireWire 800, poising this monitor in a position to change the way
+                                    you
                                     work, play, and more! The 6 ports on the monitor include, of course, the Thunderbolt
                                     port, 3 powered USB 2.0 ports, a FireWire 800 port, a Gigabit Ethernet port, and a
-                                    Kensington security slot. That's a lot of flexibility when it comes to connecting other
+                                    Kensington security slot. That's a lot of flexibility when it comes to connecting
+                                    other
                                     devices to the monitor.
                                 </p>
                             </div>
@@ -287,7 +260,7 @@
                                  width="200" height="200">
                         </div>
                         <div class="widget-body">
-                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <h3 class="widget-title">Possumus f. verborum</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
@@ -328,8 +301,10 @@
                                     Equipped with dual headphone ports, these headphones will let you share your
                                     crystal-clear, pulse-pounding music with any 3.5mm-equipped device. Their durable
                                     construction and foldable design make these Beats Pro Headphones reliable and easily
-                                    portable. The plush leather ear cups provide comfortable listening and can be rotated so
-                                    that you can find just the right headphone position. For soaring highs and deep bass,
+                                    portable. The plush leather ear cups provide comfortable listening and can be
+                                    rotated so
+                                    that you can find just the right headphone position. For soaring highs and deep
+                                    bass,
                                     these Beats over-ear headphones are the premier choice
                                 </p>
                             </div>
@@ -359,7 +334,7 @@
                                  width="200" height="200">
                         </div>
                         <div class="widget-body">
-                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <h3 class="widget-title">Possumus f. verborum</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
@@ -396,22 +371,33 @@
                             <h3 class="widget-title">The GoPro HERO3:</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
-                                <p>The GoPro HERO3: Silver Edition Camera is smaller and lighter than its predecessor. It's
-                                    also Wi-Fi enabled. The HERO3 is designed for recording action sports and it comes with
+                                <p>The GoPro HERO3: Silver Edition Camera is smaller and lighter than its predecessor.
+                                    It's
+                                    also Wi-Fi enabled. The HERO3 is designed for recording action sports and it comes
+                                    with
                                     a rugged, waterproof housing that can go down to a depth of 197' (60 m). The camera
-                                    captures up to Full HD 1920 x 1080p video at 30 fps, but it also captures 960p, 720p and
-                                    480p video as well. Plus, it supports NTSC and PAL, and it can record up to 120 fps. For
-                                    still images, the HERO3 supports 5, 8 and 11-megapixel photos. The HERO3 is compatible
+                                    captures up to Full HD 1920 x 1080p video at 30 fps, but it also captures 960p, 720p
+                                    and
+                                    480p video as well. Plus, it supports NTSC and PAL, and it can record up to 120 fps.
+                                    For
+                                    still images, the HERO3 supports 5, 8 and 11-megapixel photos. The HERO3 is
+                                    compatible
                                     with the optional Wi-Fi Remote, LCD Touch BacPac and Battery BacPac (all sold
-                                    separately). It comes with several mounts and mounting hardware for a variety of uses.
+                                    separately). It comes with several mounts and mounting hardware for a variety of
+                                    uses.
                                     The camera features an ultra-wide angle, 6-element aspherical lens, an 11-megapixel
-                                    sensor and microSD card slot that accepts up to 64GB cards. There's a USB 2.0 port, a
+                                    sensor and microSD card slot that accepts up to 64GB cards. There's a USB 2.0 port,
+                                    a
                                     micro HDMI output and a port for optional accessories including the 3.5mm Stereo Mic
-                                    Adapter and Composite A/V Adapter (both sold separately).To ensure you get the best shot
-                                    possible, the HERO3 is equipped with advanced camera settings including video looping,
-                                    Protune, manual white balance and more. Plus, it supports 11-megapixel burst shooting at
+                                    Adapter and Composite A/V Adapter (both sold separately).To ensure you get the best
+                                    shot
+                                    possible, the HERO3 is equipped with advanced camera settings including video
+                                    looping,
+                                    Protune, manual white balance and more. Plus, it supports 11-megapixel burst
+                                    shooting at
                                     10 fps and time-lapse recording at 0.5, 1, 2, 5, 10, 30 or 60 second intervals. The
-                                    HERO3 also features AAC compression with AGC enhanced audio performance, as well as a
+                                    HERO3 also features AAC compression with AGC enhanced audio performance, as well as
+                                    a
                                     1050 mAh rechargeable lithium-ion battery.
                                 </p>
                             </div>
@@ -444,13 +430,19 @@
                             <h3 class="widget-title">GoPro </h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
-                                <p>HERO4 Black takes Emmy® Award-winning GoPro performance to the next level with our best
-                                    image quality yet, plus a 2x more powerful processor1 that delivers super slow motion at
-                                    240 frames per second. Incredible high-resolution 4K30 and 2.7K60 video combines with
-                                    1080p120 and 720p240 slow motion to enable stunning, immersive footage of you and your
-                                    world. Protune™ settings for both photos and video unlock manual control of Color, ISO
+                                <p>HERO4 Black takes Emmy® Award-winning GoPro performance to the next level with our
+                                    best
+                                    image quality yet, plus a 2x more powerful processor1 that delivers super slow
+                                    motion at
+                                    240 frames per second. Incredible high-resolution 4K30 and 2.7K60 video combines
+                                    with
+                                    1080p120 and 720p240 slow motion to enable stunning, immersive footage of you and
+                                    your
+                                    world. Protune™ settings for both photos and video unlock manual control of Color,
+                                    ISO
                                     Limit, Exposure and more. Waterproof to 131’ (40m) with 12MP photos at 30 frames per
-                                    second and improved audio,1 HERO4 Black is the ultimate life-capture solution for those
+                                    second and improved audio,1 HERO4 Black is the ultimate life-capture solution for
+                                    those
                                     who demand.
                                 </p>
                             </div>
@@ -480,7 +472,7 @@
                                  width="200" height="200">
                         </div>
                         <div class="widget-body">
-                            <h3 class="widget-title">Possumus fugiendum verborum</h3>
+                            <h3 class="widget-title">Possumus f. verborum</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
@@ -518,8 +510,10 @@
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>Innovation isn’t always obvious to the eye, but look a little closer at iPhone 6s and
-                                    you’ll find it’s been fundamentally improved. The enclosure is made from a new alloy of
-                                    7000 Series aluminum — the same grade used in the aerospace industry. The cover glass is
+                                    you’ll find it’s been fundamentally improved. The enclosure is made from a new alloy
+                                    of
+                                    7000 Series aluminum — the same grade used in the aerospace industry. The cover
+                                    glass is
                                     the strongest, most durable glass used in any smartphone. And a new rose gold finish
                                     joins space gray, silver, and gold.
                                 </p>
@@ -553,10 +547,13 @@
                             <h3 class="widget-title">PlayStation 4</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
-                                <p>Sony's PlayStation 4 was announced in February 2013 with some hardware specs but not much
-                                    else. Fully unveiled at E3 2013, the PS4 is Sony's attempt at a gaming focused console,
+                                <p>Sony's PlayStation 4 was announced in February 2013 with some hardware specs but not
+                                    much
+                                    else. Fully unveiled at E3 2013, the PS4 is Sony's attempt at a gaming focused
+                                    console,
                                     rather than one that tries to be a media center. Based on a "supercharged PC
-                                    architecture," with an X86 processor, enhanced PC-style GPU, and 8GB of GDDR5 unified
+                                    architecture," with an X86 processor, enhanced PC-style GPU, and 8GB of GDDR5
+                                    unified
                                     high-speed memory, the PS4 is slightly more powerful than the Xbox One, despite its
                                     smaller size.
                                 </p>
@@ -632,8 +629,10 @@
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
                                 <p>Receive and respond to notiﬁcations in an instant. Track your daily activity. Control
-                                    your music using only your voice. Pay for groceries just like that. With Apple Watch,
-                                    important information and essential features are always just a raise of the wrist away.
+                                    your music using only your voice. Pay for groceries just like that. With Apple
+                                    Watch,
+                                    important information and essential features are always just a raise of the wrist
+                                    away.
                                 </p>
                             </div>
                             <div class="widget-body-footer">
@@ -665,15 +664,19 @@
                             <h3 class="widget-title">Sony Camera</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
                             <div class="scroll">
-                                <p>Sony has taken their line of full-frame cameras to the next level with the Alpha a7 II
+                                <p>Sony has taken their line of full-frame cameras to the next level with the Alpha a7
+                                    II
                                     Mirrorless Digital Camera with FE 28-70mm f/3.5-5.6 OSS Lens , which features 5-axis
                                     SteadyShot INSIDE image stabilization with 4.5 stops of compensation for pitch, yaw,
-                                    horizontal shift, vertical shift, and roll. Operation of the 24.3-megapixel series has
+                                    horizontal shift, vertical shift, and roll. Operation of the 24.3-megapixel series
+                                    has
                                     been streamlined with a redesigned grip, shutter release button, and customizable
-                                    controls. The a7 II also features a moisture- and dust-resistant design with a magnesium
+                                    controls. The a7 II also features a moisture- and dust-resistant design with a
+                                    magnesium
                                     alloy body and a more robust lens mount. And, with refined algorithms and better
                                     utilization of the BIONZ X image processor, the a7 II has an enhanced Fast Hybrid AF
-                                    system that is about 30% faster than the previous model along with a 5 fps burst rate
+                                    system that is about 30% faster than the previous model along with a 5 fps burst
+                                    rate
                                     with continuous autofocus as well as a 40% faster start time.
                                 </p>
                             </div>

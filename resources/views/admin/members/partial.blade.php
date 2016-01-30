@@ -84,7 +84,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="info-label">Sponsor</td>
+                <td class="info-label">Sponsor:</td>
                 <td>
                     <span>{!! \DHI\UserTree::where('user_id', $user->id)->first()->sponsor->user !!}</span>
                 </td>
