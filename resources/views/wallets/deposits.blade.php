@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-md-3 col-md-offset-0 paso3" >
                     <div class="panel pasost">
-                        <span style="font-weight:500" >STEP 3: </span><br> {{-- Waite --}}
+                        <span style="font-weight:500" >STEP 4: </span><br> {{-- Waite --}}
                         Send your request and wait 24 to 48 hours
                     </div>
                 </div>

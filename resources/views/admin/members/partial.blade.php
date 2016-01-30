@@ -48,9 +48,9 @@
         <table class="user-info">
             <tbody>
             <tr>
-                <td class="info-label">Address:</td>
+                <td class="info-label">Country:</td>
                 <td>
-                    <span>{!! $user->address !!}</span>
+                    <span>{!! \DHI\Country::where('id',$user->country_id)->first()->name !!}</span>
                 </td>
             </tr>
             <tr>
@@ -80,7 +80,7 @@
             <tr>
                 <td class="info-label">Address:</td>
                 <td>
-                    <span>{!! \DHI\Country::where('id',$user->country_id)->first()->name !!}</span>
+                    <span>{!! $user->address !!}</span>
                 </td>
             </tr>
 
