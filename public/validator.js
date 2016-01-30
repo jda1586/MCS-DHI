@@ -357,7 +357,7 @@
                             stringLength: {
                                 min: 6,
                                 max: 30,
-                                message: 'The content must be less than 30 characters long'
+                                message: 'The content must be less than 6 characters long'
                             },
                             regexp: {
                                 regexp: /^[a-zA-Z0-9ñáéíóú]+$/,

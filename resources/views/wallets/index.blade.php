@@ -95,12 +95,12 @@
                                 <div class="form-group">
                                     <div style="float: left">
                                         <h3 class="panel-title"><i class="panel-title-icon icon md-comments"
-                                                                   aria-hidden="true"></i>My BitCoins Accounts</h3>
+                                                                   aria-hidden="true"></i>My BitCoin Accounts</h3>
                                     </div>
                                     <div style="float: right; padding: 15px;">
                                         <button class="btn btn-outline btn-primary btn-default"
                                                 data-target="#exampleNiftyFadeScale"
-                                                data-toggle="modal" type="button">Add BitCoins Accounts
+                                                data-toggle="modal" type="button">Add BitCoin Account
                                         </button>
                                     </div>
                                 </div>
