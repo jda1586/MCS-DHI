@@ -39,7 +39,7 @@
     <h4 style="color: white;">{{$user->user}}</h4>
     <h4 style="color: white;">{{$user->email}}</h4>
 
-    <button type="button" class="edit btn btn-success btn-floating" data-toggle="edit" id="edit">
+    <button type="button" onclick="window.location='{{ url("admin/members/addcredit") }}'" class="edit btn btn-success btn-floating" data-toggle="edit" id="edit">
         <i class="icon md-edit animation-scale-up" aria-hidden="true"></i>
     </button>
 </header>
@@ -80,9 +80,10 @@
             <tr>
                 <td class="info-label">Address:</td>
                 <td>
-                    <span>Fuzhou</span>
+                    <span>{!! \DHI\Country::where('id',$user->country_id)->first()->name !!}</span>
                 </td>
             </tr>
+
             </tbody>
         </table>
 
