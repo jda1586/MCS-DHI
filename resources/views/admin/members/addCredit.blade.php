@@ -40,12 +40,15 @@
                                 {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleConstraintsForm"
                                       novalidate="novalidate" autocomplete="off">--}}
                                 {!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
+                                @if( Session::has('errors') )
+                                    <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check the fields</div>
+                                @endif
                                 <button class="fv-hidden-submit" style="width: 0px; height: 0px; display: none;"
                                         type="submit"></button>
                                 <div class="form-group form-material">
-                                    <label class="col-sm-3 control-label">User</label>
+                                    <label class="col-sm-3 control-label">User:</label>
                                     <div class="col-sm-9">
-                                        <input name="user" class="form-control" type="text"
+                                        <input name="user" class="form-control" type="text" value="{!! $user !!}"
                                                data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                data-fv-field="requiredInput">
                                         <small class="help-block" style="display: none;"
@@ -53,17 +56,20 @@
                                                data-fv-result="NOT_VALIDATED">This is required
                                         </small>
                                     </div>
+                                    @foreach($errors->get('user') as $m)
+                                        <div style="text-align: center; color: red;">{!! $m !!}</div>
+                                    @endforeach
                                 </div>
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">Wallet</label>
                                     <div class="col-sm-9">
-                                        <select name="Wallet" class="form-control" data-fv-notempty="true"
+                                        <select name="wallet" class="form-control" data-fv-notempty="true"
                                                 data-fv-field="requiredSelect">
                                             <option value="">Please choose</option>
-                                            <option value="foo">Activation</option>
-                                            <option value="bar">Commission</option>
-                                            <option value="bar">Action</option>
-                                            <option value="bar">Utilities</option>
+                                            <option value="activation">Activation</option>
+                                            <option value="commission">Commission</option>
+                                            <option value="action">Action</option>
+                                            <option value="utilities">Utilities</option>
                                         </select>
                                         <small class="help-block" style="display: none;"
                                                data-fv-validator="notEmpty" data-fv-for="requiredSelect"
@@ -84,9 +90,9 @@
                                     </div>
                                 </div>
                                 <div class="form-group form-material">
-                                    <div class="col-sm-9">
-                                        <button class="btn btn-primary waves-effect waves-light"
-                                                id="validateButton1" type="submit">Enviar
+                                    <div class="col-sm-9" style="float: right">
+                                        <button class="btn btn-primary waves-effect waves-light" style="float: right; width: 150px;"
+                                                id="validateButton1" type="submit">add credit
                                         </button>
                                     </div>
                                 </div>
