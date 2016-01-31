@@ -8,11 +8,12 @@
 
 namespace DHI\Http\Controllers;
 
+use DHI\UserWallet;
+use Illuminate\Http\Request;
 use Validator;
 use DHI\Product;
 use DHI\User;
 use Input;
-use DateTime;
 
 class AdminMembersController extends Controller
 {
@@ -46,21 +47,48 @@ class AdminMembersController extends Controller
     }
 
 
-    public function addCredit()
+    public function addCredit($User= 'default')
     {
 //        dd('se agrego credito');
-        return view('admin.members.addcredit');
+        return view('admin.members.addcredit',['user'=>$User]);
     }
 
-    public function credit()
+    public function credit(Request $request)
     {
         echo 'agregar credito';
-        /*$validator = Validator::make(Input::all(), [
-            'inputLableautyRadio' => 'required',
-            'amount'=> 'required | min:1',
-            'bitcoinacount' => 'required'
-        ]);*/
+        $validator = Validator::make(Input::all(), [
+            'user' => 'required',
+            'wallet' => 'required',
+            'amount'=> 'required | min:1'
+        ]);
 
+//        dd($validator);
+        if ($validator->passes()) {
+            echo 'si pasa';
+//            $wallet = UserDeposit::where('user_id','=',Auth()->user()->getAuthIdentifier())->first();
+            $usuario=Input::get('user');
+            $cartera=Input::get('wallet');
+            $cantidad= Input::get('amount');
+
+
+            $user=User::where('user',$usuario)->first();
+//            dd($user);
+            if($user!=null){
+                echo '<br>si existe<br>';
+                $wallet = UserWallet::where('user_id', '=',$user->id)->first();
+                $wallet->$cartera=$wallet->$cartera+$cantidad;
+                $wallet->balance=$wallet->balance+$cantidad;
+                $wallet->save();
+                return redirect()->route('admin.members.index');
+            }else{
+                $validator->errors()->add('user',"the user does not exist ");
+                return redirect()->route('admin.members.addcredit')->withErrors($validator);
+            }
+        }else{
+//            echo 'ase falta archivo';
+//            dd($validator);
+            return redirect()->route('admin.members.addcredit')->withErrors($validator);
+        }
 
     }
 }

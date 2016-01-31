@@ -56,7 +56,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         /* Members */
         Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
-            Route::get('/addcredit', ['as' => 'addcredit', 'uses' => 'AdminMembersController@addCredit']);
+            Route::get('/addcredit/{user?}', ['as' => 'addcredit', 'uses' => 'AdminMembersController@addCredit']);
             Route::post('/addcredit', ['as' => 'addcredit', 'uses' => 'AdminMembersController@credit']);
         });
         /* Items */
