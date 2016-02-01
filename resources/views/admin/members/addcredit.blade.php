@@ -39,7 +39,7 @@
                             <div class="example">
                                 {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleConstraintsForm"
                                       novalidate="novalidate" autocomplete="off">--}}
-                                {!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
+                                {{--{!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
                                 @if( Session::has('errors') )
                                     <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check the fields</div>
                                 @endif
@@ -96,7 +96,7 @@
                                         </button>
                                     </div>
                                 </div>
-                                {!! Form::close() !!}
+                                {!! Form::close() !!}--}}
                                 {{--</form>--}}
                             </div>
                         </div>
