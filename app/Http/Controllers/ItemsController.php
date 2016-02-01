@@ -88,7 +88,7 @@ class ItemsController extends Controller
         if( $item ){
             $data = $item->toArray();
         }else{
-            $data = 'Item not found';
+            return view('admin.items.show');
         }
 
         return $data;
