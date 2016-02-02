@@ -47,46 +47,46 @@ class AdminMembersController extends Controller
     }
 
 
-    public function addCredit($User= 'default')
+    public function addCredit($User = 'default')
     {
-//        dd('se agrego credito');
-        return view('admin.members.addcredit',['user'=>$User]);
+        return view('admin.members.addcredit', ['user' => $User]);
     }
 
     public function credit(Request $request)
     {
-        echo 'agregar credito';
         $validator = Validator::make(Input::all(), [
-            'user' => 'required',
-            'wallet' => 'required',
-            'amount'=> 'required | min:1'
+            'user' => 'required|exists:users,user',
+            'wallet' => 'required|string',
+            'amount' => 'required|min:1',
+            'reason' => 'required',
         ]);
 
-//        dd($validator);
         if ($validator->passes()) {
-            echo 'si pasa';
-//            $wallet = UserDeposit::where('user_id','=',Auth()->user()->getAuthIdentifier())->first();
-            $usuario=Input::get('user');
-            $cartera=Input::get('wallet');
-            $cantidad= Input::get('amount');
 
+            $user = User::where('user', Input::get('user'))->first();
 
-            $user=User::where('user',$usuario)->first();
-//            dd($user);
-            if($user!=null){
-                echo '<br>si existe<br>';
-                $wallet = UserWallet::where('user_id', '=',$user->id)->first();
-                $wallet->$cartera=$wallet->$cartera+$cantidad;
-                $wallet->balance=$wallet->balance+$cantidad;
-                $wallet->save();
+            if ($user != null) {
+                $wallet = UserWallet::where('user_id', '=', $user->id)->first();
+
+                $user_movement = auth()->user()->movements()->create([
+                    'type' => 'income',
+                    'movement_id' => 2,
+                    'from' => 'system',
+                    'to' => Input::get('wallet'),
+                    'amount' => Input::get('amount'),
+                    'balance' => $wallet->balance + Input::get('amount'),
+                    'note' => 'The admin: ' . auth()->user()->user . '(' . auth()->user()->id . '),
+                    has made this movement with this reason: ' . Input::get('reason')
+                ]);
+
+                auth()->user()->wallets()->increment(Input::get('wallet'), Input::get('amount'));
+                auth()->user()->wallets()->increment('balance', Input::get('amount'));
+
                 return redirect()->route('admin.members.index');
-            }else{
-                $validator->errors()->add('user',"the user does not exist ");
+            } else {
                 return redirect()->route('admin.members.addcredit')->withErrors($validator);
             }
-        }else{
-//            echo 'ase falta archivo';
-//            dd($validator);
+        } else {
             return redirect()->route('admin.members.addcredit')->withErrors($validator);
         }
 

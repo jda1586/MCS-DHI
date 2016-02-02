@@ -39,7 +39,7 @@
                             <div class="example">
                                 {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleConstraintsForm"
                                       novalidate="novalidate" autocomplete="off">--}}
-                                {{--{!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
+                                {!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
                                 @if( Session::has('errors') )
                                     <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check the fields</div>
                                 @endif
@@ -73,7 +73,7 @@
                                         </select>
                                         <small class="help-block" style="display: none;"
                                                data-fv-validator="notEmpty" data-fv-for="requiredSelect"
-                                               data-fv-result="NOT_VALIDATED">Please enter a value
+                                               data-fv-result="NOT_VALIDATED">Please select a wallet
                                         </small>
                                     </div>
                                 </div>
@@ -90,13 +90,30 @@
                                     </div>
                                 </div>
                                 <div class="form-group form-material">
+                                    <label class="col-sm-3 control-label">Reason</label>
+                                    <div class="col-sm-9">
+                                        <select name="wallet" class="form-control" data-fv-notempty="true"
+                                                data-fv-field="requiredSelect">
+                                            <option value="">Please choose</option>
+                                            <option value="cash_payment">Cash Payment</option>
+                                            <option value="certificate_deposit">The certificate of deposit</option>
+                                            <option value="sending_administrator">Sending funds from the administration</option>
+                                            <option value="positive_balance">In positive balance adjusting</option>
+                                        </select>
+                                        <small class="help-block" style="display: none;"
+                                               data-fv-validator="notEmpty" data-fv-for="requiredSelect"
+                                               data-fv-result="NOT_VALIDATED">Please select a reason
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="form-group form-material">
                                     <div class="col-sm-9" style="float: right">
                                         <button class="btn btn-primary waves-effect waves-light" style="float: right; width: 150px;"
                                                 id="validateButton1" type="submit">add credit
                                         </button>
                                     </div>
                                 </div>
-                                {!! Form::close() !!}--}}
+                                {!! Form::close() !!}
                                 {{--</form>--}}
                             </div>
                         </div>
