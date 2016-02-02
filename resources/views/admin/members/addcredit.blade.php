@@ -50,12 +50,13 @@
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">User:</label>
                                     <div class="col-sm-9">
-                                        <input name="user" class="form-control" type="text" value="{!! $user->id !!}"
+                                        <input name="user" class="form-control" type="hidden" value="{!! $user->id !!}">
+                                        <input class="form-control" type="hidden" value="{!! $user->user !!}"
                                                data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                data-fv-field="requiredInput" readonly>
                                         <small class="help-block" style="display: none;"
                                                data-fv-validator="notEmpty" data-fv-for="requiredInput"
-                                               data-fv-result="NOT_VALIDATED">This is required
+                                               data-fv-result="NOT_VALIDATED">This is <required></required>
                                         </small>
                                     </div>
                                     @foreach($errors->get('user') as $m)
