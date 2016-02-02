@@ -47,9 +47,17 @@ class AdminMembersController extends Controller
     }
 
 
-    public function addCredit($User = 'default')
+    public function addCredit($user_id)
     {
-        return view('admin.members.addcredit', ['user' => $User]);
+        $user = User::find($user_id);
+        if ($user) {
+            return view('admin.members.addcredit', [
+                'user' => $user,
+                'movements' => $user->movements()->where('movement_id', 2)->take(20)->get(),
+            ]);
+        } else {
+            return redirect()->route('admin.members.index');
+        }
     }
 
     public function credit(Request $request)
@@ -75,8 +83,10 @@ class AdminMembersController extends Controller
                     'to' => Input::get('wallet'),
                     'amount' => Input::get('amount'),
                     'balance' => $wallet->balance + Input::get('amount'),
-                    'note' => 'The admin: ' . auth()->user()->user . '(' . auth()->user()->id . '),
-                    has made this movement with this reason: ' . Input::get('reason')
+                    'note' => json_encode([
+                        'admin' => auth()->user()->id,
+                        'reason' => Input::get('reason')
+                    ]),
                 ]);
 
                 auth()->user()->wallets()->increment(Input::get('wallet'), Input::get('amount'));

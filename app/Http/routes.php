@@ -21,7 +21,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
     Route::group(['as' => 'trees.', 'prefix' => 'trees'], function () {
         Route::get('/', ['as' => 'tee', 'uses' => 'TreesController@tree']);
         Route::get('/binary', ['as' => 'binary', 'uses' => 'TreesController@binary']);
-//        Route::get('/unilevel', ['as' => 'unilevel', 'uses' => 'TreesController@unilevel']);
+        /*Route::get('/unilevel', ['as' => 'unilevel', 'uses' => 'TreesController@unilevel']);*/
     });
 
     /* Miembros */
@@ -36,6 +36,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         Route::get('/organization', ['as' => 'organization', 'uses' => 'MembersController@organization']);
         Route::get('/list', ['as' => 'list', 'uses' => 'MembersController@usersList']);
     });
+
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
         Route::get('/', ['as' => 'index', 'uses' => 'WalletsController@index']);
@@ -56,7 +57,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         /* Members */
         Route::group(['as' => 'members.', 'prefix' => 'members'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AdminMembersController@index']);
-            Route::get('/addcredit/{user?}', ['as' => 'addcredit', 'uses' => 'AdminMembersController@addCredit']);
+            Route::get('/addcredit/{user}', ['as' => 'addcredit', 'uses' => 'AdminMembersController@addCredit']);
             Route::post('/addcredit', ['as' => 'addcredit', 'uses' => 'AdminMembersController@credit']);
         });
         /* Items */
