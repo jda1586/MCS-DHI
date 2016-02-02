@@ -45,12 +45,12 @@
                                         the fields
                                     </div>
                                 @endif
+                                <input name="user" type="hidden" value="{!! $user->id !!}">
                                 <button class="fv-hidden-submit" style="width: 0px; height: 0px; display: none;"
                                         type="submit"></button>
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">User:</label>
                                     <div class="col-sm-9">
-                                        <input name="user" class="form-control" type="hidden" value="{!! $user->id !!}">
                                         <input class="form-control" type="hidden" value="{!! $user->user !!}"
                                                data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                data-fv-field="requiredInput" readonly>
