@@ -56,7 +56,7 @@
                                                data-fv-field="requiredInput" readonly>
                                         <small class="help-block" style="display: none;"
                                                data-fv-validator="notEmpty" data-fv-for="requiredInput"
-                                               data-fv-result="NOT_VALIDATED">This is <required></required>
+                                               data-fv-result="NOT_VALIDATED">This is required
                                         </small>
                                     </div>
                                     @foreach($errors->get('user') as $m)
