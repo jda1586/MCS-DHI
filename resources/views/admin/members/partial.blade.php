@@ -43,7 +43,7 @@
     <h4 style="color: white;">{{$user->user}}</h4>
     <h4 style="color: white;">{{$user->email}}</h4>
     <i class="icon wb- animation-scale-up" aria-hidden="true"></i>
-    <button type="button" onclick="window.location='{{ url("admin/members/addcredit/".$user->user) }}'" class="edit btn btn-success btn-floating" data-toggle="edit" id="edit">
+    <button type="button" onclick="window.location='{{ url("admin/members/addcredit/".$user->id) }}'" class="edit btn btn-success btn-floating" data-toggle="edit" id="edit">
         {{--<i class="icon md-edit animation-scale-up" aria-hidden="true"></i>--}}
         {{--<i class="icon oi-plus"  style="font-size: 24px;"></i>--}}
         <i class="icon md-money animation-scale-up" aria-hidden="true" ></i>
