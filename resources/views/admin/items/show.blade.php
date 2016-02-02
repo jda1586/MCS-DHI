@@ -6,10 +6,13 @@
     <link rel="stylesheet" href="/css/bootstrap-tokenfield.min.css">
     <link rel="stylesheet" href="/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="/vendor/footable/footable.css">
+    <link rel="stylesheet" href="/vendor/multi-select/multi-select.css">
     <style>
         .p {
             margin: 0;;
         }
+
+
     </style>
 @endsection
 
@@ -89,37 +92,68 @@
                         <li>gsdfgsdf</li>
                     </ul>
 
-                    <div class="btn-group bootstrap-select show-tick dropup">
-                        <button type="button" class="btn dropdown-toggle btn-select" data-toggle="dropdown"
-                                title="Nothing selected" aria-expanded="false"><span class="filter-option pull-left">Nothing selected</span>&nbsp;<span
-                                    class="bs-caret"><span class="caret"></span></span></button>
-                        <div class="dropdown-menu open" style="max-height: 313px; overflow: hidden; min-height: 119px;">
-                            <ul class="dropdown-menu inner" role="menu"
-                                style="max-height: 301px; overflow-y: auto; min-height: 107px;">
-                                <li class="dropdown-header " data-optgroup="1"><span class="text">Condiments</span></li>
-                                <li data-original-index="0" data-optgroup="1"><a tabindex="0" class="opt  " style=""
-                                                                                 data-tokens="null"><span class="text">Mustard</span><span
-                                                class="icon md-check check-mark"></span></a></li>
-                                <li data-original-index="1" data-optgroup="1"><a tabindex="0" class="opt  " style=""
-                                                                                 data-tokens="null"><span class="text">Ketchup</span><span
-                                                class="icon md-check check-mark"></span></a></li>
-                                <li data-original-index="2" data-optgroup="1"><a tabindex="0" class="opt  " style=""
-                                                                                 data-tokens="null"><span class="text">Relish</span><span
-                                                class="icon md-check check-mark"></span></a></li>
-                                <li class="divider" data-optgroup="2div"></li>
-                                <li class="dropdown-header " data-optgroup="2"><span class="text">Breads</span></li>
-                                <li data-original-index="3" data-optgroup="2"><a tabindex="0" class="opt  " style=""
-                                                                                 data-tokens="null"><span class="text">Plain</span><span
-                                                class="icon md-check check-mark"></span></a></li>
-                                <li data-original-index="4" data-optgroup="2"><a tabindex="0" class="opt  " style=""
-                                                                                 data-tokens="null"><span class="text">Steamed</span><span
-                                                class="icon md-check check-mark"></span></a></li>
-                                <li data-original-index="5" data-optgroup="2"><a tabindex="0" class="opt  " style=""
-                                                                                 data-tokens="null"><span class="text">Toasted</span><span
-                                                class="icon md-check check-mark"></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <select class="form-control" multiple data-plugin="select2">
+                        <optgroup label="Alaskan/Hawaiian Time Zone">
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                        </optgroup>
+                        <optgroup label="Pacific Time Zone">
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                        </optgroup>
+                        <optgroup label="Mountain Time Zone">
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                        </optgroup>
+                        <optgroup label="Central Time Zone">
+                            <option value="AL">Alabama</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="WI">Wisconsin</option>
+                        </optgroup>
+                        <optgroup label="Eastern Time Zone">
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="IN">Indiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="OH">Ohio</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WV">West Virginia</option>
+                        </optgroup>
+                    </select>
                 </div>
                 <div class="col-md-12">
                     <p>...</p>
@@ -139,6 +173,9 @@
             window.location = "{!! route('admin.items.register') !!}";
         }
     </script>
+    <script type="text/javascript">
+        $(".js-example-basic-multiple").select2();
+    </script>
 
     {!! HTML::script('vendor/footable/footable.all.min.js') !!}
     {{--script--}}
@@ -148,5 +185,7 @@
     {!! HTML::script('vendor/formatter-js/jquery.formatter.js') !!}  {{--para la mascara--}}
     {!! HTML::script('js/components/formatter-js.js') !!}
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}
-    {!! HTML::script('/css/bootstrap-select.min.js') !!}
+    {!! HTML::script('/js/bootstrap-select.min.js') !!}
+    {!! HTML::script('/js/components/multi-select.js') !!}
+
 @endsection

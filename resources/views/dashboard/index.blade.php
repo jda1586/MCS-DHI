@@ -30,6 +30,16 @@
             height: 150px;
             overflow: scroll;
         }
+
+        .scroll::-webkit-scrollbar {
+            /* This is the magic bit */
+            display: none;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+
+        .of_none {
+            -ms-overflow-style: none;
+        }
     </style>
 
 @endsection
@@ -63,7 +73,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">House 1</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>All of our houses are QUALITY CERTIFICATED.
                                     We make sure everything is beautiful & running for you, all you got do is to take
                                     the
@@ -102,7 +112,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">House 2</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll  of_none">
                                 <p>All of our houses are QUALITY CERTIFICATED.
                                     We make sure everything is beautiful & running for you, all you got do is to take
                                     the
@@ -141,7 +151,7 @@
                         <div class="widget-body" style="overflow: hidden;">
                             <h3 class="widget-title">Xbox One</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>An 8-core x86 processor lets you instantly switch between a game and your favorite
                                     entertainment apps with ease.
                                     Connect your cable or satellite box to your Xbox One and prepare for lift off. HDMI
@@ -180,7 +190,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">The Samsung monitor</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p> Samsung UE590 UHD monitor offers PC viewing, gaming and more, all in stunning Ultra
                                     HD
                                     picture quality. With resolution that's
@@ -221,7 +231,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">The  Thunderbolt 27"</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>The Apple 27" Thunderbolt Display introduces Thunderbolt technology to the market,
                                     providing ultra-fast speeds. Thunderbolt is 20 times faster than USB 2.0 and up to
                                     12
@@ -262,7 +272,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus f. verborum</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
                                     rationibus periculum opinor propterea intuemur poetarum efficeretur
                                     interpretaris, labefactant aeternum reformidans, laborum inquit
@@ -296,7 +306,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">Dr. Dre</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>These Beats By Dr. Dre Pro Headphones will transform the way you listen to music.
                                     Equipped with dual headphone ports, these headphones will let you share your
                                     crystal-clear, pulse-pounding music with any 3.5mm-equipped device. Their durable
@@ -336,7 +346,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus f. verborum</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
                                     rationibus periculum opinor propterea intuemur poetarum efficeretur
                                     interpretaris, labefactant aeternum reformidans, laborum inquit
@@ -370,7 +380,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">The GoPro HERO3:</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>The GoPro HERO3: Silver Edition Camera is smaller and lighter than its predecessor.
                                     It's
                                     also Wi-Fi enabled. The HERO3 is designed for recording action sports and it comes
@@ -429,7 +439,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">GoPro </h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>HERO4 Black takes Emmy® Award-winning GoPro performance to the next level with our
                                     best
                                     image quality yet, plus a 2x more powerful processor1 that delivers super slow
@@ -474,7 +484,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">Possumus f. verborum</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Munere dictum dissentio dicturam mediocriterne honesta, morbi delectus
                                     rationibus periculum opinor propterea intuemur poetarum efficeretur
                                     interpretaris, labefactant aeternum reformidans, laborum inquit
@@ -508,7 +518,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">Iphone 6 </h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Innovation isn’t always obvious to the eye, but look a little closer at iPhone 6s and
                                     you’ll find it’s been fundamentally improved. The enclosure is made from a new alloy
                                     of
@@ -546,7 +556,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">PlayStation 4</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Sony's PlayStation 4 was announced in February 2013 with some hardware specs but not
                                     much
                                     else. Fully unveiled at E3 2013, the PS4 is Sony's attempt at a gaming focused
@@ -586,7 +596,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title"> Rolex Submariner </h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Rolex Submariner Date with diamond dial and ceramic bezel, Reference Number 116613, V
                                     Serial Number Circa 2008. 40mm stainless steel and 18K yellow gold case with blue
                                     ceramic bezel and blue diamond serti dial, sapphire crystal, screw down crown. 18K
@@ -627,7 +637,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title"> Apple Watch</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Receive and respond to notiﬁcations in an instant. Track your daily activity. Control
                                     your music using only your voice. Pay for groceries just like that. With Apple
                                     Watch,
@@ -663,7 +673,7 @@
                         <div class="widget-body">
                             <h3 class="widget-title">Sony Camera</h3>
                             <p class="widget-metas">Jan 16, 2015</p>
-                            <div class="scroll">
+                            <div class="scroll of_none">
                                 <p>Sony has taken their line of full-frame cameras to the next level with the Alpha a7
                                     II
                                     Mirrorless Digital Camera with FE 28-70mm f/3.5-5.6 OSS Lens , which features 5-axis

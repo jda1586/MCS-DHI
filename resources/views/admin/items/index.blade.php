@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="/vendor/jquery-labelauty/jquery-labelauty.css">
     <link rel="stylesheet" href="/css/bootstrap-extend.min.css">
     <link rel="stylesheet" href="/vendor/footable/footable.css">
+
+
     <style>
     </style>
 @endsection
@@ -103,6 +105,9 @@
             window.location = "{!! route('admin.items.register') !!}";
         }
     </script>
+
+
+
     {{--<script src="../../../global/vendor/formatter-js/jquery.formatter.js"></script>--}}
     {{--<script src="vendor/formvalidation/formValidation.min.js"></script>--}}
     {{--<script src="vendor/formvalidation/framework/bootstrap.min.js"></script>--}}
@@ -118,4 +123,5 @@
     {!! HTML::script('vendor/formatter-js/jquery.formatter.js') !!}  {{--para la mascara--}}
     {!! HTML::script('js/components/formatter-js.js') !!}
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}
+    {!! HTML::script('vendor/select2/select2.min.js') !!}
 @endsection
