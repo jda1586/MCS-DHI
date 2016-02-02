@@ -47,6 +47,7 @@
         {{--<i class="icon md-edit animation-scale-up" aria-hidden="true"></i>--}}
         {{--<i class="icon oi-plus"  style="font-size: 24px;"></i>--}}
         <i class="icon md-money animation-scale-up" aria-hidden="true" ></i>
+
     </button>
     <i class="icon ion-android-add-circle " aria-hidden="true"  style="font-size: 24px;"></i>
 </header>
