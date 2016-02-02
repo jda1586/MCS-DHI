@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Item extends Model
 {
-    protected $fillable = ['name', 'stock', 'price', 'features', 'description', 'images', 'status'];
+    protected $fillable = ['name', 'stock', 'price', 'features', 'description', 'images', 'status','owner_id','sku'];
     protected $casts = [
         'features' => 'json',
         'description' => 'json',

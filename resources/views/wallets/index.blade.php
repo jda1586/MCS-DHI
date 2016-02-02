@@ -104,6 +104,12 @@
                                         </button>
                                     </div>
                                 </div>
+                                @if( Session::has('errors') )
+                                    <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: to add account</div>
+                                @endif
+                                @foreach($errors->get('nfondos') as $m)
+                                    <div style="text-align: center; color: red;">{!! $m !!}</div>
+                                    @endforeach
                                 <!-- Modal -->
                                 <div class="modal fade modal-fade-in-scale-up" id="exampleNiftyFadeScale"
                                      aria-hidden="true"
@@ -326,6 +332,7 @@
     <script src="/vendor/intro-js/intro.js"></script>
     {!! HTML::script('vendor/footable/footable.all.min.js') !!}{{--tablas--}}
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}{{--tablas--}}
+    {!! HTML::script('validator.js') !!}
     <script type="text/javascript">
 
         function commissions() {
