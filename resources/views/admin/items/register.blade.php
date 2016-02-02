@@ -118,6 +118,17 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-12" style="padding-left:0px;float: left">
+                        <div class="example">
+                            <div class="form-group">
+                                <h4 class="example-title">Category </h4>
+                                <label class="sr-only" for="inputName">Sku</label>
+                                <input type="text" class="form-control" id="inputName" name="sku" placeholder="category"
+                                       data-fv-field="name">
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="example" style="width: 100%;">Description</div>
                 <div class="example">

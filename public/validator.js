@@ -521,4 +521,56 @@
                 data.fv.disableSubmitButtons(false);
             });
     })();
+    // validacion de add Credits
+    // ---------------------------------
+    (function() {
+        $('#walletstore').formValidation({
+                framework: "bootstrap",
+                icon: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    nameaccount: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The username is required and cannot be empty'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 30,
+                                message: 'The content must be less than 6 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                                message: 'only letters and numbers allowed'
+                            }
+                        }
+                    },
+                    numberaccount: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Select a wallet is required'
+                            }
+                        }
+                    }
+                }
+            })
+            .on('err.field.fv', function(e, data) {
+                // $(e.target)  --> The field element
+                // data.fv      --> The FormValidation instance
+                // data.field   --> The field name
+                // data.element --> The field element
+
+                data.fv.disableSubmitButtons(false);
+            })
+            .on('success.field.fv', function(e, data) {
+                // e, data parameters are the same as in err.field.fv event handler
+                // Despite that the field is valid, by default, the submit button will be disabled if all the following conditions meet
+                // - The submit button is clicked
+                // - The form is invalid
+                data.fv.disableSubmitButtons(false);
+            });
+    })();
 })(document, window, jQuery);

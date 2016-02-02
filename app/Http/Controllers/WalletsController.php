@@ -49,21 +49,17 @@ class WalletsController extends Controller
                 'user_id' => Auth()->user()->getAuthIdentifier(),
                 'name'=>$nameAccount,
                 'number_account'=>$numberAccount,
-                'status'=>'active',
+                'status'=>'pending',
                 'balance_in'=>0,
                 'balance_out'=>0,
                 ))
             ){      //si se guardo la informacion ahoa si muevo el archivo
-                echo 'se guardo';
                 return redirect()->route('wallets.index');
             }else{
-                echo 'no se guardo';
                 return redirect()->route('wallets.index')->withErrors($validator);
             }
         }else{
-//            echo 'ase falta archivo';
-//            dd($validator);
-            return redirect()->route('wallets.deposits')->withErrors($validator);
+            return redirect()->route('wallets.index')->withErrors($validator);
         }
     }
 }
