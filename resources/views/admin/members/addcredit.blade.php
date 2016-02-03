@@ -39,7 +39,7 @@
                             <div class="example">
                                 {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleConstraintsForm"
                                       novalidate="novalidate" autocomplete="off">--}}
-                                {!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
+                                {!! Form::open(['route'=>'admin.members.addcreditc','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
                                 @if( Session::has('errors') )
                                     <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check
                                         the fields
@@ -51,7 +51,7 @@
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">User:</label>
                                     <div class="col-sm-9">
-                                        <input name="username" class="form-control" type="text" value="{!! $user->user !!}"
+                                        <input name="user" class="form-control" type="text" value="{!! $user->user !!}"
                                                data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                data-fv-field="requiredInput" readonly>
                                         <small class="help-block" style="display: none;"
@@ -71,7 +71,7 @@
                                             <option value="">Please choose</option>
                                             <option value="activation">Activation</option>
                                             <option value="commission">Commission</option>
-                                            <option value="action">Action</option>
+                                            <option value="auction">Auction</option>
                                             <option value="utilities">Utilities</option>
                                         </select>
                                         <small class="help-block" style="display: none;"
@@ -95,7 +95,7 @@
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">Reason</label>
                                     <div class="col-sm-9">
-                                        <select name="wallet" class="form-control" data-fv-notempty="true"
+                                        <select name="reason" class="form-control" data-fv-notempty="true"
                                                 data-fv-field="requiredSelect">
                                             <option value="">Please choose</option>
                                             <option value="cash_payment">Cash Payment</option>

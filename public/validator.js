@@ -247,8 +247,8 @@
                             message: 'The image is required'
                         },
                         file: {
-                            extension:'jpg',
-                            message: 'only image: jpg'
+                            extension:'jpg,png',
+                            message: 'only image: .jpg or .png'
                         }
                     }
                 },

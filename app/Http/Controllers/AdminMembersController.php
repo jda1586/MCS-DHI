@@ -9,11 +9,12 @@
 namespace DHI\Http\Controllers;
 
 use DHI\UserWallet;
-use Illuminate\Http\Request;
 use Validator;
 use DHI\Product;
 use DHI\User;
 use Input;
+use DHI\Http\Requests;
+
 
 class AdminMembersController extends Controller
 {
@@ -60,22 +61,21 @@ class AdminMembersController extends Controller
         }
     }
 
-    public function credit(Request $request)
+    public function credit()
     {
+//        dd('entro');
         $validator = Validator::make(Input::all(), [
             'user' => 'required|exists:users,user',
             'wallet' => 'required|string',
             'amount' => 'required|min:1',
             'reason' => 'required',
         ]);
-
+//        dd($validator);
         if ($validator->passes()) {
 
             $user = User::where('user', Input::get('user'))->first();
-
             if ($user != null) {
                 $wallet = UserWallet::where('user_id', '=', $user->id)->first();
-
                 $user_movement = auth()->user()->movements()->create([
                     'type' => 'income',
                     'movement_id' => 2,
@@ -89,15 +89,16 @@ class AdminMembersController extends Controller
                     ]),
                 ]);
 
-                auth()->user()->wallets()->increment(Input::get('wallet'), Input::get('amount'));
-                auth()->user()->wallets()->increment('balance', Input::get('amount'));
+                $user->wallets()->increment(Input::get('wallet'), Input::get('amount'));
+                $user->wallets()->increment('balance', Input::get('amount'));
 
                 return redirect()->route('admin.members.index');
             } else {
-                return redirect()->route('admin.members.addcredit')->withErrors($validator);
+                return redirect()->route('admin.members.addcredit'.$user->id)->withErrors($validator);
             }
         } else {
-            return redirect()->route('admin.members.addcredit')->withErrors($validator);
+//                    dd($validator);
+            return redirect()->route('admin.members.index')->withErrors($validator);
         }
 
     }
