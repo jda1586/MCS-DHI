@@ -51,7 +51,7 @@
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">User:</label>
                                     <div class="col-sm-9">
-                                        <label name="user" class="form-control" type="text" value="{!! $user->user !!}"
+                                        <input name="user" class="form-control" type="text" value="{!! $user->user !!}"
                                                data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                data-fv-field="requiredInput" readonly>
                                         <small class="help-block" style="display: none;"
@@ -103,6 +103,7 @@
                                             <option value="sending_administrator">Sending funds from the
                                                 administration
                                             </option>
+                                            <option value="positive_balance">In positive balance adjusting</option>
                                             <option value="bitcoin_payment ">Bitcoin Payment </option>
                                             <option value="auction_daily_bids">Auction Daily Bids</option>
                                             <option value="binary_commission">Binary commission</option>
