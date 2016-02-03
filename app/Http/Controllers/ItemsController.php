@@ -51,8 +51,7 @@ class ItemsController extends Controller
     }
 
     public function store( Request $request ){
-
-
+        dd($request);
         $validator = Validator::make( $request->all(), $this->validations );
         $current_year  = date('Y');
         $current_month = date('m');
