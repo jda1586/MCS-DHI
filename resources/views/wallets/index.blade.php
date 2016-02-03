@@ -181,7 +181,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($bitcoin_accounts as $account)
+                                            {{--@foreach($bitcoin_accounts as $account)
                                                 <tr>
                                                     <td>{{ $account->name }}</td>
                                                     <td class="text-nowrap" width="50px;">
@@ -192,7 +192,7 @@
                                                         </button>
                                                     </td>
                                                 </tr>
-                                            @endforeach
+                                            @endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -219,9 +219,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($commission_movements as $movement)
+                                            {{--@foreach($commission_movements as $movement)
                                                 {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            @endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -249,10 +249,10 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($activation_movements as $movement)
+                                           {{-- @foreach($activation_movements as $movement)
                                                 {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
                                             @endforeach
-                                            </tbody>
+                                            </tbody>--}}
                                         </table>
                                     </div>
                                     <a href="javascript:void(0);">See all movements</a>
@@ -279,9 +279,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($utilities_movements as $movement)
+                                            {{--@foreach($utilities_movements as $movement)
                                                 {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            @endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
@@ -309,9 +309,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($auction_movements as $movement)
+                                            {{--@foreach($auction_movements as $movement)
                                                 {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
-                                            @endforeach
+                                            @endforeach--}}
                                             </tbody>
                                         </table>
                                     </div>
