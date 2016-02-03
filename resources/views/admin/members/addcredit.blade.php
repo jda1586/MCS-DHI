@@ -51,7 +51,7 @@
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">User:</label>
                                     <div class="col-sm-9">
-                                        <input name="" class="form-control" type="text" value="{!! $user->user !!}"
+                                        <input name="user" class="form-control" type="text" value="{!! $user->user !!}"
                                                data-fv-notempty-message="This is required" data-fv-notempty="true"
                                                data-fv-field="requiredInput" readonly>
                                         <small class="help-block" style="display: none;"
