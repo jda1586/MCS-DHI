@@ -10,7 +10,7 @@ namespace DHI\Libraries\Wallets;
 
 use DHI\UserMovement;
 
-    class MovementHelper
+class MovementHelper
 {
     static function getMinRow(UserMovement $user_movement)
     {
@@ -20,6 +20,9 @@ use DHI\UserMovement;
             case 1:
                 $result .= '<td><b>' . $user_movement->movement->name . ':</b> ' . $user_movement->payment->user->user . '
                 [' . $user_movement->payment->product->name . ']</td >';
+                break;
+            case 2:
+                $result .= '<td><b>' . $user_movement->movement->name . '</b></td >';
                 break;
         }
         $result .= '<td><span class="' . ($user_movement->type == 'income' ? 'text-success' : 'text-danger') . ' text-semibold" >
