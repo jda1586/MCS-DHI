@@ -58,15 +58,16 @@
                     </div>
                     <div class="form-group">
                         <div class="form-group">
-                           {!! Form::select('Country',  \DHI\Country::where('enabled',1)->lists(['name','id']) , null, ['placeholder' => 'Country', 'class' => 'form-control', 'name' => 'country'])!!}
+                            {!! Form::select('Country',  \DHI\Country::where('enabled','=',1)->lists(['name','id']) , null, ['placeholder' => 'Country', 'class' => 'form-control', 'name' => 'country'])!!}
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="inputBirthday">Birthday</label>
                         {{--<input type="text" class="form-control" id="inputBirthday" name="birthday"--}}
-                               {{--placeholder="Birthday" data-plugin="datepicker">--}}
+                        {{--placeholder="Birthday" data-plugin="datepicker">--}}
                         <p class="help-block">Birthday YYYY/MM/DD</p>
-                        <input name="birthday" type="text" class="form-control" id="inputDate2" data-plugin="formatter" data-pattern="[[9999]]/[[99]]/[[99]]">
+                        <input name="birthday" type="text" class="form-control" id="inputDate2" data-plugin="formatter"
+                               data-pattern="[[9999]]/[[99]]/[[99]]">
 
                     </div>
                     <div class="form-group">
