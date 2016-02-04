@@ -219,8 +219,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($commission_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($commission_movements as $com_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($com_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -249,8 +249,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($activation_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($activation_movements as $act_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($act_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -279,8 +279,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($utilities_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($utilities_movements as $uti_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($uti_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -309,8 +309,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($auction_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($auction_movements as $auc_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($auc_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
