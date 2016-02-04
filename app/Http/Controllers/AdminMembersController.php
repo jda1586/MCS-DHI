@@ -89,12 +89,12 @@ class AdminMembersController extends Controller
                     ]),
                 ]);
 
-                $user->wallets()->increment(Input::get('wallet'), Input::get('amount'));
-                $user->wallets()->increment('balance', Input::get('amount'));
+                $user->wallets()->increment(Input::get('wallet'), intval(Input::get('amount')));
+                $user->wallets()->increment('balance', intval(Input::get('amount')));
 
                 return redirect()->route('admin.members.index');
             } else {
-                return redirect()->route('admin.members.addcredit'.$user->id)->withErrors($validator);
+                return redirect()->route('admin.members.addcredit' . $user->id)->withErrors($validator);
             }
         } else {
 //                    dd($validator);
