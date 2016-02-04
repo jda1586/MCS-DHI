@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-group">
-                            {!! Form::select('Country',  \DHI\Country::where('enabled','=',1)->lists(['name','id']) , null, ['placeholder' => 'Country', 'class' => 'form-control', 'name' => 'country'])!!}
+                            {!! Form::select('Country',  $countries, null, ['placeholder' => 'Country', 'class' => 'form-control', 'name' => 'country'])!!}
                         </div>
                     </div>
                     <div class="form-group">
