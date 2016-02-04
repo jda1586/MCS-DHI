@@ -110,7 +110,7 @@
                     <h1 class="page-title">Members List</h1>
                     <div class="page-header-actions">
 
-                        <div class="input-search input-search-dark">
+                        <div class="form-group form-material">
                             <i class="input-search-icon wb-search" aria-hidden="true"></i>
                             <input id="search" type="text" class="form-control" name="" placeholder="Search...">
                         </div>

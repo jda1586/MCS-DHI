@@ -348,12 +348,12 @@
                                     </a>
                                 </li>
                                 <li class="site-menu-item">
-                                    <a class="animsition-link" href="">
+                                    <a class="animsition-link" href="javascript:void(0)">
                                         <span class="site-menu-title">Movements</span>
                                     </a>
                                 </li>
                                 <li class="site-menu-item">
-                                    <a class="animsition-link" href="">
+                                    <a class="animsition-link" href="javascript:void(0)">
                                         <span class="site-menu-title">Rol´s</span>
                                     </a>
                                 </li>

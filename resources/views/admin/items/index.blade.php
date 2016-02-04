@@ -56,7 +56,7 @@
                                         </div>
                                     </div>--}}
                                     <div class="col-sm-6 text-left">
-                                        <div class="form-group">
+                                        <div class="form-group form-material">
                                             <input id="filteringSearch" type="text" placeholder="Search" class="form-control" autocomplete="off">
                                         </div>
                                     </div>
