@@ -10,7 +10,7 @@ namespace DHI\Libraries\Wallets;
 
 use DHI\UserMovement;
 
-class MovementHelper
+    class MovementHelper
 {
     static function getMinRow(UserMovement $user_movement)
     {

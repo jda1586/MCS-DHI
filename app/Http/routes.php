@@ -60,6 +60,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
             Route::get('/addcredit/{user}', ['as' => 'addcredit', 'uses' => 'AdminMembersController@addCredit']);
             Route::post('/add/credit', ['as' => 'addcreditc', 'uses' => 'AdminMembersController@credit']);
         });
+
         /* Items */
         Route::group(['as' => 'items.', 'prefix' => 'items'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'ItemsController@index']);
@@ -71,6 +72,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
             Route::get('/activate/{id}', ['as' => 'activateItem', 'uses' => 'ItemsController@activateItem']);
             Route::delete('/delete/{id}', ['as' => 'delete', 'uses' => 'ItemsController@delete']);
         });
+        
         /* Subastas */
         Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AuctionsController@index']);
