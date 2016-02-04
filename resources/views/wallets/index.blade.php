@@ -181,7 +181,7 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            {{--@foreach($bitcoin_accounts as $account)
+                                            @foreach($bitcoin_accounts as $account)
                                                 <tr>
                                                     <td>{{ $account->name }}</td>
                                                     <td class="text-nowrap" width="50px;">
@@ -192,7 +192,7 @@
                                                         </button>
                                                     </td>
                                                 </tr>
-                                            @endforeach--}}
+                                            @endforeach
                                             </tbody>
                                         </table>
                                     </div>
