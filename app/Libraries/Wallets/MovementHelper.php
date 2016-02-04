@@ -22,7 +22,7 @@ class MovementHelper
                 [' . $user_movement->payment->product->name . ']</td >';
                 break;
             case 2:
-                $result .= '<td><b>' . $user_movement->movement->name . '</b></td >';
+                $result .= '<td><b>' . $user_movement->movement->name . '</b></td>';
                 break;
         }
         $result .= '<td><span class="' . ($user_movement->type == 'income' ? 'text-success' : 'text-danger') . ' text-semibold" >
