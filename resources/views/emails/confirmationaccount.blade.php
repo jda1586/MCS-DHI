@@ -13,10 +13,10 @@
     <img src="http://www.dreamhouseinternational.com/wp-content/uploads/2015/10/Logo-mini5.png" alt="">
 </div>
 <div style="width: 75%; margin: auto;">
-    <h2>Welcome to Dream House </h2>
+    <h2>Dream House </h2>
     <div>
         <p>Dear: {!! $data['name'].' '.$data['lastname']  !!} .<br>
-            Welcome to the biggest opportunity of your life. Below we give you access to the platform DreamHose International.<br><br>
+            Confirms the registration of your bitcoin account by clicking the following link.<br><br>
             User: {!! $data['user']  !!}  <br>
             Password: {!! $data['password'] !!}    <br><br>
 
