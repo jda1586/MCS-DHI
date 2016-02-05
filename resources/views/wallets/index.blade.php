@@ -5,7 +5,6 @@
         .wallets {
             cursor: pointer;
         }
-
         .shadow {
             -webkit-box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 4px 3px 17px 1px rgba(0, 0, 0, 0.75);
@@ -33,7 +32,7 @@
                                             class="icon md-mall" aria-hidden="true"></i></div>
                                 <div class="counter counter-md counter-inverse text-left">
                                     <div class="counter-number-group">
-                                        <span class="counter-number">$ {{ number_format($wallets->comission,2,'.',',') }}</span>
+                                        <span class="counter-number">$ {{ number_format($wallets->commission,2,'.',',') }}</span>
                                         <span class="counter-number-related text-capitalize">Commission</span>
                                     </div>
                                 </div>
@@ -110,23 +109,23 @@
                                 @foreach($errors->get('nfondos') as $m)
                                     <div style="text-align: center; color: red;">{!! $m !!}</div>
                                     @endforeach
-                                <!-- Modal -->
-                                <div class="modal fade modal-fade-in-scale-up" id="exampleNiftyFadeScale"
-                                     aria-hidden="true"
-                                     aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                    <span aria-hidden="true">×</span>
-                                                </button>
-                                                <h4 class="modal-title">Add BitCoins Accounts</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                {{--<p>One fine body…</p>--}}
+                                            <!-- Modal -->
+                                    <div class="modal fade modal-fade-in-scale-up" id="exampleNiftyFadeScale"
+                                         aria-hidden="true"
+                                         aria-labelledby="exampleModalTitle" role="dialog" tabindex="-1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                    <h4 class="modal-title">Add BitCoins Accounts</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    {{--<p>One fine body…</p>--}}
                                                     {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleStandardForm" autocomplete="off" novalidate="novalidate">--}}
-                                                {!! Form::open(['route'=>'wallets.store','method'=>'post','id'=>'walletstore'] ) !!}
+                                                    {!! Form::open(['route'=>'wallets.store','method'=>'post','id'=>'walletstore'] ) !!}
                                                     <button type="submit" class="fv-hidden-submit"
                                                             style="display: none; width: 0px; height: 0px;"></button>
                                                     <div class="form-group form-material">
@@ -157,18 +156,18 @@
                                                                 id="validateButton2">Save
                                                         </button>
                                                     </div>
-                                                {!! Form::close() !!}
+                                                    {!! Form::close() !!}
+                                                </div>
+                                                {{--<div class="modal-footer">
+                                                    <button type="button" class="btn btn-default margin-0"
+                                                            data-dismiss="modal">Close
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>--}}
                                             </div>
-                                            {{--<div class="modal-footer">
-                                                <button type="button" class="btn btn-default margin-0"
-                                                        data-dismiss="modal">Close
-                                                </button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
-                                            </div>--}}
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Modal -->
+                                    <!-- End Modal -->
                             </div>
                             <div class="panel-body" style="margin-top: 20px;">
 
@@ -220,8 +219,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($commission_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($commission_movements as $com_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($com_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -250,8 +249,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($activation_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($activation_movements as $act_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($act_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -280,8 +279,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($utilities_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($utilities_movements as $uti_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($uti_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -310,8 +309,8 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($auction_movements as $movement)
-                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($movement) !!}
+                                            @foreach($auction_movements as $auc_mov)
+                                                {!! \DHI\Libraries\Wallets\MovementHelper::getMinRow($auc_mov) !!}
                                             @endforeach
                                             </tbody>
                                         </table>
@@ -334,7 +333,6 @@
     {!! HTML::script('assets/examples/js/tables/footable.js') !!}{{--tablas--}}
     {!! HTML::script('validator.js') !!}
     <script type="text/javascript">
-
         function commissions() {
             document.getElementById("commissionsBtn").className = "widget wallets shadow";
             document.getElementById("activationsBtn").className = "widget wallets";
@@ -355,7 +353,6 @@
             document.getElementById("utilities").style.display = "none";
             document.getElementById("auctions").style.display = "none";
         }
-
         function utilities() {
             document.getElementById("commissionsBtn").className = "widget wallets";
             document.getElementById("activationsBtn").className = "widget wallets";
@@ -366,7 +363,6 @@
             document.getElementById("utilities").style.display = "block";
             document.getElementById("auctions").style.display = "none";
         }
-
         function auctions() {
             document.getElementById("commissionsBtn").className = "widget wallets";
             document.getElementById("activationsBtn").className = "widget wallets";

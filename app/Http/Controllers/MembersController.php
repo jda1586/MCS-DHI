@@ -3,6 +3,7 @@
 namespace DHI\Http\Controllers;
 
 use Auth;
+use DHI\Country;
 use DHI\UserTree;
 use Hash;
 use Illuminate\Http\Request;
@@ -18,7 +19,9 @@ class MembersController extends Controller
 {
     public function register()
     {
-        return view('members.register');
+        return view('members.register', [
+            'countries' => Country::where('enabled', 1)->lists('name', 'id'),
+        ]);
     }
 
     public function store()
@@ -168,24 +171,24 @@ class MembersController extends Controller
         $bronzeU = UserTree::where('product_id', 1)->where('sponsor_id', $user->id)->count();
         $pending = User::where('status', 'pending')->get();
         $last = UserTree::where('sponsor_id', $user->id)->orderby('created_at', 'desc')->take(10)->get();
-        return view('members.organization', ['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU, 'pending' => $pending, 'last'=> $last]);
+        return view('members.organization', ['goldU' => $goldU, 'silverU' => $silverU, 'bronzeU' => $bronzeU, 'pending' => $pending, 'last' => $last]);
     }
 
     public function partial($user)
     {
-        $user= User::where('user',$user)->first();
+        $user = User::where('user', $user)->first();
         return view('admin.members.partial', ['user' => $user]);
     }
 
     public function usersList()
     {
-        $users = User::where( 'status', 'active' )->get( [ 'id', 'user' ] );
-        if ( $users ){
-            $data['users']     = $users->toArray();
-            $data['message']   = 'OK';
-        }else{
-            $data['users']     = NULL;
-            $data['message']   = 'Not users found'; 
+        $users = User::where('status', 'active')->get(['id', 'user']);
+        if ($users) {
+            $data['users'] = $users->toArray();
+            $data['message'] = 'OK';
+        } else {
+            $data['users'] = NULL;
+            $data['message'] = 'Not users found';
         }
 
         return $data;

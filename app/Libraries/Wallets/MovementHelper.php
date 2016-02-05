@@ -21,6 +21,9 @@ class MovementHelper
                 $result .= '<td><b>' . $user_movement->movement->name . ':</b> ' . $user_movement->payment->user->user . '
                 [' . $user_movement->payment->product->name . ']</td >';
                 break;
+            case 2:
+                $result .= '<td><b>' . $user_movement->movement->name . '</b></td>';
+                break;
         }
         $result .= '<td><span class="' . ($user_movement->type == 'income' ? 'text-success' : 'text-danger') . ' text-semibold" >
                 <i class="icon ' . ($user_movement->type == 'income' ? 'md-chevron-up' : 'md-chevron-down') . '" aria - hidden = "true" >

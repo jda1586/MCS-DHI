@@ -10,13 +10,16 @@
 
     <div class="page animsition" style="animation-duration: 800ms; opacity: 1;">
         <div class="page-content">
-            <ol class="breadcrumb">
-                <li><a href="javascript:void(0)">Home</a></li>
-                <li><a href="javascript:void(0)">Members</a></li>
-                <li class="active">Register</li>
-            </ol>
+            <div class="page-header">
+                <h1 class="page-title">Register</h1>
+                <ol class="breadcrumb">
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">Members</a></li>
+                    <li class="active">Register</li>
+                </ol>
+            </div>
             <div class="col-md-4 col-sm-3"></div>
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-4 col-sm-6 panel" style="padding: 25px 15px;">
                 <div class="page-register-main">
                     {{--<div class="brand visible-xs">--}}
                     {{--</div>--}}
@@ -42,61 +45,62 @@
                                                   title="Remark" style="height: 75px; width: 75px"></label>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputName">Full Name</label>
                         <input type="text" class="form-control" id="inputName" name="name" placeholder="Name">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputLastname">Full Name</label>
                         <input type="text" class="form-control" id="inputLastname" name="lastname"
                                placeholder="Lastname">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputUsername">Username</label>
                         <input type="text" class="form-control" id="inputUsername" name="user"
                                placeholder="Username">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <div class="form-group">
-                           {!! Form::select('Country',  \DHI\Country::all()->lists('name') , null, ['placeholder' => 'Country', 'class' => 'form-control', 'name' => 'country'])!!}
+                            {!! Form::select('Country',  $countries, null, ['placeholder' => 'Country', 'class' => 'form-control', 'name' => 'country'])!!}
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputBirthday">Birthday</label>
                         {{--<input type="text" class="form-control" id="inputBirthday" name="birthday"--}}
-                               {{--placeholder="Birthday" data-plugin="datepicker">--}}
+                        {{--placeholder="Birthday" data-plugin="datepicker">--}}
                         <p class="help-block">Birthday YYYY/MM/DD</p>
-                        <input name="birthday" type="text" class="form-control" id="inputDate2" data-plugin="formatter" data-pattern="[[9999]]/[[99]]/[[99]]">
+                        <input name="birthday" type="text" class="form-control" id="inputDate2" data-plugin="formatter"
+                               data-pattern="[[9999]]/[[99]]/[[99]]">
 
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputEmail">Email</label>
                         <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputEmail">Email Confirm</label>
                         <input type="email" class="form-control" id="inputEmailConfirm" name="email_confirm"
                                placeholder="Email Confirm">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputPassword">Password</label>
                         <input type="password" class="form-control" id="inputPassword" name="password"
                                placeholder="Password">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputPasswordCheck">Retype Password</label>
                         <input type="password" class="form-control" id="inputPasswordCheck" name="password_confirmation"
                                placeholder="Confirm Password">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputPhone">Phone</label>
                         <input type="text" class="form-control" id="Phone" name="phone" placeholder="Phone">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputPhone">Sype</label>
                         <input type="text" class="form-control" id="Skype" name="skype" placeholder="Skype">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-material">
                         <label class="sr-only" for="inputPhone">Whatsapp</label>
                         <input type="text" class="form-control" id="Whatsapp" name="whatsapp" placeholder="Whatsapp">
                     </div>

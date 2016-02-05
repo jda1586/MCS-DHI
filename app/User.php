@@ -96,7 +96,7 @@ class User extends Model implements AuthenticatableContract,
 
     public function movements()
     {
-        return $this->hasMany('DHI\UserMovement');
+        return $this->hasMany('DHI\UserMovement', 'user_id');
     }
 
     public function product()
