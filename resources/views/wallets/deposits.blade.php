@@ -14,6 +14,9 @@
         .paso3{
             height:100px; margin:20px 0 20px 0; padding-right:0px!important;
         }
+        .paso4{
+            height:100px; margin:20px 0 20px 0; padding-right:0px!important;
+        }
         .pasost{
             width: 100%; height: 100%; text-align: center; padding-top: 10px;
         }
@@ -35,23 +38,29 @@
         </ol>
         {{--<div id="titulo" class="col-md-10 col-md-offset-1 " style="margin-top: 20px">--}}
 
-                <div class="col-md-4 col-md-offset-0 paso1" >
+                <div class="col-md-3 col-md-offset-0 paso1" >
                     <div class="panel pasost">
                         <span style="font-weight:500" >STEP 1: </span>
                         {{--deposit <br>MAKE A TRANSFER TO THIS ACCOUNT BitCoins--}}
-                        <br>Select destination wallet
+                        <br>Send amount of bitcoins to this Bitcoin Account
                         <br>1ArPKA2cM2fY1NW5VbTauwiV2Pu8i3Z77p
                     </div>
                 </div>
-                <div class="col-md-4 col-md-offset-0 paso2" >
+                <div class="col-md-3 col-md-offset-0 paso2" >
                     <div class="panel pasost">
                         <span style="font-weight:500" >STEP 2: </span><br>
                         Upload a image proof and write the amount
                     </div>
                 </div>
-                <div class="col-md-4 col-md-offset-0 paso3" >
+                <div class="col-md-3 col-md-offset-0 paso2" >
                     <div class="panel pasost">
-                        <span style="font-weight:500" >STEP 3: </span><br> {{-- Waite --}}
+                        <span style="font-weight:500" >STEP 3: </span><br>
+                        Select a bitcoin account
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-0 paso3" >
+                    <div class="panel pasost">
+                        <span style="font-weight:500" >STEP 4: </span><br> {{-- Waite --}}
                         Send your request and wait 24 to 48 hours
                     </div>
                 </div>

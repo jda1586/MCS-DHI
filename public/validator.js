@@ -105,7 +105,7 @@
                         },
                         stringLength: {
                             min: 6,
-                            max: 18,
+                            max: 30,
                             message: 'The content must be less than 30 characters long'
                         },
                         regexp: {
@@ -247,8 +247,8 @@
                             message: 'The image is required'
                         },
                         file: {
-                            extension:'jpg',
-                            message: 'only image: jpg'
+                            extension:'jpg,png',
+                            message: 'only image: .jpg or .png'
                         }
                     }
                 },
@@ -356,8 +356,8 @@
                             },
                             stringLength: {
                                 min: 6,
-                                max: 18,
-                                message: 'The content must be less than 30 characters long'
+                                max: 30,
+                                message: 'The content must be less than 6 characters long'
                             },
                             regexp: {
                                 regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
@@ -422,11 +422,11 @@
                             },
                             stringLength: {
                                 min: 6,
-                                max: 18,
+                                max: 30,
                                 message: 'The content must be less than 30 characters long'
                             },
                             regexp: {
-                                regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                                regexp: /^[a-zA-Z0-9 ñáéíóú]+$/,
                                 message: 'only letters and numbers allowed'
                             }
                         }
@@ -448,7 +448,7 @@
                                 message: 'The amount is required'
                             },
                             stringLength: {
-                                min: 1
+                                min: 2
                             },
                             numeric: {
                                 message: 'The value is not a number'
@@ -462,7 +462,8 @@
                                 message: 'The amount is required'
                             },
                             stringLength: {
-                                min: 1
+                                min: 1,
+                                higher: 0
                             },
                             numeric: {
                                 message: 'The value is not a number'
@@ -499,6 +500,58 @@
                             regexp: {
                                 regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
                                 message: 'only letters and numbers allowed'
+                            }
+                        }
+                    }
+                }
+            })
+            .on('err.field.fv', function(e, data) {
+                // $(e.target)  --> The field element
+                // data.fv      --> The FormValidation instance
+                // data.field   --> The field name
+                // data.element --> The field element
+
+                data.fv.disableSubmitButtons(false);
+            })
+            .on('success.field.fv', function(e, data) {
+                // e, data parameters are the same as in err.field.fv event handler
+                // Despite that the field is valid, by default, the submit button will be disabled if all the following conditions meet
+                // - The submit button is clicked
+                // - The form is invalid
+                data.fv.disableSubmitButtons(false);
+            });
+    })();
+    // validacion de add Credits
+    // ---------------------------------
+    (function() {
+        $('#walletstore').formValidation({
+                framework: "bootstrap",
+                icon: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    nameaccount: {
+                        validators: {
+                            notEmpty: {
+                                message: 'The username is required and cannot be empty'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 30,
+                                message: 'The content must be less than 6 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9ñáéíóú]+$/,
+                                message: 'only letters and numbers allowed'
+                            }
+                        }
+                    },
+                    numberaccount: {
+                        validators: {
+                            notEmpty: {
+                                message: 'Select a wallet is required'
                             }
                         }
                     }

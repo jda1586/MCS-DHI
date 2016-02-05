@@ -39,35 +39,44 @@
                             <div class="example">
                                 {{--<form class="form-horizontal fv-form fv-form-bootstrap" id="exampleConstraintsForm"
                                       novalidate="novalidate" autocomplete="off">--}}
-                                {!! Form::open(['route'=>'admin.members.addcredit','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
+                                {!! Form::open(['route'=>'admin.members.addcreditc','method'=>'post','id'=>'addcredit','class'=>'form-horizontal fv-form fv-form-bootstrap'] ) !!}
+                                @if( Session::has('errors') )
+                                    <div style="text-align: center; color: red;"> {!! $registro = 'error'  !!}: check
+                                        the fields
+                                    </div>
+                                @endif
+                                <input name="user" type="hidden" value="{!! $user->id !!}">
                                 <button class="fv-hidden-submit" style="width: 0px; height: 0px; display: none;"
                                         type="submit"></button>
                                 <div class="form-group form-material">
-                                    <label class="col-sm-3 control-label">User</label>
+                                    <label class="col-sm-3 control-label">User:</label>
                                     <div class="col-sm-9">
-                                        <input name="user" class="form-control" type="text"
+                                        <label name="user" class="form-control" type="text" value="{!! $user->user !!}"
                                                data-fv-notempty-message="This is required" data-fv-notempty="true"
-                                               data-fv-field="requiredInput">
+                                               data-fv-field="requiredInput" readonly>
                                         <small class="help-block" style="display: none;"
                                                data-fv-validator="notEmpty" data-fv-for="requiredInput"
                                                data-fv-result="NOT_VALIDATED">This is required
                                         </small>
                                     </div>
+                                    @foreach($errors->get('user') as $m)
+                                        <div style="text-align: center; color: red;">{!! $m !!}</div>
+                                    @endforeach
                                 </div>
                                 <div class="form-group form-material">
                                     <label class="col-sm-3 control-label">Wallet</label>
                                     <div class="col-sm-9">
-                                        <select name="Wallet" class="form-control" data-fv-notempty="true"
+                                        <select name="wallet" class="form-control" data-fv-notempty="true"
                                                 data-fv-field="requiredSelect">
                                             <option value="">Please choose</option>
-                                            <option value="foo">Activation</option>
-                                            <option value="bar">Commission</option>
-                                            <option value="bar">Action</option>
-                                            <option value="bar">Utilities</option>
+                                            <option value="activation">Activation</option>
+                                            <option value="commission">Commission</option>
+                                            <option value="auction">Auction</option>
+                                            <option value="utilities">Utilities</option>
                                         </select>
                                         <small class="help-block" style="display: none;"
                                                data-fv-validator="notEmpty" data-fv-for="requiredSelect"
-                                               data-fv-result="NOT_VALIDATED">Please enter a value
+                                               data-fv-result="NOT_VALIDATED">Please select a wallet
                                         </small>
                                     </div>
                                 </div>
@@ -84,9 +93,33 @@
                                     </div>
                                 </div>
                                 <div class="form-group form-material">
+                                    <label class="col-sm-3 control-label">Reason</label>
                                     <div class="col-sm-9">
+                                        <select name="reason" class="form-control" data-fv-notempty="true"
+                                                data-fv-field="requiredSelect">
+                                            <option value="">Please choose</option>
+                                            <option value="cash_payment">Cash Payment</option>
+                                            <option value="certificate_deposit">The certificate of deposit</option>
+                                            <option value="sending_administrator">Sending funds from the
+                                                administration
+                                            </option>
+                                            <option value="bitcoin_payment ">Bitcoin Payment </option>
+                                            <option value="auction_daily_bids">Auction Daily Bids</option>
+                                            <option value="binary_commission">Binary commission</option>
+                                            <option value="indirect_referral_commission">Indirect Referral Commission</option>
+                                            <option value="direct_referral_commission">Direct Referral Commission</option>
+                                        </select>
+                                        <small class="help-block" style="display: none;"
+                                               data-fv-validator="notEmpty" data-fv-for="requiredSelect"
+                                               data-fv-result="NOT_VALIDATED">Please select a reason
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="form-group form-material">
+                                    <div class="col-sm-9" style="float: right">
                                         <button class="btn btn-primary waves-effect waves-light"
-                                                id="validateButton1" type="submit">Enviar
+                                                style="float: right; width: 150px;"
+                                                id="validateButton1" type="submit">add credit
                                         </button>
                                     </div>
                                 </div>
@@ -109,44 +142,27 @@
                                        id="exampleFootableFiltering">
                                     <thead>
                                     <tr>
-                                        <th class="footable-visible footable-sortable">User</th>
-                                        <th class="footable-visible footable-sortable">Wallet</th>
+                                        <th class="footable-visible footable-sortable">Admin</th>
+                                        <th class="footable-visible footable-sortable">Reason</th>
                                         <th class="footable-visible footable-sortable">Amount</th>
                                         <th class="footable-visible footable-sortable">Date</th>
                                     </tr>
                                     </thead>
 
                                     <tbody>
-                                    <tr class="footable-odd" style="display: table-row;">
-                                        <td class="footable-visible">Woldt</td>
-                                        <td class="footable-visible">Business</td>
-                                        <td class="footable-visible">5454545</td>
-                                        <td class="footable-visible">17 Oct 2014</td>
-                                    </tr>
+                                    @foreach($movements as $movement)
+                                        <tr class="footable-odd" style="display: table-row;">
+                                            <td class="footable-visible">---</td>
+                                            <td class="footable-visible">{{ explode(':',$movement->note)[2]  }}</td>
+                                            <td class="footable-visible">
+                                                $ {{ number_format($movement->amount,2,'.',',') }}
+                                            </td>
+                                            <td class="footable-visible">
+                                                {{ $movement->created_at->format('Y M d') }}
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                     </tbody>
-                                    {{--<tfoot>--}}
-                                    {{--<tr>--}}
-                                        {{--<td class="footable-visible" colspan="5">--}}
-                                            {{--<div class="text-right">--}}
-                                                {{--<ul class="pagination">--}}
-                                                    {{--<li class="footable-page-arrow disabled"><a href="#first"--}}
-                                                                                                {{--data-page="first">«</a>--}}
-                                                    {{--<li class="footable-page-arrow disabled"><a href="#prev"--}}
-                                                                                                {{--data-page="prev">‹</a>--}}
-                                                    {{--</li>--}}
-                                                    {{--<li class="footable-page active"><a href="#" data-page="0">1</a>--}}
-                                                    {{--</li>--}}
-                                                    {{--<li class="footable-page-arrow disabled"><a href="#next"--}}
-                                                                                                {{--data-page="next">›</a>--}}
-                                                    {{--</li>--}}
-                                                    {{--<li class="footable-page-arrow disabled"><a href="#last"--}}
-                                                                                                {{--data-page="last">»</a>--}}
-                                                    {{--</li>--}}
-                                                {{--</ul>--}}
-                                            {{--</div>--}}
-                                        {{--</td>--}}
-                                    {{--</tr>--}}
-                                    {{--</tfoot>--}}
                                 </table>
                             </div>
                         </div>

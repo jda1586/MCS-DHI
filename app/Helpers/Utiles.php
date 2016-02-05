@@ -1,7 +1,9 @@
 <?php
-namespace App\Helpers;
+namespace DHI\Helpers;
 
-public static function createDirs(){
+class utiles{
+
+    public static function createDirs(){
 
         $current_year  = date('Y');
         $current_month = date('m');
@@ -31,5 +33,6 @@ public static function createDirs(){
             }
         }
     }
+}
 
 ?>

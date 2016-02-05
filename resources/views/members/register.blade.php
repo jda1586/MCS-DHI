@@ -21,7 +21,7 @@
                     {{--<div class="brand visible-xs">--}}
                     {{--</div>--}}
                     <h3 class="font-size-24">Sign Up</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p style="font: bold;">Choose a Package.</p>
                     {!! Form::open(['route'=>'members.store','method'=>'post','role'=>'form','id'=>'register']) !!}
                     <div class="form-group">
                         <div class="some-class" style="display: inline-block; margin: 10px 25px;">

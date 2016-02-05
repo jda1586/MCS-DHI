@@ -8,11 +8,13 @@
 
 namespace DHI\Http\Controllers;
 
+use DHI\UserWallet;
 use Validator;
 use DHI\Product;
 use DHI\User;
 use Input;
-use DateTime;
+use DHI\Http\Requests;
+
 
 class AdminMembersController extends Controller
 {
@@ -46,21 +48,58 @@ class AdminMembersController extends Controller
     }
 
 
-    public function addCredit()
+    public function addCredit($user_id)
     {
-//        dd('se agrego credito');
-        return view('admin . members . addcredit');
+        $user = User::find($user_id);
+        if ($user) {
+            return view('admin.members.addcredit', [
+                'user' => $user,
+                'movements' => $user->movements()->where('movement_id', 2)->take(20)->get(),
+            ]);
+        } else {
+            return redirect()->route('admin.members.index');
+        }
     }
 
     public function credit()
     {
-        echo 'agregar credito';
-        /*$validator = Validator::make(Input::all(), [
-            'inputLableautyRadio' => 'required',
-            'amount'=> 'required | min:1',
-            'bitcoinacount' => 'required'
-        ]);*/
+//        dd('entro');
+        $validator = Validator::make(Input::all(), [
+            'user' => 'required|exists:users,user',
+            'wallet' => 'required|string',
+            'amount' => 'required|min:1',
+            'reason' => 'required',
+        ]);
+//        dd($validator);
+        if ($validator->passes()) {
 
+            $user = User::where('user', Input::get('user'))->first();
+            if ($user != null) {
+                $wallet = UserWallet::where('user_id', '=', $user->id)->first();
+                $user_movement = auth()->user()->movements()->create([
+                    'type' => 'income',
+                    'movement_id' => 2,
+                    'from' => 'system',
+                    'to' => Input::get('wallet'),
+                    'amount' => Input::get('amount'),
+                    'balance' => $wallet->balance + Input::get('amount'),
+                    'note' => json_encode([
+                        'admin' => auth()->user()->id,
+                        'reason' => Input::get('reason')
+                    ]),
+                ]);
+
+                $user->wallets()->increment(Input::get('wallet'), Input::get('amount'));
+                $user->wallets()->increment('balance', Input::get('amount'));
+
+                return redirect()->route('admin.members.index');
+            } else {
+                return redirect()->route('admin.members.addcredit'.$user->id)->withErrors($validator);
+            }
+        } else {
+//                    dd($validator);
+            return redirect()->route('admin.members.index')->withErrors($validator);
+        }
 
     }
 }

@@ -27,11 +27,6 @@ class DepositsController extends Controller
         return view('wallets.deposits',['depositos' => $depositos]);
     }
 
-    public function cashOut()
-    {
-        echo 'peticion de sacar dinero';
-    }
-
     /**
      * @param Request $request
      * @return $this|\Illuminate\Http\RedirectResponse
@@ -54,14 +49,9 @@ class DepositsController extends Controller
                 $extension = Input::file('image')->getClientOriginalExtension(); // obtengo la extencion de la imagen para agregarsela al nuevo nombre
                 $fileName = Hash::make(Input::file('image')->getClientOriginalName()).'.'.$extension;   //creo el nuevo nombre con hash del nombre anterior y le agrego la extencion
             }else {      //si la imagen se subio mal se regresa a la vista principal con error
+                $validator->errors()->add('nfondos',"don't have funds ");
                 return redirect()->route('wallets.deposits')->withErrors($validator);
             }
-            /*if(preg_match("/^[0-9]/", $cantidad) ){
-                echo 'son iguales <br>'.$cantidad;
-            }else{
-                echo 'no son iguales<br>'.$cantidad;
-            }*/
-
             if($wallet = UserDeposit::create(array(
                 'user_id' => Auth()->user()->getAuthIdentifier(),
                 'amount'=>$cantidad,
@@ -71,7 +61,7 @@ class DepositsController extends Controller
             ){      //si se guardo la informacion ahoa si muevo el archivo
                 echo 'se guardo';
                 Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
-                return redirect()->route('wallets.deposits')->with('success', 'registro-success');
+                return redirect()->route('wallets.deposits');
             }else{
                 echo 'no se guardo';
                 return redirect()->route('wallets.deposits')->withErrors($validator);

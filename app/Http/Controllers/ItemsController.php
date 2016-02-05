@@ -51,7 +51,7 @@ class ItemsController extends Controller
     }
 
     public function store( Request $request ){
-        dd($request);
+        dd($request->all());
         $validator = Validator::make( $request->all(), $this->validations );
         $current_year  = date('Y');
         $current_month = date('m');
@@ -69,8 +69,8 @@ class ItemsController extends Controller
 
                     $file->move(FILES . '/' . $file_path, $filename);
 
-                    $item->images                     = $file_path . '/' . $filename;
-                    $item->original_filename         = $file->getClientOriginalName();
+                    $item->images             = $file_path . '/' . $filename;
+                    $item->original_filename  = $file->getClientOriginalName();
                 }
 
                 $item->save();
@@ -87,7 +87,7 @@ class ItemsController extends Controller
         if( $item ){
             $data = $item->toArray();
         }else{
-            $data = 'Item not found';
+            return view('admin.items.show');
         }
 
         return $data;
