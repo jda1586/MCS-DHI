@@ -66,13 +66,14 @@
                                 </div>
                             </div>
                             <tbody>
+                            @if( count( $items ) >0 )
                             @foreach($items as $item)
                                 {{--*/ $d=json_decode($item['description']) /*--}}
                                 <tr>
-                                    <td>{!! $item['sku'] !!}</td>
-                                    <td>{!! $d->en !!}</td>
-                                    <td>{!! $item['owner_id'] !!}</td>
-                                    <td>{!! 0 !!}</td>
+                                    <td>{!! $item['name'] !!}</td>
+                                    <td>{!! $item['price'] !!}</td>
+                                    <td>{!! $item['description'] !!}</td>
+                                    <td>{!! $item['features'] !!}</td>
                                     <td>{!! $item['stock'] !!}</td>
                                     <td>
                                         <span class="label label-table label-success">{!!$item['status']!!}</span>
@@ -80,6 +81,7 @@
                                     {{--<td>{!! $deposit['image'] !!}</td>--}}
                                 </tr>
                             @endforeach
+                            @endif
                             </tbody>
                             <tfoot>
                             <tr>
