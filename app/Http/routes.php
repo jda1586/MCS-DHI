@@ -12,14 +12,13 @@
 */
 
 //Constates
-define('ACTIVE', 'active');
 
 Route::group(['middleware' => ['auth', 'roles']], function () {
     Route::get('/', ['as' => 'home', 'uses' => 'DashboardController@index']);
 
     /* Arboles */
     Route::group(['as' => 'trees.', 'prefix' => 'trees'], function () {
-        Route::get('/', ['as' => 'tee', 'uses' => 'TreesController@tree']);
+        Route::get('/', ['as' => 'tree', 'uses' => 'TreesController@tree']);
         Route::get('/binary', ['as' => 'binary', 'uses' => 'TreesController@binary']);
         /*Route::get('/unilevel', ['as' => 'unilevel', 'uses' => 'TreesController@unilevel']);*/
     });

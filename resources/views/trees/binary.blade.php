@@ -74,7 +74,7 @@
 @section('content')
    <div class="content">
        <div class="row col-md-12" style="margin: 0 auto;">
-           <iframe  src="{{ route('trees.tee') }}" frameborder="0" width="100%" height="550"></iframe>
+           <iframe  src="{{ route('trees.tree') }}" frameborder="0" width="100%" height="550"></iframe>
        </div>
    </div>
 @endsection
