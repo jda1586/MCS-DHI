@@ -15,7 +15,7 @@ class TreesController extends Controller
     public function binary()
     {
         $this->children_tree[] = auth()->user()->trees;
-        $children = auth()->user()->trees->children;
+        dd($children = auth()->user()->trees->children);
         $this->tree_children($children, 2, 5);
 
         dd($this->children_tree);
