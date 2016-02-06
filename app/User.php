@@ -143,5 +143,10 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('DHI\Auction')->withPivot('user_auctions', 'status');
     }
+
+    public function tree_children()
+    {
+        return UserTree::where('parent_id', $this->id)->get();
+    }
 // fin relaciones
 }

@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class UserTree extends Model
 {
-    protected $fillable = ['user_id', 'parent_id', 'position', 'sponsor_id', 'matrix_parent','matrix_position', 'product_id'];
+    protected $fillable = ['user_id', 'parent_id', 'position', 'sponsor_id', 'matrix_parent', 'matrix_position', 'product_id'];
 
     // relaciones
     public function user()
@@ -41,6 +41,9 @@ class UserTree extends Model
         return $this->belongsTo('DHI\User', 'sponsor_id');
     }
 
-
+    public function children()
+    {
+        return $this->hasMany('DHI\UserTree', 'parent_id', 'user_id');
+    }
     // fin relaciones
 }
