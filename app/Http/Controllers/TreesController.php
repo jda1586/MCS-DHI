@@ -10,10 +10,11 @@ use DHI\Http\Controllers\Controller;
 
 class TreesController extends Controller
 {
-    protected $children_tree;
+    protected $children_tree = [];
 
     public function binary()
     {
+        $this->children_tree[] = auth()->user()->trees;
         $children = auth()->user()->trees->children;
         $this->tree_children($children, 2, 5);
 
