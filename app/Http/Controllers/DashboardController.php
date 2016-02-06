@@ -19,4 +19,9 @@ class DashboardController extends Controller
         return view('dashboard.index');
     }
 
+    public function dash()
+    {
+        return view('dashboard.dash');
+    }
+
 }
