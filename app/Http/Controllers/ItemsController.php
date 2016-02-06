@@ -12,35 +12,37 @@ use DHI\Jobs\NewUserMailJob;
 use Input;
 use Validator;
 use DHI\Item;
-use App\Helpers\Utiles;
+use DHI\Helpers\Utiles;
 
 
 class ItemsController extends Controller
 {
     private $validations;
 
-    public function __construct( ) {
+    public function __construct()
+    {
         $this->validations = [
-            'name'        => 'required|string',
-            'stock'       => 'required|numeric',
-            'price'       => 'required|numeric',
-            'features'    => 'required|json',
-            'description' => 'required|json',
-            'images'      => 'required|json',
-            'status'      => 'required|in:active,disable',
+            'name'          => 'required|string',
+            'stock'         => 'required|numeric',
+            'price'         => 'required|numeric',
+            'sku'           => 'required',
+            'features'      => 'required',
+            'description'   => 'required',
+            'image'         => 'required|image|max:3000k',
+//            'status'      => 'required|in:active,disable',
         ];
 
     }
 
     public function index()
     {
-        $items = Item::where( 'status', 'active' )->get();
-        if ( count( $items ) > 0 ){
+        $items = Item::where('status', 'active')->get();
+        if (count($items) > 0) {
             $data = $items->toArray();
-        }else {
+        } else {
             $data = [];
         }
-        return view('admin.items.index',[
+        return view('admin.items.index', [
             'items' => $data
         ]);
     }
@@ -50,107 +52,116 @@ class ItemsController extends Controller
         return view('admin.items.register');
     }
 
-    public function store( Request $request ){
-
-
+    public function store(Request $request)
+    {
         $validator = Validator::make( $request->all(), $this->validations );
         $current_year  = date('Y');
         $current_month = date('m');
         $file_path     = $current_year . '/' . $current_month; // relative path to the file
-
         if ( !$validator->fails() ){
-
             Utiles::createDirs();
-            $item = Item::create(  $request->except('images') );
-
-            if ( $request->hasFile ( 'images' ) )  {
-                    $file      = $request->file( 'images' );
+            if ( $request->hasFile ( 'image' ) )  {
+                    $file      = $request->file( 'image' );
                     $extension = $file->getClientOriginalExtension();
                     $filename  = $current_month.$current_year.str_random(25).'.'.$extension;
+                    $file->move('Items'. '/' . $file_path, $filename);
+                    $image['original_name']   = $file->getClientOriginalName();
+                    $image['path']   = $file_path . '/' . $filename;
 
-                    $file->move(FILES . '/' . $file_path, $filename);
-
-                    $item->images                     = $file_path . '/' . $filename;
-                    $item->original_filename         = $file->getClientOriginalName();
                 }
+            $features    = ['en' => $request->get('features')];
+            $description = ['en' => $request->get('description')];
+            $features    = json_encode($features);
+            $description = json_encode($description);
 
-                $item->save();
-
-            return view('items.index');
+            if ($item = Item::create(array(
+                'name'      => $request->get('name'),
+                'stock'     => $request->get('stock'),
+                'price'     => $request->get('price'),
+                'sku'       => $request->get('sku'),
+                'owner_id'  => Auth()->user()->getAuthIdentifier(),
+                'features'  => $features,
+                'description' => $description,
+                'images'    => $image,
+            ))
+            ) {
+                return redirect()->route('admin.items.index');
+            } else {
+                $validator->errors()->add('item', "FAIL TO UPLOAD item");
+                return redirect()->route('admin.items.register')->withErrors($validator);
+            }
         } else {
-            return $validator->messages();
+            return redirect()->route('admin.items.register')->withErrors($validator);
         }
     }
 
-    public function show( $id )
+    public function show($id)
     {
-        $item = Item::find( $id );
-        if( $item ){
+        $item = Item::find($id);
+        if ($item) {
             $data = $item->toArray();
-        }else{
+        } else {
             return view('admin.items.show');
         }
-
         return $data;
-
     }
 
-     public function delete( $item_id )
+    public function delete($item_id)
     {
-        $item = Item::find( $item_id );
-        if ( $item ){
+        $item = Item::find($item_id);
+        if ($item) {
             $item->delete();
             $data = 'Item deleted';
-        }else{
+        } else {
             $data = 'Item dont found';
         }
 
         return $data;
     }
 
-    public function desactivateItem( $item_id )
-   {
-       $item = Item::find( $item_id );
-       if ( $item ){
-           $item->status = 'inactive';
-           $item->save();
-           $data           = 'Item desactivated';
-       }else{
-           $data           = 'Item dont found';
-       }
+    public function desactivateItem($item_id)
+    {
+        $item = Item::find($item_id);
+        if ($item) {
+            $item->status = 'inactive';
+            $item->save();
+            $data = 'Item desactivated';
+        } else {
+            $data = 'Item dont found';
+        }
 
-       return $data;
-   }
+        return $data;
+    }
 
-   public function activateItem( $item_id )
-  {
-      $item = Item::find( $item_id );
-      if ( $item ){
-          $item->status = 'active';
-          $item->save();
-          $data           = 'Item activated';
-      }else{
-          $data           = 'Item dont found';
-      }
+    public function activateItem($item_id)
+    {
+        $item = Item::find($item_id);
+        if ($item) {
+            $item->status = 'active';
+            $item->save();
+            $data = 'Item activated';
+        } else {
+            $data = 'Item dont found';
+        }
 
-      return $data;
-  }
+        return $data;
+    }
 
-  public function itemsList()
-  {
-      $items = Item::where( 'status', 'active' )->get( [ 'id', 'name' ] );
+    public function itemsList()
+    {
+        $items = Item::where('status', 'active')->get(['id', 'name']);
 
-      if ( $items ){
-          $data['items']     = $items->toArray();
-          $data['message']   = 'OK';
-      }else{
-          $data['items']     = NULL;
-          $data['message']   = 'Not items found';
-      }
+        if ($items) {
+            $data['items'] = $items->toArray();
+            $data['message'] = 'OK';
+        } else {
+            $data['items'] = NULL;
+            $data['message'] = 'Not items found';
+        }
 
-      return $data;
+        return $data;
 
-  }
+    }
 
 
 }

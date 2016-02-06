@@ -36,6 +36,8 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         Route::get('/organization', ['as' => 'organization', 'uses' => 'MembersController@organization']);
         Route::get('/list', ['as' => 'list', 'uses' => 'MembersController@usersList']);
     });
+//    ruta de partial
+    Route::get('/partial/{user}', ['as' => 'partial', 'uses' => 'MembersController@partial']);
 
     /* Carteras */
     Route::group(['as' => 'wallets.', 'prefix' => 'wallets'], function () {
@@ -76,6 +78,7 @@ Route::group(['middleware' => ['auth', 'roles']], function () {
         /* Subastas */
         Route::group(['as' => 'auctions.', 'prefix' => 'auctions'], function () {
             Route::get('/', ['as' => 'index', 'uses' => 'AuctionsController@index']);
+            Route::get('/register', ['as' => 'register', 'uses' => 'AuctionsController@register']);
             Route::post('register/store', ['as' => 'store', 'uses' => 'AuctionsController@store']);
         });
     });
@@ -91,5 +94,5 @@ Route::group([], function () {
 
 //    ruta temporal para vistas
     Route::get('admin', ['as' => 'admin', 'uses' => 'MembersController@admin']);
-    Route::get('/partial/{user}', ['as' => 'partial', 'uses' => 'MembersController@partial']);
+    Route::get('dash', ['as' => 'index', 'uses' => 'DashboardController@dash']);
 });
