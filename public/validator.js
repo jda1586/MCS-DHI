@@ -471,11 +471,27 @@
                             }
                         }
                     },
-                    feactures: {
+                    sku: {
                         validators: {
-                            /*notEmpty: {
+                            notEmpty: {
+                                message: 'The category is required and cannot be empty'
+                            },
+                            stringLength: {
+                                min: 3,
+                                max: 30,
+                                message: 'The content must be less than 30 characters long'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9 ñáéíóú]+$/,
+                                message: 'only letters and numbers allowed'
+                            }
+                        }
+                    },
+                    /*feactures: {
+                        validators: {
+                            /!*notEmpty: {
                                 message: 'The feacture is required and cannot be empty'
-                            },*/
+                            },*!/
                             stringLength: {
                                 min: 10,
                                 max: 255,
@@ -502,7 +518,7 @@
                                 message: 'only letters and numbers allowed'
                             }
                         }
-                    }
+                    }*/
                 }
             })
             .on('err.field.fv', function(e, data) {

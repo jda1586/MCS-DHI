@@ -99,11 +99,12 @@ class ItemsController extends Controller
     {
         $item = Item::find($id);
         if ($item) {
-            $data = $item->toArray();
+//            $data = $item->toArray();
+            return view('admin.items.show',['item'=>$item]);
         } else {
             return view('admin.items.show');
         }
-        return $data;
+//        return $data;
     }
 
     public function delete($item_id)

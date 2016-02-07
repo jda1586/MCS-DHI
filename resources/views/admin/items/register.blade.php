@@ -121,9 +121,9 @@
                     <div class="col-md-12" style="padding-left:0px;float: left">
                         <div class="example">
                             <div class="form-group">
-                                <h4 class="example-title">Category </h4>
+                                <h4 class="example-title">Sku Stock-keeping unit </h4>
                                 <label class="sr-only" for="inputName">Sku</label>
-                                <input type="text" class="form-control" id="inputName" name="sku" placeholder="category"
+                                <input type="text" class="form-control" id="inputsku" name="sku" placeholder="SKU"
                                        data-fv-field="name">
                             </div>
 
@@ -153,14 +153,13 @@
 
                 <div class="example" style="width: 100%">
                     <div class="example" style="margin: auto">
-                        <button style="margin-left:25%;max-width:300px" type="submit" id="deposito" name="deposito"
+                        <button style="margin-left:25%;max-width:300px" type="submit" id="regitem" name="regitem"
                                 class="btn btn-primary btn-block waves-effect waves-light">Save Item
                         </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-3" style="margin-top: 2%;padding-bottom: 1px;">
-
             </div>
             {!! Form::close() !!}
         </div> {{-- fin del fomr--}}

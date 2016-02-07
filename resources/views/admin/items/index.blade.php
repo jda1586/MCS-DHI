@@ -16,8 +16,9 @@
         <div class="page-header">
             <h1 class="page-title">Items</h1>
             <ol class="breadcrumb">
-                <li><a href="../index.html">Home</a></li>
-                <li class="active">Admin/Items</li>
+                <li><a href="{!! route('home') !!}">Home</a></li>
+                <li><a href="javascript:void(0)">Admin</a></li>
+                <li class="active">Items</li>
             </ol>
         </div>
 
@@ -70,10 +71,11 @@
                             @foreach($items as $item)
                                 {{--*/ $d=json_decode($item['description']) /*--}}
                                 <tr>
-                                    <td>{!! $item['name'] !!}</td>
-                                    <td>{!! $item['price'] !!}</td>
-                                    <td>{!! $item['description'] !!}</td>
-                                    <td>{!! $item['features'] !!}</td>
+                                    <td>{!! $item['sku'] !!}</td>
+                                    {{--<td>{!! $item['name'] !!}</td>--}}
+                                    <td><a href="{{ url("admin/items/show/".$item['id']) }}"> {!! $d->en !!} </a> </td>
+                                    <td>{!! $item['owner_id'] !!}</td>
+                                    <td>{!! 0 !!}</td>
                                     <td>{!! $item['stock'] !!}</td>
                                     <td>
                                         <span class="label label-table label-success">{!!$item['status']!!}</span>
